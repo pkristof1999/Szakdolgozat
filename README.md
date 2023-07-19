@@ -1,0 +1,2 @@
+# Szakdolgozat
+Játékos oktatóprogram fejlesztése
