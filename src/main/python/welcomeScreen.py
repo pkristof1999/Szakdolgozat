@@ -1,3 +1,4 @@
+import loginScreen
 import registerAccount
 
 from PyQt6.uic import loadUi
@@ -13,15 +14,22 @@ class WelcomeUI(QMainWindow):
         self.registerButton = self.findChild(QPushButton, "registerButton")
 
         self.registerWindow = None
+        self.loginWindow = None
 
         self.registerButtonClick()
         self.loginButtonClick()
 
     def loginButtonClick(self):
-        pass
+        self.loginButton.clicked.connect(self.openLoginUI)
 
     def registerButtonClick(self):
         self.registerButton.clicked.connect(self.openRegisterUI)
+
+    def openLoginUI(self):
+        if not self.loginWindow:
+            self.loginWindow = loginScreen.LoginScreenUI()
+        self.loginWindow.show()
+        self.hide()
 
     def openRegisterUI(self):
         if not self.registerWindow:
