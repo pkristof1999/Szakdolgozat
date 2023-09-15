@@ -1,11 +1,13 @@
 <div>
-    <h1>Szakdolgozat</h1>
+    <h1><u>Szakdolgozat</u></h1>
     <p>Játékos oktatóprogram fejlesztése</p>
     <p>Ide kerül majd a program bemutatása</p>
 </div>
+<br>
 <hr>
-<div style="text-align: center;">
-    <h1>MUNKATERV</h1>
+<br>
+<div>
+    <h1><u>Munkaterv</u></h1>
 </div>
 <br>
 <div>
@@ -39,7 +41,8 @@
     eredményeit, utóbbit alaphelyzetbe állítani, felhasználónevet váltani, profilképet feltölteni, 
     illetve megadott megjelenítési témák közül választani.</p>
 </div>
-<div style="text-align: justify;">
+<br>
+<div>
     <h3>Elvégzendő munka</h3>
     <p>A terveim a szerint a programot Python3 nyelven valósítom meg, a kérdésbankhoz, illetve a 
     felhasználói adatok tárolásához pedig JSON fájlt fogok készíteni. A felhasználói felületeket 
@@ -51,11 +54,13 @@
     előkészületet elvégeztem, elkezdem a program fejlesztését, illetve a fejlesztés végeztével a 
     tesztelését. Ha sikeresen elkészült a program, akkor megírom hozzá a dolgozatom.</p>
 </div>
-<div style="text-align: justify;">
+<br>
+<div>
     <h3>A téma relevanciája</h3>
     <p>Napjainkban az internetet szinte minden korosztály napi rendszerességgel használja, azonban 
     bárki könnyen belefuthat gyanútlanul egy átverésbe, vagy internetes kártevőbe. Az oktató 
     program célja az, hogy megtanítsa a felhasználókat az efféle veszélyek felismerésére, hogy 
     kisebb valószínűséggel váljanak áldozattá.</p>
 </div>
+<br>
 <hr>
