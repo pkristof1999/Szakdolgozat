@@ -2,7 +2,7 @@ import welcomeScreen
 
 from PyQt6 import QtCore
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QLabel
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel
 from PyQt6.QtGui import QPixmap
 
 
@@ -20,6 +20,7 @@ class RegisterAccountUI(QMainWindow):
         self.inputPwd1 = self.findChild(QLineEdit, "inputPwd1")
         self.inputPwd2 = self.findChild(QLineEdit, "inputPwd2")
         self.profilePicture = self.findChild(QFrame, "profilePicture")
+
         self.label = QLabel(self.profilePicture)
 
         self.welcomeWindow = None
@@ -31,19 +32,22 @@ class RegisterAccountUI(QMainWindow):
         self.loadDefaultImage()
 
     def addPictureClick(self):
-        pass
+        self.addPictureButton.clicked.connect(self.addPicture)
 
-    def removePictureClick(self):
-        self.removePictureButton.clicked.connect(self.resetDefaultImage)
+    def addPicture(self):
+        file_dialog = QFileDialog(self)
+        file_dialog.setNameFilter("Images (*.png *.jpg *.jpeg *.bmp *.gif)")
+        file_dialog.setViewMode(QFileDialog.ViewMode.List)
+        file_dialog.setFileMode(QFileDialog.FileMode.ExistingFile)
 
-    def backButtonClick(self):
-        self.backButton.clicked.connect(self.openWelcomeUI)
+        if file_dialog.exec() == QFileDialog.DialogCode.Accepted:
+            selected_files = file_dialog.selectedFiles()
+            if selected_files:
+                imagePath = selected_files[0]
+                self.loadImage(imagePath)
 
-    def registerButtonClick(self):
-        self.registerButton.clicked.connect(self.registerUser)
-
-    def loadDefaultImage(self):
-        pixmap = QPixmap("../resources/pictures/userDefault.png")
+    def loadImage(self, imagePath):
+        pixmap = QPixmap(imagePath)
 
         frameSize = self.profilePicture.size()
         pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
@@ -53,8 +57,17 @@ class RegisterAccountUI(QMainWindow):
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
 
-    def resetDefaultImage(self):
-        pixmap = QPixmap("../resources/pictures/userDefault2.png")
+    def removePictureClick(self):
+        self.removePictureButton.clicked.connect(self.loadDefaultImage)
+
+    def backButtonClick(self):
+        self.backButton.clicked.connect(self.openWelcomeUI)
+
+    def registerButtonClick(self):
+        self.registerButton.clicked.connect(self.registerUser)
+
+    def loadDefaultImage(self):
+        pixmap = QPixmap("../resources/pictures/userDefault.png")
 
         frameSize = self.profilePicture.size()
         pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
