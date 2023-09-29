@@ -10,11 +10,9 @@ class LoginScreenUI(QMainWindow):
         loadUi("../resources/ui/loginScreen.ui", self)
 
         self.backButton = self.findChild(QPushButton, "backButton")
+
         self.welcomeWindow = None
 
-        self.backButtonClick()
-
-    def backButtonClick(self):
         self.backButton.clicked.connect(self.openWelcomeUI)
 
     def openWelcomeUI(self):

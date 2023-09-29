@@ -16,13 +16,7 @@ class WelcomeUI(QMainWindow):
         self.registerWindow = None
         self.loginWindow = None
 
-        self.registerButtonClick()
-        self.loginButtonClick()
-
-    def loginButtonClick(self):
         self.loginButton.clicked.connect(self.openLoginUI)
-
-    def registerButtonClick(self):
         self.registerButton.clicked.connect(self.openRegisterUI)
 
     def openLoginUI(self):

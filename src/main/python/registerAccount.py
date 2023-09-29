@@ -21,30 +21,29 @@ class RegisterAccountUI(QMainWindow):
         self.inputPwd2 = self.findChild(QLineEdit, "inputPwd2")
         self.profilePicture = self.findChild(QFrame, "profilePicture")
 
+        self.imagePath = "../resources/pictures/userDefault.png"
         self.label = QLabel(self.profilePicture)
 
         self.welcomeWindow = None
 
-        self.addPictureClick()
-        self.removePictureClick()
-        self.backButtonClick()
-        self.registerButtonClick()
+        self.addPictureButton.clicked.connect(self.addPicture)
+        self.removePictureButton.clicked.connect(self.loadDefaultImage)
+        self.backButton.clicked.connect(self.openWelcomeUI)
+        self.registerButton.clicked.connect(self.registerUser)
+
         self.loadDefaultImage()
 
-    def addPictureClick(self):
-        self.addPictureButton.clicked.connect(self.addPicture)
-
     def addPicture(self):
-        file_dialog = QFileDialog(self)
-        file_dialog.setNameFilter("Images (*.png *.jpg *.jpeg *.bmp *.gif)")
-        file_dialog.setViewMode(QFileDialog.ViewMode.List)
-        file_dialog.setFileMode(QFileDialog.FileMode.ExistingFile)
+        fileDialog = QFileDialog(self)
+        fileDialog.setNameFilter("Images (*.png *.jpg *.jpeg *.bmp *.gif)")
+        fileDialog.setViewMode(QFileDialog.ViewMode.List)
+        fileDialog.setFileMode(QFileDialog.FileMode.ExistingFile)
 
-        if file_dialog.exec() == QFileDialog.DialogCode.Accepted:
-            selected_files = file_dialog.selectedFiles()
+        if fileDialog.exec() == QFileDialog.DialogCode.Accepted:
+            selected_files = fileDialog.selectedFiles()
             if selected_files:
-                imagePath = selected_files[0]
-                self.loadImage(imagePath)
+                self.imagePath = selected_files[0]
+                self.loadImage(self.imagePath)
 
     def loadImage(self, imagePath):
         pixmap = QPixmap(imagePath)
@@ -56,15 +55,6 @@ class RegisterAccountUI(QMainWindow):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
-
-    def removePictureClick(self):
-        self.removePictureButton.clicked.connect(self.loadDefaultImage)
-
-    def backButtonClick(self):
-        self.backButton.clicked.connect(self.openWelcomeUI)
-
-    def registerButtonClick(self):
-        self.registerButton.clicked.connect(self.registerUser)
 
     def loadDefaultImage(self):
         pixmap = QPixmap("../resources/pictures/userDefault.png")
