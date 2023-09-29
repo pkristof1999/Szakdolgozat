@@ -10,6 +10,12 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Corbel</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -19,47 +25,106 @@
      <rect>
       <x>20</x>
       <y>520</y>
-      <width>141</width>
-      <height>31</height>
+      <width>160</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>Vissza</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QPushButton" name="registerButton">
     <property name="geometry">
      <rect>
-      <x>79</x>
-      <y>29</y>
-      <width>311</width>
-      <height>171</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="nextButton">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
+      <x>280</x>
       <y>520</y>
-      <width>141</width>
-      <height>31</height>
+      <width>160</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string>Tovább</string>
+     <string>Regisztráció</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>460</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <widget class="QLineEdit" name="inputPwd1">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>380</y>
+      <width>340</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Jelszó</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter|Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputPwd2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>440</y>
+      <width>340</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Jelszó mégegyszer</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter|Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputUserAge">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>340</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Életkor</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter|Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputUserName">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>260</y>
+      <width>340</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Felhasználónév</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter|Qt::AlignHCenter|Qt::AlignVCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
