@@ -6,10 +6,11 @@ from src.main.python.components.encodePwd import encodePassword
 
 def createAccount(username, userAge, password, profilePicturePath):
     accountData = {
-        "Username": username,
-        "UserAge": userAge,
-        "Password": encodePassword(password),
-        "ProfilePicturePath": profilePicturePath
+        username: {
+            "UserAge": userAge,
+            "Password": encodePassword(password),
+            "ProfilePicturePath": profilePicturePath
+        }
     }
 
     saveDirectory = "../../../userdata/profiles"
@@ -18,8 +19,15 @@ def createAccount(username, userAge, password, profilePicturePath):
     savePath = os.path.join(saveDirectory, "profiles.json")
 
     try:
+        existingAccounts = {}
+        if os.path.exists(savePath):
+            with open(savePath, 'r') as jsonFile:
+                existingAccounts = json.load(jsonFile)
+
+        existingAccounts.update(accountData)
+
         with open(savePath, 'w') as jsonFile:
-            json.dump(accountData, jsonFile)
-        print("Account data saved to", savePath)
+            json.dump(existingAccounts, jsonFile, indent=4)
+
     except Exception as e:
-        print("Error:", e)
+        print("Hiba: ", e)
