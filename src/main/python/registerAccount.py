@@ -1,10 +1,11 @@
 import welcomeScreen
-import components.createAccount
 
 from PyQt6 import QtCore
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox
 from PyQt6.QtGui import QPixmap
+
+from components.createAccount import createAccount
 
 
 class RegisterAccountUI(QMainWindow):
@@ -114,3 +115,6 @@ class RegisterAccountUI(QMainWindow):
             saveData = False
         else:
             saveData = True
+
+        if saveData:
+            createAccount(username, userAge, password2, self.imagePath)
