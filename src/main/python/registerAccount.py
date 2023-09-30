@@ -1,5 +1,6 @@
 import os
 import shutil
+import datetime
 
 from PyQt6 import QtCore
 from PyQt6.uic import loadUi
@@ -111,9 +112,12 @@ class RegisterAccountUI(QMainWindow):
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":
-                shutil.copy(self.imagePath, "../../../userdata/profiles/profilepicture")
                 newFileName = os.path.basename(self.imagePath)
-                newImagePath = f"../userdata/profiles/profilepicture/{newFileName}"
+                currentTime = datetime.datetime.now().time()
+                formattedTime = currentTime.strftime("%H%M%S")
+                shutil.copy(self.imagePath,
+                            f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+                newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
                 createAccount(username, userAge, password2, newImagePath)
             else:
                 createAccount(username, userAge, password2, self.imagePath)
