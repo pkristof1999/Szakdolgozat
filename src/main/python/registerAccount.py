@@ -86,19 +86,19 @@ class RegisterAccountUI(QMainWindow):
         errorDialog = QMessageBox(self)
         errorDialog.setWindowTitle("Hiba!")
 
-        if username == "":
+        if len(username) == 0:
             errorMessage = "Nem adott meg felhasználónevet!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif userAge == "":
+        elif len(userAge) == 0:
             errorMessage = "Nem adott meg életkort!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif password1 == "" and password2 == "" or password1 != password2:
+        elif len(password1) == 0 and len(password2) == 0 or password1 != password2:
             errorMessage = "A megadott jelszó hiányzik, vagy nem egyezik!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
@@ -109,7 +109,3 @@ class RegisterAccountUI(QMainWindow):
 
         if saveData:
             createAccount(username, userAge, password2, self.imagePath)
-            error_message = "nagy siker"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(error_message)
-            errorDialog.exec()

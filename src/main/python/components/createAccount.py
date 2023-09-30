@@ -10,10 +10,10 @@ def createAccount(username, userAge, password, profilePicturePath):
         "ProfilePicturePath": profilePicturePath
     }
 
-    saveDirectory = f"../../../userdata/profiles/{username}'s profile"
+    saveDirectory = f"../../../userdata/profiles"
     os.makedirs(saveDirectory, exist_ok = True)
 
-    savePath = os.path.join(saveDirectory, "profile.json")
+    savePath = os.path.join(saveDirectory, f"{username}.json")
 
     try:
         with open(savePath, 'w') as jsonFile:
