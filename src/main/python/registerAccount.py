@@ -1,8 +1,9 @@
 import welcomeScreen
+import components.createAccount
 
 from PyQt6 import QtCore
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox
 from PyQt6.QtGui import QPixmap
 
 
@@ -74,4 +75,42 @@ class RegisterAccountUI(QMainWindow):
         self.hide()
 
     def registerUser(self):
-        pass
+        username = self.inputUserName.text().strip()
+        userAge = self.inputUserAge.text().strip()
+        password1 = self.inputPwd1.text().strip()
+        password2 = self.inputPwd2.text().strip()
+
+        saveData = False
+
+        error_dialog = QMessageBox(self)
+        error_dialog.setWindowTitle("Hiba!")
+
+        if username == "":
+            error_message = "Nem adott meg felhasználónevet!"
+            error_dialog.setIcon(QMessageBox.Icon.Critical)
+            error_dialog.setText(error_message)
+            error_dialog.exec()
+            saveData = False
+        elif userAge == "":
+            error_message = "Nem adott meg életkort!"
+            error_dialog.setIcon(QMessageBox.Icon.Critical)
+            error_dialog.setText(error_message)
+            error_dialog.exec()
+            saveData = False
+        elif password1 == "" and password2 == "":
+            error_message = "Nem adott meg jelszót!"
+            error_dialog.setIcon(QMessageBox.Icon.Critical)
+            error_dialog.setText(error_message)
+            error_dialog.exec()
+            saveData = False
+        else:
+            saveData = True
+
+        if password1 != password2:
+            error_message = "A megadott jelszavak nem egyeznek!"
+            error_dialog.setIcon(QMessageBox.Icon.Critical)
+            error_dialog.setText(error_message)
+            error_dialog.exec()
+            saveData = False
+        else:
+            saveData = True
