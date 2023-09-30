@@ -1,15 +1,14 @@
 import os
 import json
 
-from encodePwd import *
+from src.main.python.components.encodePwd import encodePassword
 
 
 def createAccount(username, userAge, password, profilePicturePath):
-    """encPwd = """
     accountData = {
         "Username": username,
         "UserAge": userAge,
-        "Password": password,
+        "Password": encodePassword(password),
         "ProfilePicturePath": profilePicturePath
     }
 

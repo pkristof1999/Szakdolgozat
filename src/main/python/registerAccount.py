@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDi
 from PyQt6.QtGui import QPixmap
 
 import welcomeScreen
-from components.createAccount import createAccount
+from src.main.python.components.createAccount import createAccount
 
 
 class RegisterAccountUI(QMainWindow):
@@ -44,9 +44,9 @@ class RegisterAccountUI(QMainWindow):
         fileDialog.setFileMode(QFileDialog.FileMode.ExistingFile)
 
         if fileDialog.exec() == QFileDialog.DialogCode.Accepted:
-            selected_files = fileDialog.selectedFiles()
-            if selected_files:
-                self.imagePath = selected_files[0]
+            selectedFiles = fileDialog.selectedFiles()
+            if selectedFiles:
+                self.imagePath = selectedFiles[0]
                 self.loadImage(self.imagePath)
 
     def loadImage(self, imagePath):
@@ -113,7 +113,7 @@ class RegisterAccountUI(QMainWindow):
             if self.imagePath != "../resources/pictures/userDefault.png":
                 shutil.copy(self.imagePath, "../../../userdata/profiles/profilepicture")
                 newFileName = os.path.basename(self.imagePath)
-                newImagePath = f"../../../userdata/profiles/profilepicture/{newFileName}"
+                newImagePath = f"../userdata/profiles/profilepicture/{newFileName}"
                 createAccount(username, userAge, password2, newImagePath)
             else:
                 createAccount(username, userAge, password2, self.imagePath)
