@@ -1,8 +1,11 @@
 import os
 import json
 
+from encodePwd import *
+
 
 def createAccount(username, userAge, password, profilePicturePath):
+    """encPwd = """
     accountData = {
         "Username": username,
         "UserAge": userAge,
@@ -10,10 +13,10 @@ def createAccount(username, userAge, password, profilePicturePath):
         "ProfilePicturePath": profilePicturePath
     }
 
-    saveDirectory = f"../../../userdata/profiles"
+    saveDirectory = "../../../userdata/profiles"
     os.makedirs(saveDirectory, exist_ok = True)
 
-    savePath = os.path.join(saveDirectory, f"{username}.json")
+    savePath = os.path.join(saveDirectory, "profiles.json")
 
     try:
         with open(savePath, 'w') as jsonFile:

@@ -1,10 +1,12 @@
-import welcomeScreen
+import os
+import shutil
 
 from PyQt6 import QtCore
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox
 from PyQt6.QtGui import QPixmap
 
+import welcomeScreen
 from components.createAccount import createAccount
 
 
@@ -108,4 +110,10 @@ class RegisterAccountUI(QMainWindow):
             saveData = True
 
         if saveData:
-            createAccount(username, userAge, password2, self.imagePath)
+            if self.imagePath != "../resources/pictures/userDefault.png":
+                shutil.copy(self.imagePath, "../../../userdata/profiles/profilepicture")
+                newFileName = os.path.basename(self.imagePath)
+                newImagePath = f"../../../userdata/profiles/profilepicture/{newFileName}"
+                createAccount(username, userAge, password2, newImagePath)
+            else:
+                createAccount(username, userAge, password2, self.imagePath)
