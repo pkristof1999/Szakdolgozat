@@ -106,7 +106,7 @@
      <set>Qt::AlignCenter</set>
     </property>
     <property name="placeholderText">
-     <string>Életkor</string>
+     <string>Életkor (1-től 151-ig)</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="inputUserName">

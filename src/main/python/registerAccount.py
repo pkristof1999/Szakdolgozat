@@ -100,6 +100,26 @@ class RegisterAccountUI(QMainWindow):
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
+        elif convertibleToInt(userAge):
+            userAge = int(userAge)
+            if 1 > userAge or 150 < userAge:
+                errorMessage = "Nem adható meg ilyen életkor!"
+                errorDialog.setIcon(QMessageBox.Icon.Critical)
+                errorDialog.setText(errorMessage)
+                errorDialog.exec()
+                saveData = False
+        elif not convertibleToInt(userAge):
+            errorMessage = "Nem egész szám a megadott életkor!"
+            errorDialog.setIcon(QMessageBox.Icon.Critical)
+            errorDialog.setText(errorMessage)
+            errorDialog.exec()
+            saveData = False
+        elif int(userAge) == ValueError:
+            errorMessage = "Nem egész számot adott meg életkornak!"
+            errorDialog.setIcon(QMessageBox.Icon.Critical)
+            errorDialog.setText(errorMessage)
+            errorDialog.exec()
+            saveData = False
         elif len(password1) == 0 and len(password2) == 0 or password1 != password2:
             errorMessage = "A megadott jelszó hiányzik, vagy nem egyezik!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
@@ -133,3 +153,11 @@ class RegisterAccountUI(QMainWindow):
                     errorDialog.setIcon(QMessageBox.Icon.Critical)
                     errorDialog.setText(errorMessage)
                     errorDialog.exec()
+
+
+def convertibleToInt(variable):
+    try:
+        variable = int(variable)
+        return True
+    except ValueError:
+        return False

@@ -1,6 +1,8 @@
 import os
 import json
 
+from PyQt6 import QtCore
+
 import welcomeScreen
 
 from PyQt6.uic import loadUi
@@ -18,6 +20,13 @@ class LoginScreenUI(QMainWindow):
         self.inputPwd = self.findChild(QLineEdit, "inputPwd")
         self.backButton = self.findChild(QPushButton, "backButton")
         self.loginButton = self.findChild(QPushButton, "loginButton")
+
+        """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
+           This is here because I couldn't align the QComboBox's content to center elsewhere."""
+        self.userNameBox.setEditable(True)
+        lineEdit = self.userNameBox.lineEdit()
+        lineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        lineEdit.setReadOnly(True)
 
         self.welcomeWindow = None
 
