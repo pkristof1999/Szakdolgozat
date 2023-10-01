@@ -75,10 +75,10 @@ class LoginScreenUI(QMainWindow):
             print("Hiba: ", e)
 
         if checkPassword(inputPassword, storedPassword):
-            logging.info("Sikeres bejelentkezés!")
+            logger.info("Sikeres bejelentkezés!")
             self.openMainUI()
         else:
-            logging.error("Sikertelen bejelentkezés!")
+            logger.error("Sikertelen bejelentkezés!")
             errorDialog = QMessageBox(self)
             errorDialog.setWindowTitle("Hiba!")
             errorMessage = "A megadott jelszó hibás!"
