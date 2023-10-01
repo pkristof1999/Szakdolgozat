@@ -137,8 +137,8 @@ class RegisterAccountUI(QMainWindow):
                             f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
                 newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
 
-                if createAccount(username, userAge, password2, newImagePath):
-                    createAccount(username, userAge, password2, newImagePath)
+                if createAccount(username, int(userAge), password2, newImagePath):
+                    createAccount(username, int(userAge), password2, newImagePath)
                 else:
                     errorMessage = "A megadott felhasználónév foglalt!"
                     errorDialog.setIcon(QMessageBox.Icon.Critical)
@@ -146,8 +146,8 @@ class RegisterAccountUI(QMainWindow):
                     errorDialog.exec()
 
             else:
-                if createAccount(username, userAge, password2, self.imagePath):
-                    createAccount(username, userAge, password2, self.imagePath)
+                if createAccount(username, int(userAge), password2, self.imagePath):
+                    createAccount(username, int(userAge), password2, self.imagePath)
                 else:
                     errorMessage = "A megadott felhasználónév foglalt!"
                     errorDialog.setIcon(QMessageBox.Icon.Critical)

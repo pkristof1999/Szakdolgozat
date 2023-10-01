@@ -22,16 +22,19 @@ def createAccount(username, userAge, password, profilePicturePath):
         existingAccounts = {}
         if os.path.exists(savePath):
             with open(savePath, 'r') as jsonFile:
-                existingAccounts = json.load(jsonFile)
+                fileContents = jsonFile.read()
+                if fileContents.strip():
+                    existingAccounts = json.loads(fileContents)
 
         if username in existingAccounts:
             return False
-        else:
-            existingAccounts.update(accountData)
 
-            with open(savePath, 'w') as jsonFile:
-                json.dump(existingAccounts, jsonFile, indent=4)
-            return True
+        existingAccounts.update(accountData)
+
+        with open(savePath, 'w') as jsonFile:
+            json.dump(existingAccounts, jsonFile, indent=4)
+
+        return True
 
     except Exception as e:
         print("Hiba: ", e)

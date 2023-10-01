@@ -40,10 +40,17 @@ class LoginScreenUI(QMainWindow):
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
-                    existingAccounts = json.load(jsonFile)
+                    fileContents = jsonFile.read()
 
-                    usernames = list(existingAccounts.keys())
-                    self.userNameBox.addItems(usernames)
+                    if not fileContents.strip():
+                        self.userNameBox.addItem("Regisztráljon!")
+                    else:
+                        existingAccounts = json.loads(fileContents)
+                        usernames = list(existingAccounts.keys())
+                        self.userNameBox.addItems(usernames)
+
+            else:
+                self.userNameBox.addItem("Regisztráljon!")
 
         except Exception as e:
             print("Hiba: ", e)
