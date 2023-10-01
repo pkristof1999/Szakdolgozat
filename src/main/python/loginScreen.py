@@ -7,7 +7,7 @@ import welcomeScreen
 import mainWindow
 
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox, QMessageBox
 
 from src.main.python.components.securePwd import checkPassword
 
@@ -33,7 +33,7 @@ class LoginScreenUI(QMainWindow):
         self.appMainWindow = None
 
         self.backButton.clicked.connect(self.openWelcomeUI)
-        self.loginButton.clicked.connect(self.openMainUI)
+        self.loginButton.clicked.connect(self.authenticateUser)
 
         self.loadUserNames()
 
@@ -57,6 +57,32 @@ class LoginScreenUI(QMainWindow):
 
         except Exception as e:
             print("Hiba: ", e)
+
+    def authenticateUser(self):
+        dataPath = "../../../userdata/profiles/profiles.json"
+
+        username = self.userNameBox.currentText()
+        inputPassword = self.inputPwd.text().strip()
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+                    storedPassword = existingAccounts[username]["Password"]
+
+        except Exception as e:
+            print("Hiba: ", e)
+
+        if checkPassword(inputPassword, storedPassword):
+            self.openMainUI()
+        else:
+            errorDialog = QMessageBox(self)
+            errorDialog.setWindowTitle("Hiba!")
+            errorMessage = "A megadott jelszó hibás!"
+            errorDialog.setIcon(QMessageBox.Icon.Critical)
+            errorDialog.setText(errorMessage)
+            errorDialog.exec()
 
     def openMainUI(self):
         if not self.appMainWindow:
