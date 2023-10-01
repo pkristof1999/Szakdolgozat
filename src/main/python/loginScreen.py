@@ -4,6 +4,7 @@ import json
 from PyQt6 import QtCore
 
 import welcomeScreen
+import mainWindow
 
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox
@@ -29,8 +30,10 @@ class LoginScreenUI(QMainWindow):
         lineEdit.setReadOnly(True)
 
         self.welcomeWindow = None
+        self.appMainWindow = None
 
         self.backButton.clicked.connect(self.openWelcomeUI)
+        self.loginButton.clicked.connect(self.openMainUI)
 
         self.loadUserNames()
 
@@ -54,6 +57,12 @@ class LoginScreenUI(QMainWindow):
 
         except Exception as e:
             print("Hiba: ", e)
+
+    def openMainUI(self):
+        if not self.appMainWindow:
+            self.appMainWindow = mainWindow.MainWindowUI()
+        self.appMainWindow.show()
+        self.hide()
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:
