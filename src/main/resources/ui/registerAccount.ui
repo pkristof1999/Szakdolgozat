@@ -17,7 +17,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Regisztráció</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="backButton">
