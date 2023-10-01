@@ -1,14 +1,14 @@
 import os
 import json
 
-from PyQt6 import QtCore
-
 import welcomeScreen
 import mainWindow
 
+from PyQt6 import QtCore
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox, QMessageBox
 
+from src.main.python.components.logger import *
 from src.main.python.components.securePwd import checkPassword
 
 
@@ -75,8 +75,10 @@ class LoginScreenUI(QMainWindow):
             print("Hiba: ", e)
 
         if checkPassword(inputPassword, storedPassword):
+            logging.info("Sikeres bejelentkezés!")
             self.openMainUI()
         else:
+            logging.error("Sikertelen bejelentkezés!")
             errorDialog = QMessageBox(self)
             errorDialog.setWindowTitle("Hiba!")
             errorMessage = "A megadott jelszó hibás!"

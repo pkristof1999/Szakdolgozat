@@ -7,6 +7,8 @@ from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDi
 from PyQt6.QtGui import QPixmap
 
 import welcomeScreen
+
+from src.main.python.components.logger import *
 from src.main.python.components.createAccount import createAccount
 
 
@@ -48,6 +50,7 @@ class RegisterAccountUI(QMainWindow):
             if selectedFiles:
                 self.imagePath = selectedFiles[0]
                 self.loadImage(self.imagePath)
+                logger.info("Profilkép kiválasztásra került!")
 
     def loadImage(self, imagePath):
         pixmap = QPixmap(imagePath)
@@ -70,11 +73,13 @@ class RegisterAccountUI(QMainWindow):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
+        logger.info("Alap profilkép betöltésre került!")
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:
             self.welcomeWindow = welcomeScreen.WelcomeUI()
         self.welcomeWindow.show()
+        logger.info("Visszalépés az indítóképernyőre.")
         self.hide()
 
     def registerUser(self):
@@ -89,12 +94,14 @@ class RegisterAccountUI(QMainWindow):
         errorDialog.setWindowTitle("Hiba!")
 
         if len(username) == 0:
+            logger.error("Nem adott meg felhasználónevet!")
             errorMessage = "Nem adott meg felhasználónevet!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
         elif len(userAge) == 0:
+            logger.error("Nem adott meg életkort!")
             errorMessage = "Nem adott meg életkort!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
@@ -103,24 +110,28 @@ class RegisterAccountUI(QMainWindow):
         elif convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
+                logger.error("Nem adható meg ilyen életkor!")
                 errorMessage = "Nem adható meg ilyen életkor!"
                 errorDialog.setIcon(QMessageBox.Icon.Critical)
                 errorDialog.setText(errorMessage)
                 errorDialog.exec()
                 saveData = False
         elif not convertibleToInt(userAge):
+            logger.error("Nem egész szám a megadott életkor!")
             errorMessage = "Nem egész szám a megadott életkor!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
         elif int(userAge) == ValueError:
+            logger.error("Nem egész számot adott meg életkornak!")
             errorMessage = "Nem egész számot adott meg életkornak!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
         elif len(password1) == 0 and len(password2) == 0 or password1 != password2:
+            logger.error("A megadott jelszó hiányzik, vagy nem egyezik!")
             errorMessage = "A megadott jelszó hiányzik, vagy nem egyezik!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
@@ -139,7 +150,9 @@ class RegisterAccountUI(QMainWindow):
 
                 if createAccount(username, int(userAge), password2, newImagePath):
                     createAccount(username, int(userAge), password2, newImagePath)
+                    logger.info("Sikeres regisztráció!")
                 else:
+                    logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
                     errorDialog.setIcon(QMessageBox.Icon.Critical)
                     errorDialog.setText(errorMessage)
@@ -148,7 +161,10 @@ class RegisterAccountUI(QMainWindow):
             else:
                 if createAccount(username, int(userAge), password2, self.imagePath):
                     createAccount(username, int(userAge), password2, self.imagePath)
+                    logger.warning("Profilkép nem került feltöltésre!")
+                    logger.info("Sikeres regisztráció!")
                 else:
+                    logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
                     errorDialog.setIcon(QMessageBox.Icon.Critical)
                     errorDialog.setText(errorMessage)
