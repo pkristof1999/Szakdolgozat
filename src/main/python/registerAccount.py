@@ -112,12 +112,25 @@ class RegisterAccountUI(QMainWindow):
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":
-                newFileName = os.path.basename(self.imagePath)
                 currentTime = datetime.datetime.now().time()
                 formattedTime = currentTime.strftime("%H%M%S")
                 shutil.copy(self.imagePath,
                             f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
                 newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
-                createAccount(username, userAge, password2, newImagePath)
+
+                if createAccount(username, userAge, password2, newImagePath):
+                    createAccount(username, userAge, password2, newImagePath)
+                else:
+                    errorMessage = "A megadott felhasználónév foglalt!"
+                    errorDialog.setIcon(QMessageBox.Icon.Critical)
+                    errorDialog.setText(errorMessage)
+                    errorDialog.exec()
+
             else:
-                createAccount(username, userAge, password2, self.imagePath)
+                if createAccount(username, userAge, password2, self.imagePath):
+                    createAccount(username, userAge, password2, self.imagePath)
+                else:
+                    errorMessage = "A megadott felhasználónév foglalt!"
+                    errorDialog.setIcon(QMessageBox.Icon.Critical)
+                    errorDialog.setText(errorMessage)
+                    errorDialog.exec()

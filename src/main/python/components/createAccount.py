@@ -1,7 +1,7 @@
 import os
 import json
 
-from src.main.python.components.encodePwd import encodePassword
+from src.main.python.components.securePwd import encodePassword
 
 
 def createAccount(username, userAge, password, profilePicturePath):
@@ -24,10 +24,14 @@ def createAccount(username, userAge, password, profilePicturePath):
             with open(savePath, 'r') as jsonFile:
                 existingAccounts = json.load(jsonFile)
 
-        existingAccounts.update(accountData)
+        if username in existingAccounts:
+            return False
+        else:
+            existingAccounts.update(accountData)
 
-        with open(savePath, 'w') as jsonFile:
-            json.dump(existingAccounts, jsonFile, indent=4)
+            with open(savePath, 'w') as jsonFile:
+                json.dump(existingAccounts, jsonFile, indent=4)
+            return True
 
     except Exception as e:
         print("Hiba: ", e)
