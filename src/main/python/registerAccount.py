@@ -100,14 +100,16 @@ class RegisterAccountUI(QMainWindow):
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif len(userAge) == 0:
+
+        if len(userAge) == 0:
             logger.error("Nem adott meg életkort!")
             errorMessage = "Nem adott meg életkort!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif convertibleToInt(userAge):
+
+        if convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
                 logger.error("Nem adható meg ilyen életkor!")
@@ -116,29 +118,38 @@ class RegisterAccountUI(QMainWindow):
                 errorDialog.setText(errorMessage)
                 errorDialog.exec()
                 saveData = False
-        elif not convertibleToInt(userAge):
+
+        if not convertibleToInt(userAge):
             logger.error("Nem egész szám a megadott életkor!")
             errorMessage = "Nem egész szám a megadott életkor!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif int(userAge) == ValueError:
+
+        if int(userAge) == ValueError:
             logger.error("Nem egész számot adott meg életkornak!")
             errorMessage = "Nem egész számot adott meg életkornak!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        elif len(password1) == 0 and len(password2) == 0 or password1 != password2:
-            logger.error("A megadott jelszó hiányzik, vagy nem egyezik!")
-            errorMessage = "A megadott jelszó hiányzik, vagy nem egyezik!"
+
+        if len(password1) == 0 or len(password2) == 0:
+            logger.error("Jelszó mező nincs kitöltve!")
+            errorMessage = "Jelszó mező nincs kitöltve!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
             saveData = False
-        else:
-            saveData = True
+
+        if password1 != password2:
+            logger.error("A jelszavak nem egyeznek!")
+            errorMessage = "A jelszavak nem egyeznek!"
+            errorDialog.setIcon(QMessageBox.Icon.Critical)
+            errorDialog.setText(errorMessage)
+            errorDialog.exec()
+            saveData = False
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":
