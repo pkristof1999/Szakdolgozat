@@ -1,4 +1,7 @@
 <div>
+    <h1>Futtatáshoz szükséges csomagok:</h1>
+    <h3>pip3 install pyqt6 pyqt6-tools bcrypt</h3>
+<div>
     <h1><u>Szakdolgozat</u></h1>
     <p>Játékos oktatóprogram fejlesztése</p>
     <p>Ide kerül majd a program bemutatása</p>
