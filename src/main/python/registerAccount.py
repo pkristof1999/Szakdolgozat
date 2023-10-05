@@ -11,6 +11,7 @@ from src.main.python import welcomeScreen
 from src.main.python.components.logger import *
 from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
+from src.main.python.infoscreens.registerSuccess import RegisterSuccessUI
 
 
 class RegisterAccountUI(QMainWindow):
@@ -86,7 +87,7 @@ class RegisterAccountUI(QMainWindow):
 
     def openRegisterSuccessUI(self):
         if not self.registerWindow:
-            self.registerWindow = registerSuccess.RegisterSuccessUI()
+            self.registerWindow = registerSuccess.RegisterSuccessUI(self)
         self.registerWindow.show()
         logger.info("Sikeres regisztráció ablak megnyitása.")
 
@@ -167,8 +168,6 @@ class RegisterAccountUI(QMainWindow):
                     createAccount(username, int(userAge), password2, newImagePath)
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
-                    if registerSuccess.loginClicked():
-                        self.hide()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
@@ -182,9 +181,6 @@ class RegisterAccountUI(QMainWindow):
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
-                    print(registerSuccess.loginClicked())
-                    if registerSuccess.loginClicked():
-                        self.hide()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
