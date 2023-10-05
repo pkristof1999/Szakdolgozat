@@ -1,11 +1,15 @@
 import logging
+import os
+
+logDirectory = "../log"
+os.makedirs(logDirectory, exist_ok=True)
 
 logger = logging.getLogger("app")
 logger.setLevel(logging.INFO)
 
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-fileHandler = logging.FileHandler("../../main/log/app.log", encoding="utf-8")
+fileHandler = logging.FileHandler(os.path.join(logDirectory, "app.log"), mode="a", encoding="utf-8")
 fileHandler.setFormatter(formatter)
 
 consoleHandler = logging.StreamHandler()
