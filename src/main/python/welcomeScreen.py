@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python.components.logger import *
 
+
 class WelcomeUI(QMainWindow):
     def __init__(self):
         super(WelcomeUI, self).__init__()
