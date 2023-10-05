@@ -1,4 +1,3 @@
-import os
 import json
 
 import welcomeScreen
@@ -31,6 +30,7 @@ class LoginScreenUI(QMainWindow):
 
         self.welcomeWindow = None
         self.appMainWindow = None
+        self.loginSuccess = False
 
         self.backButton.clicked.connect(self.openWelcomeUI)
         self.loginButton.clicked.connect(self.authenticateUser)
@@ -74,17 +74,26 @@ class LoginScreenUI(QMainWindow):
         except Exception as e:
             print("Hiba: ", e)
 
-        if checkPassword(inputPassword, storedPassword):
-            logger.info("Sikeres bejelentkezés!")
-            self.openMainUI()
-        else:
+        if self.userNameBox.currentText() == "Regisztráljon!":
             logger.error("Sikertelen bejelentkezés!")
             errorDialog = QMessageBox(self)
             errorDialog.setWindowTitle("Hiba!")
-            errorMessage = "A megadott jelszó hibás!"
+            errorMessage = "Nincs regisztrált felhasználó!"
             errorDialog.setIcon(QMessageBox.Icon.Critical)
             errorDialog.setText(errorMessage)
             errorDialog.exec()
+        else:
+            if checkPassword(inputPassword, storedPassword):
+                logger.info("Sikeres bejelentkezés!")
+                self.openMainUI()
+            else:
+                logger.error("Sikertelen bejelentkezés!")
+                errorDialog = QMessageBox(self)
+                errorDialog.setWindowTitle("Hiba!")
+                errorMessage = "A megadott jelszó hibás!"
+                errorDialog.setIcon(QMessageBox.Icon.Critical)
+                errorDialog.setText(errorMessage)
+                errorDialog.exec()
 
     def openMainUI(self):
         if not self.appMainWindow:
