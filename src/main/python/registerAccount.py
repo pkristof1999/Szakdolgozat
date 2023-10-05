@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox,
 from PyQt6.uic import loadUi
 
 from src.main.python import welcomeScreen
-from src.main.python.components import logger
+from src.main.python.components.logger import *
 from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
 
@@ -135,14 +135,6 @@ class RegisterAccountUI(QMainWindow):
             errorDialog.exec()
             saveData = False
 
-        if int(userAge) == ValueError:
-            logger.error("Nem egész számot adott meg életkornak!")
-            errorMessage = "Nem egész számot adott meg életkornak!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
-            saveData = False
-
         if len(password1) == 0 or len(password2) == 0:
             logger.error("Jelszó mező nincs kitöltve!")
             errorMessage = "Jelszó mező nincs kitöltve!"
@@ -175,6 +167,8 @@ class RegisterAccountUI(QMainWindow):
                     createAccount(username, int(userAge), password2, newImagePath)
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
+                    if registerSuccess.loginClicked():
+                        self.hide()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
@@ -188,6 +182,9 @@ class RegisterAccountUI(QMainWindow):
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
+                    print(registerSuccess.loginClicked())
+                    if registerSuccess.loginClicked():
+                        self.hide()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"

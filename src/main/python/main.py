@@ -3,7 +3,7 @@ import welcomeScreen
 
 from PyQt6.QtWidgets import QApplication
 
-from src.main.python.components import logger
+from src.main.python.components.logger import *
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ from PyQt6 import QtCore
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox, QMessageBox
 
-from src.main.python.components import logger
+from src.main.python.components.logger import *
 from src.main.python.components.securePwd import checkPassword
 
 

@@ -4,7 +4,7 @@ import registerAccount
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
-from src.main.python.components import logger
+from src.main.python.components.logger import *
 
 
 class WelcomeUI(QMainWindow):
