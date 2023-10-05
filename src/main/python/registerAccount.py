@@ -1,3 +1,4 @@
+import os
 import shutil
 import datetime
 
@@ -155,6 +156,10 @@ class RegisterAccountUI(QMainWindow):
             if self.imagePath != "../resources/pictures/userDefault.png":
                 currentTime = datetime.datetime.now().time()
                 formattedTime = currentTime.strftime("%H%M%S")
+
+                pictureDirectory = "../../../userdata/profiles/profilepicture"
+                os.makedirs(pictureDirectory, exist_ok=True)
+
                 shutil.copy(self.imagePath,
                             f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
                 newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
