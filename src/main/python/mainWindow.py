@@ -1,5 +1,3 @@
-import loginScreen
-
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 

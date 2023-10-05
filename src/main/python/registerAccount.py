@@ -1,6 +1,5 @@
-import os
-import shutil
 import datetime
+import shutil
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
@@ -8,10 +7,9 @@ from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox,
 from PyQt6.uic import loadUi
 
 from src.main.python import welcomeScreen
-from src.main.python.components.logger import *
 from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
-from src.main.python.infoscreens.registerSuccess import RegisterSuccessUI
+from src.main.python.components.logger import *
 
 
 class RegisterAccountUI(QMainWindow):
