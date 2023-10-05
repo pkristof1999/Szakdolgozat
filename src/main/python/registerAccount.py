@@ -1,14 +1,15 @@
+import os
 import shutil
 import datetime
 
 from PyQt6 import QtCore
-from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox
 from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox, QPushButton, QMainWindow
+from PyQt6.uic import loadUi
 
-import welcomeScreen
-
-from src.main.python.components.logger import *
+from src.main.python import welcomeScreen
+from src.main.python.components import logger
+from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
 
 
@@ -31,6 +32,7 @@ class RegisterAccountUI(QMainWindow):
         self.label = QLabel(self.profilePicture)
 
         self.welcomeWindow = None
+        self.registerWindow = None
 
         self.addPictureButton.clicked.connect(self.addPicture)
         self.removePictureButton.clicked.connect(self.loadDefaultImage)
@@ -81,6 +83,12 @@ class RegisterAccountUI(QMainWindow):
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
         self.hide()
+
+    def openRegisterSuccessUI(self):
+        if not self.registerWindow:
+            self.registerWindow = registerSuccess.RegisterSuccessUI()
+        self.registerWindow.show()
+        logger.info("Sikeres regisztráció ablak megnyitása.")
 
     def registerUser(self):
         username = self.inputUserName.text().strip()
@@ -166,6 +174,7 @@ class RegisterAccountUI(QMainWindow):
                 if createAccount(username, int(userAge), password2, newImagePath):
                     createAccount(username, int(userAge), password2, newImagePath)
                     logger.info("Sikeres regisztráció!")
+                    self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"
@@ -178,6 +187,7 @@ class RegisterAccountUI(QMainWindow):
                     createAccount(username, int(userAge), password2, self.imagePath)
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
+                    self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
                     errorMessage = "A megadott felhasználónév foglalt!"

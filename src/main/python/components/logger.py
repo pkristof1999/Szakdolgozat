@@ -1,5 +1,5 @@
-import logging
 import os
+import logging
 
 logDirectory = "../log"
 os.makedirs(logDirectory, exist_ok=True)
