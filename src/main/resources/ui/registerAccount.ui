@@ -55,6 +55,18 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 173, 173);</string>
+    </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
     </property>
@@ -73,6 +85,15 @@
       <width>340</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Corbel</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 173, 173);</string>
     </property>
     <property name="inputMask">
      <string/>

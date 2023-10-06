@@ -9,6 +9,7 @@ from PyQt6.uic import loadUi
 from src.main.python import welcomeScreen
 from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
+from src.main.python.components import checkPwdStrenght
 from src.main.python.components.logger import *
 
 
@@ -39,6 +40,9 @@ class RegisterAccountUI(QMainWindow):
         self.registerButton.clicked.connect(self.registerUser)
 
         self.loadDefaultImage()
+
+        self.inputPwd1.textChanged.connect(self.setPwd1Color)
+        self.inputPwd2.textChanged.connect(self.setPwd2Color)
 
     def addPicture(self):
         fileDialog = QFileDialog(self)
@@ -76,24 +80,20 @@ class RegisterAccountUI(QMainWindow):
         self.label.setPixmap(pixmap)
         logger.info("Alap profilkép betöltésre került!")
 
-    def openWelcomeUI(self):
-        if not self.welcomeWindow:
-            self.welcomeWindow = welcomeScreen.WelcomeUI()
-        self.welcomeWindow.show()
-        logger.info("Visszalépés az indítóképernyőre.")
-        self.hide()
-
-    def openRegisterSuccessUI(self):
-        if not self.registerWindow:
-            self.registerWindow = registerSuccess.RegisterSuccessUI(self)
-        self.registerWindow.show()
-        logger.info("Sikeres regisztráció ablak megnyitása.")
+    def setRegisterDataToDefault(self):
+        self.loadDefaultImage()
+        self.inputUserName.setText("")
+        self.inputUserAge.setText("")
+        self.inputPwd1.setText("")
+        self.inputPwd2.setText("")
 
     def registerUser(self):
         username = self.inputUserName.text().strip()
         userAge = self.inputUserAge.text().strip()
         password1 = self.inputPwd1.text().strip()
         password2 = self.inputPwd2.text().strip()
+
+        chkPwd = checkPwdStrenght.calculateStrength(password1)
 
         saveData = True
 
@@ -150,6 +150,14 @@ class RegisterAccountUI(QMainWindow):
             errorDialog.exec()
             saveData = False
 
+        if chkPwd == 0:
+            logger.error("A jelszó nem megfelelő erősségű!")
+            errorMessage = "A jelszó nem megfelelő erősségű!"
+            errorDialog.setIcon(QMessageBox.Icon.Critical)
+            errorDialog.setText(errorMessage)
+            errorDialog.exec()
+            saveData = False
+
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":
                 currentTime = datetime.datetime.now().time()
@@ -188,12 +196,40 @@ class RegisterAccountUI(QMainWindow):
                     errorDialog.setText(errorMessage)
                     errorDialog.exec()
 
-    def setRegisterDataToDefault(self):
-        self.loadDefaultImage()
-        self.inputUserName.setText("")
-        self.inputUserAge.setText("")
-        self.inputPwd1.setText("")
-        self.inputPwd2.setText("")
+    def setPwd1Color(self):
+        password = self.inputPwd1.text().strip()
+        chkPwd = checkPwdStrenght.calculateStrength(password)
+
+        if chkPwd == 0:
+            self.inputPwd1.setStyleSheet("background-color: rgb(255, 173, 173);")
+        elif 0 < chkPwd < 5:
+            self.inputPwd1.setStyleSheet("background-color: rgb(255, 203, 111);")
+        elif chkPwd >= 5:
+            self.inputPwd1.setStyleSheet("background-color: rgb(167, 255, 111);")
+
+        self.setPwd2Color()
+
+    def setPwd2Color(self):
+        password1 = self.inputPwd1.text().strip()
+        password2 = self.inputPwd2.text().strip()
+
+        if password1 != password2:
+            self.inputPwd2.setStyleSheet("background-color: rgb(255, 173, 173);")
+        else:
+            self.inputPwd2.setStyleSheet("background-color: rgb(167, 255, 111);")
+
+    def openWelcomeUI(self):
+        if not self.welcomeWindow:
+            self.welcomeWindow = welcomeScreen.WelcomeUI()
+        self.welcomeWindow.show()
+        logger.info("Visszalépés az indítóképernyőre.")
+        self.hide()
+
+    def openRegisterSuccessUI(self):
+        if not self.registerWindow:
+            self.registerWindow = registerSuccess.RegisterSuccessUI(self)
+        self.registerWindow.show()
+        logger.info("Sikeres regisztráció ablak megnyitása.")
 
 
 def convertibleToInt(variable):
