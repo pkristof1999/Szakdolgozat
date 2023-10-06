@@ -40,10 +40,10 @@ class RegisterAccountUI(QMainWindow):
         self.backButton.clicked.connect(self.openWelcomeUI)
         self.registerButton.clicked.connect(self.registerUser)
 
-        self.loadDefaultImage()
-
         self.inputPwd1.textChanged.connect(self.setPwd1Color)
         self.inputPwd2.textChanged.connect(self.setPwd2Color)
+
+        self.loadDefaultImage()
 
     def addPicture(self):
         fileDialog = QFileDialog(self)
