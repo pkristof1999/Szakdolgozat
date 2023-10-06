@@ -9,6 +9,7 @@ from PyQt6.uic import loadUi
 from src.main.python import welcomeScreen
 from src.main.python.infoscreens import registerSuccess
 from src.main.python.components.createAccount import createAccount
+from src.main.python.components.isConvertible import convertibleToInt
 from src.main.python.components import checkPwdStrenght
 from src.main.python.components.logger import *
 
@@ -202,11 +203,3 @@ class RegisterAccountUI(QMainWindow):
         errorDialog.setIcon(QMessageBox.Icon.Critical)
         errorDialog.setText(message)
         errorDialog.exec()
-
-
-def convertibleToInt(variable):
-    try:
-        variable = int(variable)
-        return True
-    except ValueError:
-        return False
