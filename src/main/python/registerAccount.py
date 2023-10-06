@@ -99,65 +99,41 @@ class RegisterAccountUI(QMainWindow):
 
         saveData = True
 
-        errorDialog = QMessageBox(self)
-        errorDialog.setWindowTitle("Hiba!")
-
         if len(username) == 0:
             logger.error("Nem adott meg felhasználónevet!")
-            errorMessage = "Nem adott meg felhasználónevet!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("Nem adott meg felhasználónevet!")
             saveData = False
 
         if len(userAge) == 0:
             logger.error("Nem adott meg életkort!")
-            errorMessage = "Nem adott meg életkort!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("Nem adott meg életkort!")
             saveData = False
 
         if convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
                 logger.error("Nem adható meg ilyen életkor!")
-                errorMessage = "Nem adható meg ilyen életkor!"
-                errorDialog.setIcon(QMessageBox.Icon.Critical)
-                errorDialog.setText(errorMessage)
-                errorDialog.exec()
+                self.errorMessage("Nem adható meg ilyen életkor!")
                 saveData = False
 
         if not convertibleToInt(userAge):
             logger.error("Nem egész szám a megadott életkor!")
-            errorMessage = "Nem egész szám a megadott életkor!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("Nem egész szám a megadott életkor!")
             saveData = False
 
         if len(password1) == 0 or len(password2) == 0:
             logger.error("Jelszó mező nincs kitöltve!")
-            errorMessage = "Jelszó mező nincs kitöltve!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("Jelszó mező nincs kitöltve!")
             saveData = False
 
         if password1 != password2:
             logger.error("A jelszavak nem egyeznek!")
-            errorMessage = "A jelszavak nem egyeznek!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("A jelszavak nem egyeznek!")
             saveData = False
 
         if chkPwd == 0:
             logger.error("A jelszó nem megfelelő erősségű!")
-            errorMessage = "A jelszó nem megfelelő erősségű!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("A jelszó nem megfelelő erősségű!")
             saveData = False
 
         if saveData:
@@ -179,10 +155,7 @@ class RegisterAccountUI(QMainWindow):
                     self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
-                    errorMessage = "A megadott felhasználónév foglalt!"
-                    errorDialog.setIcon(QMessageBox.Icon.Critical)
-                    errorDialog.setText(errorMessage)
-                    errorDialog.exec()
+                    self.errorMessage("A megadott felhasználónév foglalt!")
 
             else:
                 if createAccount(username, int(userAge), password2, self.imagePath):
@@ -193,10 +166,7 @@ class RegisterAccountUI(QMainWindow):
                     self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
-                    errorMessage = "A megadott felhasználónév foglalt!"
-                    errorDialog.setIcon(QMessageBox.Icon.Critical)
-                    errorDialog.setText(errorMessage)
-                    errorDialog.exec()
+                    self.errorMessage("A megadott felhasználónév foglalt!")
 
     def setPwd1Color(self):
         password = self.inputPwd1.text().strip()
@@ -233,6 +203,13 @@ class RegisterAccountUI(QMainWindow):
             self.registerWindow = registerSuccess.RegisterSuccessUI(self)
         self.registerWindow.show()
         logger.info("Sikeres regisztráció ablak megnyitása.")
+
+    def errorMessage(self, message):
+        errorDialog = QMessageBox(self)
+        errorDialog.setWindowTitle("Hiba!")
+        errorDialog.setIcon(QMessageBox.Icon.Critical)
+        errorDialog.setText(message)
+        errorDialog.exec()
 
 
 def convertibleToInt(variable):
