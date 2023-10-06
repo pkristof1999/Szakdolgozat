@@ -165,6 +165,7 @@ class RegisterAccountUI(QMainWindow):
                 if createAccount(username, int(userAge), password2, newImagePath):
                     createAccount(username, int(userAge), password2, newImagePath)
                     logger.info("Sikeres regisztráció!")
+                    self.setRegisterDataToDefault()
                     self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
@@ -178,6 +179,7 @@ class RegisterAccountUI(QMainWindow):
                     createAccount(username, int(userAge), password2, self.imagePath)
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
+                    self.setRegisterDataToDefault()
                     self.openRegisterSuccessUI()
                 else:
                     logger.error("A megadott felhasználónév foglalt!")
@@ -185,6 +187,13 @@ class RegisterAccountUI(QMainWindow):
                     errorDialog.setIcon(QMessageBox.Icon.Critical)
                     errorDialog.setText(errorMessage)
                     errorDialog.exec()
+
+    def setRegisterDataToDefault(self):
+        self.loadDefaultImage()
+        self.inputUserName.setText("")
+        self.inputUserAge.setText("")
+        self.inputPwd1.setText("")
+        self.inputPwd2.setText("")
 
 
 def convertibleToInt(variable):
