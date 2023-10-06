@@ -86,6 +86,8 @@ class RegisterAccountUI(QMainWindow):
         self.inputUserAge.setText("")
         self.inputPwd1.setText("")
         self.inputPwd2.setText("")
+        self.inputPwd1.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.inputPwd2.setStyleSheet("background-color: rgb(255, 255, 255);")
 
     def registerUser(self):
         username = self.inputUserName.text().strip()
@@ -212,8 +214,9 @@ class RegisterAccountUI(QMainWindow):
     def setPwd2Color(self):
         password1 = self.inputPwd1.text().strip()
         password2 = self.inputPwd2.text().strip()
+        chkPwd = checkPwdStrenght.calculateStrength(password1)
 
-        if password1 != password2:
+        if password1 != password2 or chkPwd == 0:
             self.inputPwd2.setStyleSheet("background-color: rgb(255, 173, 173);")
         else:
             self.inputPwd2.setStyleSheet("background-color: rgb(167, 255, 111);")
