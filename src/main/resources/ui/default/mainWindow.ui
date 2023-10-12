@@ -13,18 +13,21 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>10</y>
+      <y>0</y>
       <width>411</width>
-      <height>441</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: lightgrey;</string>
+     <string notr="true"/>
     </property>
     <widget class="QPushButton" name="learningGameButton">
      <property name="geometry">
@@ -87,22 +90,22 @@
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>211</width>
-      <height>441</height>
+      <x>0</x>
+      <y>0</y>
+      <width>221</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: grey;</string>
+     <string notr="true">background-color: rgb(100, 100, 200);</string>
     </property>
     <widget class="QFrame" name="profilePicture">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>191</width>
-       <height>209</height>
+       <width>201</width>
+       <height>201</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -116,8 +119,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>260</y>
-       <width>191</width>
+       <y>320</y>
+       <width>201</width>
        <height>27</height>
       </rect>
      </property>
@@ -135,8 +138,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>290</y>
-       <width>191</width>
+       <y>350</y>
+       <width>201</width>
        <height>27</height>
       </rect>
      </property>
@@ -154,8 +157,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>320</y>
-       <width>191</width>
+       <y>380</y>
+       <width>201</width>
        <height>27</height>
       </rect>
      </property>
@@ -173,8 +176,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>350</y>
-       <width>191</width>
+       <y>410</y>
+       <width>201</width>
        <height>27</height>
       </rect>
      </property>
@@ -192,8 +195,8 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>230</y>
-       <width>191</width>
+       <y>290</y>
+       <width>201</width>
        <height>27</height>
       </rect>
      </property>
@@ -205,6 +208,19 @@
      </property>
      <property name="text">
       <string>Profil</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="usernameLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
