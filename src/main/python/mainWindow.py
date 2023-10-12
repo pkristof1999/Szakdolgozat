@@ -2,8 +2,9 @@ import os
 import json
 
 from PyQt6 import QtCore
+from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
@@ -16,6 +17,7 @@ class MainWindowUI(QMainWindow):
 
         self.username = username
 
+        self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.profileButton = self.findChild(QPushButton, "profileButton")
         self.resultsButton = self.findChild(QPushButton, "resultsButton")
         self.settingsButton = self.findChild(QPushButton, "settingsButton")
@@ -32,7 +34,9 @@ class MainWindowUI(QMainWindow):
         self.exitButton.clicked.connect(self.exitApp)
 
         self.imagePath = self.getImagePath(username)
-        print(self.imagePath)
+        self.label = QLabel(self.profilePicture)
+
+        self.loadImage(self.imagePath)
 
     def getImagePath(self, username):
         dataPath = "../../../userdata/profiles/profiles.json"
@@ -42,12 +46,16 @@ class MainWindowUI(QMainWindow):
                 with open(dataPath, 'r') as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
-                    return existingAccounts[username]["ProfilePicturePath"]
+                    if "avatar" in existingAccounts[username]["ProfilePicturePath"]:
+                        return "../../" + existingAccounts[username]["ProfilePicturePath"]
+                    else:
+                        return existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
             print("Hiba: ", e)
 
-    """def loadImage(self, imagePath):
+    def loadImage(self, imagePath):
+        print(imagePath)
         pixmap = QPixmap(imagePath)
 
         frameSize = self.profilePicture.size()
@@ -56,7 +64,7 @@ class MainWindowUI(QMainWindow):
 
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)"""
+        self.label.setPixmap(pixmap)
 
     def logOut(self):
         if not self.loginWindow:
