@@ -10,7 +10,7 @@ from src.main.python.components.logger import *
 class WelcomeUI(QMainWindow):
     def __init__(self):
         super(WelcomeUI, self).__init__()
-        loadUi("../resources/ui/welcomeScreen.ui", self)
+        loadUi(f"../resources/ui/default/welcomeScreen.ui", self)
 
         self.loginButton = self.findChild(QPushButton, "loginButton")
         self.registerButton = self.findChild(QPushButton, "registerButton")

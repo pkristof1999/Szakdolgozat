@@ -13,7 +13,8 @@ from src.main.python.components.logger import *
 class MainWindowUI(QMainWindow):
     def __init__(self, username):
         super(MainWindowUI, self).__init__()
-        loadUi("../resources/ui/mainWindow.ui", self)
+        default = "default"
+        loadUi(f"../resources/ui/{default}/mainWindow.ui", self)
 
         self.username = username
 

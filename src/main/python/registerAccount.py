@@ -18,7 +18,7 @@ from src.main.python.components.logger import *
 class RegisterAccountUI(QMainWindow):
     def __init__(self):
         super(RegisterAccountUI, self).__init__()
-        loadUi("../resources/ui/registerAccount.ui", self)
+        loadUi("../resources/ui/default/registerAccount.ui", self)
 
         self.backButton = self.findChild(QPushButton, "backButton")
         self.registerButton = self.findChild(QPushButton, "registerButton")

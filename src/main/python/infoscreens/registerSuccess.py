@@ -8,7 +8,7 @@ from src.main.python.components.logger import *
 class RegisterSuccessUI(QMainWindow):
     def __init__(self, parent):
         super(RegisterSuccessUI, self).__init__()
-        loadUi("../resources/ui/registerSuccess.ui", self)
+        loadUi("../resources/ui/default/registerSuccess.ui", self)
 
         self.toLoginScreenButton = self.findChild(QPushButton, "toLoginScreenButton")
         self.newRegisterButton = self.findChild(QPushButton, "newRegisterButton")

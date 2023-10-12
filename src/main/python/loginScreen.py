@@ -14,7 +14,7 @@ from src.main.python.components.securePwd import checkPassword
 class LoginScreenUI(QMainWindow):
     def __init__(self):
         super(LoginScreenUI, self).__init__()
-        loadUi("../resources/ui/loginScreen.ui", self)
+        loadUi("../resources/ui/default/loginScreen.ui", self)
 
         self.userNameBox = self.findChild(QComboBox, "userNameBox")
         self.inputPwd = self.findChild(QLineEdit, "inputPwd")
