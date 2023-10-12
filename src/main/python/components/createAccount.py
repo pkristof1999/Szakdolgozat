@@ -9,7 +9,18 @@ def createAccount(username, userAge, password, profilePicturePath):
         username: {
             "UserAge": userAge,
             "Password": encodePassword(password),
-            "ProfilePicturePath": profilePicturePath
+            "ProfilePicturePath": profilePicturePath,
+            "LearnMedal": 0,
+            "QuizMedal": 0,
+            "EmailMedal": 0,
+            "badge01": 0,
+            "badge02": 0,
+            "badge03": 0,
+            "badge04": 0,
+            "badge05": 0,
+            "badge06": 0,
+            "Score": 0,
+            "Theme": "default"
         }
     }
 
