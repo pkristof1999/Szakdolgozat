@@ -1,15 +1,20 @@
-import sys
+import os
+import json
 
+from PyQt6 import QtCore
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QApplication
+from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python import loginScreen
+from src.main.python.components import logger
 
 
 class MainWindowUI(QMainWindow):
-    def __init__(self):
+    def __init__(self, username):
         super(MainWindowUI, self).__init__()
         loadUi("../resources/ui/mainWindow.ui", self)
+
+        self.username = username
 
         self.profileButton = self.findChild(QPushButton, "profileButton")
         self.resultsButton = self.findChild(QPushButton, "resultsButton")
@@ -26,11 +31,38 @@ class MainWindowUI(QMainWindow):
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.exitApp)
 
+        self.imagePath = self.getImagePath(username)
+        print(self.imagePath)
+
+    def getImagePath(self, username):
+        dataPath = "../../../userdata/profiles/profiles.json"
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+                    return existingAccounts[username]["ProfilePicturePath"]
+
+        except Exception as e:
+            print("Hiba: ", e)
+
+    """def loadImage(self, imagePath):
+        pixmap = QPixmap(imagePath)
+
+        frameSize = self.profilePicture.size()
+        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                               QtCore.Qt.TransformationMode.SmoothTransformation)
+
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label.setGeometry(self.profilePicture.rect())
+        self.label.setPixmap(pixmap)"""
+
     def logOut(self):
         if not self.loginWindow:
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
-        # logger.info("Bejelentkezési képernyő megnyitásra került!")
+        logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.close()
 
     def exitApp(self):

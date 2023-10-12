@@ -85,7 +85,7 @@ class LoginScreenUI(QMainWindow):
         else:
             if checkPassword(inputPassword, storedPassword):
                 logger.info("Sikeres bejelentkezés!")
-                self.openMainUI()
+                self.openMainUI(username)
             else:
                 logger.error("Sikertelen bejelentkezés!")
                 errorDialog = QMessageBox(self)
@@ -95,9 +95,9 @@ class LoginScreenUI(QMainWindow):
                 errorDialog.setText(errorMessage)
                 errorDialog.exec()
 
-    def openMainUI(self):
+    def openMainUI(self, username):
         if not self.appMainWindow:
-            self.appMainWindow = mainWindow.MainWindowUI()
+            self.appMainWindow = mainWindow.MainWindowUI(username)
         self.appMainWindow.show()
         logger.info("Továbblépés a fő felületre.")
         self.hide()
