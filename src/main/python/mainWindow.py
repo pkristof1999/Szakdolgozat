@@ -6,7 +6,7 @@ from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python import loginScreen
-from src.main.python.components import logger
+from src.main.python.components.logger import *
 
 
 class MainWindowUI(QMainWindow):
@@ -62,8 +62,9 @@ class MainWindowUI(QMainWindow):
         if not self.loginWindow:
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
+        logger.info("Sikeres kijelentkezés!")
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.close()
+        self.hide()
 
     def exitApp(self):
         exit()
