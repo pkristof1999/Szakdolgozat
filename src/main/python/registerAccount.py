@@ -1,10 +1,11 @@
-import datetime
 import shutil
+import random
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
+from datetime import datetime
 
 from src.main.python import welcomeScreen
 from src.main.python.infoscreens import registerSuccess
@@ -132,8 +133,9 @@ class RegisterAccountUI(QMainWindow):
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":
-                currentTime = datetime.datetime.now().time()
-                formattedTime = currentTime.strftime("%H%M%S")
+                randomNumber = random.randint(1000, 9999)
+                currentTime = datetime.now()
+                formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
                 pictureDirectory = "../../../userdata/profiles/profilepicture"
                 os.makedirs(pictureDirectory, exist_ok=True)
