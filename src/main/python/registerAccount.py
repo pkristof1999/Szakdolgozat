@@ -82,15 +82,6 @@ class RegisterAccountUI(QMainWindow):
         self.label.setPixmap(pixmap)
         logger.info("Alap profilkép betöltésre került!")
 
-    def setRegisterDataToDefault(self):
-        self.loadDefaultImage()
-        self.inputUserName.setText("")
-        self.inputUserAge.setText("")
-        self.inputPwd1.setText("")
-        self.inputPwd2.setText("")
-        self.inputPwd1.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.inputPwd2.setStyleSheet("background-color: rgb(255, 255, 255);")
-
     def registerUser(self):
         username = self.inputUserName.text().strip()
         userAge = self.inputUserAge.text().strip()
@@ -147,7 +138,6 @@ class RegisterAccountUI(QMainWindow):
                 if createAccount(username, int(userAge), password2, newImagePath):
                     createAccount(username, int(userAge), password2, newImagePath)
                     logger.info("Sikeres regisztráció!")
-                    self.setRegisterDataToDefault()
                     self.openRegisterSuccessUI()
                 else:
                     self.errorMessage("A megadott felhasználónév foglalt!")
@@ -157,7 +147,6 @@ class RegisterAccountUI(QMainWindow):
                     createAccount(username, int(userAge), password2, self.imagePath)
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
-                    self.setRegisterDataToDefault()
                     self.openRegisterSuccessUI()
                 else:
                     self.errorMessage("A megadott felhasználónév foglalt!")
@@ -194,9 +183,10 @@ class RegisterAccountUI(QMainWindow):
 
     def openRegisterSuccessUI(self):
         if not self.registerWindow:
-            self.registerWindow = registerSuccess.RegisterSuccessUI(self)
+            self.registerWindow = registerSuccess.RegisterSuccessUI()
         self.registerWindow.show()
         logger.info("Sikeres regisztráció ablak megnyitása.")
+        self.hide()
 
     def errorMessage(self, message):
         logger.error(message)
