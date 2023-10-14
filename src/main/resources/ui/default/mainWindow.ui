@@ -7,27 +7,36 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>480</height>
+    <height>472</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">* {
+	background-color: #8f8f91;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>0</y>
+      <y>10</y>
       <width>411</width>
-      <height>461</height>
+      <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">* {
+	background-color: white;
+    border: 2px solid #8f8f91;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}</string>
     </property>
     <widget class="QPushButton" name="learningGameButton">
      <property name="geometry">
@@ -41,8 +50,20 @@
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Tanulós mód</string>
@@ -60,8 +81,20 @@
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Kvíz</string>
@@ -79,8 +112,20 @@
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>E-mail</string>
@@ -90,23 +135,33 @@
    <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>221</width>
-      <height>461</height>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(100, 100, 200);</string>
+     <string notr="true">* {
+	background-color: rgb(100, 100, 200);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}</string>
     </property>
     <widget class="QFrame" name="profilePicture">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>201</width>
-       <height>201</height>
+       <width>191</width>
+       <height>191</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 0px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -119,16 +174,28 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>320</y>
-       <width>201</width>
+       <y>310</y>
+       <width>191</width>
        <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Eredmények</string>
@@ -138,16 +205,28 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>350</y>
-       <width>201</width>
+       <y>340</y>
+       <width>191</width>
        <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Beállítások</string>
@@ -157,16 +236,28 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>380</y>
-       <width>201</width>
+       <y>370</y>
+       <width>191</width>
        <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Kijelentkezés</string>
@@ -176,16 +267,28 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>410</y>
-       <width>201</width>
+       <y>400</y>
+       <width>191</width>
        <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Kilépés</string>
@@ -195,16 +298,28 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>290</y>
-       <width>201</width>
+       <y>280</y>
+       <width>191</width>
        <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>12</pointsize>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Profil</string>
@@ -215,13 +330,16 @@
       <rect>
        <x>10</x>
        <y>220</y>
-       <width>201</width>
+       <width>191</width>
        <height>41</height>
       </rect>
      </property>
-     <property name="text">
-      <string/>
+     <property name="styleSheet">
+      <string notr="true">border-style: none; color: white;</string>
      </property>
+     <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     </widget>
    </widget>
   </widget>

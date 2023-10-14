@@ -19,11 +19,14 @@ class MainWindowUI(QMainWindow):
         self.username = username
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
+        self.usernameLabel = self.findChild(QLabel, "usernameLabel")
         self.profileButton = self.findChild(QPushButton, "profileButton")
         self.resultsButton = self.findChild(QPushButton, "resultsButton")
         self.settingsButton = self.findChild(QPushButton, "settingsButton")
         self.logOutButton = self.findChild(QPushButton, "logOutButton")
         self.exitButton = self.findChild(QPushButton, "exitButton")
+
+        self.usernameLabel.setText(f"Üdv, {username}!")
 
         self.learningGameButton = self.findChild(QPushButton, "learningGameButton")
         self.quizGameButton = self.findChild(QPushButton, "quizGameButton")
