@@ -42,9 +42,9 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>70</y>
        <width>370</width>
-       <height>110</height>
+       <height>80</height>
       </rect>
      </property>
      <property name="font">
@@ -73,9 +73,9 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>160</y>
+       <y>180</y>
        <width>370</width>
-       <height>110</height>
+       <height>80</height>
       </rect>
      </property>
      <property name="font">
@@ -106,7 +106,7 @@
        <x>20</x>
        <y>290</y>
        <width>370</width>
-       <height>110</height>
+       <height>80</height>
       </rect>
      </property>
      <property name="font">
@@ -205,7 +205,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>310</y>
+       <y>250</y>
        <width>191</width>
        <height>27</height>
       </rect>
@@ -236,7 +236,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>340</y>
+       <y>310</y>
        <width>191</width>
        <height>27</height>
       </rect>
@@ -267,7 +267,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>370</y>
+       <y>340</y>
        <width>191</width>
        <height>27</height>
       </rect>
@@ -292,37 +292,6 @@
      </property>
      <property name="text">
       <string>Kilépés</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="profileButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>250</y>
-       <width>191</width>
-       <height>27</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Profil</string>
      </property>
     </widget>
     <widget class="QLabel" name="usernameLabel">

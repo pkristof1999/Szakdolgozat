@@ -1,9 +1,8 @@
-import os
 import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
 from src.main.python import loginScreen
@@ -20,7 +19,6 @@ class MainWindowUI(QMainWindow):
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.usernameLabel = self.findChild(QLabel, "usernameLabel")
-        self.profileButton = self.findChild(QPushButton, "profileButton")
         self.resultsButton = self.findChild(QPushButton, "resultsButton")
         self.settingsButton = self.findChild(QPushButton, "settingsButton")
         self.logOutButton = self.findChild(QPushButton, "logOutButton")

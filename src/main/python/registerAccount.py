@@ -156,11 +156,11 @@ class RegisterAccountUI(QMainWindow):
         chkPwd = checkPwdStrenght.calculateStrength(password)
 
         if chkPwd == 0:
-            self.inputPwd1.setStyleSheet("background-color: rgb(255, 173, 173);")
+            self.inputPwd1.setStyleSheet(checkPwdStrenght.changeColor("red"))
         elif 0 < chkPwd < 5:
-            self.inputPwd1.setStyleSheet("background-color: rgb(255, 203, 111);")
+            self.inputPwd1.setStyleSheet(checkPwdStrenght.changeColor("orange"))
         elif chkPwd >= 5:
-            self.inputPwd1.setStyleSheet("background-color: rgb(167, 255, 111);")
+            self.inputPwd1.setStyleSheet(checkPwdStrenght.changeColor("green"))
 
         self.setPwd2Color()
 
@@ -170,9 +170,9 @@ class RegisterAccountUI(QMainWindow):
         chkPwd = checkPwdStrenght.calculateStrength(password1)
 
         if password1 != password2 or chkPwd == 0:
-            self.inputPwd2.setStyleSheet("background-color: rgb(255, 173, 173);")
+            self.inputPwd2.setStyleSheet(checkPwdStrenght.changeColor("red"))
         else:
-            self.inputPwd2.setStyleSheet("background-color: rgb(167, 255, 111);")
+            self.inputPwd2.setStyleSheet(checkPwdStrenght.changeColor("green"))
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:

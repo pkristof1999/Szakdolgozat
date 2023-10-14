@@ -28,6 +28,28 @@ class LoginScreenUI(QMainWindow):
         lineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         lineEdit.setReadOnly(True)
 
+        self.userNameBox.setStyleSheet("""
+            * {
+                background-color: white;
+                border: 2px solid #8f8f91;
+                border-radius: 10px;
+                color: grey;
+                box-shadow: none;
+            }
+            
+            *::drop-down {
+                border: none;
+                box-shadow: none;
+                right: 8px;
+            }
+            
+            *::down-arrow {
+                image: url("../resources/pictures/Arrow.png");
+                width: 16px;
+                height: 16px;
+                box-shadow: none;
+            }""")
+
         self.welcomeWindow = None
         self.appMainWindow = None
         self.loginSuccess = False

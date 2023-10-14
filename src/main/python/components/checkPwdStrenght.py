@@ -27,3 +27,30 @@ def calculateStrength(password):
         strength += 2
 
     return strength
+
+
+def changeColor(color):
+    if color == "red":
+        return """* {
+                    font-size: 16px;
+                    background-color: rgb(255, 173, 173);
+                    border: 2px solid #8f8f91;
+                    border-radius: 10px;
+                    color: grey;
+                    }"""
+    elif color == "orange":
+        return """* {
+                    font-size: 16px;
+                    background-color: rgb(255, 203, 111);
+                    border: 2px solid #8f8f91;
+                    border-radius: 10px;
+                    color: grey;
+                    }"""
+    elif color == "green":
+        return """* {
+                    font-size: 16px;
+                    background-color: rgb(167, 255, 111);
+                    border: 2px solid #8f8f91;
+                    border-radius: 10px;
+                    color: grey;
+                    }"""
