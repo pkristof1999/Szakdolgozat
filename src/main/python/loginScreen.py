@@ -24,8 +24,6 @@ class LoginScreenUI(QMainWindow):
 
         """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
            This is here because I couldn't align the QComboBox's content to center elsewhere."""
-        self.userNameBox.setEditable(True)
-
         clickableLineEdit = clickableComboBox.ClickableLineEdit(self.userNameBox)
 
         self.userNameBox.setLineEdit(clickableLineEdit)
