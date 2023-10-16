@@ -8,6 +8,7 @@ from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox, QMessageBox
 
 from src.main.python.components.logger import *
+from src.main.python.components import clickableComboBox
 from src.main.python.components.securePwd import checkPassword
 
 
@@ -24,9 +25,12 @@ class LoginScreenUI(QMainWindow):
         """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
            This is here because I couldn't align the QComboBox's content to center elsewhere."""
         self.userNameBox.setEditable(True)
-        lineEdit = self.userNameBox.lineEdit()
-        lineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        lineEdit.setReadOnly(True)
+
+        clickableLineEdit = clickableComboBox.ClickableLineEdit(self.userNameBox)
+
+        self.userNameBox.setLineEdit(clickableLineEdit)
+        clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        clickableLineEdit.setReadOnly(True)
 
         self.userNameBox.setStyleSheet("""
             * {
@@ -34,12 +38,10 @@ class LoginScreenUI(QMainWindow):
                 border: 2px solid #8f8f91;
                 border-radius: 10px;
                 color: grey;
-                box-shadow: none;
             }
             
             *::drop-down {
-                border: none;
-                box-shadow: none;
+                border: thin solid grey;
                 right: 8px;
             }
             
@@ -47,7 +49,6 @@ class LoginScreenUI(QMainWindow):
                 image: url("../resources/pictures/Arrow.png");
                 width: 16px;
                 height: 16px;
-                box-shadow: none;
             }""")
 
         self.welcomeWindow = None
