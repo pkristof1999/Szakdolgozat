@@ -7,6 +7,7 @@ from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
+from src.main.python.infoscreens import areYouSure
 
 
 class SettingsWindowUI(QMainWindow):
@@ -27,6 +28,8 @@ class SettingsWindowUI(QMainWindow):
         self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
         self.abortButton = self.findChild(QPushButton, "abortButton")
         self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
+
+        self.questionWindow = None
 
         """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
            This is here because I couldn't align the QComboBox's content to center elsewhere."""
@@ -55,7 +58,8 @@ class SettingsWindowUI(QMainWindow):
                         height: 16px;
                     }""")
 
-        self.deleteProfilePictureButton.clicked.connect(self.loadDefaultImage)
+        self.deleteProfilePictureButton.clicked.connect(lambda: self.openQuestionWindow("Biztos benne, hogy törli\n"
+                                                                                        "a profilképet?"))
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
         self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
@@ -103,6 +107,11 @@ class SettingsWindowUI(QMainWindow):
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
         logger.info("Alap profilkép betöltésre került!")
+
+    def openQuestionWindow(self, question):
+        if not self.questionWindow:
+            self.questionWindow = areYouSure.AreYouSureUI(question)
+        self.questionWindow.show()
 
     def abortAndCloseSettings(self):
         self.close()
