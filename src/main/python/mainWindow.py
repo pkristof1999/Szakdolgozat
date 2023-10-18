@@ -2,7 +2,7 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QMessageBox
 from PyQt6.uic import loadUi
 
 from src.main.python import loginScreen
@@ -54,7 +54,7 @@ class MainWindowUI(QMainWindow):
                         return existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
-            print("Hiba: ", e)
+            self.errorMessage(f"Hiba: {e}")
 
     def loadImage(self, imagePath):
         print(imagePath)
@@ -78,3 +78,11 @@ class MainWindowUI(QMainWindow):
 
     def exitApp(self):
         exit()
+
+    def errorMessage(self, message):
+        logger.error(message)
+        errorDialog = QMessageBox(self)
+        errorDialog.setWindowTitle("Hiba!")
+        errorDialog.setIcon(QMessageBox.Icon.Critical)
+        errorDialog.setText(message)
+        errorDialog.exec()

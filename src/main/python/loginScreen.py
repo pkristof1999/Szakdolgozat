@@ -77,7 +77,7 @@ class LoginScreenUI(QMainWindow):
                 self.userNameBox.addItem("Regisztráljon!")
 
         except Exception as e:
-            print("Hiba: ", e)
+            self.errorMessage(f"Hiba: {e}")
 
     def authenticateUser(self):
         dataPath = "../../../userdata/profiles/profiles.json"
@@ -93,28 +93,16 @@ class LoginScreenUI(QMainWindow):
                     storedPassword = existingAccounts[username]["Password"]
 
         except Exception as e:
-            print("Hiba: ", e)
+            self.errorMessage(f"Hiba: {e}")
 
         if self.userNameBox.currentText() == "Regisztráljon!":
-            logger.error("Sikertelen bejelentkezés!")
-            errorDialog = QMessageBox(self)
-            errorDialog.setWindowTitle("Hiba!")
-            errorMessage = "Nincs regisztrált felhasználó!"
-            errorDialog.setIcon(QMessageBox.Icon.Critical)
-            errorDialog.setText(errorMessage)
-            errorDialog.exec()
+            self.errorMessage("Nincs regisztrált felhasználó!")
         else:
             if checkPassword(inputPassword, storedPassword):
                 logger.info("Sikeres bejelentkezés!")
                 self.openMainUI(username)
             else:
-                logger.error("Sikertelen bejelentkezés!")
-                errorDialog = QMessageBox(self)
-                errorDialog.setWindowTitle("Hiba!")
-                errorMessage = "A megadott jelszó hibás!"
-                errorDialog.setIcon(QMessageBox.Icon.Critical)
-                errorDialog.setText(errorMessage)
-                errorDialog.exec()
+                self.errorMessage("A megadott jelszó hibás!")
 
     def openMainUI(self, username):
         if not self.appMainWindow:
@@ -129,3 +117,11 @@ class LoginScreenUI(QMainWindow):
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
         self.hide()
+
+    def errorMessage(self, message):
+        logger.error(message)
+        errorDialog = QMessageBox(self)
+        errorDialog.setWindowTitle("Hiba!")
+        errorDialog.setIcon(QMessageBox.Icon.Critical)
+        errorDialog.setText(message)
+        errorDialog.exec()

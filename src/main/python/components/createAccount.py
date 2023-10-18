@@ -1,6 +1,6 @@
-import os
 import json
 
+from src.main.python.components.logger import *
 from src.main.python.components.securePwd import encodePassword
 
 
@@ -48,4 +48,4 @@ def createAccount(username, userAge, password, profilePicturePath):
         return True
 
     except Exception as e:
-        print("Hiba: ", e)
+        logger.info(f"Hiba: {e}")
