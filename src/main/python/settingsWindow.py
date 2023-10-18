@@ -17,6 +17,15 @@ class SettingsWindowUI(QMainWindow):
         self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
         self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
         self.changeTheme = self.findChild(QComboBox, "changeTheme")
-        self.closeButton = self.findChild(QPushButton, "closeButton")
+        self.abortButton = self.findChild(QPushButton, "abortButton")
+        self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
 
-        self.closeButton.clicked.connect(self.close())
+        self.abortButton.clicked.connect(self.abortAndCloseSettings)
+        self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
+
+    def abortAndCloseSettings(self):
+        self.close()
+
+    def saveAndCloseSettings(self):
+        self.close()
+        # TODO

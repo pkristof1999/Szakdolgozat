@@ -5,6 +5,7 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QMessageBox
 from PyQt6.uic import loadUi
 
+from src.main.python import settingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
 
@@ -31,7 +32,9 @@ class MainWindowUI(QMainWindow):
         self.emailGameButton = self.findChild(QPushButton, "emailGameButton")
 
         self.loginWindow = None
+        self.settingsWindow = None
 
+        self.settingsButton.clicked.connect(self.openSettings)
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.exitApp)
 
@@ -67,6 +70,11 @@ class MainWindowUI(QMainWindow):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
+
+    def openSettings(self):
+        if not self.settingsWindow:
+            self.settingsWindow = settingsWindow.SettingsWindowUI(self)
+        self.settingsWindow.show()
 
     def logOut(self):
         if not self.loginWindow:

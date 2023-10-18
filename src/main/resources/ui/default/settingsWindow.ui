@@ -241,12 +241,12 @@
       <string>Profilkép törlése</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="closeButton">
+    <widget class="QPushButton" name="saveAndCloseButton">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>180</x>
        <y>550</y>
-       <width>171</width>
+       <width>141</width>
        <height>30</height>
       </rect>
      </property>
@@ -264,7 +264,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>Bezárás</string>
+      <string>Mentés</string>
      </property>
     </widget>
     <widget class="QPushButton" name="changePasswordButton">
@@ -296,6 +296,32 @@
      </property>
      <property name="text">
       <string>Jelszóváltás</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="abortButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>550</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Mégse</string>
      </property>
     </widget>
    </widget>
