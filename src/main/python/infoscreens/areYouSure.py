@@ -1,8 +1,11 @@
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
+from PyQt6.QtCore import pyqtSignal
 
 
 class AreYouSureUI(QMainWindow):
+    finished = pyqtSignal(str)
+
     def __init__(self, question):
         super(AreYouSureUI, self).__init__()
         loadUi("../resources/ui/default/areYouSure.ui", self)
@@ -17,7 +20,9 @@ class AreYouSureUI(QMainWindow):
         self.yesButton.clicked.connect(self.yesButtonClick)
 
     def noButtonClick(self):
+        self.finished.emit("No")
         self.close()
 
     def yesButtonClick(self):
+        self.finished.emit("Yes")
         self.close()

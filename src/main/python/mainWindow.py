@@ -74,6 +74,7 @@ class MainWindowUI(QMainWindow):
         if not self.settingsWindow:
             self.settingsWindow = settingsWindow.SettingsWindowUI(self, self.username)
         self.settingsWindow.show()
+        self.settingsWindow = None
 
     def logOut(self):
         if not self.loginWindow:

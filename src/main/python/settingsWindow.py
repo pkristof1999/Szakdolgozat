@@ -2,8 +2,9 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel
+from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog
 from PyQt6.uic import loadUi
+from tkinter import *
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
@@ -17,6 +18,7 @@ class SettingsWindowUI(QMainWindow):
 
         self.parent = parent
         self.username = username
+        self.deletePicture = False
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.changeProfilePictureButton = self.findChild(QPushButton, "changeProfilePictureButton")
@@ -58,8 +60,12 @@ class SettingsWindowUI(QMainWindow):
                         height: 16px;
                     }""")
 
-        self.deleteProfilePictureButton.clicked.connect(lambda: self.openQuestionWindow("Biztos benne, hogy törli\n"
-                                                                                        "a profilképet?"))
+        self.changeProfilePictureButton.clicked.connect(self.addPicture)
+        self.deleteProfilePictureButton.clicked.connect(
+            lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképet?",
+                                            self.handleProfilePictureDeletion
+                                            )
+        )
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
         self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
@@ -68,6 +74,19 @@ class SettingsWindowUI(QMainWindow):
         self.label = QLabel(self.profilePicture)
 
         self.loadImage(self.imagePath)
+
+    def addPicture(self):
+        fileDialog = QFileDialog(self)
+        fileDialog.setNameFilter("Images (*.png *.jpg *.jpeg *.bmp *.gif)")
+        fileDialog.setViewMode(QFileDialog.ViewMode.List)
+        fileDialog.setFileMode(QFileDialog.FileMode.ExistingFile)
+
+        if fileDialog.exec() == QFileDialog.DialogCode.Accepted:
+            selectedFiles = fileDialog.selectedFiles()
+            if selectedFiles:
+                self.imagePath = selectedFiles[0]
+                self.loadImage(self.imagePath)
+                logger.info("Új profilkép kiválasztásra került!")
 
     def getImagePath(self, username):
         dataPath = "../../../userdata/profiles/profiles.json"
@@ -108,10 +127,16 @@ class SettingsWindowUI(QMainWindow):
         self.label.setPixmap(pixmap)
         logger.info("Alap profilkép betöltésre került!")
 
-    def openQuestionWindow(self, question):
+    def openQuestionWindow(self, question, handler):
         if not self.questionWindow:
             self.questionWindow = areYouSure.AreYouSureUI(question)
+
+        self.questionWindow.finished.connect(handler)
         self.questionWindow.show()
+
+    def handleProfilePictureDeletion(self, result):
+        if result == "Yes":
+            self.loadDefaultImage()
 
     def abortAndCloseSettings(self):
         self.close()
