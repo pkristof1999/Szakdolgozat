@@ -60,7 +60,6 @@ class MainWindowUI(QMainWindow):
             self.errorMessage(f"Hiba: {e}")
 
     def loadImage(self, imagePath):
-        print(imagePath)
         pixmap = QPixmap(imagePath)
 
         frameSize = self.profilePicture.size()
@@ -73,7 +72,7 @@ class MainWindowUI(QMainWindow):
 
     def openSettings(self):
         if not self.settingsWindow:
-            self.settingsWindow = settingsWindow.SettingsWindowUI(self)
+            self.settingsWindow = settingsWindow.SettingsWindowUI(self, self.username)
         self.settingsWindow.show()
 
     def logOut(self):
