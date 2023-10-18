@@ -2,9 +2,8 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog
+from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit
 from PyQt6.uic import loadUi
-from tkinter import *
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
@@ -16,15 +15,13 @@ class SettingsWindowUI(QMainWindow):
         super(SettingsWindowUI, self).__init__()
         loadUi("../resources/ui/default/settingsWindow.ui", self)
 
-        self.parent = parent
-        self.username = username
-        self.deletePicture = False
-
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.changeProfilePictureButton = self.findChild(QPushButton, "changeProfilePictureButton")
         self.deleteProfilePictureButton = self.findChild(QPushButton, "deleteProfilePictureButton")
-        self.changeUserAgeButton = self.findChild(QPushButton, "changeUserAgeButton")
-        self.changePasswordButton = self.findChild(QPushButton, "changePasswordButton")
+        self.changeUserAge = self.findChild(QLineEdit, "changeUserAge")
+        self.oldPassword = self.findChild(QLineEdit, "oldPassword")
+        self.newPassword1 = self.findChild(QLineEdit, "newPassword1")
+        self.newPassword2 = self.findChild(QLineEdit, "newPassword2")
         self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
         self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
         self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
@@ -74,6 +71,7 @@ class SettingsWindowUI(QMainWindow):
         self.label = QLabel(self.profilePicture)
 
         self.loadImage(self.imagePath)
+        self.loadUserAge(username)
 
     def addPicture(self):
         fileDialog = QFileDialog(self)
@@ -126,6 +124,21 @@ class SettingsWindowUI(QMainWindow):
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
         logger.info("Alap profilkép betöltésre került!")
+
+    def loadUserAge(self, username):
+        dataPath = "../../../userdata/profiles/profiles.json"
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+                    storedUserAge = existingAccounts[username]["UserAge"]
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
+
+        self.changeUserAge.setText(str(storedUserAge))
 
     def openQuestionWindow(self, question, handler):
         if not self.questionWindow:
