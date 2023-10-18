@@ -55,6 +55,8 @@ class SettingsWindowUI(QMainWindow):
                         height: 16px;
                     }""")
 
+        self.deleteProfilePictureButton.clicked.connect(self.loadDefaultImage)
+
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
         self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
 
@@ -89,6 +91,18 @@ class SettingsWindowUI(QMainWindow):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
+
+    def loadDefaultImage(self):
+        pixmap = QPixmap("../resources/pictures/userDefault.png")
+
+        frameSize = self.profilePicture.size()
+        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                               QtCore.Qt.TransformationMode.SmoothTransformation)
+
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label.setGeometry(self.profilePicture.rect())
+        self.label.setPixmap(pixmap)
+        logger.info("Alap profilkép betöltésre került!")
 
     def abortAndCloseSettings(self):
         self.close()
