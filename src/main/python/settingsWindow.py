@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
+from src.main.python.components import clickableComboBox
 
 
 class SettingsWindowUI(QMainWindow):
@@ -23,9 +24,36 @@ class SettingsWindowUI(QMainWindow):
         self.changePasswordButton = self.findChild(QPushButton, "changePasswordButton")
         self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
         self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
-        self.changeTheme = self.findChild(QComboBox, "changeTheme")
+        self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
         self.abortButton = self.findChild(QPushButton, "abortButton")
         self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
+
+        """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
+           This is here because I couldn't align the QComboBox's content to center elsewhere."""
+        clickableLineEdit = clickableComboBox.ClickableLineEdit(self.changeThemeBox)
+
+        self.changeThemeBox.setLineEdit(clickableLineEdit)
+        clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        clickableLineEdit.setReadOnly(True)
+
+        self.changeThemeBox.setStyleSheet("""
+                    * {
+                        background-color: white;
+                        border: 2px solid #8f8f91;
+                        border-radius: 10px;
+                        color: grey;
+                    }
+
+                    *::drop-down {
+                        border: thin solid grey;
+                        right: 8px;
+                    }
+
+                    *::down-arrow {
+                        image: url("../resources/pictures/Arrow.png");
+                        width: 16px;
+                        height: 16px;
+                    }""")
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
         self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
