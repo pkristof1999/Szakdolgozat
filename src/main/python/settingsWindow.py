@@ -216,6 +216,7 @@ class SettingsWindowUI(QMainWindow):
 
     def saveAndCloseSettings(self, username):
         dataPath = "../../../userdata/profiles/profiles.json"
+        newProfilePicturePath = "../resources/pictures/userDefault.png"
 
         userAge = self.changeUserAge.text().strip()
         oldPwd = self.oldPassword.text().strip()
