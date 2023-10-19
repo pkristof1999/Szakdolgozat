@@ -10,12 +10,15 @@ from src.main.python.components import clickableComboBox
 from src.main.python.infoscreens import areYouSure
 from src.main.python.components.checkPwdStrenght import *
 from src.main.python.components.securePwd import *
+from src.main.python.components.overwriteAccount import overwriteAccount as overWrite
 
 
 class SettingsWindowUI(QMainWindow):
     def __init__(self, parent, username):
         super(SettingsWindowUI, self).__init__()
         loadUi("../resources/ui/default/settingsWindow.ui", self)
+
+        self.parent = parent
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.changeProfilePictureButton = self.findChild(QPushButton, "changeProfilePictureButton")
@@ -214,6 +217,7 @@ class SettingsWindowUI(QMainWindow):
     def saveAndCloseSettings(self, username):
         dataPath = "../../../userdata/profiles/profiles.json"
 
+        userAge = self.changeUserAge.text().strip()
         oldPwd = self.oldPassword.text().strip()
         newPwd1 = self.newPassword1.text().strip()
         newPwd2 = self.newPassword2.text().strip()
@@ -250,8 +254,10 @@ class SettingsWindowUI(QMainWindow):
 
         if saveData:
             self.errorMessage("Sikeres mentés :)")
+            overWrite(username, userAge, newPwd1, newProfilePicturePath)
 
-        self.repaint()
+            self.close()
+            self.parent.repaint()
 
     def errorMessage(self, message):
         logger.error(message)
