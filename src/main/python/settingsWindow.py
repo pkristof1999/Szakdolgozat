@@ -2,12 +2,14 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit
+from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit, QMessageBox
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
 from src.main.python.infoscreens import areYouSure
+from src.main.python.components.checkPwdStrenght import *
+from src.main.python.components.securePwd import *
 
 
 class SettingsWindowUI(QMainWindow):
@@ -57,12 +59,19 @@ class SettingsWindowUI(QMainWindow):
                         height: 16px;
                     }""")
 
-        self.changeProfilePictureButton.clicked.connect(self.addPicture)
+        self.changeProfilePictureButton.clicked.connect(
+            lambda: self.openQuestionWindow("Biztosan lecseréli\na profilképét?",
+                                            self.handleProfilePictureChange
+                                            )
+        )
         self.deleteProfilePictureButton.clicked.connect(
             lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképet?",
                                             self.handleProfilePictureDeletion
                                             )
         )
+
+        self.newPassword1.textChanged.connect(self.changeNewPassword1)
+        self.newPassword2.textChanged.connect(self.changeNewPassword2)
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
         self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
@@ -141,6 +150,7 @@ class SettingsWindowUI(QMainWindow):
         self.changeUserAge.setText(str(storedUserAge))
 
     def openQuestionWindow(self, question, handler):
+        self.questionWindow = None
         if not self.questionWindow:
             self.questionWindow = areYouSure.AreYouSureUI(question)
 
@@ -151,10 +161,72 @@ class SettingsWindowUI(QMainWindow):
         if result == "Yes":
             self.loadDefaultImage()
 
+    def handleProfilePictureChange(self, result):
+        if result == "Yes":
+            self.addPicture()
+
+    """def checkOldPassword(self, username):
+        dataPath = "../../userdata/profiles/profiles.json"
+
+        oldPassword = self.oldPassword.text().strip()
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+                    storedPassword = existingAccounts[username]["Password"]
+
+        except Exception as e:
+            self.errorMessage(f"Hiba: {e}")
+
+        if checkPassword(oldPassword, storedPassword):
+            return True
+        else:
+            return False"""
+
+    def changeNewPassword1(self):
+        password = self.newPassword1.text().strip()
+        chkPwd = calculateStrength(password)
+
+        if chkPwd == 0:
+            self.newPassword1.setStyleSheet(changeColor("red"))
+        elif 0 < chkPwd < 5:
+            self.newPassword1.setStyleSheet(changeColor("orange"))
+        elif chkPwd >= 5:
+            self.newPassword1.setStyleSheet(changeColor("green"))
+
+        self.changeNewPassword2()
+
+    def changeNewPassword2(self):
+        password1 = self.newPassword1.text().strip()
+        password2 = self.newPassword2.text().strip()
+        chkPwd = calculateStrength(password1)
+
+        if password1 != password2 or chkPwd == 0:
+            self.newPassword2.setStyleSheet(changeColor("red"))
+        else:
+            self.newPassword2.setStyleSheet(changeColor("green"))
+
     def abortAndCloseSettings(self):
         self.close()
 
     def saveAndCloseSettings(self):
+        if self.oldPassword == "" and self.newPassword1 != "" or self.newPassword2 != "":
+            self.errorMessage("Nem adta meg a régi jelszót!")
+
+        if self.oldPassword != "":
+
+
+
         self.close()
         self.parent.repaint()
         # TODO
+
+    def errorMessage(self, message):
+        logger.error(message)
+        errorDialog = QMessageBox(self)
+        errorDialog.setWindowTitle("Hiba!")
+        errorDialog.setIcon(QMessageBox.Icon.Critical)
+        errorDialog.setText(message)
+        errorDialog.exec()
