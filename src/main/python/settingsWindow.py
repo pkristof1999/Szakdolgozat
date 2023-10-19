@@ -74,7 +74,7 @@ class SettingsWindowUI(QMainWindow):
         self.newPassword2.textChanged.connect(self.changeNewPassword2)
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
-        self.saveAndCloseButton.clicked.connect(self.saveAndCloseSettings)
+        self.saveAndCloseButton.clicked.connect(lambda : self.saveAndCloseSettings(username))
 
         self.imagePath = self.getImagePath(username)
         self.label = QLabel(self.profilePicture)
@@ -211,17 +211,47 @@ class SettingsWindowUI(QMainWindow):
     def abortAndCloseSettings(self):
         self.close()
 
-    def saveAndCloseSettings(self):
-        if self.oldPassword == "" and self.newPassword1 != "" or self.newPassword2 != "":
+    def saveAndCloseSettings(self, username):
+        dataPath = "../../../userdata/profiles/profiles.json"
+
+        oldPwd = self.oldPassword.text().strip()
+        newPwd1 = self.newPassword1.text().strip()
+        newPwd2 = self.newPassword2.text().strip()
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+                    storedPwd = existingAccounts[username]["Password"]
+
+        except Exception as e:
+            self.errorMessage(f"Hiba: {e}")
+
+        saveData = True
+
+        if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
             self.errorMessage("Nem adta meg a régi jelszót!")
+            saveData = False
 
-        if self.oldPassword != "":
+        if oldPwd != "":
+            if not checkPassword(oldPwd, storedPwd):
+                print(checkPassword(oldPwd, storedPwd))
+                self.errorMessage("A régi jelszó nem egyezik!")
+                saveData = False
 
+            if calculateStrength(newPwd1) == 0:
+                self.errorMessage("A jelszó nem megfelelő erősségű!")
+                saveData = False
 
+            if newPwd1 != newPwd2:
+                self.errorMessage("Az új jelszavak nem egyeznek!")
+                saveData = False
 
-        self.close()
-        self.parent.repaint()
-        # TODO
+        if saveData:
+            self.errorMessage("Sikeres mentés :)")
+
+        self.repaint()
 
     def errorMessage(self, message):
         logger.error(message)
