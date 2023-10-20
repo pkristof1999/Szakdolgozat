@@ -11,6 +11,7 @@ from src.main.python.infoscreens import areYouSure
 from src.main.python.components.checkPwdStrenght import *
 from src.main.python.components.securePwd import *
 from src.main.python.components.overwriteAccount import overwriteAccount as overWrite
+from src.main.python.components.isConvertible import convertibleToInt
 
 
 class SettingsWindowUI(QMainWindow):
@@ -215,6 +216,20 @@ class SettingsWindowUI(QMainWindow):
         except Exception as e:
             self.errorMessage(f"Hiba: {e}")
 
+        if len(userAge) == 0:
+            self.errorMessage("Nem adott meg életkort!")
+            saveData = False
+
+        if convertibleToInt(userAge):
+            userAge = int(userAge)
+            if 1 > userAge or 150 < userAge:
+                self.errorMessage("Nem adható meg ilyen életkor!")
+                saveData = False
+
+        if not convertibleToInt(userAge):
+            self.errorMessage("Nem egész szám a megadott életkor!")
+            saveData = False
+
         if oldPwd == "" and newPwd1 == "" and newPwd2 == "":
             newPassword = False
             logger.info("Nem került új jelszó megadásra!")
@@ -243,6 +258,8 @@ class SettingsWindowUI(QMainWindow):
 
         if saveData:
             logger.info("Adatok mentve!")
+
+            """Elég csak a jelszót vizsgálni, mert az titkosított, így nem lehet a beolvasottal egyszerűen felülírni."""
             if newPassword:
                 overWrite(username, userAge, storedPPath, newPwd1)
             else:
