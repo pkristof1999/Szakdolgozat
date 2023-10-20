@@ -168,26 +168,6 @@ class SettingsWindowUI(QMainWindow):
         if result == "Yes":
             self.addPicture()
 
-    """def checkOldPassword(self, username):
-        dataPath = "../../userdata/profiles/profiles.json"
-
-        oldPassword = self.oldPassword.text().strip()
-
-        try:
-            if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
-                    fileContents = jsonFile.read()
-                    existingAccounts = json.loads(fileContents)
-                    storedPassword = existingAccounts[username]["Password"]
-
-        except Exception as e:
-            self.errorMessage(f"Hiba: {e}")
-
-        if checkPassword(oldPassword, storedPassword):
-            return True
-        else:
-            return False"""
-
     def changeNewPassword1(self):
         password = self.newPassword1.text().strip()
         chkPwd = calculateStrength(password)
@@ -218,7 +198,6 @@ class SettingsWindowUI(QMainWindow):
         saveData = True
         newPassword = False
         dataPath = "../../../userdata/profiles/profiles.json"
-        newProfilePicturePath = "../resources/pictures/userDefault.png"
 
         userAge = self.changeUserAge.text().strip()
         oldPwd = self.oldPassword.text().strip()
@@ -231,6 +210,7 @@ class SettingsWindowUI(QMainWindow):
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     storedPwd = existingAccounts[username]["Password"]
+                    storedPPath = existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
             self.errorMessage(f"Hiba: {e}")
@@ -262,13 +242,11 @@ class SettingsWindowUI(QMainWindow):
             newPassword = True
 
         if saveData:
-            self.errorMessage("Sikeres mentés :)")
+            logger.info("Adatok mentve!")
             if newPassword:
-                overWrite(username, userAge, newProfilePicturePath, newPwd1)
-                print("Van új jelszó")
+                overWrite(username, userAge, storedPPath, newPwd1)
             else:
-                overWrite(username, userAge, newProfilePicturePath)
-                print("Nincs új jelszó")
+                overWrite(username, userAge, storedPPath)
 
             self.close()
             self.parent.repaint()
