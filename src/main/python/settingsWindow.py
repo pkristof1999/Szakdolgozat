@@ -215,6 +215,8 @@ class SettingsWindowUI(QMainWindow):
         self.close()
 
     def saveAndCloseSettings(self, username):
+        saveData = True
+        newPassword = False
         dataPath = "../../../userdata/profiles/profiles.json"
         newProfilePicturePath = "../resources/pictures/userDefault.png"
 
@@ -233,29 +235,40 @@ class SettingsWindowUI(QMainWindow):
         except Exception as e:
             self.errorMessage(f"Hiba: {e}")
 
-        saveData = True
-
-        if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
-            self.errorMessage("Nem adta meg a régi jelszót!")
-            saveData = False
-
-        if oldPwd != "":
-            if not checkPassword(oldPwd, storedPwd):
-                print(checkPassword(oldPwd, storedPwd))
-                self.errorMessage("A régi jelszó nem egyezik!")
+        if oldPwd == "" and newPwd1 == "" and newPwd2 == "":
+            newPassword = False
+            logger.info("Nem került új jelszó megadásra!")
+        else:
+            if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
+                self.errorMessage("Nem adta meg a régi jelszót!")
                 saveData = False
 
-            if calculateStrength(newPwd1) == 0:
-                self.errorMessage("A jelszó nem megfelelő erősségű!")
-                saveData = False
+            if oldPwd != "":
+                if not checkPassword(oldPwd, storedPwd):
+                    self.errorMessage("A régi jelszó nem egyezik!")
+                    saveData = False
+                elif oldPwd == newPwd1:
+                    self.errorMessage("Nem adhatja meg újra a régi jelszót!")
+                    saveData = False
 
-            if newPwd1 != newPwd2:
-                self.errorMessage("Az új jelszavak nem egyeznek!")
-                saveData = False
+                if calculateStrength(newPwd1) == 0:
+                    self.errorMessage("A jelszó nem megfelelő erősségű!")
+                    saveData = False
+
+                if newPwd1 != newPwd2:
+                    self.errorMessage("Az új jelszavak nem egyeznek!")
+                    saveData = False
+
+            newPassword = True
 
         if saveData:
             self.errorMessage("Sikeres mentés :)")
-            overWrite(username, userAge, newPwd1, newProfilePicturePath)
+            if newPassword:
+                overWrite(username, userAge, newProfilePicturePath, newPwd1)
+                print("Van új jelszó")
+            else:
+                overWrite(username, userAge, newProfilePicturePath)
+                print("Nincs új jelszó")
 
             self.close()
             self.parent.repaint()
