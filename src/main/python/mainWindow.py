@@ -93,7 +93,7 @@ class MainWindowUI(QMainWindow):
         self.loginWindow.show()
         logger.info("Sikeres kijelentkezés!")
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.hide()
+        self.close()
 
     def refreshWindow(self):
         self.imagePath = self.getImagePath(self.username)

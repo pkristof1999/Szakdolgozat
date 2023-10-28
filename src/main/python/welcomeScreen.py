@@ -26,11 +26,11 @@ class WelcomeUI(QMainWindow):
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.hide()
+        self.close()
 
     def openRegisterUI(self):
         if not self.registerWindow:
             self.registerWindow = registerAccount.RegisterAccountUI()
         self.registerWindow.show()
         logger.info("Regisztrációs képernyő megnyitásra került!")
-        self.hide()
+        self.close()

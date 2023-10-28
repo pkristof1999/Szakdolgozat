@@ -439,4 +439,4 @@ class SettingsWindowUI(QMainWindow):
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.hide()
+        self.close()

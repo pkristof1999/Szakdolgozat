@@ -25,10 +25,10 @@ class RegisterSuccessUI(QMainWindow):
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.hide()
+        self.close()
 
     def showRegisterScreen(self):
         if not self.registerWindow:
             self.registerWindow = registerAccount.RegisterAccountUI()
         self.registerWindow.show()
-        self.hide()
+        self.close()
