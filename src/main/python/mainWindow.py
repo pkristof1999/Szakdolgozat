@@ -13,10 +13,9 @@ from src.main.python.components.logger import *
 class MainWindowUI(QMainWindow):
     def __init__(self, username):
         super(MainWindowUI, self).__init__()
+        self.username = username
         default = "default"
         loadUi(f"../resources/ui/{default}/mainWindow.ui", self)
-
-        self.username = username
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.usernameLabel = self.findChild(QLabel, "usernameLabel")
@@ -38,9 +37,9 @@ class MainWindowUI(QMainWindow):
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.exitApp)
 
-        self.imagePath = self.getImagePath(username)
         self.label = QLabel(self.profilePicture)
 
+        self.imagePath = self.getImagePath(username)
         self.loadImage(self.imagePath)
 
     def getImagePath(self, username):
@@ -86,6 +85,10 @@ class MainWindowUI(QMainWindow):
 
     def exitApp(self):
         exit()
+
+    def refreshWindow(self):
+        self.imagePath = self.getImagePath(self.username)
+        self.loadImage(self.imagePath)
 
     def errorMessage(self, message):
         logger.error(message)

@@ -319,6 +319,7 @@ class SettingsWindowUI(QMainWindow):
                 else:
                     overWrite(username, userAge, storedPPath)
 
+            self.parent.refreshWindow()
             self.close()
 
             logger.info("Adatok mentve!")
