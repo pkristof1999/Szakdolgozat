@@ -282,7 +282,7 @@ class SettingsWindowUI(QMainWindow):
             newPassword = False
             logger.info("Nem került új jelszó megadásra!")
         else:
-            if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
+            if oldPwd == "" and newPwd1 != "" or oldPwd == "" and newPwd2 != "":
                 if message == "":
                     message = message + "Nem adta meg a régi jelszót!"
                 else:
@@ -317,7 +317,7 @@ class SettingsWindowUI(QMainWindow):
                         message = message + "\nAz új jelszavak nem egyeznek!"
                     saveData = False
 
-                newPassword = True
+            newPassword = True
 
         if message != "":
             errorMessage(message)
