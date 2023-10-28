@@ -8,6 +8,7 @@ from PyQt6.uic import loadUi
 from src.main.python import settingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
+from src.main.python.components.errorMessage import errorMessage
 
 
 class MainWindowUI(QMainWindow):
@@ -56,7 +57,7 @@ class MainWindowUI(QMainWindow):
                         return existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
-            self.errorMessage(f"Hiba: {e}")
+            errorMessage(f"Hiba: {e}")
 
     def loadImage(self, imagePath):
         pixmap = QPixmap(imagePath)
@@ -89,11 +90,3 @@ class MainWindowUI(QMainWindow):
     def refreshWindow(self):
         self.imagePath = self.getImagePath(self.username)
         self.loadImage(self.imagePath)
-
-    def errorMessage(self, message):
-        logger.error(message)
-        errorDialog = QMessageBox(self)
-        errorDialog.setWindowTitle("Hiba!")
-        errorDialog.setIcon(QMessageBox.Icon.Critical)
-        errorDialog.setText(message)
-        errorDialog.exec()

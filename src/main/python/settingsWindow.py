@@ -17,6 +17,7 @@ from src.main.python.components.checkPwdStrenght import *
 from src.main.python.components.securePwd import *
 from src.main.python.components.overwriteAccount import overwriteAccount as overWrite
 from src.main.python.components.isConvertible import convertibleToInt
+from src.main.python.components.errorMessage import errorMessage
 
 
 class SettingsWindowUI(QMainWindow):
@@ -250,20 +251,20 @@ class SettingsWindowUI(QMainWindow):
                     storedPPath = existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
-            self.errorMessage(f"Hiba: {e}")
+            errorMessage(f"Hiba: {e}")
 
         if len(userAge) == 0:
-            self.errorMessage("Nem adott meg életkort!")
+            errorMessage("Nem adott meg életkort!")
             saveData = False
 
         if convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
-                self.errorMessage("Nem adható meg ilyen életkor!")
+                errorMessage("Nem adható meg ilyen életkor!")
                 saveData = False
 
         if not convertibleToInt(userAge):
-            self.errorMessage("Nem egész szám a megadott életkor!")
+            errorMessage("Nem egész szám a megadott életkor!")
             saveData = False
 
         if oldPwd == "" and newPwd1 == "" and newPwd2 == "":
@@ -271,23 +272,23 @@ class SettingsWindowUI(QMainWindow):
             logger.info("Nem került új jelszó megadásra!")
         else:
             if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
-                self.errorMessage("Nem adta meg a régi jelszót!")
+                errorMessage("Nem adta meg a régi jelszót!")
                 saveData = False
 
             if oldPwd != "":
                 if not checkPassword(oldPwd, storedPwd):
-                    self.errorMessage("A régi jelszó nem egyezik!")
+                    errorMessage("A régi jelszó nem egyezik!")
                     saveData = False
                 elif oldPwd == newPwd1:
-                    self.errorMessage("Nem adhatja meg újra a régi jelszót!")
+                    errorMessage("Nem adhatja meg újra a régi jelszót!")
                     saveData = False
 
                 if calculateStrength(newPwd1) == 0:
-                    self.errorMessage("A jelszó nem megfelelő erősségű!")
+                    errorMessage("A jelszó nem megfelelő erősségű!")
                     saveData = False
 
                 if newPwd1 != newPwd2:
-                    self.errorMessage("Az új jelszavak nem egyeznek!")
+                    errorMessage("Az új jelszavak nem egyeznek!")
                     saveData = False
 
                 newPassword = True
@@ -308,7 +309,7 @@ class SettingsWindowUI(QMainWindow):
                     os.remove(self.oldImage)
                     logger.info("Régi profilkép törlésre került!")
                 except OSError as e:
-                    self.errorMessage(f"Hiba: {e}")
+                    errorMessage(f"Hiba: {e}")
 
                 newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
 
@@ -324,7 +325,7 @@ class SettingsWindowUI(QMainWindow):
                     os.remove(self.oldImage)
                     logger.info("Régi profilkép törlésre került!")
                 except OSError as e:
-                    self.errorMessage(f"Hiba: {e}")
+                    errorMessage(f"Hiba: {e}")
 
                 if newPassword:
                     overWrite(username, userAge, self.imagePath, newPwd1)
@@ -367,7 +368,7 @@ class SettingsWindowUI(QMainWindow):
                     json.dump(fileContents, jsonFile, indent=4)
 
         except Exception as e:
-            self.errorMessage(f"Hiba: {e}")
+            errorMessage(f"Hiba: {e}")
 
     def handleProfileDeletion(self, result, username):
         if result == "Yes":
@@ -388,7 +389,7 @@ class SettingsWindowUI(QMainWindow):
                         os.remove(profilePictureDeletion)
                         logger.info("Profilkép törlésre került!")
                     except OSError as e:
-                        self.errorMessage(f"Hiba: {e}")                    
+                        errorMessage(f"Hiba: {e}")
 
                 del fileContents[username]
 
@@ -402,7 +403,7 @@ class SettingsWindowUI(QMainWindow):
             self.openLoginUI()
 
         except Exception as e:
-            self.errorMessage(f"Hiba: {e}")
+            errorMessage(f"Hiba: {e}")
 
     def openLoginUI(self):
         if not self.loginWindow:
@@ -410,11 +411,3 @@ class SettingsWindowUI(QMainWindow):
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.hide()
-
-    def errorMessage(self, message):
-        logger.error(message)
-        errorDialog = QMessageBox(self)
-        errorDialog.setWindowTitle("Hiba!")
-        errorDialog.setIcon(QMessageBox.Icon.Critical)
-        errorDialog.setText(message)
-        errorDialog.exec()
