@@ -5,6 +5,7 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
+from src.main.python import resultsWindow
 from src.main.python import settingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
@@ -14,8 +15,10 @@ from src.main.python.components.errorMessage import errorMessage
 class MainWindowUI(QMainWindow):
     def __init__(self, username):
         super(MainWindowUI, self).__init__()
+
         self.username = username
         default = "default"
+
         loadUi(f"../resources/ui/{default}/mainWindow.ui", self)
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
@@ -31,12 +34,14 @@ class MainWindowUI(QMainWindow):
         self.quizGameButton = self.findChild(QPushButton, "quizGameButton")
         self.emailGameButton = self.findChild(QPushButton, "emailGameButton")
 
+        self.resultsScreen = None
+        self.settingsScreen = None
         self.loginWindow = None
-        self.settingsWindow = None
 
+        self.resultsButton.clicked.connect(self.openResults)
         self.settingsButton.clicked.connect(self.openSettings)
         self.logOutButton.clicked.connect(self.logOut)
-        self.exitButton.clicked.connect(self.exitApp)
+        self.exitButton.clicked.connect(self.close)
 
         self.label = QLabel(self.profilePicture)
 
@@ -70,11 +75,17 @@ class MainWindowUI(QMainWindow):
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
 
+    def openResults(self):
+        if not self.resultsScreen:
+            self.resultsScreen = resultsWindow.ResultsUI(self, self.username)
+        self.resultsScreen.show()
+        self.settingsScreen = None
+
     def openSettings(self):
-        if not self.settingsWindow:
-            self.settingsWindow = settingsWindow.SettingsWindowUI(self, self.username)
-        self.settingsWindow.show()
-        self.settingsWindow = None
+        if not self.settingsScreen:
+            self.settingsScreen = settingsWindow.SettingsWindowUI(self, self.username)
+        self.settingsScreen.show()
+        self.settingsScreen = None
 
     def logOut(self):
         if not self.loginWindow:
@@ -83,9 +94,6 @@ class MainWindowUI(QMainWindow):
         logger.info("Sikeres kijelentkezés!")
         logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.hide()
-
-    def exitApp(self):
-        exit()
 
     def refreshWindow(self):
         self.imagePath = self.getImagePath(self.username)
