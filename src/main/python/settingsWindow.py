@@ -344,6 +344,16 @@ class SettingsWindowUI(QMainWindow):
                 data = json.load(json_file)
 
             if username in data:
+                profilePictureDeletion = data[username]["ProfilePicturePath"]
+
+                if profilePictureDeletion != "../resources/pictures/userDefault.png":
+                    profilePictureDeletion = "../../" + profilePictureDeletion
+                    try:
+                        os.remove(profilePictureDeletion)
+                        logger.info("Profilkép törlésre került!")
+                    except OSError as e:
+                        self.errorMessage(f"Hiba: {e}")                    
+
                 del data[username]
 
             with open(dataPath, 'w') as json_file:
