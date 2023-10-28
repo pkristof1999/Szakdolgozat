@@ -70,17 +70,25 @@ class SettingsWindowUI(QMainWindow):
                     }""")
 
         self.changeProfilePictureButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan lecseréli\na profilképét?",
+            lambda: self.openQuestionWindow("Biztosan lecseréli a profilképét?",
                                             self.handleProfilePictureChange
                                             )
         )
         self.deleteProfilePictureButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképet?",
+            lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképét?",
                                             self.handleProfilePictureDeletion
                                             )
         )
+        self.restoreDefaultResultsButton.clicked.connect(
+            lambda: self.openQuestionWindow("Biztosan törli az eredményeit?"
+                                            "\nEhhez nem kell a mentés gomb!",
+                                            self.handleResultsDeletion,
+                                            username
+                                            )
+        )
         self.deleteUserProfileButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan törli\na felhasználói\nprofilját?",
+            lambda: self.openQuestionWindow("Biztosan törli\na felhasználói profilját?"
+                                            "\nEhhez nem kell a mentés gomb!",
                                             self.handleProfileDeletion,
                                             username
                                             )
@@ -333,6 +341,34 @@ class SettingsWindowUI(QMainWindow):
 
             logger.info("Adatok mentve!")
 
+    def handleResultsDeletion(self, result, username):
+        if result == "Yes":
+            self.resultsDeletion(username)
+
+    def resultsDeletion(self, username):
+        dataPath = "../../../userdata/profiles/profiles.json"
+        try:
+            with open(dataPath, 'r') as jsonFile:
+                fileContents = json.load(jsonFile)
+
+            if username in fileContents:
+                fileContents[username]["LearnMedal"] = 0
+                fileContents[username]["QuizMedal"] = 0
+                fileContents[username]["EmailMedal"] = 0
+                fileContents[username]["badge01"] = 0
+                fileContents[username]["badge02"] = 0
+                fileContents[username]["badge03"] = 0
+                fileContents[username]["badge04"] = 0
+                fileContents[username]["badge05"] = 0
+                fileContents[username]["badge06"] = 0
+                fileContents[username]["Score"] = 0
+
+                with open(dataPath, 'w') as jsonFile:
+                    json.dump(fileContents, jsonFile, indent=4)
+
+        except Exception as e:
+            self.errorMessage(f"Hiba: {e}")
+
     def handleProfileDeletion(self, result, username):
         if result == "Yes":
             self.userDeletion(username)
@@ -340,11 +376,11 @@ class SettingsWindowUI(QMainWindow):
     def userDeletion(self, username):
         dataPath = "../../../userdata/profiles/profiles.json"
         try:
-            with open(dataPath, 'r') as json_file:
-                data = json.load(json_file)
+            with open(dataPath, 'r') as jsonFile:
+                fileContents = json.load(jsonFile)
 
-            if username in data:
-                profilePictureDeletion = data[username]["ProfilePicturePath"]
+            if username in fileContents:
+                profilePictureDeletion = fileContents[username]["ProfilePicturePath"]
 
                 if profilePictureDeletion != "../resources/pictures/userDefault.png":
                     profilePictureDeletion = "../../" + profilePictureDeletion
@@ -354,10 +390,10 @@ class SettingsWindowUI(QMainWindow):
                     except OSError as e:
                         self.errorMessage(f"Hiba: {e}")                    
 
-                del data[username]
+                del fileContents[username]
 
             with open(dataPath, 'w') as json_file:
-                json.dump(data, json_file, indent=4)
+                json.dump(fileContents, json_file, indent=4)
 
             logger.info("Felhasználó sikeresen törölve!")
 
