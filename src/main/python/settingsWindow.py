@@ -1,9 +1,12 @@
 import json
+import random
+import shutil
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit, QMessageBox
 from PyQt6.uic import loadUi
+from datetime import datetime
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
@@ -78,9 +81,16 @@ class SettingsWindowUI(QMainWindow):
         self.newPassword2.textChanged.connect(self.changeNewPassword2)
 
         self.abortButton.clicked.connect(self.abortAndCloseSettings)
-        self.saveAndCloseButton.clicked.connect(lambda : self.saveAndCloseSettings(username))
+
+        self.saveAndCloseButton.clicked.connect(
+            lambda: self.openQuestionWindow("Biztosan menti\na módosításokat?",
+                                            self.handleSaveAndCloseSettings,
+                                            username
+                                            )
+        )
 
         self.imagePath = self.getImagePath(username)
+        self.oldImage = self.imagePath
         self.label = QLabel(self.profilePicture)
 
         self.loadImage(self.imagePath)
@@ -136,6 +146,7 @@ class SettingsWindowUI(QMainWindow):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setGeometry(self.profilePicture.rect())
         self.label.setPixmap(pixmap)
+        self.imagePath = "../resources/pictures/userDefault.png"
         logger.info("Alap profilkép betöltésre került!")
 
     def loadUserAge(self, username):
@@ -153,12 +164,16 @@ class SettingsWindowUI(QMainWindow):
 
         self.changeUserAge.setText(str(storedUserAge))
 
-    def openQuestionWindow(self, question, handler):
+    def openQuestionWindow(self, question, handler, username = None):
         self.questionWindow = None
         if not self.questionWindow:
             self.questionWindow = areYouSure.AreYouSureUI(question)
 
-        self.questionWindow.finished.connect(handler)
+        if username is not None:
+            self.questionWindow.finished.connect(lambda result: handler(result, username))
+        else:
+            self.questionWindow.finished.connect(handler)
+
         self.questionWindow.show()
 
     def handleProfilePictureDeletion(self, result):
@@ -194,6 +209,10 @@ class SettingsWindowUI(QMainWindow):
 
     def abortAndCloseSettings(self):
         self.close()
+
+    def handleSaveAndCloseSettings(self, result, username):
+        if result == "Yes":
+            self.saveAndCloseSettings(username)
 
     def saveAndCloseSettings(self, username):
         saveData = True
@@ -254,19 +273,55 @@ class SettingsWindowUI(QMainWindow):
                     self.errorMessage("Az új jelszavak nem egyeznek!")
                     saveData = False
 
-            newPassword = True
+                newPassword = True
 
         if saveData:
-            logger.info("Adatok mentve!")
+            if self.imagePath != "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+                randomNumber = random.randint(1000, 9999)
+                currentTime = datetime.now()
+                formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
-            """Elég csak a jelszót vizsgálni, mert az titkosított, így nem lehet a beolvasottal egyszerűen felülírni."""
-            if newPassword:
-                overWrite(username, userAge, storedPPath, newPwd1)
+                pictureDirectory = "../../../userdata/profiles/profilepicture"
+                os.makedirs(pictureDirectory, exist_ok=True)
+
+                shutil.copy(self.imagePath,
+                            f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+
+                try:
+                    os.remove(self.oldImage)
+                    logger.info("Régi profilkép törlésre került!")
+                except OSError as e:
+                    self.errorMessage(f"Hiba: {e}")
+
+                newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+
+                """Elég csak a jelszót vizsgálni, mert az titkosított,
+                így nem lehet a beolvasottal egyszerűen felülírni."""
+                if newPassword:
+                    overWrite(username, userAge, newImagePath, newPwd1)
+                else:
+                    overWrite(username, userAge, newImagePath)
+            elif self.imagePath == "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+
+                try:
+                    os.remove(self.oldImage)
+                    logger.info("Régi profilkép törlésre került!")
+                except OSError as e:
+                    self.errorMessage(f"Hiba: {e}")
+
+                if newPassword:
+                    overWrite(username, userAge, self.imagePath, newPwd1)
+                else:
+                    overWrite(username, userAge, self.imagePath)
             else:
-                overWrite(username, userAge, storedPPath)
+                if newPassword:
+                    overWrite(username, userAge, storedPPath, newPwd1)
+                else:
+                    overWrite(username, userAge, storedPPath)
 
             self.close()
-            self.parent.repaint()
+
+            logger.info("Adatok mentve!")
 
     def errorMessage(self, message):
         logger.error(message)

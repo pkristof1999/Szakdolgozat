@@ -18,9 +18,7 @@ def overwriteAccount(username, userAge, profilePicturePath, password = None):
                     existingAccounts = json.loads(fileContents)
 
         existingAccounts[username]["UserAge"] = userAge
-
-        if profilePicturePath is not None:
-            existingAccounts[username]["ProfilePicturePath"] = profilePicturePath
+        existingAccounts[username]["ProfilePicturePath"] = profilePicturePath
 
         if password is not None:
             existingAccounts[username]["Password"] = encodePassword(password)
