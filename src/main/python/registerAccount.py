@@ -84,6 +84,8 @@ class RegisterAccountUI(QMainWindow):
         logger.info("Alap profilkép betöltésre került!")
 
     def registerUser(self):
+        message = ""
+
         username = self.inputUserName.text().strip()
         userAge = self.inputUserAge.text().strip()
         password1 = self.inputPwd1.text().strip()
@@ -94,34 +96,58 @@ class RegisterAccountUI(QMainWindow):
         saveData = True
 
         if len(username) == 0:
-            errorMessage("Nem adott meg felhasználónevet!")
+            if message == "":
+                message = message + "Nem adott meg felhasználónevet!"
+            else:
+                message = message + "\nNem adott meg felhasználónevet!"
             saveData = False
 
         if len(userAge) == 0:
-            errorMessage("Nem adott meg életkort!")
+            if message == "":
+                message = message + "Nem adott meg életkort!"
+            else:
+                message = message + "\nNem adott meg életkort!"
             saveData = False
 
         if convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
-                errorMessage("Nem adható meg ilyen életkor!")
+                if message == "":
+                    message = message + "Nem adható meg ilyen életkor!"
+                else:
+                    message = message + "\nNem adható meg ilyen életkor!"
                 saveData = False
 
         if not convertibleToInt(userAge):
-            errorMessage("Nem egész szám a megadott életkor!")
+            if message == "":
+                message = message + "Nem egész szám a megadott életkor!"
+            else:
+                message = message + "\nNem egész szám a megadott életkor!"
             saveData = False
 
         if len(password1) == 0 or len(password2) == 0:
-            errorMessage("Jelszó mező nincs kitöltve!")
+            if message == "":
+                message = message + "Jelszó mező nincs kitöltve!"
+            else:
+                message = message + "\nJelszó mező nincs kitöltve!"
             saveData = False
 
         if password1 != password2:
-            errorMessage("A jelszavak nem egyeznek!")
+            if message == "":
+                message = message + "A jelszavak nem egyeznek!"
+            else:
+                message = message + "\nA jelszavak nem egyeznek!"
             saveData = False
 
         if chkPwd == 0:
-            errorMessage("A jelszó nem megfelelő erősségű!")
+            if message == "":
+                message = message + "A jelszó nem megfelelő erősségű!"
+            else:
+                message = message + "\nA jelszó nem megfelelő erősségű!"
             saveData = False
+
+        if message != "":
+            errorMessage(message)
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png":

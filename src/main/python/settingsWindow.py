@@ -233,6 +233,8 @@ class SettingsWindowUI(QMainWindow):
             self.saveAndCloseSettings(username)
 
     def saveAndCloseSettings(self, username):
+        message = ""
+
         saveData = True
         newPassword = False
         dataPath = "../../../userdata/profiles/profiles.json"
@@ -254,17 +256,26 @@ class SettingsWindowUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
         if len(userAge) == 0:
-            errorMessage("Nem adott meg életkort!")
+            if message == "":
+                message = message + "Nem adott meg életkort!"
+            else:
+                message = message + "\nNem adott meg életkort!"
             saveData = False
 
         if convertibleToInt(userAge):
             userAge = int(userAge)
             if 1 > userAge or 150 < userAge:
-                errorMessage("Nem adható meg ilyen életkor!")
+                if message == "":
+                    message = message + "Nem adható meg ilyen életkor!"
+                else:
+                    message = message + "\nNem adható meg ilyen életkor!"
                 saveData = False
 
         if not convertibleToInt(userAge):
-            errorMessage("Nem egész szám a megadott életkor!")
+            if message == "":
+                message = message + "Nem egész szám a megadott életkor!"
+            else:
+                message = message + "\nNem egész szám a megadott életkor!"
             saveData = False
 
         if oldPwd == "" and newPwd1 == "" and newPwd2 == "":
@@ -272,26 +283,44 @@ class SettingsWindowUI(QMainWindow):
             logger.info("Nem került új jelszó megadásra!")
         else:
             if oldPwd == "" and newPwd1 != "" and newPwd2 != "":
-                errorMessage("Nem adta meg a régi jelszót!")
+                if message == "":
+                    message = message + "Nem adta meg a régi jelszót!"
+                else:
+                    message = message + "\nNem adta meg a régi jelszót!"
                 saveData = False
 
             if oldPwd != "":
                 if not checkPassword(oldPwd, storedPwd):
-                    errorMessage("A régi jelszó nem egyezik!")
+                    if message == "":
+                        message = message + "A régi jelszó nem egyezik!"
+                    else:
+                        message = message + "\nA régi jelszó nem egyezik!"
                     saveData = False
                 elif oldPwd == newPwd1:
-                    errorMessage("Nem adhatja meg újra a régi jelszót!")
+                    if message == "":
+                        message = message + "Nem adhatja meg újra a régi jelszót!"
+                    else:
+                        message = message + "\nNem adhatja meg újra a régi jelszót!"
                     saveData = False
 
                 if calculateStrength(newPwd1) == 0:
-                    errorMessage("A jelszó nem megfelelő erősségű!")
+                    if message == "":
+                        message = message + "A jelszó nem megfelelő erősségű!"
+                    else:
+                        message = message + "\nA jelszó nem megfelelő erősségű!"
                     saveData = False
 
                 if newPwd1 != newPwd2:
-                    errorMessage("Az új jelszavak nem egyeznek!")
+                    if message == "":
+                        message = message + "Az új jelszavak nem egyeznek!"
+                    else:
+                        message = message + "\nAz új jelszavak nem egyeznek!"
                     saveData = False
 
                 newPassword = True
+
+        if message != "":
+            errorMessage(message)
 
         if saveData:
             if self.imagePath != "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
