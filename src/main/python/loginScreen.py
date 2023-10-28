@@ -66,7 +66,7 @@ class LoginScreenUI(QMainWindow):
                 with open(dataPath, 'r') as jsonFile:
                     fileContents = jsonFile.read()
 
-                    if not fileContents.strip():
+                    if not fileContents.strip() or fileContents.strip() == "{}":
                         self.userNameBox.addItem("Regisztráljon!")
                     else:
                         existingAccounts = json.loads(fileContents)

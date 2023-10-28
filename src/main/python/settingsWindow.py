@@ -2,6 +2,8 @@ import json
 import random
 import shutil
 
+import loginScreen
+
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit, QMessageBox
@@ -38,6 +40,7 @@ class SettingsWindowUI(QMainWindow):
         self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
 
         self.questionWindow = None
+        self.loginWindow = None
 
         """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
            This is here because I couldn't align the QComboBox's content to center elsewhere."""
@@ -74,6 +77,12 @@ class SettingsWindowUI(QMainWindow):
         self.deleteProfilePictureButton.clicked.connect(
             lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképet?",
                                             self.handleProfilePictureDeletion
+                                            )
+        )
+        self.deleteUserProfileButton.clicked.connect(
+            lambda: self.openQuestionWindow("Biztosan törli\na felhasználói\nprofilját?",
+                                            self.handleProfileDeletion,
+                                            username
                                             )
         )
 
@@ -323,6 +332,38 @@ class SettingsWindowUI(QMainWindow):
             self.close()
 
             logger.info("Adatok mentve!")
+
+    def handleProfileDeletion(self, result, username):
+        if result == "Yes":
+            self.userDeletion(username)
+
+    def userDeletion(self, username):
+        dataPath = "../../../userdata/profiles/profiles.json"
+        try:
+            with open(dataPath, 'r') as json_file:
+                data = json.load(json_file)
+
+            if username in data:
+                del data[username]
+
+            with open(dataPath, 'w') as json_file:
+                json.dump(data, json_file, indent=4)
+
+            logger.info("Felhasználó sikeresen törölve!")
+
+            self.close()
+            self.parent.close()
+            self.openLoginUI()
+
+        except Exception as e:
+            self.errorMessage(f"Hiba: {e}")
+
+    def openLoginUI(self):
+        if not self.loginWindow:
+            self.loginWindow = loginScreen.LoginScreenUI()
+        self.loginWindow.show()
+        logger.info("Bejelentkezési képernyő megnyitásra került!")
+        self.hide()
 
     def errorMessage(self, message):
         logger.error(message)
