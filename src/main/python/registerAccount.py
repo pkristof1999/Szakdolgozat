@@ -3,7 +3,7 @@ import random
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QMessageBox, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 from datetime import datetime
 

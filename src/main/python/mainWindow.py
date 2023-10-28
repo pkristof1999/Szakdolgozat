@@ -2,7 +2,7 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QMessageBox
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
 from src.main.python import settingsWindow
