@@ -6,9 +6,9 @@ from PyQt6.QtCore import pyqtSignal
 class AreYouSureUI(QMainWindow):
     finished = pyqtSignal(str)
 
-    def __init__(self, question):
+    def __init__(self, question, theme = "default"):
         super(AreYouSureUI, self).__init__()
-        loadUi("../resources/ui/default/areYouSure.ui", self)
+        loadUi(f"../resources/ui/{theme}/areYouSure.ui", self)
 
         self.questionLabel = self.findChild(QLabel, "questionLabel")
         self.noButton = self.findChild(QPushButton, "noButton")
