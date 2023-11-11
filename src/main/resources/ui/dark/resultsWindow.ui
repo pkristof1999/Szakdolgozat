@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>362</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+background-color: grey;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>341</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	background-color: rgb(100, 100, 200);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}</string>
+    </property>
+    <widget class="QFrame" name="learnMedal">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="quizMedal">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>10</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="emailMedal">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge01">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge02">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge03">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge04">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge05">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="badge06">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>120</y>
+       <width>48</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 1px solid grey;
+border-radius: 0px;
+background-color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="userScore">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>301</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+border: 0px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backButton">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>290</y>
+       <width>101</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Vissza</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
