@@ -38,8 +38,8 @@ class MainWindowUI(QMainWindow):
         self.settingsScreen = None
         self.loginWindow = None
 
-        self.resultsButton.clicked.connect(self.openResults)
-        self.settingsButton.clicked.connect(self.openSettings)
+        self.resultsButton.clicked.connect(lambda: self.openResults(username))
+        self.settingsButton.clicked.connect(lambda: self.openSettings(username))
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.close)
 
@@ -49,7 +49,10 @@ class MainWindowUI(QMainWindow):
         self.loadImage(self.imagePath)
 
     def getImagePath(self, username):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        if username != "Vendég":
+            dataPath = "../../../userdata/profiles/profiles.json"
+        else:
+            dataPath = "../../../userdata/profiles/guestProfile.json"
 
         try:
             if os.path.exists(dataPath):
@@ -81,7 +84,7 @@ class MainWindowUI(QMainWindow):
         self.resultsScreen.show()
         self.settingsScreen = None
 
-    def openSettings(self):
+    def openSettings(self, username):
         if not self.settingsScreen:
             self.settingsScreen = settingsWindow.SettingsWindowUI(self, self.username)
         self.settingsScreen.show()

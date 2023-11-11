@@ -1,3 +1,4 @@
+import mainWindow
 import loginScreen
 import registerAccount
 
@@ -20,17 +21,19 @@ class WelcomeUI(QMainWindow):
         self.registerWindow = None
         self.loginWindow = None
         self.questionWindow = None
+        self.appMainWindow = None
 
         self.loginButton.clicked.connect(self.openLoginUI)
         self.registerButton.clicked.connect(self.openRegisterUI)
 
         self.playAsGuestButton.clicked.connect(
-            lambda: self.openQuestionWindow("Vendégként nem mentődnek az eredmények! Folytatja?",
-                                            self.playAsGuest
+            lambda: self.openQuestionWindow("Vendégként nem mentődnek\naz eredmények!\nFolytatja?",
+                                            self.handlePlayAsGuest,
+                                            "Vendég"
                                             )
         )
 
-    def openQuestionWindow(self, question, handler, username = None):
+    def openQuestionWindow(self, question, handler, username=None):
         self.questionWindow = None
         if not self.questionWindow:
             self.questionWindow = areYouSure.AreYouSureUI(question)
@@ -41,6 +44,18 @@ class WelcomeUI(QMainWindow):
             self.questionWindow.finished.connect(handler)
 
         self.questionWindow.show()
+
+    def handlePlayAsGuest(self, result, username):
+        if result == "Yes":
+            self.playAsGuest(username)
+
+    def playAsGuest(self, username):
+        if not self.appMainWindow:
+            self.appMainWindow = mainWindow.MainWindowUI(username)
+        self.appMainWindow.show()
+        logger.info("Továbblépés a fő felületre.")
+        self.close()
+
 
     def openLoginUI(self):
         if not self.loginWindow:
