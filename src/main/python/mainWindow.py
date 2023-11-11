@@ -7,6 +7,7 @@ from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
 from src.main.python import settingsWindow
+from src.main.python import guestSettingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
 from src.main.python.components.errorMessage import errorMessage
@@ -36,9 +37,10 @@ class MainWindowUI(QMainWindow):
 
         self.resultsScreen = None
         self.settingsScreen = None
+        self.guestSettingsScreen = None
         self.loginWindow = None
 
-        self.resultsButton.clicked.connect(lambda: self.openResults(username))
+        self.resultsButton.clicked.connect(self.openResults)
         self.settingsButton.clicked.connect(lambda: self.openSettings(username))
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.close)
@@ -85,10 +87,16 @@ class MainWindowUI(QMainWindow):
         self.settingsScreen = None
 
     def openSettings(self, username):
-        if not self.settingsScreen:
-            self.settingsScreen = settingsWindow.SettingsWindowUI(self, self.username)
-        self.settingsScreen.show()
-        self.settingsScreen = None
+        if username == "Vendég":
+            if not self.guestSettingsScreen:
+                self.guestSettingsScreen = guestSettingsWindow.GuestSettingsWindowUI(self, username)
+            self.guestSettingsScreen.show()
+            self.guestSettingsScreen = None
+        else:
+            if not self.settingsScreen:
+                self.settingsScreen = settingsWindow.SettingsWindowUI(self, self.username)
+            self.settingsScreen.show()
+            self.settingsScreen = None
 
     def logOut(self):
         if not self.loginWindow:

@@ -30,7 +30,10 @@ class ResultsUI(QMainWindow):
         self.backButton.clicked.connect(self.close)
 
     def getUserScore(self, username):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        if username != "Vendég":
+            dataPath = "../../../userdata/profiles/profiles.json"
+        else:
+            dataPath = "../../../userdata/profiles/guestProfile.json"
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
