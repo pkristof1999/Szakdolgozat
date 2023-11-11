@@ -7,8 +7,10 @@ from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
+from src.main.python.components.translateTheme import translateTheme
 from src.main.python.infoscreens import areYouSure
 from src.main.python.components.errorMessage import errorMessage
+from src.main.python.components.overwriteAccount import *
 
 
 class GuestSettingsWindowUI(QMainWindow):
@@ -132,18 +134,13 @@ class GuestSettingsWindowUI(QMainWindow):
             self.saveAndCloseSettings(username)
 
     def saveAndCloseSettings(self, username):
-        dataPath = "../../../userdata/profiles/guestProfile.json"
+        theme = translateTheme(self.changeThemeBox.currentText())
+        overWriteGuestAccount(username, theme)
 
-        try:
-            if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
-                    fileContents = jsonFile.read()
-                    existingAccounts = json.loads(fileContents)
+        self.parent.refreshWindow()
+        self.close()
 
-        except Exception as e:
-            errorMessage(f"Hiba: {e}")
-
-        #TODO: téma mentése
+        logger.info("Adatok mentve!")
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
