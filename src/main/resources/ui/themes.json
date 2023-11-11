@@ -1,6 +1,7 @@
 {
   "Themes": {
-    "Default" : "Alap Téma",
-    "TODO" : "TODO"
+    "default" : "Alap t\u00e9ma",
+    "dark": "S\u00f6t\u00e9t t\u00e9ma",
+    "todo" : "TODO"
   }
 }

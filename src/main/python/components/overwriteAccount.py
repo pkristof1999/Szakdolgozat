@@ -4,7 +4,7 @@ from src.main.python.components.logger import *
 from src.main.python.components.securePwd import encodePassword
 
 
-def overwriteAccount(username, userAge, profilePicturePath, password = None):
+def overwriteAccount(username, userAge, profilePicturePath, theme, password = None):
     saveDirectory = "../../../userdata/profiles"
     savePath = os.path.join(saveDirectory, "profiles.json")
 
@@ -19,6 +19,7 @@ def overwriteAccount(username, userAge, profilePicturePath, password = None):
 
         existingAccounts[username]["UserAge"] = userAge
         existingAccounts[username]["ProfilePicturePath"] = profilePicturePath
+        existingAccounts[username]["Theme"] = theme
 
         if password is not None:
             existingAccounts[username]["Password"] = encodePassword(password)

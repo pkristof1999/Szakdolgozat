@@ -2,7 +2,7 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QLabel, QComboBox, QLineEdit
+from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QLabel, QComboBox
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -20,7 +20,10 @@ class GuestSettingsWindowUI(QMainWindow):
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
+
+        """Ha ezt a sort törlöm, nem működik a témaválasztás valamiért..."""
         self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
+
         self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
         self.abortButton = self.findChild(QPushButton, "abortButton")
         self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
@@ -139,8 +142,6 @@ class GuestSettingsWindowUI(QMainWindow):
 
         except Exception as e:
             errorMessage(f"Hiba: {e}")
-
-        errorMessage("TODO: téma mentése")
 
         #TODO: téma mentése
 

@@ -17,6 +17,7 @@ from src.main.python.components.checkPwdStrenght import *
 from src.main.python.components.securePwd import *
 from src.main.python.components.overwriteAccount import overwriteAccount as overWrite
 from src.main.python.components.isConvertible import convertibleToInt
+from src.main.python.components.translateTheme import translateTheme
 from src.main.python.components.errorMessage import errorMessage
 
 
@@ -266,6 +267,7 @@ class SettingsWindowUI(QMainWindow):
         oldPwd = self.oldPassword.text().strip()
         newPwd1 = self.newPassword1.text().strip()
         newPwd2 = self.newPassword2.text().strip()
+        theme = translateTheme(self.changeThemeBox.currentText())
 
         try:
             if os.path.exists(dataPath):
@@ -368,9 +370,9 @@ class SettingsWindowUI(QMainWindow):
                 """Elég csak a jelszót vizsgálni, mert az titkosított,
                 így nem lehet a beolvasottal egyszerűen felülírni."""
                 if newPassword:
-                    overWrite(username, userAge, newImagePath, newPwd1)
+                    overWrite(username, userAge, newImagePath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, newImagePath)
+                    overWrite(username, userAge, newImagePath, theme)
             elif self.imagePath == "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
 
                 try:
@@ -380,14 +382,14 @@ class SettingsWindowUI(QMainWindow):
                     errorMessage(f"Hiba: {e}")
 
                 if newPassword:
-                    overWrite(username, userAge, self.imagePath, newPwd1)
+                    overWrite(username, userAge, self.imagePath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, self.imagePath)
+                    overWrite(username, userAge, self.imagePath, theme)
             else:
                 if newPassword:
-                    overWrite(username, userAge, storedPPath, newPwd1)
+                    overWrite(username, userAge, storedPPath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, storedPPath)
+                    overWrite(username, userAge, storedPPath, theme)
 
             self.parent.refreshWindow()
             self.close()
