@@ -113,6 +113,7 @@ class SettingsWindowUI(QMainWindow):
 
         self.loadImage(self.imagePath)
         self.loadUserAge(username)
+        self.loadThemes()
 
     def addPicture(self):
         fileDialog = QFileDialog(self)
@@ -181,6 +182,28 @@ class SettingsWindowUI(QMainWindow):
             logger.error(f"Hiba: {e}")
 
         self.changeUserAge.setText(str(storedUserAge))
+
+    def loadThemes(self):
+        dataPath = "../resources/ui/themes.json"
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+
+                    if not fileContents.strip() or fileContents.strip() == "{}":
+                        self.changeThemeBox.addItem("Alap Téma")
+                    else:
+                        existingAccounts = json.loads(fileContents)
+                        themes = existingAccounts.get("Themes", {})
+                        theme_names = list(themes.values())
+                        self.changeThemeBox.addItems(theme_names)
+
+            else:
+                self.changeThemeBox.addItem("Alap Téma")
+
+        except Exception as e:
+            errorMessage(f"Hiba: {e}")
 
     def openQuestionWindow(self, question, handler, username = None):
         self.questionWindow = None
