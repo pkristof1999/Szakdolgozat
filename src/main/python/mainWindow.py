@@ -94,7 +94,7 @@ class MainWindowUI(QMainWindow):
             self.guestSettingsScreen = None
         else:
             if not self.settingsScreen:
-                self.settingsScreen = settingsWindow.SettingsWindowUI(self, self.username)
+                self.settingsScreen = settingsWindow.SettingsWindowUI(self, username)
             self.settingsScreen.show()
             self.settingsScreen = None
 

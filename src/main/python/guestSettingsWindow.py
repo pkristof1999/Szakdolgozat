@@ -2,7 +2,7 @@ import json
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel
+from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QLabel, QComboBox, QLineEdit
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -20,6 +20,7 @@ class GuestSettingsWindowUI(QMainWindow):
 
         self.profilePicture = self.findChild(QFrame, "profilePicture")
         self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
+        self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
         self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
         self.abortButton = self.findChild(QPushButton, "abortButton")
         self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
