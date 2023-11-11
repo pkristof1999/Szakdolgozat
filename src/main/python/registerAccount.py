@@ -95,6 +95,13 @@ class RegisterAccountUI(QMainWindow):
 
         saveData = True
 
+        if username == "Vendég":
+            if message == "":
+                message = message + "Ezt a felhasználónevet nem lehet választani!"
+            else:
+                message = message + "\nEzt a felhasználónevet nem lehet választani!"
+            saveData = False
+
         if len(username) == 0:
             if message == "":
                 message = message + "Nem adott meg felhasználónevet!"

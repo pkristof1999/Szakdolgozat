@@ -209,7 +209,7 @@ class SettingsWindowUI(QMainWindow):
     def openQuestionWindow(self, question, handler, username = None):
         self.questionWindow = None
         if not self.questionWindow:
-            self.questionWindow = areYouSure.AreYouSureUI(question, "dark")
+            self.questionWindow = areYouSure.AreYouSureUI(question, "default")
 
         if username is not None:
             self.questionWindow.finished.connect(lambda result: handler(result, username))
