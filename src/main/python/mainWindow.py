@@ -11,6 +11,7 @@ from src.main.python import guestSettingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
 from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens import gameModeInfo
 
 
 class MainWindowUI(QMainWindow):
@@ -39,11 +40,37 @@ class MainWindowUI(QMainWindow):
         self.settingsScreen = None
         self.guestSettingsScreen = None
         self.loginWindow = None
+        self.infoWindow = None
 
         self.resultsButton.clicked.connect(self.openResults)
         self.settingsButton.clicked.connect(lambda: self.openSettings(username))
         self.logOutButton.clicked.connect(self.logOut)
         self.exitButton.clicked.connect(self.close)
+
+        self.learningGameInfo = """Ide lesz majd a leírás"""
+        self.quizGameInfo = """Ide lesz majd a leírás"""
+        self.emailGameInfo = """Ide lesz majd a leírás"""
+
+        self.learningGameButton.clicked.connect(
+            lambda: self.openQuestionWindow(self.learningGameInfo,
+                                            self.handleLearningGameOpen,
+                                            username
+                                          )
+        )
+
+        self.quizGameButton.clicked.connect(
+            lambda: self.openQuestionWindow(self.quizGameInfo,
+                                            self.handleQuizGameOpen,
+                                            username
+                                            )
+        )
+
+        self.emailGameButton.clicked.connect(
+            lambda: self.openQuestionWindow(self.emailGameInfo,
+                                            self.handleEmailGameOpen,
+                                            username
+                                            )
+        )
 
         self.label = QLabel(self.profilePicture)
 
@@ -97,6 +124,39 @@ class MainWindowUI(QMainWindow):
                 self.settingsScreen = settingsWindow.SettingsWindowUI(self, username)
             self.settingsScreen.show()
             self.settingsScreen = None
+
+    def openQuestionWindow(self, info, handler, username = None):
+        self.infoWindow = None
+        if not self.infoWindow:
+            self.infoWindow = gameModeInfo.GameModeInfoUI(info, "default")
+
+        if username is not None:
+            self.infoWindow.finished.connect(lambda result: handler(result, username))
+        else:
+            self.infoWindow.finished.connect(handler)
+
+        self.infoWindow.show()
+
+    def handleLearningGameOpen(self, result, username):
+        if result == "Yes":
+            self.openLearningGame(username)
+
+    def handleQuizGameOpen(self, result, username):
+        if result == "Yes":
+            self.openQuizGame(username)
+
+    def handleEmailGameOpen(self, result, username):
+        if result == "Yes":
+            self.openEmailGame(username)
+
+    def openLearningGame(self, username):
+        errorMessage("openLearningGame")
+
+    def openQuizGame(self, username):
+        errorMessage("openQuizGame")
+
+    def openEmailGame(self, username):
+        errorMessage("openEmailGame")
 
     def logOut(self):
         if not self.loginWindow:
