@@ -43,8 +43,6 @@ class ResultsUI(QMainWindow):
             self.badge05Label = QLabel(self.badge05)
             self.badge06Label = QLabel(self.badge06)
 
-            self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
-
             self.backButton.clicked.connect(self.close)
             self.loadUserAchievements(username)
 
@@ -54,6 +52,8 @@ class ResultsUI(QMainWindow):
             self.close()
 
     def loadUserAchievements(self, username):
+        self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
+
         if username != "Vendég":
             dataPath = "../../../userdata/profiles/profiles.json"
         else:

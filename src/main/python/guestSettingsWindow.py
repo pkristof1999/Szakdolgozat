@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QLabel, QComboBox
 from PyQt6.uic import loadUi
 
 from src.main.python.components import clickableComboBox
+from src.main.python.components.resultsDeletion import resultsDeletion
 from src.main.python.components.translateTheme import translateTheme
 from src.main.python.infoscreens import areYouSure
 from src.main.python.components.errorMessage import errorMessage
@@ -157,28 +158,4 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
-            self.resultsDeletion(username)
-
-    def resultsDeletion(self, username):
-        dataPath = "../../../userdata/profiles/guestProfile.json"
-        try:
-            with open(dataPath, 'r') as jsonFile:
-                fileContents = json.load(jsonFile)
-
-            if username in fileContents:
-                fileContents[username]["LearnMedal"] = 0
-                fileContents[username]["QuizMedal"] = 0
-                fileContents[username]["EmailMedal"] = 0
-                fileContents[username]["badge01"] = 0
-                fileContents[username]["badge02"] = 0
-                fileContents[username]["badge03"] = 0
-                fileContents[username]["badge04"] = 0
-                fileContents[username]["badge05"] = 0
-                fileContents[username]["badge06"] = 0
-                fileContents[username]["Score"] = 0
-
-                with open(dataPath, 'w') as jsonFile:
-                    json.dump(fileContents, jsonFile, indent=4)
-
-        except Exception as e:
-            errorMessage(f"Hiba: {e}")
+            resultsDeletion(username, "../../../userdata/profiles/guestProfile.json")

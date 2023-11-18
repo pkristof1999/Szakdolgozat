@@ -125,6 +125,8 @@ class MainWindowUI(QMainWindow):
     def openResults(self):
         if not self.resultsScreen:
             self.resultsScreen = resultsWindow.ResultsUI(self, self.username)
+
+        self.resultsScreen.loadUserAchievements(self.username)
         self.resultsScreen.show()
         self.settingsScreen = None
 
