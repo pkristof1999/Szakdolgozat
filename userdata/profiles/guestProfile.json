@@ -2,15 +2,15 @@
     "Vend\u00e9g": {
         "ProfilePicturePath": "../resources/pictures/userDefault.png",
         "LearnMedal": 1,
-        "QuizMedal": 1,
-        "EmailMedal": 1,
+        "QuizMedal": 0,
+        "EmailMedal": 0,
         "badge01": 1,
-        "badge02": 1,
-        "badge03": 1,
-        "badge04": 1,
-        "badge05": 1,
-        "badge06": 1,
-        "Score": 2000,
+        "badge02": 0,
+        "badge03": 0,
+        "badge04": 0,
+        "badge05": 0,
+        "badge06": 0,
+        "Score": 0,
         "Theme": "default"
     }
 }

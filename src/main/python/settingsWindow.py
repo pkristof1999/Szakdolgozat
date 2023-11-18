@@ -2,14 +2,13 @@ import json
 import random
 import shutil
 
-import loginScreen
-
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit
 from PyQt6.uic import loadUi
 from datetime import datetime
 
+from src.main.python import loginScreen
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
 from src.main.python.components.resultsDeletion import resultsDeletion

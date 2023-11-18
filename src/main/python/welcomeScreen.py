@@ -1,16 +1,10 @@
-import json
-
-import mainWindow
-import loginScreen
-import registerAccount
-
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
+from src.main.python import mainWindow, loginScreen, registerAccount
 from src.main.python.components.logger import *
 from src.main.python.components.resultsDeletion import resultsDeletion
 from src.main.python.infoscreens import areYouSure
-from src.main.python.components.errorMessage import errorMessage
 
 
 class WelcomeUI(QMainWindow):

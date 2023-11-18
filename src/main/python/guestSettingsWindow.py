@@ -1,11 +1,8 @@
-import json
-
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QLabel, QComboBox
 from PyQt6.uic import loadUi
 
-from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
 from src.main.python.components.translateTheme import translateTheme
 from src.main.python.infoscreens import areYouSure

@@ -1,8 +1,8 @@
 import sys
-import welcomeScreen
 
 from PyQt6.QtWidgets import QApplication
 
+from src.main.python import welcomeScreen
 from src.main.python.components.logger import *
 
 

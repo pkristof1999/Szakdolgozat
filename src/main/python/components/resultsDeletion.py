@@ -9,10 +9,10 @@ def resultsDeletion(username, dataPath):
             fileContents = json.load(jsonFile)
 
         if username in fileContents:
-            fileContents[username]["LearnMedal"] = 0
+            fileContents[username]["LearnMedal"] = 1
             fileContents[username]["QuizMedal"] = 0
             fileContents[username]["EmailMedal"] = 0
-            fileContents[username]["badge01"] = 0
+            fileContents[username]["badge01"] = 1
             fileContents[username]["badge02"] = 0
             fileContents[username]["badge03"] = 0
             fileContents[username]["badge04"] = 0
