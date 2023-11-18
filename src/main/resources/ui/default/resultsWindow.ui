@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>362</width>
-    <height>372</height>
+    <width>531</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@ background-color: grey;
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>341</width>
-      <height>341</height>
+      <width>511</width>
+      <height>451</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -43,8 +43,8 @@ background-color: grey;
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>100</width>
-       <height>100</height>
+       <width>151</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -64,10 +64,10 @@ background-color: white;
     <widget class="QFrame" name="quizMedal">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>180</x>
        <y>10</y>
-       <width>100</width>
-       <height>100</height>
+       <width>151</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -87,10 +87,10 @@ background-color: white;
     <widget class="QFrame" name="emailMedal">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>350</x>
        <y>10</y>
-       <width>100</width>
-       <height>100</height>
+       <width>151</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -111,9 +111,9 @@ background-color: white;
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -133,10 +133,10 @@ background-color: white;
     <widget class="QFrame" name="badge02">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <x>90</x>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -156,10 +156,10 @@ background-color: white;
     <widget class="QFrame" name="badge03">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <x>180</x>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -179,10 +179,10 @@ background-color: white;
     <widget class="QFrame" name="badge04">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <x>260</x>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -202,10 +202,10 @@ background-color: white;
     <widget class="QFrame" name="badge05">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <x>350</x>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -225,10 +225,10 @@ background-color: white;
     <widget class="QFrame" name="badge06">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>120</y>
-       <width>48</width>
-       <height>48</height>
+       <x>430</x>
+       <y>170</y>
+       <width>71</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -248,9 +248,9 @@ background-color: white;
     <widget class="QLabel" name="userScore">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>190</y>
-       <width>301</width>
+       <x>90</x>
+       <y>270</y>
+       <width>331</width>
        <height>81</height>
       </rect>
      </property>
@@ -262,19 +262,19 @@ border: 0px;
      <property name="text">
       <string/>
      </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>290</y>
-       <width>101</width>
+       <x>170</x>
+       <y>400</y>
+       <width>171</width>
        <height>32</height>
       </rect>
      </property>

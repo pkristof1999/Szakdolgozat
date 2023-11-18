@@ -68,16 +68,16 @@ class WelcomeUI(QMainWindow):
                 fileContents = json.load(jsonFile)
 
             if username in fileContents:
-                fileContents[username]["LearnMedal"] = 0
+                fileContents[username]["LearnMedal"] = 1
                 fileContents[username]["QuizMedal"] = 0
-                fileContents[username]["EmailMedal"] = 0
+                fileContents[username]["EmailMedal"] = 1
                 fileContents[username]["badge01"] = 0
                 fileContents[username]["badge02"] = 0
-                fileContents[username]["badge03"] = 0
+                fileContents[username]["badge03"] = 1
                 fileContents[username]["badge04"] = 0
                 fileContents[username]["badge05"] = 0
-                fileContents[username]["badge06"] = 0
-                fileContents[username]["Score"] = 0
+                fileContents[username]["badge06"] = 1
+                fileContents[username]["Score"] = 2000
                 fileContents[username]["Theme"] = "default"
 
                 with open(dataPath, 'w') as jsonFile:
