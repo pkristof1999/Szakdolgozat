@@ -118,7 +118,16 @@ class ResultsUI(QMainWindow):
             else:
                 raise Exception("Hiba a 'LearnMedal' jelvény betöltésekor!")
 
-            # TODO KVÍZ
+            if account[username]["QuizMedal"] == 0:
+                self.badgeLoader(
+                    "/quiz/Quiz_Locked.png", self.quizMedal, self.quizMedalLabel
+                )
+            elif account[username]["QuizMedal"] == 1:
+                self.badgeLoader(
+                    "/quiz/Quiz_Unlocked.png", self.quizMedal, self.quizMedalLabel
+                )
+            else:
+                raise Exception("Hiba a 'EmailMedal' jelvény betöltésekor!")
 
             if account[username]["EmailMedal"] == 0:
                 self.badgeLoader(
