@@ -8,6 +8,7 @@ from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python.components.logger import *
+from src.main.python.components.resultsDeletion import resultsDeletion
 from src.main.python.infoscreens import areYouSure
 from src.main.python.components.errorMessage import errorMessage
 
@@ -50,7 +51,7 @@ class WelcomeUI(QMainWindow):
 
     def handlePlayAsGuest(self, result, username):
         if result == "Yes":
-            self.resultsDeletion(username)
+            resultsDeletion(username, "../../../userdata/profiles/guestProfile.json")
             self.playAsGuest(username)
 
     def playAsGuest(self, username):
@@ -59,32 +60,6 @@ class WelcomeUI(QMainWindow):
         self.appMainWindow.show()
         logger.info("Továbblépés a fő felületre.")
         self.close()
-
-    def resultsDeletion(self, username):
-        dataPath = "../../../userdata/profiles/guestProfile.json"
-
-        try:
-            with open(dataPath, 'r') as jsonFile:
-                fileContents = json.load(jsonFile)
-
-            if username in fileContents:
-                fileContents[username]["LearnMedal"] = 1
-                fileContents[username]["QuizMedal"] = 1
-                fileContents[username]["EmailMedal"] = 1
-                fileContents[username]["badge01"] = 1
-                fileContents[username]["badge02"] = 1
-                fileContents[username]["badge03"] = 1
-                fileContents[username]["badge04"] = 1
-                fileContents[username]["badge05"] = 1
-                fileContents[username]["badge06"] = 1
-                fileContents[username]["Score"] = 2000
-                fileContents[username]["Theme"] = "default"
-
-                with open(dataPath, 'w') as jsonFile:
-                    json.dump(fileContents, jsonFile, indent=4)
-
-        except Exception as e:
-            errorMessage(f"Hiba: {e}")
 
     def openLoginUI(self):
         if not self.loginWindow:
