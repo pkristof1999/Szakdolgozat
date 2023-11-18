@@ -81,41 +81,7 @@ class ResultsUI(QMainWindow):
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
 
-                    if existingAccounts[username]["LearnMedal"] == 0:
-                        self.badgeLoader(
-                            "/learning/Learning_Locked.png", self.learnMedal, self.learnMedalLabel
-                        )
-                    elif existingAccounts[username]["LearnMedal"] == 1:
-                        self.badgeLoader(
-                            "/learning/Learning_Unlocked.png", self.learnMedal, self.learnMedalLabel
-                        )
-                    else:
-                        raise Exception("Hiba a 'LearnMedal' jelvény betöltésekor!")
-
-                    #TODO EMAIL
-                    #TODO QUIZ
-
-                    if existingAccounts[username]["badge01"] == 0:
-                        self.badgeLoader(
-                            "/learning/Learning_100Percent_Locked.png", self.badge01, self.badge01Label
-                        )
-                    elif existingAccounts[username]["badge01"] == 1:
-                        self.badgeLoader(
-                            "/learning/Learning_100Percent_Unlocked.png", self.badge01, self.badge01Label
-                        )
-                    else:
-                        raise Exception("Hiba a 'badge01' jelvény betöltésekor!")
-
-                    if existingAccounts[username]["badge02"] == 0:
-                        self.badgeLoader(
-                            "/learning/Learning_Fast_Completion_Locked.png", self.badge02, self.badge02Label
-                        )
-                    elif existingAccounts[username]["badge02"] == 1:
-                        self.badgeLoader(
-                            "/learning/Learning_Fast_Completion_Unlocked.png", self.badge02, self.badge02Label
-                        )
-                    else:
-                        raise Exception("Hiba a 'badge02' jelvény betöltésekor!")
+                    self.loadUserAchievementsComponent(existingAccounts, username)
 
         except Exception as e:
             logger.error(f"Hiba: {e}")
@@ -146,3 +112,44 @@ class ResultsUI(QMainWindow):
         label.setGeometry(medal.rect())
         label.setPixmap(pixmap)
         logger.info(f"{medal} sikeresen betöltésre került!")
+
+    def loadUserAchievementsComponent(self, account, username):
+        try:
+            if account[username]["LearnMedal"] == 0:
+                self.badgeLoader(
+                    "/learning/Learning_Locked.png", self.learnMedal, self.learnMedalLabel
+                )
+            elif account[username]["LearnMedal"] == 1:
+                self.badgeLoader(
+                    "/learning/Learning_Unlocked.png", self.learnMedal, self.learnMedalLabel
+                )
+            else:
+                raise Exception("Hiba a 'LearnMedal' jelvény betöltésekor!")
+
+            # TODO EMAIL
+            # TODO QUIZ
+
+            if account[username]["badge01"] == 0:
+                self.badgeLoader(
+                    "/learning/Learning_100Percent_Locked.png", self.badge01, self.badge01Label
+                )
+            elif account[username]["badge01"] == 1:
+                self.badgeLoader(
+                    "/learning/Learning_100Percent_Unlocked.png", self.badge01, self.badge01Label
+                )
+            else:
+                raise Exception("Hiba a 'badge01' jelvény betöltésekor!")
+
+            if account[username]["badge02"] == 0:
+                self.badgeLoader(
+                    "/learning/Learning_Fast_Completion_Locked.png", self.badge02, self.badge02Label
+                )
+            elif account[username]["badge02"] == 1:
+                self.badgeLoader(
+                    "/learning/Learning_Fast_Completion_Unlocked.png", self.badge02, self.badge02Label
+                )
+            else:
+                raise Exception("Hiba a 'badge02' jelvény betöltésekor!")
+
+        except Exception as f:
+            logger.error(f"Hiba: {f}")
