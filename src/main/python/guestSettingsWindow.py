@@ -12,71 +12,80 @@ from src.main.python.components.overwriteAccount import *
 
 class GuestSettingsWindowUI(QMainWindow):
     def __init__(self, parent, username):
-        super(GuestSettingsWindowUI, self).__init__()
-        loadUi("../resources/ui/default/guestSettingsWindow.ui", self)
+        try:
+            if username is None or username == "":
+                raise Exception("Hiba: Felhasználó nem található!")
 
-        self.parent = parent
+            super(GuestSettingsWindowUI, self).__init__()
+            loadUi("../resources/ui/default/guestSettingsWindow.ui", self)
 
-        self.profilePicture = self.findChild(QFrame, "profilePicture")
-        self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
+            self.parent = parent
 
-        """Ha ezt a sort törlöm, nem működik a témaválasztás valamiért..."""
-        self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
+            self.profilePicture = self.findChild(QFrame, "profilePicture")
+            self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
 
-        self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
-        self.abortButton = self.findChild(QPushButton, "abortButton")
-        self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
+            """Ha ezt a sort törlöm, nem működik a témaválasztás valamiért..."""
+            self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
 
-        self.questionWindow = None
-        self.loginWindow = None
+            self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
+            self.abortButton = self.findChild(QPushButton, "abortButton")
+            self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
 
-        """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
-           This is here because I couldn't align the QComboBox's content to center elsewhere."""
-        clickableLineEdit = clickableComboBox.ClickableLineEdit(self.changeThemeBox)
+            self.questionWindow = None
+            self.loginWindow = None
 
-        self.changeThemeBox.setLineEdit(clickableLineEdit)
-        clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        clickableLineEdit.setReadOnly(True)
+            """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
+               This is here because I couldn't align the QComboBox's content to center elsewhere."""
+            clickableLineEdit = clickableComboBox.ClickableLineEdit(self.changeThemeBox)
 
-        self.changeThemeBox.setStyleSheet("""
-                    * {
-                        background-color: white;
-                        border: 2px solid #8f8f91;
-                        border-radius: 10px;
-                        color: grey;
-                    }
+            self.changeThemeBox.setLineEdit(clickableLineEdit)
+            clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            clickableLineEdit.setReadOnly(True)
 
-                    *::drop-down {
-                        border: thin solid grey;
-                        right: 8px;
-                    }
+            self.changeThemeBox.setStyleSheet("""
+                        * {
+                            background-color: white;
+                            border: 2px solid #8f8f91;
+                            border-radius: 10px;
+                            color: grey;
+                        }
+    
+                        *::drop-down {
+                            border: thin solid grey;
+                            right: 8px;
+                        }
+    
+                        *::down-arrow {
+                            image: url("../resources/pictures/Arrow.png");
+                            width: 16px;
+                            height: 16px;
+                        }""")
 
-                    *::down-arrow {
-                        image: url("../resources/pictures/Arrow.png");
-                        width: 16px;
-                        height: 16px;
-                    }""")
+            self.restoreDefaultResultsButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan törli az eredményeit?"
+                                                "\nEhhez nem kell a mentés gomb!",
+                                                self.handleResultsDeletion,
+                                                username
+                                                )
+            )
 
-        self.restoreDefaultResultsButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan törli az eredményeit?"
-                                            "\nEhhez nem kell a mentés gomb!",
-                                            self.handleResultsDeletion,
-                                            username
-                                            )
-        )
+            self.abortButton.clicked.connect(self.abortAndCloseSettings)
 
-        self.abortButton.clicked.connect(self.abortAndCloseSettings)
+            self.saveAndCloseButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan menti\na módosításokat?",
+                                                self.handleSaveAndCloseSettings,
+                                                username
+                                                )
+            )
 
-        self.saveAndCloseButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan menti\na módosításokat?",
-                                            self.handleSaveAndCloseSettings,
-                                            username
-                                            )
-        )
+            self.label = QLabel(self.profilePicture)
+            self.loadImage()
+            self.loadThemes()
 
-        self.label = QLabel(self.profilePicture)
-        self.loadImage()
-        self.loadThemes()
+        except Exception as e:
+            errorMessage(e)
+            self.parent.close()
+            self.close()
 
     def loadImage(self):
         try:

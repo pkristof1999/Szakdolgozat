@@ -6,42 +6,52 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QFrame, QPushButton, QLabel
 
+from src.main.python.components.errorMessage import errorMessage
 from src.main.python.components.logger import *
 
 
 class ResultsUI(QMainWindow):
     def __init__(self, parent, username):
-        super(ResultsUI, self).__init__()
-        loadUi(f"../resources/ui/default/resultsWindow.ui", self)
+        try:
+            if username is None or username == "":
+                raise Exception("Hiba: Felhasználó nem található!")
 
-        self.parent = parent
+            super(ResultsUI, self).__init__()
+            loadUi(f"../resources/ui/default/resultsWindow.ui", self)
 
-        self.learnMedal = self.findChild(QFrame, "learnMedal")
-        self.quizMedal = self.findChild(QFrame, "quizMedal")
-        self.emailMedal = self.findChild(QFrame, "emailMedal")
-        self.badge01 = self.findChild(QFrame, "badge01")
-        self.badge02 = self.findChild(QFrame, "badge02")
-        self.badge03 = self.findChild(QFrame, "badge03")
-        self.badge04 = self.findChild(QFrame, "badge04")
-        self.badge05 = self.findChild(QFrame, "badge05")
-        self.badge06 = self.findChild(QFrame, "badge06")
-        self.userScore = self.findChild(QLabel, "userScore")
-        self.backButton = self.findChild(QPushButton, "backButton")
+            self.parent = parent
 
-        self.learnMedalLabel = QLabel(self.learnMedal)
-        self.quizMedalLabel = QLabel(self.quizMedal)
-        self.emailMedalLabel = QLabel(self.emailMedal)
-        self.badge01Label = QLabel(self.badge01)
-        self.badge02Label = QLabel(self.badge02)
-        self.badge03Label = QLabel(self.badge03)
-        self.badge04Label = QLabel(self.badge04)
-        self.badge05Label = QLabel(self.badge05)
-        self.badge06Label = QLabel(self.badge06)
+            self.learnMedal = self.findChild(QFrame, "learnMedal")
+            self.quizMedal = self.findChild(QFrame, "quizMedal")
+            self.emailMedal = self.findChild(QFrame, "emailMedal")
+            self.badge01 = self.findChild(QFrame, "badge01")
+            self.badge02 = self.findChild(QFrame, "badge02")
+            self.badge03 = self.findChild(QFrame, "badge03")
+            self.badge04 = self.findChild(QFrame, "badge04")
+            self.badge05 = self.findChild(QFrame, "badge05")
+            self.badge06 = self.findChild(QFrame, "badge06")
+            self.userScore = self.findChild(QLabel, "userScore")
+            self.backButton = self.findChild(QPushButton, "backButton")
 
-        self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
+            self.learnMedalLabel = QLabel(self.learnMedal)
+            self.quizMedalLabel = QLabel(self.quizMedal)
+            self.emailMedalLabel = QLabel(self.emailMedal)
+            self.badge01Label = QLabel(self.badge01)
+            self.badge02Label = QLabel(self.badge02)
+            self.badge03Label = QLabel(self.badge03)
+            self.badge04Label = QLabel(self.badge04)
+            self.badge05Label = QLabel(self.badge05)
+            self.badge06Label = QLabel(self.badge06)
 
-        self.backButton.clicked.connect(self.close)
-        self.loadUserAchievements(username)
+            self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
+
+            self.backButton.clicked.connect(self.close)
+            self.loadUserAchievements(username)
+
+        except Exception as e:
+            errorMessage(e)
+            self.parent.close()
+            self.close()
 
     def loadUserAchievements(self, username):
         if username != "Vendég":

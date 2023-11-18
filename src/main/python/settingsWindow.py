@@ -23,98 +23,107 @@ from src.main.python.components.errorMessage import errorMessage
 
 class SettingsWindowUI(QMainWindow):
     def __init__(self, parent, username):
-        super(SettingsWindowUI, self).__init__()
-        loadUi("../resources/ui/default/settingsWindow.ui", self)
+        try:
+            if username is None or username == "":
+                raise Exception("Hiba: Felhasználó nem található!")
 
-        self.parent = parent
+            super(SettingsWindowUI, self).__init__()
+            loadUi("../resources/ui/default/settingsWindow.ui", self)
 
-        self.profilePicture = self.findChild(QFrame, "profilePicture")
-        self.changeProfilePictureButton = self.findChild(QPushButton, "changeProfilePictureButton")
-        self.deleteProfilePictureButton = self.findChild(QPushButton, "deleteProfilePictureButton")
-        self.changeUserAge = self.findChild(QLineEdit, "changeUserAge")
-        self.oldPassword = self.findChild(QLineEdit, "oldPassword")
-        self.newPassword1 = self.findChild(QLineEdit, "newPassword1")
-        self.newPassword2 = self.findChild(QLineEdit, "newPassword2")
-        self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
-        self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
-        self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
-        self.abortButton = self.findChild(QPushButton, "abortButton")
-        self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
+            self.parent = parent
 
-        self.questionWindow = None
-        self.loginWindow = None
+            self.profilePicture = self.findChild(QFrame, "profilePicture")
+            self.changeProfilePictureButton = self.findChild(QPushButton, "changeProfilePictureButton")
+            self.deleteProfilePictureButton = self.findChild(QPushButton, "deleteProfilePictureButton")
+            self.changeUserAge = self.findChild(QLineEdit, "changeUserAge")
+            self.oldPassword = self.findChild(QLineEdit, "oldPassword")
+            self.newPassword1 = self.findChild(QLineEdit, "newPassword1")
+            self.newPassword2 = self.findChild(QLineEdit, "newPassword2")
+            self.restoreDefaultResultsButton = self.findChild(QPushButton, "restoreDefaultResultsButton")
+            self.deleteUserProfileButton = self.findChild(QPushButton, "deleteUserProfileButton")
+            self.changeThemeBox = self.findChild(QComboBox, "changeThemeBox")
+            self.abortButton = self.findChild(QPushButton, "abortButton")
+            self.saveAndCloseButton = self.findChild(QPushButton, "saveAndCloseButton")
 
-        """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
-           This is here because I couldn't align the QComboBox's content to center elsewhere."""
-        clickableLineEdit = clickableComboBox.ClickableLineEdit(self.changeThemeBox)
+            self.questionWindow = None
+            self.loginWindow = None
 
-        self.changeThemeBox.setLineEdit(clickableLineEdit)
-        clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        clickableLineEdit.setReadOnly(True)
+            """Ez csak azért kell ide, mert máshol nem tudtam középre igazítani a QComboBox tartalmát.
+               This is here because I couldn't align the QComboBox's content to center elsewhere."""
+            clickableLineEdit = clickableComboBox.ClickableLineEdit(self.changeThemeBox)
 
-        self.changeThemeBox.setStyleSheet("""
-                    * {
-                        background-color: white;
-                        border: 2px solid #8f8f91;
-                        border-radius: 10px;
-                        color: grey;
-                    }
+            self.changeThemeBox.setLineEdit(clickableLineEdit)
+            clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            clickableLineEdit.setReadOnly(True)
 
-                    *::drop-down {
-                        border: thin solid grey;
-                        right: 8px;
-                    }
+            self.changeThemeBox.setStyleSheet("""
+                        * {
+                            background-color: white;
+                            border: 2px solid #8f8f91;
+                            border-radius: 10px;
+                            color: grey;
+                        }
+    
+                        *::drop-down {
+                            border: thin solid grey;
+                            right: 8px;
+                        }
+    
+                        *::down-arrow {
+                            image: url("../resources/pictures/Arrow.png");
+                            width: 16px;
+                            height: 16px;
+                        }""")
 
-                    *::down-arrow {
-                        image: url("../resources/pictures/Arrow.png");
-                        width: 16px;
-                        height: 16px;
-                    }""")
+            self.changeProfilePictureButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan lecseréli a profilképét?",
+                                                self.handleProfilePictureChange
+                                                )
+            )
+            self.deleteProfilePictureButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképét?",
+                                                self.handleProfilePictureDeletion
+                                                )
+            )
+            self.restoreDefaultResultsButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan törli az eredményeit?"
+                                                "\nEhhez nem kell a mentés gomb!",
+                                                self.handleResultsDeletion,
+                                                username
+                                                )
+            )
+            self.deleteUserProfileButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan törli\na felhasználói profilját?"
+                                                "\nEhhez nem kell a mentés gomb!",
+                                                self.handleProfileDeletion,
+                                                username
+                                                )
+            )
 
-        self.changeProfilePictureButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan lecseréli a profilképét?",
-                                            self.handleProfilePictureChange
-                                            )
-        )
-        self.deleteProfilePictureButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztos benne, hogy törli\na profilképét?",
-                                            self.handleProfilePictureDeletion
-                                            )
-        )
-        self.restoreDefaultResultsButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan törli az eredményeit?"
-                                            "\nEhhez nem kell a mentés gomb!",
-                                            self.handleResultsDeletion,
-                                            username
-                                            )
-        )
-        self.deleteUserProfileButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan törli\na felhasználói profilját?"
-                                            "\nEhhez nem kell a mentés gomb!",
-                                            self.handleProfileDeletion,
-                                            username
-                                            )
-        )
+            self.newPassword1.textChanged.connect(self.changeNewPassword1)
+            self.newPassword2.textChanged.connect(self.changeNewPassword2)
 
-        self.newPassword1.textChanged.connect(self.changeNewPassword1)
-        self.newPassword2.textChanged.connect(self.changeNewPassword2)
+            self.abortButton.clicked.connect(self.abortAndCloseSettings)
 
-        self.abortButton.clicked.connect(self.abortAndCloseSettings)
+            self.saveAndCloseButton.clicked.connect(
+                lambda: self.openQuestionWindow("Biztosan menti\na módosításokat?",
+                                                self.handleSaveAndCloseSettings,
+                                                username
+                                                )
+            )
 
-        self.saveAndCloseButton.clicked.connect(
-            lambda: self.openQuestionWindow("Biztosan menti\na módosításokat?",
-                                            self.handleSaveAndCloseSettings,
-                                            username
-                                            )
-        )
+            self.imagePath = self.getImagePath(username)
+            self.oldImage = self.imagePath
+            self.label = QLabel(self.profilePicture)
 
-        self.imagePath = self.getImagePath(username)
-        self.oldImage = self.imagePath
-        self.label = QLabel(self.profilePicture)
+            self.loadImage(self.imagePath)
+            self.loadUserAge(username)
+            self.loadThemes()
 
-        self.loadImage(self.imagePath)
-        self.loadUserAge(username)
-        self.loadThemes()
+        except Exception as e:
+            errorMessage(e)
+            self.parent.close()
+            self.close()
 
     def addPicture(self):
         fileDialog = QFileDialog(self)

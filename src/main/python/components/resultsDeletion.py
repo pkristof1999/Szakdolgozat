@@ -18,7 +18,7 @@ def resultsDeletion(username, dataPath):
             fileContents[username]["badge04"] = 0
             fileContents[username]["badge05"] = 0
             fileContents[username]["badge06"] = 0
-            fileContents[username]["Score"] = 0
+            fileContents[username]["Score"] = 10000
 
             with open(dataPath, 'w') as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
