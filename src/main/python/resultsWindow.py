@@ -40,35 +40,7 @@ class ResultsUI(QMainWindow):
         self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
 
         self.backButton.clicked.connect(self.close)
-
         self.loadUserAchievements(username)
-
-    """def loadDefaultImage(self):
-        pixmap = QPixmap("../resources/pictures/userDefault.png")
-
-        frameSize = self.profilePicture.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
-
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)
-        logger.info("Alap profilkép betöltésre került!")
-        "Teszt Elek": {
-        "UserAge": 30,
-        "Password": "JDJiJDEyJHJKdXRlUFU2ZnhDL1V1Q2RGR2F6bWVwcDRwaGxsVm9MMVpneVFwU2hwdTFZOXR4eXViVy8u",
-        "ProfilePicturePath": "../resources/pictures/userDefault.png",
-        "LearnMedal": 0,
-        "QuizMedal": 0,
-        "EmailMedal": 0,
-        "badge01": 0,
-        "badge02": 0,
-        "badge03": 0,
-        "badge04": 0,
-        "badge05": 0,
-        "badge06": 0,
-        "Score": 0,
-        "Theme": "default"""
 
     def loadUserAchievements(self, username):
         if username != "Vendég":
@@ -111,7 +83,9 @@ class ResultsUI(QMainWindow):
         label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         label.setGeometry(medal.rect())
         label.setPixmap(pixmap)
-        logger.info(f"{medal} sikeresen betöltésre került!")
+
+        path, to, badge = pathToBadge.split("/")
+        logger.info(f"{badge} sikeresen betöltésre került!")
 
     def loadUserAchievementsComponent(self, account, username):
         try:
