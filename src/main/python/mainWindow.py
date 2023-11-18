@@ -97,15 +97,22 @@ class MainWindowUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
     def loadImage(self, imagePath):
-        pixmap = QPixmap(imagePath)
+        try:
+            pixmap = QPixmap(imagePath)
 
-        frameSize = self.profilePicture.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
+            if not os.path.exists(imagePath):
+                raise Exception("A megadott kép nem található!")
 
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)
+            frameSize = self.profilePicture.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
+
+            self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.label.setGeometry(self.profilePicture.rect())
+            self.label.setPixmap(pixmap)
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def openResults(self):
         if not self.resultsScreen:

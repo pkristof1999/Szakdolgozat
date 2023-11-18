@@ -82,15 +82,22 @@ class GuestSettingsWindowUI(QMainWindow):
         self.loadThemes()
 
     def loadImage(self):
-        pixmap = QPixmap("../resources/pictures/userDefault.png")
+        try:
+            pixmap = QPixmap("../resources/pictures/userDefault.png")
 
-        frameSize = self.profilePicture.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
+            if not os.path.exists("../resources/pictures/userDefault.png"):
+                raise Exception("A megadott kép nem található!")
 
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)
+            frameSize = self.profilePicture.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
+
+            self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.label.setGeometry(self.profilePicture.rect())
+            self.label.setPixmap(pixmap)
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def loadThemes(self):
         dataPath = "../resources/ui/themes.json"

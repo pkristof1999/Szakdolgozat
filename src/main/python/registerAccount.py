@@ -61,27 +61,41 @@ class RegisterAccountUI(QMainWindow):
                 logger.info("Profilkép kiválasztásra került!")
 
     def loadImage(self, imagePath):
-        pixmap = QPixmap(imagePath)
+        try:
+            pixmap = QPixmap(imagePath)
 
-        frameSize = self.profilePicture.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
+            if not os.path.exists(imagePath):
+                raise Exception("A megadott kép nem található!")
 
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)
+            frameSize = self.profilePicture.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
+
+            self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.label.setGeometry(self.profilePicture.rect())
+            self.label.setPixmap(pixmap)
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def loadDefaultImage(self):
-        pixmap = QPixmap("../resources/pictures/userDefault.png")
+        try:
+            pixmap = QPixmap("../resources/pictures/userDefault.png")
 
-        frameSize = self.profilePicture.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
+            if not os.path.exists("../resources/pictures/userDefault.png"):
+                raise Exception("A megadott kép nem található!")
 
-        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label.setGeometry(self.profilePicture.rect())
-        self.label.setPixmap(pixmap)
-        logger.info("Alap profilkép betöltésre került!")
+            frameSize = self.profilePicture.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
+
+            self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.label.setGeometry(self.profilePicture.rect())
+            self.label.setPixmap(pixmap)
+            logger.info("Alap profilkép betöltésre került!")
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def registerUser(self):
         message = ""

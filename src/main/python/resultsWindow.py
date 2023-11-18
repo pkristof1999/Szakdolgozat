@@ -1,4 +1,5 @@
 import json
+import os.path
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap
@@ -74,18 +75,25 @@ class ResultsUI(QMainWindow):
             logger.error(f"Hiba: {e}")
 
     def badgeLoader(self, pathToBadge, medal, label):
-        pixmap = QPixmap(f"../resources/emblems{pathToBadge}")
+        try:
+            pixmap = QPixmap(f"../resources/emblems{pathToBadge}")
 
-        frameSize = medal.size()
-        pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                               QtCore.Qt.TransformationMode.SmoothTransformation)
+            if not os.path.exists(f"../resources/emblems{pathToBadge}"):
+                raise Exception("A megadott kép nem található!")
 
-        label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        label.setGeometry(medal.rect())
-        label.setPixmap(pixmap)
+            frameSize = medal.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
 
-        path, to, badge = pathToBadge.split("/")
-        logger.info(f"{badge} sikeresen betöltésre került!")
+            label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            label.setGeometry(medal.rect())
+            label.setPixmap(pixmap)
+
+            path, to, badge = pathToBadge.split("/")
+            logger.info(f"{badge} sikeresen betöltésre került!")
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def loadUserAchievementsComponent(self, account, username):
         try:
@@ -101,7 +109,6 @@ class ResultsUI(QMainWindow):
                 raise Exception("Hiba a 'LearnMedal' jelvény betöltésekor!")
 
             # TODO EMAIL
-            # TODO QUIZ
 
             if account[username]["badge01"] == 0:
                 self.badgeLoader(
@@ -124,6 +131,50 @@ class ResultsUI(QMainWindow):
                 )
             else:
                 raise Exception("Hiba a 'badge02' jelvény betöltésekor!")
+
+            if account[username]["badge03"] == 0:
+                self.badgeLoader(
+                    "/quiz/Quiz_100Percent_Locked.png", self.badge03, self.badge03Label
+                )
+            elif account[username]["badge03"] == 1:
+                self.badgeLoader(
+                    "/quiz/Quiz_100Percent_Unlocked.png", self.badge03, self.badge03Label
+                )
+            else:
+                raise Exception("Hiba a 'badge03' jelvény betöltésekor!")
+
+            if account[username]["badge04"] == 0:
+                self.badgeLoader(
+                    "/quiz/Quiz_Fast_Completion_Locked.png", self.badge04, self.badge04Label
+                )
+            elif account[username]["badge04"] == 1:
+                self.badgeLoader(
+                    "/quiz/Quiz_Fast_Completion_Locked.png", self.badge04, self.badge04Label
+                )
+            else:
+                raise Exception("Hiba a 'badge04' jelvény betöltésekor!")
+
+            if account[username]["badge05"] == 0:
+                self.badgeLoader(
+                    "/email/Email_100Percent_Locked.png", self.badge05, self.badge05Label
+                )
+            elif account[username]["badge05"] == 1:
+                self.badgeLoader(
+                    "/email/Email_100Percent_Unlocked.png", self.badge05, self.badge05Label
+                )
+            else:
+                raise Exception("Hiba a 'badge05' jelvény betöltésekor!")
+
+            if account[username]["badge06"] == 0:
+                self.badgeLoader(
+                    "/email/Email_Fast_Completion_Locked.png", self.badge06, self.badge06Label
+                )
+            elif account[username]["badge06"] == 1:
+                self.badgeLoader(
+                    "/email/Email_Fast_Completion_Unlocked.png", self.badge06, self.badge06Label
+                )
+            else:
+                raise Exception("Hiba a 'badge06' jelvény betöltésekor!")
 
         except Exception as f:
             logger.error(f"Hiba: {f}")
