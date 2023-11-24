@@ -1,6 +1,7 @@
 import json
 
 from PyQt6 import QtCore
+from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLineEdit, QComboBox
 
@@ -15,6 +16,7 @@ class LoginScreenUI(QMainWindow):
     def __init__(self):
         super(LoginScreenUI, self).__init__()
         loadUi("../resources/ui/default/loginScreen.ui", self)
+        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.userNameBox = self.findChild(QComboBox, "userNameBox")
         self.inputPwd = self.findChild(QLineEdit, "inputPwd")

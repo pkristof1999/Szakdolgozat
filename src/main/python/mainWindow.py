@@ -1,7 +1,7 @@
 import json
 
 from PyQt6 import QtCore
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
@@ -21,6 +21,7 @@ class MainWindowUI(QMainWindow):
                 raise Exception("Hiba: Felhasználó nem található!")
 
             super(MainWindowUI, self).__init__()
+            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.username = username
             default = "default"

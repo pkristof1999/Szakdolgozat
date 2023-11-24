@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
@@ -10,6 +11,7 @@ class RegisterSuccessUI(QMainWindow):
     def __init__(self):
         super(RegisterSuccessUI, self).__init__()
         loadUi("../resources/ui/default/registerSuccess.ui", self)
+        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.toLoginScreenButton = self.findChild(QPushButton, "toLoginScreenButton")
         self.newRegisterButton = self.findChild(QPushButton, "newRegisterButton")

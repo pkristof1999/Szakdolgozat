@@ -2,7 +2,7 @@ import shutil
 import random
 
 from PyQt6 import QtCore
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtWidgets import QLineEdit, QFrame, QFileDialog, QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 from datetime import datetime
@@ -20,6 +20,7 @@ class RegisterAccountUI(QMainWindow):
     def __init__(self):
         super(RegisterAccountUI, self).__init__()
         loadUi("../resources/ui/default/registerAccount.ui", self)
+        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.backButton = self.findChild(QPushButton, "backButton")
         self.registerButton = self.findChild(QPushButton, "registerButton")

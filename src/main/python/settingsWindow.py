@@ -3,7 +3,7 @@ import random
 import shutil
 
 from PyQt6 import QtCore
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtWidgets import QFrame, QPushButton, QMainWindow, QComboBox, QLabel, QFileDialog, QLineEdit
 from PyQt6.uic import loadUi
 from datetime import datetime
@@ -29,6 +29,7 @@ class SettingsWindowUI(QMainWindow):
 
             super(SettingsWindowUI, self).__init__()
             loadUi("../resources/ui/default/settingsWindow.ui", self)
+            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.parent = parent
 

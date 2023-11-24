@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
 from PyQt6.QtCore import pyqtSignal
@@ -9,6 +10,7 @@ class AreYouSureUI(QMainWindow):
     def __init__(self, question, theme = "default"):
         super(AreYouSureUI, self).__init__()
         loadUi(f"../resources/ui/{theme}/areYouSure.ui", self)
+        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.questionLabel = self.findChild(QLabel, "questionLabel")
         self.noButton = self.findChild(QPushButton, "noButton")

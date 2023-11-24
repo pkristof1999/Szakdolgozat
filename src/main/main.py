@@ -1,5 +1,6 @@
 import sys
 
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QApplication
 
 from src.main.python import welcomeScreen
