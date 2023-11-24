@@ -23,7 +23,8 @@ class GameModeInfoUI(QMainWindow):
 
         self.label = QLabel(self.infoFrame)
 
-        self.infoLabel.setText(question)
+        self.infoLabel.setText(question.replace("  ", ""))
+        self.infoLabel.setWordWrap(True)
 
         self.backButton.clicked.connect(self.backButtonClick)
         self.nextButton.clicked.connect(self.nextButtonClick)

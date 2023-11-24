@@ -53,9 +53,20 @@ class MainWindowUI(QMainWindow):
             self.logOutButton.clicked.connect(self.logOut)
             self.exitButton.clicked.connect(self.close)
 
-            self.learningGameInfo = """Ide lesz majd a leírás"""
-            self.quizGameInfo = """Ide lesz majd a leírás"""
-            self.emailGameInfo = """Ide lesz majd a leírás"""
+            self.learningGameInfo = "Ebben a módban kártevőtípusokról tanulhatsz. " + \
+                                    "Minden témakör tartalmaz interaktív anyagokat tanuláshoz,melyekhez tartoznak kérdések is. " + \
+                                    "Ha ezekre helyes a válasz, akkor kitűző kapható. " + \
+                                    "Ha egy témakör válaszaira 5 percen belül helyes válaszok kerülnek megadásra, erre is kitűző szerezhető!"
+
+            self.quizGameInfo = "Ebben a módban a tanult tudást lehet tesztelni kvíz formájában! " + \
+                                "Tíz darab kérdésre kell válaszolni, minden kérdésre 30 másodperc idő jár. " + \
+                                "Ha minden kérdésre helyes a válasz, akkor kitűző kapható. " + \
+                                "Ha minden válasz helyes, és a tíz kérdést megválaszolod 2 perc alatt, kitűző szerezhető!"
+
+            self.emailGameInfo = "Ebben a módban egy tíz levélből álló postafiókot kell átnézni! " + \
+                                 "Minden email-t jelölni kell, amely alkalmaz kártékony rutint!" + \
+                                 "Ha minden levél helyesen van (vagy nincs) megjelölve, akkor kitűző kapható. " + \
+                                 "Ha minden megadott válasz helyes 1 perc alatt, kitűző szerezhető!"
 
             self.learningGameButton.clicked.connect(
                 lambda: self.openQuestionWindow(self.learningGameInfo,

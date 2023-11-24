@@ -7,14 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>545</width>
-    <height>302</height>
+    <height>254</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Játékmód információ</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">* {
+	font-size: 16pt;
+	color: grey;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
@@ -23,7 +26,7 @@
       <x>0</x>
       <y>0</y>
       <width>551</width>
-      <height>281</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -37,7 +40,7 @@
      <property name="geometry">
       <rect>
        <x>300</x>
-       <y>240</y>
+       <y>180</y>
        <width>128</width>
        <height>32</height>
       </rect>
@@ -69,8 +72,8 @@
     <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>240</y>
+       <x>100</x>
+       <y>180</y>
        <width>128</width>
        <height>32</height>
       </rect>
@@ -105,16 +108,16 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>110</x>
        <y>20</y>
-       <width>361</width>
-       <height>201</height>
+       <width>411</width>
+       <height>131</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>16</pointsize>
+       <pointsize>12</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -123,7 +126,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	font-size: 16pt;
+	font-size: 12pt;
 	color: grey;
 }</string>
      </property>
@@ -140,16 +143,16 @@
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignJustify</set>
      </property>
     </widget>
     <widget class="QFrame" name="infoFrame">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>60</y>
-       <width>121</width>
-       <height>121</height>
+       <y>20</y>
+       <width>80</width>
+       <height>80</height>
       </rect>
      </property>
      <property name="frameShape">
