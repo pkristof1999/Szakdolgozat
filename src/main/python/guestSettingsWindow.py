@@ -7,7 +7,7 @@ from src.main.python.components import clickableComboBox
 from src.main.python.components.resultsDeletion import resultsDeletion
 from src.main.python.components.translateTheme import translateTheme
 from src.main.python.infoscreens import areYouSure
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.components.overwriteAccount import *
 
 
@@ -20,6 +20,8 @@ class GuestSettingsWindowUI(QMainWindow):
             super(GuestSettingsWindowUI, self).__init__()
             loadUi("../resources/ui/default/guestSettingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+            self.setFixedSize(self.size())
 
             self.parent = parent
 

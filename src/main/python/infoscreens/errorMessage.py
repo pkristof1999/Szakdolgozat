@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QMessageBox
 
 from src.main.python.components.logger import *
@@ -6,6 +7,7 @@ from src.main.python.components.logger import *
 def errorMessage(message):
     logger.error(message)
     errorDialog = QMessageBox()
+    errorDialog.setWindowIcon(QIcon("../resources/icon/icon.ico"))
     errorDialog.setWindowTitle("Hiba!")
     errorDialog.setStyleSheet("""
                 * {

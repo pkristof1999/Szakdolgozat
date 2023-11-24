@@ -18,7 +18,7 @@ from src.main.python.components.securePwd import *
 from src.main.python.components.overwriteAccount import overwriteAccount as overWrite
 from src.main.python.components.isConvertible import convertibleToInt
 from src.main.python.components.translateTheme import translateTheme
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class SettingsWindowUI(QMainWindow):
@@ -30,6 +30,8 @@ class SettingsWindowUI(QMainWindow):
             super(SettingsWindowUI, self).__init__()
             loadUi("../resources/ui/default/settingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+            self.setFixedSize(self.size())
 
             self.parent = parent
 

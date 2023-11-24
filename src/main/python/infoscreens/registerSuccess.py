@@ -13,6 +13,8 @@ class RegisterSuccessUI(QMainWindow):
         loadUi("../resources/ui/default/registerSuccess.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
+        self.setFixedSize(self.size())
+
         self.toLoginScreenButton = self.findChild(QPushButton, "toLoginScreenButton")
         self.newRegisterButton = self.findChild(QPushButton, "newRegisterButton")
 

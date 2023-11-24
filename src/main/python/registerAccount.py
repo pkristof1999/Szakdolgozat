@@ -13,7 +13,7 @@ from src.main.python.components.createAccount import createAccount
 from src.main.python.components.isConvertible import convertibleToInt
 from src.main.python.components import checkPwdStrenght
 from src.main.python.components.logger import *
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class RegisterAccountUI(QMainWindow):
@@ -21,6 +21,8 @@ class RegisterAccountUI(QMainWindow):
         super(RegisterAccountUI, self).__init__()
         loadUi("../resources/ui/default/registerAccount.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+        self.setFixedSize(self.size())
 
         self.backButton = self.findChild(QPushButton, "backButton")
         self.registerButton = self.findChild(QPushButton, "registerButton")

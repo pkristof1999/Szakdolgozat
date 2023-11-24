@@ -9,7 +9,7 @@ from src.main.python import mainWindow, welcomeScreen
 from src.main.python.components.logger import *
 from src.main.python.components import clickableComboBox
 from src.main.python.components.securePwd import checkPassword
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class LoginScreenUI(QMainWindow):
@@ -17,6 +17,8 @@ class LoginScreenUI(QMainWindow):
         super(LoginScreenUI, self).__init__()
         loadUi("../resources/ui/default/loginScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+        self.setFixedSize(self.size())
 
         self.userNameBox = self.findChild(QComboBox, "userNameBox")
         self.inputPwd = self.findChild(QLineEdit, "inputPwd")

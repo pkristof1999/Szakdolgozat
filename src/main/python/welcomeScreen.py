@@ -1,6 +1,7 @@
+from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QSizePolicy
 
 from src.main.python import mainWindow, loginScreen, registerAccount
 from src.main.python.components.logger import *
@@ -13,6 +14,8 @@ class WelcomeUI(QMainWindow):
         super(WelcomeUI, self).__init__()
         loadUi(f"../resources/ui/default/welcomeScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+        self.setFixedSize(self.size())
 
         self.loginButton = self.findChild(QPushButton, "loginButton")
         self.registerButton = self.findChild(QPushButton, "registerButton")

@@ -12,6 +12,8 @@ class AreYouSureUI(QMainWindow):
         loadUi(f"../resources/ui/{theme}/areYouSure.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
+        self.setFixedSize(self.size())
+
         self.questionLabel = self.findChild(QLabel, "questionLabel")
         self.noButton = self.findChild(QPushButton, "noButton")
         self.yesButton = self.findChild(QPushButton, "yesButton")

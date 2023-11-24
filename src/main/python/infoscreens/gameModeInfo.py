@@ -1,6 +1,6 @@
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel, QFrame, QStyle
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel, QFrame, QStyle, QSizePolicy
 from PyQt6.QtCore import pyqtSignal, Qt
 
 from src.main.python.components.logger import *
@@ -13,6 +13,8 @@ class GameModeInfoUI(QMainWindow):
         super(GameModeInfoUI, self).__init__()
         loadUi(f"../resources/ui/{theme}/gameModeInfo.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+        self.setFixedSize(self.size())
 
         self.infoFrame = self.findChild(QFrame, "infoFrame")
         self.infoLabel = self.findChild(QLabel, "infoLabel")

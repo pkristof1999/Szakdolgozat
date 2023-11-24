@@ -6,7 +6,7 @@ from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QFrame, QPushButton, QLabel
 
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.components.logger import *
 
 
@@ -19,6 +19,8 @@ class ResultsUI(QMainWindow):
             super(ResultsUI, self).__init__()
             loadUi(f"../resources/ui/default/resultsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+
+            self.setFixedSize(self.size())
 
             self.parent = parent
 

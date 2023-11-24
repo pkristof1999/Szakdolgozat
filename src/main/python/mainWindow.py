@@ -10,7 +10,7 @@ from src.main.python import settingsWindow
 from src.main.python import guestSettingsWindow
 from src.main.python import loginScreen
 from src.main.python.components.logger import *
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
 
 
@@ -20,13 +20,14 @@ class MainWindowUI(QMainWindow):
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
-            super(MainWindowUI, self).__init__()
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-
             self.username = username
             default = "default"
 
+            super(MainWindowUI, self).__init__()
+            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
             loadUi(f"../resources/ui/{default}/mainWindow.ui", self)
+
+            self.setFixedSize(self.size())
 
             self.profilePicture = self.findChild(QFrame, "profilePicture")
             self.usernameLabel = self.findChild(QLabel, "usernameLabel")

@@ -1,6 +1,6 @@
 import json
 
-from src.main.python.components.errorMessage import errorMessage
+from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 def resultsDeletion(username, dataPath):
