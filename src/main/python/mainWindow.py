@@ -12,6 +12,7 @@ from src.main.python import loginScreen
 from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
+from src.main.python.learninggame import chooseLearning
 
 
 class MainWindowUI(QMainWindow):
@@ -47,6 +48,9 @@ class MainWindowUI(QMainWindow):
             self.guestSettingsScreen = None
             self.loginWindow = None
             self.infoWindow = None
+            self.chooseLearningWindow = None
+            self.quizWindow = None
+            self.emailWindow = None
 
             self.resultsButton.clicked.connect(self.openResults)
             self.settingsButton.clicked.connect(lambda: self.openSettings(username))
@@ -180,7 +184,10 @@ class MainWindowUI(QMainWindow):
             self.openEmailGame(username)
 
     def openLearningGame(self, username):
-        errorMessage("openLearningGame")
+        if not self.chooseLearningWindow:
+            self.chooseLearningWindow = chooseLearning.ChooseLearningUI(username, self)
+        self.chooseLearningWindow.show()
+        logger.info("Tanulós játékmódhoz az anyagválasztó megnyitása!")
 
     def openQuizGame(self, username):
         errorMessage("openQuizGame")
