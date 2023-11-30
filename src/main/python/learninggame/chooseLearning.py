@@ -30,6 +30,16 @@ class ChooseLearningUI(QMainWindow):
 
             self.parent = parent
 
+            self.selfReplicating = self.findChild(QPushButton, "selfReplicating")
+            self.deceptive = self.findChild(QPushButton, "deceptive")
+            self.nuisance = self.findChild(QPushButton, "nuisance")
+            self.concealing = self.findChild(QPushButton, "concealing")
+            self.informationTheft = self.findChild(QPushButton, "informationTheft")
+            self.networkBased = self.findChild(QPushButton, "networkBased")
+            self.deliveryMechanism = self.findChild(QPushButton, "deliveryMechanism")
+            self.evading = self.findChild(QPushButton, "evading")
+            self.psychologicalBased = self.findChild(QPushButton, "psychologicalBased")
+            self.otherTargeted = self.findChild(QPushButton, "otherTargeted")
             self.backButton = self.findChild(QPushButton, "backButton")
 
             self.backButton.clicked.connect(self.close)
