@@ -315,7 +315,7 @@ kártevők</string>
 kártevők</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="techniqueBased">
+    <widget class="QPushButton" name="psychologicalBased">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -346,7 +346,7 @@ kártevők</string>
       <string>Pszichológiai kártevők</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="mobileTargeted">
+    <widget class="QPushButton" name="otherTargeted">
      <property name="geometry">
       <rect>
        <x>190</x>
