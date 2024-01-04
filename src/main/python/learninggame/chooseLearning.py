@@ -1,18 +1,9 @@
-import json
-
-from PyQt6 import QtCore
-from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
-from src.main.python import resultsWindow
-from src.main.python import settingsWindow
-from src.main.python import guestSettingsWindow
-from src.main.python import loginScreen
-from src.main.python.learninggame import learnWindow
-from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
-from src.main.python.infoscreens import gameModeInfo
+from src.main.python.learninggame import learnWindow
 
 
 class ChooseLearningUI(QMainWindow):
