@@ -199,7 +199,7 @@ class MainWindowUI(QMainWindow):
         errorMessage("openEmailGame")
 
     def logOut(self, username):
-        self.checkOpenWindows()
+        self.closeOpenWindows()
 
         if username == "Vendég":
             if not self.welcomeWindow:
@@ -226,7 +226,7 @@ class MainWindowUI(QMainWindow):
         self.imagePath = self.getImagePath(self.username)
         self.loadImage(self.imagePath)
 
-    def checkOpenWindows(self):
+    def closeOpenWindows(self):
         openWindows = QApplication.topLevelWidgets()
         for scene in openWindows:
             if scene.windowTitle() is not "Főképernyő":
