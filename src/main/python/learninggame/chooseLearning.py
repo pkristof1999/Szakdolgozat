@@ -9,9 +9,11 @@ from src.main.python import resultsWindow
 from src.main.python import settingsWindow
 from src.main.python import guestSettingsWindow
 from src.main.python import loginScreen
+from src.main.python.learninggame import learnWindow
 from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
+
 
 class ChooseLearningUI(QMainWindow):
     def __init__(self, username, parent):
@@ -42,8 +44,24 @@ class ChooseLearningUI(QMainWindow):
             self.otherTargeted = self.findChild(QPushButton, "otherTargeted")
             self.backButton = self.findChild(QPushButton, "backButton")
 
+            self.learnScreen = None
+
+            self.selfReplicating.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson = "Teszt"
+                                             )
+            )
+
             self.backButton.clicked.connect(self.close)
 
         except Exception as e:
             errorMessage(e)
             self.close()
+
+    def openLearnWindow(self, username, parent, typeOfLesson):
+        if not self.learnScreen:
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
+        self.learnScreen.show()
+        self.close()
+        self.parent.close()
