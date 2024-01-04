@@ -49,7 +49,70 @@ class ChooseLearningUI(QMainWindow):
             self.selfReplicating.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Teszt"
+                                             typeOfLesson = "Önsokszorosító kártevők"
+                                             )
+            )
+
+            self.deceptive.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson = "Megtévesztő kártevők"
+                                             )
+            )
+
+            self.nuisance.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson = "Zavaró kártevők"
+                                             )
+            )
+
+            self.concealing.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson = "Rejtőzködő kártevők"
+                                             )
+            )
+
+            self.informationTheft.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Adatlopó kártevők"
+                                             )
+            )
+
+            self.networkBased.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Hálózati kártevők"
+                                             )
+            )
+
+            self.deliveryMechanism.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Terjedésre specializált kártevők"
+                                             )
+            )
+
+            self.evading.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Észleléselkerülő kártevők"
+                                             )
+            )
+
+            self.psychologicalBased.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Pszichológiai kártevők"
+                                             )
+            )
+
+            self.otherTargeted.clicked.connect(
+                lambda: self.openLearnWindow(username,
+                                             parent,
+                                             typeOfLesson="Egyéb célpontú kártevők"
                                              )
             )
 
@@ -61,6 +124,9 @@ class ChooseLearningUI(QMainWindow):
 
     def openLearnWindow(self, username, parent, typeOfLesson):
         if not self.learnScreen:
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
+        else:
+            self.learnScreen = None
             self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
         self.learnScreen.show()
         self.close()

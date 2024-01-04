@@ -109,8 +109,16 @@
        <height>81</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: black;
+}</string>
+     </property>
      <property name="text">
       <string>TextLabel</string>
+     </property>
+    <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="contentLabel">

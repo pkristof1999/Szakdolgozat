@@ -38,7 +38,7 @@ class LearnWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
-            self.titleLabel.setText("gae")
+            self.titleLabel.setText(typeOfLesson)
 
             self.backButton.clicked.connect(lambda: self.closeLearnWindow(parent, grandParent))
 
