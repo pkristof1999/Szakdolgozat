@@ -3,7 +3,7 @@ import sys
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QMessageBox
 from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
@@ -14,6 +14,7 @@ from src.main.python import welcomeScreen
 from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
+from src.main.python.infoscreens import areYouSure
 from src.main.python.learninggame import chooseLearning
 
 
@@ -54,6 +55,7 @@ class MainWindowUI(QMainWindow):
             self.quizWindow = None
             self.emailWindow = None
             self.welcomeWindow = None
+            self.questionWindow = None
 
             self.resultsButton.clicked.connect(self.openResults)
             self.settingsButton.clicked.connect(lambda: self.openSettings(username))
@@ -100,6 +102,10 @@ class MainWindowUI(QMainWindow):
 
             self.imagePath = self.getImagePath(username)
             self.loadImage(self.imagePath)
+
+            self.destroyed.connect(self.onCloseButtonPress)
+
+            self.closeEvent = self.onWindowClose
 
         except Exception as e:
             errorMessage(e)
@@ -223,6 +229,7 @@ class MainWindowUI(QMainWindow):
         self.quizWindow = None
         self.emailWindow = None
         self.welcomeWindow = None
+        self.questionWindow = None
         self.imagePath = self.getImagePath(self.username)
         self.loadImage(self.imagePath)
 
@@ -231,3 +238,9 @@ class MainWindowUI(QMainWindow):
         for scene in openWindows:
             if scene.windowTitle() is not "Főképernyő":
                 scene.close()
+
+    def onCloseButtonPress(self):
+        sys.exit()
+
+    def onWindowClose(self, event):
+        sys.exit()
