@@ -9,6 +9,7 @@ from src.main.python import resultsWindow
 from src.main.python import settingsWindow
 from src.main.python import guestSettingsWindow
 from src.main.python import loginScreen
+from src.main.python import welcomeScreen
 from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
@@ -51,10 +52,11 @@ class MainWindowUI(QMainWindow):
             self.chooseLearningWindow = None
             self.quizWindow = None
             self.emailWindow = None
+            self.welcomeWindow = None
 
             self.resultsButton.clicked.connect(self.openResults)
             self.settingsButton.clicked.connect(lambda: self.openSettings(username))
-            self.logOutButton.clicked.connect(self.logOut)
+            self.logOutButton.clicked.connect(lambda: self.logOut(username))
             self.exitButton.clicked.connect(self.close)
 
             self.learningGameInfo = "Ebben a módban kártevőtípusokról tanulhatsz. " + \
@@ -195,10 +197,15 @@ class MainWindowUI(QMainWindow):
     def openEmailGame(self, username):
         errorMessage("openEmailGame")
 
-    def logOut(self):
-        if not self.loginWindow:
-            self.loginWindow = loginScreen.LoginScreenUI()
-        self.loginWindow.show()
+    def logOut(self, username):
+        if username == "Vendég":
+            if not self.welcomeWindow:
+                self.welcomeWindow = welcomeScreen.WelcomeUI()
+            self.welcomeWindow.show()
+        else:
+            if not self.loginWindow:
+                self.loginWindow = loginScreen.LoginScreenUI()
+            self.loginWindow.show()
         logger.info("Sikeres kijelentkezés!")
         logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.close()
