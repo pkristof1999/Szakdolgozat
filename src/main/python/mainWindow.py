@@ -1,8 +1,9 @@
 import json
+import sys
 
 from PyQt6 import QtCore
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication
 from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
@@ -57,7 +58,7 @@ class MainWindowUI(QMainWindow):
             self.resultsButton.clicked.connect(self.openResults)
             self.settingsButton.clicked.connect(lambda: self.openSettings(username))
             self.logOutButton.clicked.connect(lambda: self.logOut(username))
-            self.exitButton.clicked.connect(self.close)
+            self.exitButton.clicked.connect(sys.exit)
 
             self.learningGameInfo = "Ebben a módban kártevőtípusokról tanulhatsz. " + \
                                     "Minden témakör tartalmaz interaktív anyagokat tanuláshoz,melyekhez tartoznak kérdések is. " + \
@@ -78,7 +79,7 @@ class MainWindowUI(QMainWindow):
                 lambda: self.openQuestionWindow(self.learningGameInfo,
                                                 self.handleLearningGameOpen,
                                                 username
-                                              )
+                                                )
             )
 
             self.quizGameButton.clicked.connect(
@@ -161,7 +162,7 @@ class MainWindowUI(QMainWindow):
             self.settingsScreen.show()
             self.settingsScreen = None
 
-    def openQuestionWindow(self, info, handler, username = None):
+    def openQuestionWindow(self, info, handler, username=None):
         self.infoWindow = None
         if not self.infoWindow:
             self.infoWindow = gameModeInfo.GameModeInfoUI(info, "default")
@@ -198,6 +199,8 @@ class MainWindowUI(QMainWindow):
         errorMessage("openEmailGame")
 
     def logOut(self, username):
+        self.checkOpenWindows()
+
         if username == "Vendég":
             if not self.welcomeWindow:
                 self.welcomeWindow = welcomeScreen.WelcomeUI()
@@ -211,5 +214,20 @@ class MainWindowUI(QMainWindow):
         self.close()
 
     def refreshWindow(self):
+        self.resultsScreen = None
+        self.settingsScreen = None
+        self.guestSettingsScreen = None
+        self.loginWindow = None
+        self.infoWindow = None
+        self.chooseLearningWindow = None
+        self.quizWindow = None
+        self.emailWindow = None
+        self.welcomeWindow = None
         self.imagePath = self.getImagePath(self.username)
         self.loadImage(self.imagePath)
+
+    def checkOpenWindows(self):
+        openWindows = QApplication.topLevelWidgets()
+        for scene in openWindows:
+            if scene.windowTitle() is not "Főképernyő":
+                scene.close()
