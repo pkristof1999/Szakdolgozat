@@ -38,6 +38,7 @@ class LearnWindowUI(QMainWindow):
             self.close()
 
     def closeLearnWindow(self, parent, grandParent):
-        grandParent.show()
         parent.show()
+        grandParent.show()
+        parent.raise_()
         self.close()
