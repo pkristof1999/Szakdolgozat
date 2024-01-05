@@ -2,6 +2,7 @@ import json
 import sys
 
 from PyQt6 import QtCore
+from PyQt6.QtCore import QEventLoop
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QMessageBox
 from PyQt6.uic import loadUi
@@ -60,7 +61,7 @@ class MainWindowUI(QMainWindow):
             self.resultsButton.clicked.connect(self.openResults)
             self.settingsButton.clicked.connect(lambda: self.openSettings(username))
             self.logOutButton.clicked.connect(lambda: self.logOut(username))
-            self.exitButton.clicked.connect(sys.exit)
+            self.exitButton.clicked.connect(self.exitWindowWithExitButton)
 
             self.learningGameInfo = "Ebben a módban kártevőtípusokról tanulhatsz. " + \
                                     "Minden témakör tartalmaz interaktív anyagokat tanuláshoz,melyekhez tartoznak kérdések is. " + \
@@ -103,13 +104,13 @@ class MainWindowUI(QMainWindow):
             self.imagePath = self.getImagePath(username)
             self.loadImage(self.imagePath)
 
-            self.destroyed.connect(self.onCloseButtonPress)
-
-            self.closeEvent = self.onWindowClose
+            self.logOutResult = False
+            self.exitResult = False
+            self.closeEvent = self.exitWindow
 
         except Exception as e:
             errorMessage(e)
-            self.close()
+            self.hide()
 
     def getImagePath(self, username):
         if username != "Vendég":
@@ -205,19 +206,31 @@ class MainWindowUI(QMainWindow):
         errorMessage("openEmailGame")
 
     def logOut(self, username):
-        self.closeOpenWindows()
+        self.logOutResult = False
+        self.openLogOutExitWindow("Biztosan kijelentkezik?",
+                                  self.handleLogOutButton)
 
-        if username == "Vendég":
-            if not self.welcomeWindow:
-                self.welcomeWindow = welcomeScreen.WelcomeUI()
-            self.welcomeWindow.show()
-        else:
-            if not self.loginWindow:
-                self.loginWindow = loginScreen.LoginScreenUI()
-            self.loginWindow.show()
-        logger.info("Sikeres kijelentkezés!")
-        logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.close()
+        loop = QEventLoop(self.questionWindow)
+        self.questionWindow.finished.connect(loop.quit)
+
+        loop.exec()
+
+        if self.logOutResult:
+            self.closeOpenWindows()
+
+            if username == "Vendég":
+                if not self.welcomeWindow:
+                    self.welcomeWindow = welcomeScreen.WelcomeUI()
+                self.welcomeWindow.show()
+            else:
+                if not self.loginWindow:
+                    self.loginWindow = loginScreen.LoginScreenUI()
+                self.loginWindow.show()
+
+            logger.info("Sikeres kijelentkezés!")
+            logger.info("Bejelentkezési képernyő megnyitásra került!")
+
+            self.hide()
 
     def refreshWindow(self):
         self.resultsScreen = None
@@ -236,11 +249,51 @@ class MainWindowUI(QMainWindow):
     def closeOpenWindows(self):
         openWindows = QApplication.topLevelWidgets()
         for scene in openWindows:
-            if scene.windowTitle() is not "Főképernyő":
-                scene.close()
+            if scene.windowTitle() != "Főképernyő":
+                scene.hide()
 
-    def onCloseButtonPress(self):
-        sys.exit()
+    def exitWindow(self, event):
+        self.exitResult = False
+        self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
+                                  self.handleExitButton)
 
-    def onWindowClose(self, event):
-        sys.exit()
+        loop = QEventLoop(self.questionWindow)
+        self.questionWindow.finished.connect(loop.quit)
+
+        loop.exec()
+
+        if self.exitResult:
+            logger.info("Kilépés az alkalmazásból!")
+            event.accept()
+        else:
+            event.ignore()
+
+    def exitWindowWithExitButton(self):
+        self.exitResult = False
+        self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
+                                  self.handleExitButton)
+
+        loop = QEventLoop(self.questionWindow)
+        self.questionWindow.finished.connect(loop.quit)
+
+        loop.exec()
+
+        if self.exitResult:
+            logger.info("Kilépés az alkalmazásból!")
+            sys.exit()
+
+    def openLogOutExitWindow(self, info, handler):
+        self.questionWindow = None
+        if not self.questionWindow:
+            self.questionWindow = areYouSure.AreYouSureUI(info, "default")
+
+        self.questionWindow.finished.connect(handler)
+        self.questionWindow.show()
+
+    def handleLogOutButton(self, result):
+        if result == "Yes":
+            self.logOutResult = True
+
+    def handleExitButton(self, result):
+        if result == "Yes":
+            self.exitResult = True

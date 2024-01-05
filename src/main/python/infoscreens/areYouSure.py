@@ -25,8 +25,8 @@ class AreYouSureUI(QMainWindow):
 
     def noButtonClick(self):
         self.finished.emit("No")
-        self.close()
+        self.hide()
 
     def yesButtonClick(self):
         self.finished.emit("Yes")
-        self.close()
+        self.hide()

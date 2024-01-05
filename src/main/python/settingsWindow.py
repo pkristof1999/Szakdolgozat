@@ -125,8 +125,8 @@ class SettingsWindowUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
-            self.parent.close()
-            self.close()
+            self.parent.hide()
+            self.hide()
 
     def addPicture(self):
         fileDialog = QFileDialog(self)
@@ -276,7 +276,7 @@ class SettingsWindowUI(QMainWindow):
             self.newPassword2.setStyleSheet(changeColor("green"))
 
     def abortAndCloseSettings(self):
-        self.close()
+        self.hide()
 
     def handleSaveAndCloseSettings(self, result, username):
         if result == "Yes":
@@ -418,7 +418,7 @@ class SettingsWindowUI(QMainWindow):
                     overWrite(username, userAge, storedPPath, theme)
 
             self.parent.refreshWindow()
-            self.close()
+            self.hide()
 
             logger.info("Adatok mentve!")
 
@@ -454,8 +454,8 @@ class SettingsWindowUI(QMainWindow):
 
             logger.info("Felhasználó sikeresen törölve!")
 
-            self.close()
-            self.parent.close()
+            self.hide()
+            self.parent.hide()
             self.openLoginUI()
 
         except Exception as e:
@@ -466,4 +466,4 @@ class SettingsWindowUI(QMainWindow):
             self.loginWindow = loginScreen.LoginScreenUI()
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
-        self.close()
+        self.hide()

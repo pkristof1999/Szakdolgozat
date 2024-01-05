@@ -230,11 +230,11 @@ class RegisterAccountUI(QMainWindow):
             self.welcomeWindow = welcomeScreen.WelcomeUI()
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
-        self.close()
+        self.hide()
 
     def openRegisterSuccessUI(self):
         if not self.registerWindow:
             self.registerWindow = registerSuccess.RegisterSuccessUI()
         self.registerWindow.show()
         logger.info("Sikeres regisztráció ablak megnyitása.")
-        self.close()
+        self.hide()

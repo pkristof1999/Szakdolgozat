@@ -35,10 +35,10 @@ class LearnWindowUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
-            self.close()
+            self.hide()
 
     def closeLearnWindow(self, parent, grandParent):
         parent.show()
         grandParent.show()
         parent.raise_()
-        self.close()
+        self.hide()

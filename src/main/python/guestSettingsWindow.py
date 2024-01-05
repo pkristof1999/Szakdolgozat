@@ -88,8 +88,8 @@ class GuestSettingsWindowUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
-            self.parent.close()
-            self.close()
+            self.parent.hide()
+            self.hide()
 
     def loadImage(self):
         try:
@@ -144,7 +144,7 @@ class GuestSettingsWindowUI(QMainWindow):
         self.questionWindow.show()
 
     def abortAndCloseSettings(self):
-        self.close()
+        self.hide()
 
     def handleSaveAndCloseSettings(self, result, username):
         if result == "Yes":
@@ -155,7 +155,7 @@ class GuestSettingsWindowUI(QMainWindow):
         overWriteGuestAccount(username, theme)
 
         self.parent.refreshWindow()
-        self.close()
+        self.hide()
 
         logger.info("Adatok mentve!")
 

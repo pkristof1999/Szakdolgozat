@@ -44,8 +44,8 @@ class GameModeInfoUI(QMainWindow):
 
     def backButtonClick(self):
         self.finished.emit("No")
-        self.close()
+        self.hide()
 
     def nextButtonClick(self):
         self.finished.emit("Yes")
-        self.close()
+        self.hide()

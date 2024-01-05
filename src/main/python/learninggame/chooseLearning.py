@@ -111,7 +111,7 @@ class ChooseLearningUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
-            self.close()
+            self.hide()
 
     def openLearnWindow(self, username, parent, typeOfLesson):
         if not self.learnScreen:
@@ -120,5 +120,5 @@ class ChooseLearningUI(QMainWindow):
             self.learnScreen = None
             self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
         self.learnScreen.show()
-        self.close()
-        self.parent.close()
+        self.hide()
+        self.parent.hide()

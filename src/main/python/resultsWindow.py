@@ -51,8 +51,8 @@ class ResultsUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
-            self.parent.close()
-            self.close()
+            self.parent.hide()
+            self.hide()
 
     def loadUserAchievements(self, username):
         self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")

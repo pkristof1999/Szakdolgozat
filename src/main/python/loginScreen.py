@@ -112,11 +112,11 @@ class LoginScreenUI(QMainWindow):
             self.appMainWindow = mainWindow.MainWindowUI(username)
         self.appMainWindow.show()
         logger.info("Továbblépés a fő felületre.")
-        self.close()
+        self.hide()
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:
             self.welcomeWindow = welcomeScreen.WelcomeUI()
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
-        self.close()
+        self.hide()
