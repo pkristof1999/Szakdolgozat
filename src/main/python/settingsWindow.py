@@ -386,8 +386,10 @@ class SettingsWindowUI(QMainWindow):
                             f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
 
                 try:
-                    os.remove(self.oldImage)
-                    logger.info("Régi profilkép törlésre került!")
+                    if not self.oldImage == "../resources/pictures/userDefault.png":
+                        os.remove(self.oldImage)
+                        logger.info("Régi profilkép törlésre került!")
+
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 
@@ -402,8 +404,9 @@ class SettingsWindowUI(QMainWindow):
             elif self.imagePath == "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
 
                 try:
-                    os.remove(self.oldImage)
-                    logger.info("Régi profilkép törlésre került!")
+                    if not self.oldImage == "../resources/pictures/userDefault.png":
+                        os.remove(self.oldImage)
+                        logger.info("Régi profilkép törlésre került!")
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 
