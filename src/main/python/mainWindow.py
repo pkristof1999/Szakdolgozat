@@ -17,6 +17,7 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.infoscreens import gameModeInfo
 from src.main.python.infoscreens import areYouSure
 from src.main.python.learninggame import chooseLearning
+from src.main.python.quizgame import quizWindow
 
 
 class MainWindowUI(QMainWindow):
@@ -200,7 +201,11 @@ class MainWindowUI(QMainWindow):
         logger.info("Tanulós játékmódhoz az anyagválasztó megnyitása!")
 
     def openQuizGame(self, username):
-        errorMessage("openQuizGame")
+        if not self.quizWindow:
+            self.quizWindow = quizWindow.QuizWindowUI(username, self)
+        self.quizWindow.show()
+        self.hide()
+        logger.info("Kvíz játékmód megnyitása!")
 
     def openEmailGame(self, username):
         errorMessage("openEmailGame")

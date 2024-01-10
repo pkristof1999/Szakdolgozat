@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Anyagok</string>
+   <string>Kvíz</string>
   </property>
   <property name="styleSheet">
    <string notr="true">* {

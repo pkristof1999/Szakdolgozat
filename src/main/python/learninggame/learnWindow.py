@@ -2,6 +2,7 @@ from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
+from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 
 
@@ -42,3 +43,4 @@ class LearnWindowUI(QMainWindow):
         grandParent.show()
         parent.raise_()
         self.hide()
+        logger.info("Tanulós játémód bezárása!")
