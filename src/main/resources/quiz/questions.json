@@ -1,0 +1,82 @@
+{
+    "question1": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question2": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question3": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question4": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question5": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question6": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question7": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question8": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question9": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    },
+    "question10": {
+        "question": "Teszt",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "asnwer3": "Teszt3",
+        "asnwer4": "Teszt4"
+    }
+}
