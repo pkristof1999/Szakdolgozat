@@ -195,12 +195,14 @@ class MainWindowUI(QMainWindow):
             self.openEmailGame(username)
 
     def openLearningGame(self, username):
+        self.chooseLearningWindow = None
         if not self.chooseLearningWindow:
             self.chooseLearningWindow = chooseLearning.ChooseLearningUI(username, self)
         self.chooseLearningWindow.show()
         logger.info("Tanulós játékmódhoz az anyagválasztó megnyitása!")
 
     def openQuizGame(self, username):
+        self.quizWindow = None
         if not self.quizWindow:
             self.quizWindow = quizWindow.QuizWindowUI(username, self)
         self.quizWindow.show()
@@ -208,6 +210,12 @@ class MainWindowUI(QMainWindow):
         logger.info("Kvíz játékmód megnyitása!")
 
     def openEmailGame(self, username):
+        self.emailWindow = None
+        """if not self.emailWindow:
+            self.emailWindow = ...
+        self.emailWindow.show()
+        self.hide()
+        logger.info("Email játékmód megnyitása!")"""
         errorMessage("openEmailGame")
 
     def logOut(self, username):
