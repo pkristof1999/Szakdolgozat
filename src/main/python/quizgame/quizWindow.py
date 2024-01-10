@@ -41,6 +41,8 @@ class QuizWindowUI(QMainWindow):
 
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
+            self.closeEvent = parent.exitWindow
+
         except Exception as e:
             errorMessage(e)
             self.hide()

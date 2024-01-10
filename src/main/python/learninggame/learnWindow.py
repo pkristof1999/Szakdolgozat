@@ -34,6 +34,8 @@ class LearnWindowUI(QMainWindow):
 
             self.backButton.clicked.connect(lambda: self.closeLearnWindow(parent, grandParent))
 
+            self.closeEvent = grandParent.exitWindow
+
         except Exception as e:
             errorMessage(e)
             self.hide()
