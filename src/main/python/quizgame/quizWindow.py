@@ -1,5 +1,5 @@
 from PyQt6.QtGui import QIcon
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -31,11 +31,44 @@ class QuizWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
+            self.answerButtonGroup = QButtonGroup(self)
+            self.answerButtonGroup.addButton(self.answer1Button)
+            self.answerButtonGroup.addButton(self.answer2Button)
+            self.answerButtonGroup.addButton(self.answer3Button)
+            self.answerButtonGroup.addButton(self.answer4Button)
+
+            self.answerButtonGroup.buttonClicked.connect(self.handleAnswerSelection)
+
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
         except Exception as e:
             errorMessage(e)
             self.hide()
+
+    def handleAnswerSelection(self, selectedButton):
+        for button in self.answerButtonGroup.buttons():
+            if button is not selectedButton:
+                button.setChecked(False)
+                button.setStyleSheet("""
+                                     * {
+                                         background-color: white;
+                                         color: grey;
+                                     }
+                                    
+                                     *:hover {
+                                         background-color: rgb(120, 120, 220);
+                                         color: white;
+                                     }
+                                     """)
+
+        if selectedButton.isChecked():
+            selectedButton.setStyleSheet("""
+                                         * {
+                                             background-color: rgb(120, 120, 220);
+	                                         color: white;
+                                         }
+                                         """
+                                         )
 
     def closeQuizWindow(self, parent):
         parent.show()
