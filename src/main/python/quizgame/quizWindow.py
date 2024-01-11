@@ -2,7 +2,7 @@ import json
 import random
 
 from PyQt6.QtGui import QIcon
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QApplication
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -35,6 +35,7 @@ class QuizWindowUI(QMainWindow):
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
             self.answerButtonGroup = QButtonGroup(self)
+            self.answerButtonGroup.setExclusive(False)
             self.answerButtonGroup.addButton(self.answer1Button)
             self.answerButtonGroup.addButton(self.answer2Button)
             self.answerButtonGroup.addButton(self.answer3Button)
@@ -43,6 +44,8 @@ class QuizWindowUI(QMainWindow):
             self.questionBank = []
             self.questionIndex = 0
             self.previousQuestions = []
+
+            self.goodAnswers = 0
 
             self.loadFirstQuestion()
 
@@ -74,6 +77,7 @@ class QuizWindowUI(QMainWindow):
                                      """)
 
         if selectedButton.isChecked():
+            logger.info(f"{selectedButton.text()} megjelölve válaszként.")
             selectedButton.setStyleSheet("""
                                          * {
                                              background-color: rgb(120, 120, 220);
@@ -81,6 +85,23 @@ class QuizWindowUI(QMainWindow):
                                          }
                                          """
                                          )
+
+    def setButtonsUnchecked(self):
+        for button in self.answerButtonGroup.buttons():
+            button.setChecked(False)
+            print(button.isChecked())
+            button.setStyleSheet("""
+                                    * {
+                                        background-color: white;
+                                        color: grey;
+                                    }
+    
+                                    *:hover {
+                                        background-color: rgb(120, 120, 220);
+                                        color: white;
+                                    }
+                                 """
+                                 )
 
     def loadQuestionsIntoArray(self):
         try:
@@ -106,18 +127,26 @@ class QuizWindowUI(QMainWindow):
         self.answer4Button.setText(firstQuestion["answer4"])
 
     def nextQuestion(self):
-        self.questionIndex += 1
-        if self.questionIndex < 10:
-            print(self.questionIndex)
-            nextQuestion = self.questionBank[self.questionIndex]
+        if self.answer1Button.isChecked() or \
+                self.answer2Button.isChecked() or \
+                self.answer3Button.isChecked() or \
+                self.answer4Button.isChecked():
+            self.questionIndex += 1
+            if self.questionIndex < 10:
+                print(self.questionIndex)
+                nextQuestion = self.questionBank[self.questionIndex]
 
-            self.questionField.setText(nextQuestion["question"])
-            self.answer1Button.setText(nextQuestion["answer1"])
-            self.answer2Button.setText(nextQuestion["answer2"])
-            self.answer3Button.setText(nextQuestion["answer3"])
-            self.answer4Button.setText(nextQuestion["answer4"])
+                self.questionField.setText(nextQuestion["question"])
+                self.answer1Button.setText(nextQuestion["answer1"])
+                self.answer2Button.setText(nextQuestion["answer2"])
+                self.answer3Button.setText(nextQuestion["answer3"])
+                self.answer4Button.setText(nextQuestion["answer4"])
+            else:
+                errorMessage("Nincs több kérdés :(")
         else:
-            errorMessage("Nincs több kérdés :(")
+            errorMessage("Nem választott választ!")
+
+        self.setButtonsUnchecked()
 
     def closeQuizWindow(self, parent):
         parent.show()
