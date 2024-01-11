@@ -89,17 +89,16 @@ class QuizWindowUI(QMainWindow):
     def setButtonsUnchecked(self):
         for button in self.answerButtonGroup.buttons():
             button.setChecked(False)
-            print(button.isChecked())
             button.setStyleSheet("""
-                                    * {
-                                        background-color: white;
-                                        color: grey;
-                                    }
-    
-                                    *:hover {
-                                        background-color: rgb(120, 120, 220);
-                                        color: white;
-                                    }
+                                 * {
+                                     background-color: white;
+                                     color: grey;
+                                 }
+
+                                 *:hover {
+                                     background-color: rgb(120, 120, 220);
+                                     color: white;
+                                 }
                                  """
                                  )
 
@@ -131,9 +130,11 @@ class QuizWindowUI(QMainWindow):
                 self.answer2Button.isChecked() or \
                 self.answer3Button.isChecked() or \
                 self.answer4Button.isChecked():
+            for button in self.answerButtonGroup.buttons():
+                if button.isChecked():
+                    logger.info(f"{button.text()} sikeresen leadva válaszként!")
             self.questionIndex += 1
             if self.questionIndex < 10:
-                print(self.questionIndex)
                 nextQuestion = self.questionBank[self.questionIndex]
 
                 self.questionField.setText(nextQuestion["question"])
