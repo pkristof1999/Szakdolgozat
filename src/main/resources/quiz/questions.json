@@ -1,82 +1,82 @@
 {
     "question1": {
-        "question": "Teszt",
+        "question": "Teszt1",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question2": {
-        "question": "Teszt",
+        "question": "Teszt2",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question3": {
-        "question": "Teszt",
+        "question": "Teszt3",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question4": {
-        "question": "Teszt",
+        "question": "Teszt4",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question5": {
-        "question": "Teszt",
+        "question": "Teszt5",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question6": {
-        "question": "Teszt",
+        "question": "Teszt6",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question7": {
-        "question": "Teszt",
+        "question": "Teszt7",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question8": {
-        "question": "Teszt",
+        "question": "Teszt8",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question9": {
-        "question": "Teszt",
+        "question": "Teszt9",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     },
     "question10": {
-        "question": "Teszt",
+        "question": "Teszt10",
         "rightAnswer": "Teszt1",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
-        "asnwer3": "Teszt3",
-        "asnwer4": "Teszt4"
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     }
 }

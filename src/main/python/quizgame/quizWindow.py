@@ -1,4 +1,5 @@
 import json
+import random
 
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
@@ -42,7 +43,8 @@ class QuizWindowUI(QMainWindow):
             self.questionArray = []
             self.questionIndex = 0
             self.previousQuestions = []
-            self.loadQuestionsIntoArray()
+
+            self.loadFirstQuestion()
 
             self.answerButtonGroup.buttonClicked.connect(self.handleAnswerSelection)
 
@@ -84,10 +86,22 @@ class QuizWindowUI(QMainWindow):
             with open("../resources/quiz/questions.json", "r") as jsonFile:
                 questionBank = json.load(jsonFile)
 
-            print(questionBank)
+            shuffledQuestions = list(questionBank.values())
+            random.shuffle(shuffledQuestions)
+
+            return shuffledQuestions
 
         except Exception as e:
             errorMessage(e)
+
+    def loadFirstQuestion(self):
+        firstQuestion = self.loadQuestionsIntoArray()[0]
+
+        self.questionField.setText(firstQuestion["question"])
+        self.answer1Button.setText(firstQuestion["answer1"])
+        self.answer2Button.setText(firstQuestion["answer2"])
+        self.answer3Button.setText(firstQuestion["answer3"])
+        self.answer4Button.setText(firstQuestion["answer4"])
 
     def closeQuizWindow(self, parent):
         parent.show()
