@@ -40,7 +40,7 @@ class QuizWindowUI(QMainWindow):
             self.answerButtonGroup.addButton(self.answer3Button)
             self.answerButtonGroup.addButton(self.answer4Button)
 
-            self.questionArray = []
+            self.questionBank = []
             self.questionIndex = 0
             self.previousQuestions = []
 
@@ -48,6 +48,7 @@ class QuizWindowUI(QMainWindow):
 
             self.answerButtonGroup.buttonClicked.connect(self.handleAnswerSelection)
 
+            self.nextButton.clicked.connect(self.nextQuestion)
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
             self.closeEvent = parent.exitWindow
@@ -95,13 +96,28 @@ class QuizWindowUI(QMainWindow):
             errorMessage(e)
 
     def loadFirstQuestion(self):
-        firstQuestion = self.loadQuestionsIntoArray()[0]
+        self.questionBank = self.loadQuestionsIntoArray()
+        firstQuestion = self.questionBank[0]
 
         self.questionField.setText(firstQuestion["question"])
         self.answer1Button.setText(firstQuestion["answer1"])
         self.answer2Button.setText(firstQuestion["answer2"])
         self.answer3Button.setText(firstQuestion["answer3"])
         self.answer4Button.setText(firstQuestion["answer4"])
+
+    def nextQuestion(self):
+        self.questionIndex += 1
+        if self.questionIndex < 10:
+            print(self.questionIndex)
+            nextQuestion = self.questionBank[self.questionIndex]
+
+            self.questionField.setText(nextQuestion["question"])
+            self.answer1Button.setText(nextQuestion["answer1"])
+            self.answer2Button.setText(nextQuestion["answer2"])
+            self.answer3Button.setText(nextQuestion["answer3"])
+            self.answer4Button.setText(nextQuestion["answer4"])
+        else:
+            errorMessage("Nincs több kérdés :(")
 
     def closeQuizWindow(self, parent):
         parent.show()
