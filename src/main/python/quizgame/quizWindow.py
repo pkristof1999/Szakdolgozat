@@ -1,3 +1,5 @@
+import json
+
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
 from PyQt6.uic import loadUi
@@ -37,6 +39,11 @@ class QuizWindowUI(QMainWindow):
             self.answerButtonGroup.addButton(self.answer3Button)
             self.answerButtonGroup.addButton(self.answer4Button)
 
+            self.questionArray = []
+            self.questionIndex = 0
+            self.previousQuestions = []
+            self.loadQuestionsIntoArray()
+
             self.answerButtonGroup.buttonClicked.connect(self.handleAnswerSelection)
 
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
@@ -71,6 +78,16 @@ class QuizWindowUI(QMainWindow):
                                          }
                                          """
                                          )
+
+    def loadQuestionsIntoArray(self):
+        try:
+            with open("../resources/quiz/questions.json", "r") as jsonFile:
+                questionBank = json.load(jsonFile)
+
+            print(questionBank)
+
+        except Exception as e:
+            errorMessage(e)
 
     def closeQuizWindow(self, parent):
         parent.show()
