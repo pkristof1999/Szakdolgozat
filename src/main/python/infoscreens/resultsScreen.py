@@ -5,23 +5,24 @@ from PyQt6.QtCore import pyqtSignal
 
 
 class ResultsScreenUI(QMainWindow):
-    finished = pyqtSignal(str)
 
-    def __init__(self, question, theme="default"):
+    def __init__(self, info, grandParent, theme="default"):
         super(ResultsScreenUI, self).__init__()
         loadUi(f"../resources/ui/{theme}/resultsScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 
+        self.grandParent = grandParent
+
         self.infoLabel = self.findChild(QLabel, "infoLabel")
         self.nextButton = self.findChild(QPushButton, "nextButton")
 
-        self.infoLabel.setText(question.replace("  ", ""))
+        self.infoLabel.setText(info.replace("  ", ""))
         self.infoLabel.setWordWrap(True)
 
         self.nextButton.clicked.connect(self.nextButtonClick)
 
     def nextButtonClick(self):
-        self.finished.emit("Next")
+        self.grandParent.show()
         self.hide()

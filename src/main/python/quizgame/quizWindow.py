@@ -35,6 +35,8 @@ class QuizWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
+            self.resultsWindow = None
+
             self.answerButtonGroup = QButtonGroup(self)
             self.answerButtonGroup.setExclusive(False)
             self.answerButtonGroup.addButton(self.answer1Button)
@@ -131,11 +133,16 @@ class QuizWindowUI(QMainWindow):
                 self.answer2Button.isChecked() or \
                 self.answer3Button.isChecked() or \
                 self.answer4Button.isChecked():
-            for button in self.answerButtonGroup.buttons():
-                if button.isChecked():
-                    logger.info(f"{button.text()} sikeresen leadva válaszként!")
+
             self.questionIndex += 1
             if self.questionIndex < 10:
+                for button in self.answerButtonGroup.buttons():
+                    if button.isChecked():
+                        logger.info(f"{button.text()} sikeresen leadva válaszként!")
+                        if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
+                            self.goodAnswers += 1
+                            print(self.goodAnswers)
+
                 nextQuestion = self.questionBank[self.questionIndex]
 
                 self.questionField.setText(nextQuestion["question"])
@@ -144,7 +151,13 @@ class QuizWindowUI(QMainWindow):
                 self.answer3Button.setText(nextQuestion["answer3"])
                 self.answer4Button.setText(nextQuestion["answer4"])
             else:
-                errorMessage("Nincs több kérdés :(")
+                self.resultsWindow = None
+                info = str(self.goodAnswers)
+                if not self.resultsWindow:
+                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
+
+                self.hide()
+                self.resultsWindow.show()
         else:
             errorMessage("Nem választott választ!")
 
