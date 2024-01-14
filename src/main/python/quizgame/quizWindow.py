@@ -135,21 +135,29 @@ class QuizWindowUI(QMainWindow):
                 self.answer4Button.isChecked():
 
             self.questionIndex += 1
-            if self.questionIndex < 10:
-                for button in self.answerButtonGroup.buttons():
-                    if button.isChecked():
-                        logger.info(f"{button.text()} sikeresen leadva válaszként!")
-                        if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
-                            self.goodAnswers += 1
-                            print(self.goodAnswers)
+            if self.questionIndex <= 10:
+                if self.questionIndex < 10:
+                    for button in self.answerButtonGroup.buttons():
+                        if button.isChecked():
+                            logger.info(f"{button.text()} sikeresen leadva válaszként!")
+                            if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
+                                self.goodAnswers += 1
+                                print(self.goodAnswers)
 
-                nextQuestion = self.questionBank[self.questionIndex]
+                    nextQuestion = self.questionBank[self.questionIndex]
 
-                self.questionField.setText(nextQuestion["question"])
-                self.answer1Button.setText(nextQuestion["answer1"])
-                self.answer2Button.setText(nextQuestion["answer2"])
-                self.answer3Button.setText(nextQuestion["answer3"])
-                self.answer4Button.setText(nextQuestion["answer4"])
+                    self.questionField.setText(nextQuestion["question"])
+                    self.answer1Button.setText(nextQuestion["answer1"])
+                    self.answer2Button.setText(nextQuestion["answer2"])
+                    self.answer3Button.setText(nextQuestion["answer3"])
+                    self.answer4Button.setText(nextQuestion["answer4"])
+                else:
+                    for button in self.answerButtonGroup.buttons():
+                        if button.isChecked():
+                            logger.info(f"{button.text()} sikeresen leadva válaszként!")
+                            if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
+                                self.goodAnswers += 1
+                                print(self.goodAnswers, "asd")
             else:
                 self.resultsWindow = None
                 info = str(self.goodAnswers)

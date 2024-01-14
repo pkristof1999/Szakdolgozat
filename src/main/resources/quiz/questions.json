@@ -78,5 +78,13 @@
         "answer2": "Teszt2",
         "answer3": "Teszt3",
         "answer4": "Teszt4"
+    },
+    "question11": {
+        "question": "Teszt11",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
     }
 }

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Játékmód információ</string>
+   <string>Eredmény</string>
   </property>
   <property name="styleSheet">
    <string notr="true">* {
@@ -39,9 +39,9 @@
     <widget class="QPushButton" name="nextButton">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>170</x>
        <y>180</y>
-       <width>128</width>
+       <width>151</width>
        <height>32</height>
       </rect>
      </property>
@@ -66,7 +66,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>Tovább</string>
+      <string>Kezdőképernyő</string>
      </property>
     </widget>
     <widget class="QLabel" name="infoLabel">
@@ -110,7 +110,7 @@
       <bool>true</bool>
      </property>
      <property name="alignment">
-      <set>Qt::AlignJustify</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
