@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QApp
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
+from src.main.python.infoscreens import resultsScreen
 from src.main.python.infoscreens.errorMessage import errorMessage
 
 
@@ -148,6 +149,9 @@ class QuizWindowUI(QMainWindow):
             errorMessage("Nem választott választ!")
 
         self.setButtonsUnchecked()
+
+    def showResults(self):
+        pass
 
     def closeQuizWindow(self, parent):
         parent.show()
