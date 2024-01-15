@@ -52,6 +52,9 @@ class QuizWindowUI(QMainWindow):
             self.previousQuestions = []
 
             self.goodAnswers = 0
+
+            self.terminateThread = threading.Event()
+            self.timerThread = None
             self.countdown = 30
 
             self.startCountdown(self.countdown)
@@ -178,8 +181,8 @@ class QuizWindowUI(QMainWindow):
         self.setButtonsUnchecked()
 
     def startCountdown(self, seconds):
-        timerThread = threading.Thread(target=self.timeCountdown, args=(seconds,))
-        timerThread.start()
+        self.timerThread = threading.Thread(target=self.timeCountdown, args=(seconds,))
+        self.timerThread.start()
 
     def timeCountdown(self, seconds):
         while seconds >= 0:
@@ -202,10 +205,20 @@ class QuizWindowUI(QMainWindow):
                                                      color: grey;
                                                  }
                                               """)
+
+            if self.terminateThread.is_set():
+                break
+
             time.sleep(1)
             seconds -= 1
 
     def closeQuizWindow(self, parent):
+        self.terminateThread.set()
+
+        if self.timerThread and self.timerThread.is_alive():
+            self.timerThread.join()
+
+        self.timerThread = None
         parent.show()
         self.hide()
         logger.info("Kvíz játékmód bezárása!")
