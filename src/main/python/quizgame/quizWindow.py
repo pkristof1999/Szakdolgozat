@@ -1,8 +1,10 @@
 import json
+import time
 import random
+import threading
 
 from PyQt6.QtGui import QIcon
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QApplication
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -32,6 +34,7 @@ class QuizWindowUI(QMainWindow):
             self.answer2Button = self.findChild(QPushButton, "answer2Button")
             self.answer3Button = self.findChild(QPushButton, "answer3Button")
             self.answer4Button = self.findChild(QPushButton, "answer4Button")
+            self.timerLabel = self.findChild(QLabel, "timerLabel")
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
@@ -49,6 +52,9 @@ class QuizWindowUI(QMainWindow):
             self.previousQuestions = []
 
             self.goodAnswers = 0
+            self.countdown = 30
+
+            self.startCountdown(self.countdown)
 
             self.loadFirstQuestion()
 
@@ -171,8 +177,33 @@ class QuizWindowUI(QMainWindow):
 
         self.setButtonsUnchecked()
 
-    def showResults(self):
-        pass
+    def startCountdown(self, seconds):
+        timerThread = threading.Thread(target=self.timeCountdown, args=(seconds,))
+        timerThread.start()
+
+    def timeCountdown(self, seconds):
+        while seconds >= 0:
+            if seconds >= 10:
+                self.timerLabel.setText(f"00:{seconds}")
+            else:
+                self.timerLabel.setText(f"00:0{seconds}")
+
+            if seconds <= 10 and seconds > 5:
+                self.timerLabel.setStyleSheet("""
+                                            * {
+                                                background-color: rgb(255, 203, 111);
+                                                color: grey;
+                                            }
+                                         """)
+            elif seconds <= 5:
+                self.timerLabel.setStyleSheet("""
+                                                 * {
+                                                     background-color: rgb(255, 173, 173);
+                                                     color: grey;
+                                                 }
+                                              """)
+            time.sleep(1)
+            seconds -= 1
 
     def closeQuizWindow(self, parent):
         parent.show()
