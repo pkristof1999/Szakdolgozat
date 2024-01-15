@@ -66,7 +66,9 @@ class QuizWindowUI(QMainWindow):
             self.nextButton.clicked.connect(self.nextQuestion)
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
-            self.closeEvent = parent.exitWindow
+            if self.closeEvent:
+                self.terminateThread.set()
+                self.closeEvent = parent.exitWindow
 
         except Exception as e:
             errorMessage(e)
@@ -222,3 +224,4 @@ class QuizWindowUI(QMainWindow):
         parent.show()
         self.hide()
         logger.info("Kvíz játékmód bezárása!")
+
