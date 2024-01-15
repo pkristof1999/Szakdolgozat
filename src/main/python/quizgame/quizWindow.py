@@ -66,9 +66,7 @@ class QuizWindowUI(QMainWindow):
             self.nextButton.clicked.connect(self.nextQuestion)
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
-            if self.closeEvent:
-                self.terminateThread.set()
-                self.closeEvent = parent.exitWindow
+            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread)
 
         except Exception as e:
             errorMessage(e)
@@ -153,7 +151,6 @@ class QuizWindowUI(QMainWindow):
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
-                                print(self.goodAnswers)
 
                     nextQuestion = self.questionBank[self.questionIndex]
 
@@ -162,16 +159,22 @@ class QuizWindowUI(QMainWindow):
                     self.answer2Button.setText(nextQuestion["answer2"])
                     self.answer3Button.setText(nextQuestion["answer3"])
                     self.answer4Button.setText(nextQuestion["answer4"])
+
+                    if self.timerThread and self.timerThread.is_alive():
+                        self.terminateThread.set()
+                        self.timerThread.join()
+                    self.startCountdown(30)
                 else:
                     for button in self.answerButtonGroup.buttons():
                         if button.isChecked():
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
-                                print(self.goodAnswers, "asd")
             else:
                 self.resultsWindow = None
-                info = str(self.goodAnswers)
+                info = f"""
+                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%) 
+                        """
                 if not self.resultsWindow:
                     self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
 
@@ -183,6 +186,7 @@ class QuizWindowUI(QMainWindow):
         self.setButtonsUnchecked()
 
     def startCountdown(self, seconds):
+        self.terminateThread.clear()
         self.timerThread = threading.Thread(target=self.timeCountdown, args=(seconds,))
         self.timerThread.start()
 
