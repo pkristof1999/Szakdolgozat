@@ -1,7 +1,6 @@
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
-from PyQt6.QtCore import pyqtSignal
 
 
 class ResultsScreenUI(QMainWindow):
@@ -22,6 +21,8 @@ class ResultsScreenUI(QMainWindow):
         self.infoLabel.setWordWrap(True)
 
         self.nextButton.clicked.connect(self.nextButtonClick)
+
+        self.closeEvent = grandParent.exitWindow
 
     def nextButtonClick(self):
         self.grandParent.show()
