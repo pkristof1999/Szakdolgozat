@@ -57,7 +57,12 @@ class QuizWindowUI(QMainWindow):
             self.timerThread = None
             self.countdown = 30
 
+            self.terminateQuizThread = threading.Event()
+            self.quizTimerThread = None
+            self.timeSpent = 0
+
             self.startCountdown(self.countdown)
+            self.startQuizTimer(self.timeSpent)
 
             self.loadFirstQuestion()
 
@@ -66,7 +71,7 @@ class QuizWindowUI(QMainWindow):
             self.nextButton.clicked.connect(self.nextQuestion)
             self.backButton.clicked.connect(lambda: self.closeQuizWindow(parent))
 
-            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread)
+            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread, self.quizTimerThread)
 
         except Exception as e:
             errorMessage(e)
@@ -171,15 +176,19 @@ class QuizWindowUI(QMainWindow):
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
             else:
+                self.terminateThread.set()
+                self.terminateQuizThread.set()
                 self.resultsWindow = None
                 info = f"""
-                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%) 
+                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
+                            Kvízzel töltött idő:
                         """
                 if not self.resultsWindow:
                     self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
 
                 self.hide()
                 self.resultsWindow.show()
+
         else:
             errorMessage("Nem választott választ!")
 
@@ -190,14 +199,28 @@ class QuizWindowUI(QMainWindow):
         self.timerThread = threading.Thread(target=self.timeCountdown, args=(seconds,))
         self.timerThread.start()
 
+    def startQuizTimer(self, seconds):
+        self.terminateQuizThread.clear()
+        self.quizTimerThread = threading.Thread(target=self.quizTimer, args=(seconds,))
+        self.quizTimerThread.start()
+
     def timeCountdown(self, seconds):
+        times = 0
         while seconds >= 0:
             if seconds >= 10:
                 self.timerLabel.setText(f"00:{seconds}")
             else:
                 self.timerLabel.setText(f"00:0{seconds}")
 
-            if seconds <= 10 and seconds > 5:
+            if 30 >= seconds > 10:
+                self.timerLabel.setStyleSheet("""
+                                                 * {
+                                                     background-color: rgb(255, 255, 255);
+                                                     color: grey;
+                                                 }
+                                              """)
+
+            elif 10 >= seconds > 5:
                 self.timerLabel.setStyleSheet("""
                                             * {
                                                 background-color: rgb(255, 203, 111);
@@ -212,17 +235,41 @@ class QuizWindowUI(QMainWindow):
                                                  }
                                               """)
 
+            if seconds == 0:
+                self.terminateThread.set()
+                self.nextQuestion()
+
             if self.terminateThread.is_set():
                 break
 
-            time.sleep(1)
-            seconds -= 1
+            time.sleep(0.1)
+            times += 1
+            if times == 10:
+                seconds -= 1
+                times = 0
+
+    def quizTimer(self, seconds):
+        times = 0
+        while True:
+            time.sleep(0.1)
+            times += 1
+            if times == 10:
+                seconds += 1
+                print(seconds)
+                times = 0
+
+            if self.terminateQuizThread.is_set():
+                break
 
     def closeQuizWindow(self, parent):
         self.terminateThread.set()
+        self.terminateQuizThread.set()
 
         if self.timerThread and self.timerThread.is_alive():
             self.timerThread.join()
+
+        if self.quizTimerThread and self.quizTimerThread.is_alive():
+            self.quizTimerThread.join()
 
         self.timerThread = None
         parent.show()
