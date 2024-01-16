@@ -195,20 +195,22 @@ class QuizWindowUI(QMainWindow):
                 info = f"""
                             A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers / 10 * 100)}%)
                             Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
-                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont"""
+                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
 
                 if self.goodAnswers == 10:
                     info += """
                                 Minden válaszod helyes volt!
-                                Kitűzőt szereztél pontosságra! Értéke: 250 pont"""
+                                Kitűzőt szereztél pontosságra! Értéke: 250 pont*"""
                     badge1 = True
 
                     if self.timeSpent <= 120:
                         info += """
                                     Teljesítetted a kvízt 02:00-n belül!
-                                    Kitűzőt szereztél sebességre! Értéke: 1000 pont
+                                    Kitűzőt szereztél sebességre! Értéke: 1000 pont*
                                 """
                         badge2 = True
+
+                info += "* Csak akkor kerül beszámításra, ha eddig nem volt meg!"
 
                 self.saveResults(badge1, badge2)
 
