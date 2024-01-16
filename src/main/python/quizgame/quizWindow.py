@@ -176,48 +176,44 @@ class QuizWindowUI(QMainWindow):
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
             else:
-                try:
-                    self.terminateThread.set()
-                    self.terminateQuizThread.set()
-                    self.resultsWindow = None
+                self.terminateThread.set()
+                self.terminateQuizThread.set()
+                self.resultsWindow = None
 
-                    while True:
-                        if not self.quizTimerThread.is_alive():
-                            break
+                while True:
+                    if not self.quizTimerThread.is_alive():
+                        break
 
-                    badge1 = False
-                    badge2 = False
+                badge1 = False
+                badge2 = False
 
-                    minutes, seconds = divmod(self.timeSpent, 60)
+                minutes, seconds = divmod(self.timeSpent, 60)
 
-                    info = f"""
-                                A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
-                                Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
-                                Kitűzőt szereztél teljesítésre!"""
+                info = f"""
+                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
+                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
+                            Kitűzőt szereztél teljesítésre!"""
 
-                    if self.goodAnswers == 10:
+                if self.goodAnswers == 10:
+                    info += """
+                                Minden válaszod helyes volt!
+                                Kitűzőt szereztél pontosságra!"""
+                    badge1 = True
+
+                    if self.timeSpent <= 120:
                         info += """
-                                    Minden válaszod helyes volt!
-                                    Kitűzőt szereztél pontosságra!"""
-                        badge1 = True
+                                    Teljesítetted a kvízt 02:00-n belül!
+                                    Kitűzőt szereztél sebességre!
+                                """
+                        badge2 = True
 
-                        if self.timeSpent <= 120:
-                            info += """
-                                        Teljesítetted a kvízt 02:00-n belül!
-                                        Kitűzőt szereztél sebességre!
-                                    """
-                            badge2 = True
+                self.saveResults(badge1, badge2)
 
-                    self.saveResults(badge1, badge2)
+                if not self.resultsWindow:
+                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
 
-                    if not self.resultsWindow:
-                        self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
-
-                    self.hide()
-                    self.resultsWindow.show()
-
-                except Exception as e:
-                    errorMessage(f"Hiba: {e}")
+                self.hide()
+                self.resultsWindow.show()
 
         else:
             errorMessage("Nem választott választ!")

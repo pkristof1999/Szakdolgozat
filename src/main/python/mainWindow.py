@@ -220,8 +220,13 @@ class MainWindowUI(QMainWindow):
 
     def logOut(self, username):
         self.logOutResult = False
-        self.openLogOutExitWindow("Biztosan kijelentkezik?",
-                                  self.handleLogOutButton)
+        if self.username == "Vendég":
+            self.openLogOutExitWindow("Biztosan kijelentkezik?\n"
+                                      "Eredményei törlődnek!",
+                                      self.handleLogOutButton)
+        else:
+            self.openLogOutExitWindow("Biztosan kijelentkezik?",
+                                      self.handleLogOutButton)
 
         loop = QEventLoop(self.questionWindow)
         self.questionWindow.finished.connect(loop.quit)
@@ -265,10 +270,15 @@ class MainWindowUI(QMainWindow):
             if scene.windowTitle() != "Főképernyő":
                 scene.hide()
 
-    def exitWindow(self, event, thread1 = None, thread2 = None):
+    def exitWindow(self, event, thread1=None, thread2=None):
         self.exitResult = False
-        self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
-                                  self.handleExitButton)
+        if self.username == "Vendég":
+            self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?\n"
+                                      "Eredményei törlődnek!",
+                                      self.handleExitButton)
+        else:
+            self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
+                                      self.handleExitButton)
 
         loop = QEventLoop(self.questionWindow)
         self.questionWindow.finished.connect(loop.quit)
@@ -287,8 +297,13 @@ class MainWindowUI(QMainWindow):
 
     def exitWindowWithExitButton(self):
         self.exitResult = False
-        self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
-                                  self.handleExitButton)
+        if self.username == "Vendég":
+            self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?\n"
+                                      "Eredményei törlődnek!",
+                                      self.handleExitButton)
+        else:
+            self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?",
+                                      self.handleExitButton)
 
         loop = QEventLoop(self.questionWindow)
         self.questionWindow.finished.connect(loop.quit)
