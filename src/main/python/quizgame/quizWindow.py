@@ -181,11 +181,18 @@ class QuizWindowUI(QMainWindow):
                 self.terminateThread.set()
                 self.terminateQuizThread.set()
 
+                if self.timerThread and self.timerThread.is_alive():
+                    self.timerThread.join()
+
+                if self.quizTimerThread and self.quizTimerThread.is_alive():
+                    self.quizTimerThread.join()
+
                 while True:
                     if not self.timerThread.is_alive() and not self.quizTimerThread.is_alive():
-                        self.timerThread.join()
-                        self.quizTimerThread.join()
                         break
+
+                self.timerThread = None
+                self.quizTimerThread = None
 
                 badge1 = False
                 badge2 = False
@@ -210,7 +217,9 @@ class QuizWindowUI(QMainWindow):
                                 """
                         badge2 = True
 
-                info += "* Csak akkor kerül beszámításra, ha eddig nem volt meg!"
+                info += """
+                            * Csak akkor kerül beszámításra, ha eddig nem volt meg!
+                        """
 
                 self.saveResults(badge1, badge2)
 
@@ -358,6 +367,7 @@ class QuizWindowUI(QMainWindow):
             self.quizTimerThread.join()
 
         self.timerThread = None
+        self.quizTimerThread = None
         parent.show()
         self.hide()
         logger.info("Kvíz játékmód bezárása!")
