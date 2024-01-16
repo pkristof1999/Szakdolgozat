@@ -39,6 +39,7 @@ class QuizWindowUI(QMainWindow):
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
             self.resultsWindow = None
+            self.pointsEarned = 0
 
             self.answerButtonGroup = QButtonGroup(self)
             self.answerButtonGroup.setExclusive(False)
@@ -210,10 +211,10 @@ class QuizWindowUI(QMainWindow):
                 self.saveResults(badge1, badge2)
 
                 if not self.resultsWindow:
-                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
+                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self, self.parent, "default")
 
-                self.hide()
                 self.resultsWindow.show()
+                self.hide()
 
         else:
             errorMessage("Nem választott választ!")

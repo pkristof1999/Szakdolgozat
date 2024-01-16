@@ -5,13 +5,14 @@ from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
 
 class ResultsScreenUI(QMainWindow):
 
-    def __init__(self, info, grandParent, theme="default"):
+    def __init__(self, info, parent, grandParent, theme="default"):
         super(ResultsScreenUI, self).__init__()
         loadUi(f"../resources/ui/{theme}/resultsScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 
+        self.parent = parent
         self.grandParent = grandParent
 
         self.infoLabel = self.findChild(QLabel, "infoLabel")
@@ -25,5 +26,5 @@ class ResultsScreenUI(QMainWindow):
         self.closeEvent = grandParent.exitWindow
 
     def nextButtonClick(self):
-        self.grandParent.show()
         self.hide()
+        self.grandParent.show()
