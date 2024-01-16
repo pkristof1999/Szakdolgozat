@@ -67,7 +67,7 @@ class MainWindowUI(QMainWindow):
             self.learningGameInfo = "Ebben a módban kártevőtípusokról tanulhatsz. " + \
                                     "Minden témakör tartalmaz interaktív anyagokat tanuláshoz,melyekhez tartoznak kérdések is. " + \
                                     "Ha ezekre helyes a válasz, akkor kitűző kapható. " + \
-                                    "Ha egy témakör válaszaira 5 percen belül helyes válaszok kerülnek megadásra, erre is kitűző szerezhető!"
+                                    "Ha minden témakör válaszaira külön-külön 5 percen belül helyes válaszok kerülnek megadásra, erre is kitűző szerezhető!"
 
             self.quizGameInfo = "Ebben a módban a tanult tudást lehet tesztelni kvíz formájában! " + \
                                 "Tíz darab kérdésre kell válaszolni, minden kérdésre 30 másodperc idő jár. " + \

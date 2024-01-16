@@ -177,12 +177,14 @@ class QuizWindowUI(QMainWindow):
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
             else:
+                self.resultsWindow = None
                 self.terminateThread.set()
                 self.terminateQuizThread.set()
-                self.resultsWindow = None
 
                 while True:
-                    if not self.quizTimerThread.is_alive():
+                    if not self.timerThread.is_alive() and not self.quizTimerThread.is_alive():
+                        self.timerThread.join()
+                        self.quizTimerThread.join()
                         break
 
                 badge1 = False
@@ -191,20 +193,20 @@ class QuizWindowUI(QMainWindow):
                 minutes, seconds = divmod(self.timeSpent, 60)
 
                 info = f"""
-                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
+                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers / 10 * 100)}%)
                             Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
-                            Kitűzőt szereztél teljesítésre!"""
+                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont"""
 
                 if self.goodAnswers == 10:
                     info += """
                                 Minden válaszod helyes volt!
-                                Kitűzőt szereztél pontosságra!"""
+                                Kitűzőt szereztél pontosságra! Értéke: 250 pont"""
                     badge1 = True
 
                     if self.timeSpent <= 120:
                         info += """
                                     Teljesítetted a kvízt 02:00-n belül!
-                                    Kitűzőt szereztél sebességre!
+                                    Kitűzőt szereztél sebességre! Értéke: 1000 pont
                                 """
                         badge2 = True
 
@@ -300,14 +302,41 @@ class QuizWindowUI(QMainWindow):
 
             if self.username in fileContents:
                 if badge1 and badge2:
-                    print("milestone")
+                    if fileContents[self.username]["QuizMedal"] == 0 and \
+                            fileContents[self.username]["badge03"] == 0 and \
+                            fileContents[self.username]["badge04"] == 0:
+                        self.pointsEarned = 1350
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["QuizMedal"] == 1 and \
+                            fileContents[self.username]["badge03"] == 0 and \
+                            fileContents[self.username]["badge04"] == 0:
+                        self.pointsEarned = 1250
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["QuizMedal"] == 1 and \
+                            fileContents[self.username]["badge03"] == 1 and \
+                            fileContents[self.username]["badge04"] == 0:
+                        self.pointsEarned = 1000
+                        fileContents[self.username]["Score"] += self.pointsEarned
+
                     fileContents[self.username]["QuizMedal"] = 1
                     fileContents[self.username]["badge03"] = 1
                     fileContents[self.username]["badge04"] = 1
                 elif badge1:
+                    if fileContents[self.username]["QuizMedal"] == 0 and \
+                            fileContents[self.username]["badge03"] == 0:
+                        self.pointsEarned = 350
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["QuizMedal"] == 1 and \
+                            fileContents[self.username]["badge03"] == 0:
+                        self.pointsEarned = 250
+                        fileContents[self.username]["Score"] += self.pointsEarned
+
                     fileContents[self.username]["QuizMedal"] = 1
                     fileContents[self.username]["badge03"] = 1
                 else:
+                    if fileContents[self.username]["QuizMedal"] == 0:
+                        self.pointsEarned = 100
+                        fileContents[self.username]["Score"] += self.pointsEarned
                     fileContents[self.username]["QuizMedal"] = 1
 
             with open(dataPath, 'w') as jsonFile:
@@ -330,4 +359,3 @@ class QuizWindowUI(QMainWindow):
         parent.show()
         self.hide()
         logger.info("Kvíz játékmód bezárása!")
-
