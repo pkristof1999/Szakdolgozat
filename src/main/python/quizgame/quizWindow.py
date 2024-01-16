@@ -186,8 +186,16 @@ class QuizWindowUI(QMainWindow):
                 minutes, seconds = divmod(self.timeSpent, 60)
                 info = f"""
                             A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
-                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
-                        """
+                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}"""
+                if self.goodAnswers == 10:
+                    info += """
+                                Minden válaszod helyes volt!
+                                Kitűzőt szereztél pontosságra!"""
+                    if self.timeSpent <= 120:
+                        info += """
+                                    Teljesítetted a kvízt 02:00-n belül!
+                                    Kitűzőt szereztél sebességre!
+                                """
                 if not self.resultsWindow:
                     self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
 
