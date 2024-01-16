@@ -182,7 +182,7 @@ class ResultsUI(QMainWindow):
                 )
             elif account[username]["badge04"] == 1:
                 self.badgeLoader(
-                    "/quiz/Quiz_Fast_Completion_Locked.png", self.badge04, self.badge04Label
+                    "/quiz/Quiz_Fast_Completion_Unlocked.png", self.badge04, self.badge04Label
                 )
             else:
                 raise Exception("Hiba a 'badge04' jelvény betöltésekor!")
