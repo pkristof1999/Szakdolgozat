@@ -176,31 +176,48 @@ class QuizWindowUI(QMainWindow):
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
             else:
-                self.terminateThread.set()
-                self.terminateQuizThread.set()
-                self.resultsWindow = None
-                while True:
-                    if not self.quizTimerThread.is_alive():
-                        break
+                try:
+                    self.terminateThread.set()
+                    self.terminateQuizThread.set()
+                    self.resultsWindow = None
 
-                minutes, seconds = divmod(self.timeSpent, 60)
-                info = f"""
-                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
-                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}"""
-                if self.goodAnswers == 10:
-                    info += """
-                                Minden válaszod helyes volt!
-                                Kitűzőt szereztél pontosságra!"""
-                    if self.timeSpent <= 120:
+                    while True:
+                        if not self.quizTimerThread.is_alive():
+                            break
+
+                    badge1 = False
+                    badge2 = False
+
+                    minutes, seconds = divmod(self.timeSpent, 60)
+
+                    info = f"""
+                                A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
+                                Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
+                                Kitűzőt szereztél teljesítésre!"""
+
+                    if self.goodAnswers == 10:
                         info += """
-                                    Teljesítetted a kvízt 02:00-n belül!
-                                    Kitűzőt szereztél sebességre!
-                                """
-                if not self.resultsWindow:
-                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
+                                    Minden válaszod helyes volt!
+                                    Kitűzőt szereztél pontosságra!"""
+                        badge1 = True
 
-                self.hide()
-                self.resultsWindow.show()
+                        if self.timeSpent <= 120:
+                            info += """
+                                        Teljesítetted a kvízt 02:00-n belül!
+                                        Kitűzőt szereztél sebességre!
+                                    """
+                            badge2 = True
+
+                    self.saveResults(badge1, badge2)
+
+                    if not self.resultsWindow:
+                        self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
+
+                    self.hide()
+                    self.resultsWindow.show()
+
+                except Exception as e:
+                    errorMessage(f"Hiba: {e}")
 
         else:
             errorMessage("Nem választott választ!")
@@ -273,6 +290,34 @@ class QuizWindowUI(QMainWindow):
             if self.terminateQuizThread.is_set():
                 self.timeSpent = seconds
                 break
+
+    def saveResults(self, badge1, badge2):
+        try:
+            if self.username == "Vendég":
+                dataPath = "../../../userdata/profiles/guestProfile.json"
+            else:
+                dataPath = "../../../userdata/profiles/profiles.json"
+
+            with open(dataPath, 'r') as jsonFile:
+                fileContents = json.load(jsonFile)
+
+            if self.username in fileContents:
+                if badge1 and badge2:
+                    print("milestone")
+                    fileContents[self.username]["QuizMedal"] = 1
+                    fileContents[self.username]["badge03"] = 1
+                    fileContents[self.username]["badge04"] = 1
+                elif badge1:
+                    fileContents[self.username]["QuizMedal"] = 1
+                    fileContents[self.username]["badge03"] = 1
+                else:
+                    fileContents[self.username]["QuizMedal"] = 1
+
+            with open(dataPath, 'w') as jsonFile:
+                json.dump(fileContents, jsonFile, indent=4)
+
+        except Exception as e:
+            errorMessage(f"Hiba: {e}")
 
     def closeQuizWindow(self, parent):
         self.terminateThread.set()
