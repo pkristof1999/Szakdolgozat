@@ -179,9 +179,14 @@ class QuizWindowUI(QMainWindow):
                 self.terminateThread.set()
                 self.terminateQuizThread.set()
                 self.resultsWindow = None
+                while True:
+                    if not self.quizTimerThread.is_alive():
+                        break
+
+                minutes, seconds = divmod(self.timeSpent, 60)
                 info = f"""
                             A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers/10*100)}%)
-                            Kvízzel töltött idő:
+                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
                         """
                 if not self.resultsWindow:
                     self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, "default")
@@ -255,10 +260,10 @@ class QuizWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
-                print(seconds)
                 times = 0
 
             if self.terminateQuizThread.is_set():
+                self.timeSpent = seconds
                 break
 
     def closeQuizWindow(self, parent):
