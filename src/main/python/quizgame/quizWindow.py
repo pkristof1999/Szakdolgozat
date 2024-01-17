@@ -56,6 +56,7 @@ class QuizWindowUI(QMainWindow):
 
             self.terminateThread = threading.Event()
             self.timerThread = None
+            self.isTimesUp = False
             self.countdown = 30
 
             self.terminateQuizThread = threading.Event()
@@ -147,11 +148,12 @@ class QuizWindowUI(QMainWindow):
         if self.answer1Button.isChecked() or \
                 self.answer2Button.isChecked() or \
                 self.answer3Button.isChecked() or \
-                self.answer4Button.isChecked():
+                self.answer4Button.isChecked() or \
+                self.isTimesUp:
 
             self.questionIndex += 1
-            if self.questionIndex <= 10:
-                if self.questionIndex < 10:
+            if self.questionIndex < 10:
+                if self.questionIndex < 9:
                     for button in self.answerButtonGroup.buttons():
                         if button.isChecked():
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
@@ -166,25 +168,42 @@ class QuizWindowUI(QMainWindow):
                     self.answer3Button.setText(nextQuestion["answer3"])
                     self.answer4Button.setText(nextQuestion["answer4"])
 
-                    if self.timerThread and self.timerThread.is_alive():
-                        self.terminateThread.set()
-                        self.timerThread.join()
-                    self.startCountdown(30)
+                    if not self.isTimesUp:
+                        if self.timerThread and self.timerThread.is_alive():
+                            self.terminateThread.set()
+                            self.timerThread.join()
+
+                    self.isTimesUp = False
+                    self.startCountdown(5)
                 else:
                     for button in self.answerButtonGroup.buttons():
                         if button.isChecked():
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
+
+                    if not self.isTimesUp:
+                        if self.timerThread and self.timerThread.is_alive():
+                            self.terminateThread.set()
+                            self.timerThread.join()
+
+                    self.isTimesUp = False
+                    self.startCountdown(5)
             else:
+                for button in self.answerButtonGroup.buttons():
+                    if button.isChecked():
+                        logger.info(f"{button.text()} sikeresen leadva válaszként!")
+                        if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
+                            self.goodAnswers += 1
+
                 self.resultsWindow = None
-                self.terminateThread.set()
-                self.terminateQuizThread.set()
 
                 if self.timerThread and self.timerThread.is_alive():
+                    self.terminateThread.set()
                     self.timerThread.join()
 
                 if self.quizTimerThread and self.quizTimerThread.is_alive():
+                    self.terminateQuizThread.set()
                     self.quizTimerThread.join()
 
                 while True:
@@ -228,7 +247,6 @@ class QuizWindowUI(QMainWindow):
 
                 self.resultsWindow.show()
                 self.hide()
-
         else:
             errorMessage("Nem választott választ!")
 
@@ -252,32 +270,10 @@ class QuizWindowUI(QMainWindow):
             else:
                 self.timerLabel.setText(f"00:0{seconds}")
 
-            if 30 >= seconds > 10:
-                self.timerLabel.setStyleSheet("""
-                                                 * {
-                                                     background-color: rgb(255, 255, 255);
-                                                     color: grey;
-                                                 }
-                                              """)
-
-            elif 10 >= seconds > 5:
-                self.timerLabel.setStyleSheet("""
-                                            * {
-                                                background-color: rgb(255, 203, 111);
-                                                color: grey;
-                                            }
-                                         """)
-            elif seconds <= 5:
-                self.timerLabel.setStyleSheet("""
-                                                 * {
-                                                     background-color: rgb(255, 173, 173);
-                                                     color: grey;
-                                                 }
-                                              """)
-
             if seconds == 0:
+                time.sleep(1)
+                self.isTimesUp = True
                 self.terminateThread.set()
-                self.nextQuestion()
 
             if self.terminateThread.is_set():
                 break
@@ -287,6 +283,9 @@ class QuizWindowUI(QMainWindow):
             if times == 10:
                 seconds -= 1
                 times = 0
+
+        if self.isTimesUp:
+            self.nextQuestion()
 
     def quizTimer(self, seconds):
         times = 0
