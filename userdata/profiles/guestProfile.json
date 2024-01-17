@@ -6,11 +6,11 @@
         "EmailMedal": 0,
         "badge01": 0,
         "badge02": 0,
-        "badge03": 0,
+        "badge03": 1,
         "badge04": 0,
         "badge05": 0,
         "badge06": 0,
-        "Score": 100,
+        "Score": 350,
         "Theme": "default"
     }
 }

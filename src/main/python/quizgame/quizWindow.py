@@ -206,10 +206,16 @@ class QuizWindowUI(QMainWindow):
 
                 minutes, seconds = divmod(self.timeSpent, 60)
 
-                info = f"""
-                            A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers / 10 * 100)}%)
-                            Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
-                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
+                if self.timeSpent <= 3600:
+                    info = f"""
+                                A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers / 10 * 100)}%)
+                                Kvízzel töltött idő: {minutes:02d}:{seconds:02d}
+                                Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
+                else:
+                    info = f"""
+                                A helyes válaszok száma: 10/{self.goodAnswers} ({int(self.goodAnswers / 10 * 100)}%)
+                                Kvízzel töltött idő: Több, mint egy óra
+                                Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
 
                 if self.goodAnswers == 10:
                     info += """
