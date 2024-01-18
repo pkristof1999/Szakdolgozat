@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>646</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Email Játékmód</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	background-color: #8f8f91;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>621</width>
+      <height>605</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	background-color: white;
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+</string>
+    </property>
+    <widget class="QFrame" name="emailFrame">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>601</width>
+       <height>585</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	border: none;
+	border-radius: 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>251</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	background-color:  #8f8f91;
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}</string>
+    </property>
+    <widget class="QPushButton" name="email1Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email2Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>70</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email3Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email4Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email5Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>250</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email8Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>430</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email7Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>370</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email6Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>310</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email9Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>490</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="email10Button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>550</y>
+       <width>240</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: white;
+	border-radius: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>emailTextHere</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
