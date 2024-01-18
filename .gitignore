@@ -4,6 +4,7 @@ src/main/python/components/__pycache__
 src/main/python/infoscreens/__pycache__
 src/main/python/learninggame/__pycache__
 src/main/python/quizgame/__pycache__/
+src/main/python/emailgame/__pycache__/
 src/main/log
 userdata/profiles/profilepicture
 userdata/profiles/profiles.json
