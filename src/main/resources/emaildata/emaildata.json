@@ -48,5 +48,55 @@
         "subject": "Teszt10",
         "pathToEmail": "",
         "isMalicious": false
+    },
+    "email11": {
+        "subject": "Teszt11",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email12": {
+        "subject": "Teszt12",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email13": {
+        "subject": "Teszt13",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email14": {
+        "subject": "Teszt14",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email15": {
+        "subject": "Teszt15",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email16": {
+        "subject": "Teszt16",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email17": {
+        "subject": "Teszt17",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email18": {
+        "subject": "Teszt18",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email19": {
+        "subject": "Teszt19",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email20": {
+        "subject": "Teszt20",
+        "pathToEmail": "",
+        "isMalicious": false
     }
 }

@@ -45,13 +45,41 @@ class EmailWindowUI(QMainWindow):
             self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
 
+            self.emailBank = []
+            self.emailIndex = 0
+            self.previousEmails = []
+
             self.backButton.clicked.connect(self.closeEmailWindow)
 
             self.closeEvent = lambda event: parent.exitWindow(event)
 
+            self.loadSubjects()
+
         except Exception as e:
             errorMessage(e)
             self.hide()
+
+    def loadEmailsIntoArray(self):
+        try:
+            with open("../resources/emaildata/emaildata.json", "r") as jsonFile:
+                emailBank = json.load(jsonFile)
+
+            shuffledEmails = list(emailBank.values())
+            random.shuffle(shuffledEmails)
+
+            return shuffledEmails
+
+        except Exception as e:
+            errorMessage(e)
+
+    def loadSubjects(self):
+        self.emailBank = self.loadEmailsIntoArray()
+
+        for i in range(10):
+            buttonName = f"email{i + 1}Button"
+            button = getattr(self, buttonName, None)
+
+            button.setText(self.emailBank[i]["subject"])
 
     def closeEmailWindow(self):
         self.hide()
