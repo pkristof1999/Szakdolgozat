@@ -18,6 +18,7 @@ from src.main.python.infoscreens import gameModeInfo
 from src.main.python.infoscreens import areYouSure
 from src.main.python.learninggame import chooseLearning
 from src.main.python.quizgame import quizWindow
+from src.main.python.emailgame import emailWindow
 
 
 class MainWindowUI(QMainWindow):
@@ -211,12 +212,11 @@ class MainWindowUI(QMainWindow):
 
     def openEmailGame(self, username):
         self.emailWindow = None
-        """if not self.emailWindow:
-            self.emailWindow = ...
+        if not self.emailWindow:
+            self.emailWindow = emailWindow.EmailWindowUI(username, self)
         self.emailWindow.show()
         self.hide()
-        logger.info("Email játékmód megnyitása!")"""
-        errorMessage("openEmailGame")
+        logger.info("Email játékmód megnyitása!")
 
     def logOut(self, username):
         self.logOutResult = False
