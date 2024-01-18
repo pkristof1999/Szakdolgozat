@@ -42,6 +42,7 @@ class EmailWindowUI(QMainWindow):
             self.maliciousButton = self.findChild(QPushButton, "maliciousButton")
             self.genuineButton = self.findChild(QPushButton, "genuineButton")
             self.backButton = self.findChild(QPushButton, "backButton")
+            self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
 
             self.backButton.clicked.connect(self.closeEmailWindow)
