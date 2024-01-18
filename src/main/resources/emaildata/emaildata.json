@@ -1,0 +1,52 @@
+{
+    "email1": {
+        "subject": "Teszt1",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email2": {
+        "subject": "Teszt2",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email3": {
+        "subject": "Teszt3",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email4": {
+        "subject": "Teszt4",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email5": {
+        "subject": "Teszt5",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email6": {
+        "subject": "Teszt6",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email7": {
+        "subject": "Teszt7",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email8": {
+        "subject": "Teszt8",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email9": {
+        "subject": "Teszt9",
+        "pathToEmail": "",
+        "isMalicious": false
+    },
+    "email10": {
+        "subject": "Teszt10",
+        "pathToEmail": "",
+        "isMalicious": false
+    }
+}
