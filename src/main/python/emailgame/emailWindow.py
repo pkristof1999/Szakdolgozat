@@ -85,6 +85,17 @@ class EmailWindowUI(QMainWindow):
             self.loadSubjects()
             self.loadDefaults()
 
+            self.email1Button.clicked.connect(lambda: self.loadNextEmail(self.email1ID))
+            self.email2Button.clicked.connect(lambda: self.loadNextEmail(self.email2ID))
+            self.email3Button.clicked.connect(lambda: self.loadNextEmail(self.email3ID))
+            self.email4Button.clicked.connect(lambda: self.loadNextEmail(self.email4ID))
+            self.email5Button.clicked.connect(lambda: self.loadNextEmail(self.email5ID))
+            self.email6Button.clicked.connect(lambda: self.loadNextEmail(self.email6ID))
+            self.email7Button.clicked.connect(lambda: self.loadNextEmail(self.email7ID))
+            self.email8Button.clicked.connect(lambda: self.loadNextEmail(self.email8ID))
+            self.email9Button.clicked.connect(lambda: self.loadNextEmail(self.email9ID))
+            self.email10Button.clicked.connect(lambda: self.loadNextEmail(self.email10ID))
+
         except Exception as e:
             errorMessage(e)
             self.hide()
@@ -114,7 +125,6 @@ class EmailWindowUI(QMainWindow):
             button.setText(self.emailBank[i]["subject"])
             setattr(self, buttonID, self.emailBank[i]["ID"])
             if self.emailBank[i]["isMalicious"]:
-                print(self.emailBank[i]["isMalicious"])
                 setattr(self, emailIsMalicious, True)
 
     def loadDefaults(self):
@@ -173,6 +183,9 @@ class EmailWindowUI(QMainWindow):
 
         except Exception as e:
             logger.error(f"Hiba: {e}")
+
+    def loadNextEmail(self, ID):
+        print(ID)
 
     def closeEmailWindow(self):
         self.hide()
