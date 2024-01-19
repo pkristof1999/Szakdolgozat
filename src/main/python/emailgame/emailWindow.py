@@ -228,23 +228,71 @@ class EmailWindowUI(QMainWindow):
                 logger.info(f"{button.text()} kiválasztva.")
 
     def chooseEmailType(self, ID, isMalicious):
+        firstGreenStyle = """
+                             * {
+                                background-color: rgb(167, 255, 111);
+                                border-radius: 0;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                                color: white;
+                             }
+                          """
+        lastGreenStyle = """
+                             * {
+                                background-color: rgb(167, 255, 111);
+                                border-radius: 0;
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                color: white;
+                             }
+                          """
+        firstRedStyle = """
+                           * {
+                              background-color: rgb(255, 173, 173);
+                              border-radius: 0;
+                              border-top-left-radius: 10px;
+                              border-top-right-radius: 10px;
+                              color: white;
+                           }
+                          """
+        lastRedStyle = """
+                             * {
+                                background-color: rgb(255, 173, 173);
+                                border-radius: 0;
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                color: white;
+                             }
+                          """
         greenStyle = """                  
                     * {
                         background-color: rgb(167, 255, 111);
+                        border-radius: 0;
                         color: white;
                     }
                 """
         redStyle = """                  
                     * {
                         background-color: rgb(255, 173, 173);
+                        border-radius: 0;
                         color: white;
                     }
                 """
 
         if isMalicious:
-            self.selectedButton.setStyleSheet(greenStyle)
+            if self.selectedButton == self.email1Button:
+                self.selectedButton.setStyleSheet(firstGreenStyle)
+            elif self.selectedButton == self.email10Button:
+                self.selectedButton.setStyleSheet(lastGreenStyle)
+            else:
+                self.selectedButton.setStyleSheet(greenStyle)
         else:
-            self.selectedButton.setStyleSheet(redStyle)
+            if self.selectedButton == self.email1Button:
+                self.selectedButton.setStyleSheet(firstRedStyle)
+            elif self.selectedButton == self.email10Button:
+                self.selectedButton.setStyleSheet(lastRedStyle)
+            else:
+                self.selectedButton.setStyleSheet(redStyle)
 
     def closeEmailWindow(self):
         self.hide()
