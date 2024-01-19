@@ -4,6 +4,7 @@ import random
 import threading
 
 from PyQt6 import QtCore
+from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QFrame
 from PyQt6.uic import loadUi
@@ -68,7 +69,8 @@ class EmailWindowUI(QMainWindow):
             self.closeEvent = lambda event: parent.exitWindow(event)
 
             self.loadSubjects()
-            self.loadImage("../resources/emaildata/emails/example_legit_email.png")
+            self.loadDefaultImage()
+            self.defaultButtonBehaviour()
             print(self.email1ID)
 
         except Exception as e:
@@ -98,6 +100,21 @@ class EmailWindowUI(QMainWindow):
 
             button.setText(self.emailBank[i]["subject"])
             setattr(self, buttonID, self.emailBank[i]["ID"])
+
+    def loadDefaultImage(self):
+        self.loadImage("../resources/emaildata/emails/default_email_icon.png")
+
+    def defaultButtonBehaviour(self):
+        style = """                  
+                    * {
+                        border: None;
+                        background-color: white;
+                        color: white;
+                    }
+                """
+
+        self.maliciousButton.setStyleSheet(style)
+        self.genuineButton.setStyleSheet(style)
 
     def loadImage(self, imagePath):
         try:
