@@ -45,7 +45,7 @@
        <x>10</x>
        <y>10</y>
        <width>601</width>
-       <height>541</height>
+       <height>531</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -65,7 +65,7 @@
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>560</y>
+       <y>557</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -96,7 +96,7 @@
      <property name="geometry">
       <rect>
        <x>320</x>
-       <y>560</y>
+       <y>557</y>
        <width>191</width>
        <height>31</height>
       </rect>
@@ -121,6 +121,19 @@
      </property>
      <property name="text">
       <string>Hiteles</string>
+     </property>
+    </widget>
+    <widget class="Line" name="horizontalLine">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>540</y>
+       <width>601</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </widget>

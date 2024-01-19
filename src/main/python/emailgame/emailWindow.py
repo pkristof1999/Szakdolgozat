@@ -4,9 +4,9 @@ import random
 import threading
 
 from PyQt6 import QtCore
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QLine
 from PyQt6.QtGui import QIcon, QPixmap
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QFrame
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QFrame, QLineEdit
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -46,6 +46,7 @@ class EmailWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
+            self.horizontalLine = self.findChild(QFrame, "horizontalLine")
 
             self.maliciousButtonHiddenState = False
             self.genuineButtonHiddenState = False
@@ -165,6 +166,7 @@ class EmailWindowUI(QMainWindow):
 
         self.maliciousButton.setStyleSheet(style)
         self.genuineButton.setStyleSheet(style)
+        self.horizontalLine.setStyleSheet(style)
 
     def loadImage(self, imagePath):
         try:
@@ -186,6 +188,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadNextEmail(self, ID):
         print(ID)
+        self.buttonBehaviour("present")
 
     def closeEmailWindow(self):
         self.hide()
