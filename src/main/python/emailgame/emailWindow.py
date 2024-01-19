@@ -3,7 +3,8 @@ import time
 import random
 import threading
 
-from PyQt6.QtGui import QIcon
+from PyQt6 import QtCore
+from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QFrame
 from PyQt6.uic import loadUi
 
@@ -45,6 +46,8 @@ class EmailWindowUI(QMainWindow):
             self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
 
+            self.label = QLabel(self.emailFrame)
+
             self.emailBank = []
             self.emailIndex = 0
             self.previousEmails = []
@@ -54,6 +57,7 @@ class EmailWindowUI(QMainWindow):
             self.closeEvent = lambda event: parent.exitWindow(event)
 
             self.loadSubjects()
+            self.loadImage("../resources/emaildata/emails/example_legit_email.png")
 
         except Exception as e:
             errorMessage(e)
@@ -80,6 +84,24 @@ class EmailWindowUI(QMainWindow):
             button = getattr(self, buttonName, None)
 
             button.setText(self.emailBank[i]["subject"])
+
+    def loadImage(self, imagePath):
+        try:
+            pixmap = QPixmap(imagePath)
+
+            if not os.path.exists(imagePath):
+                raise Exception("A megadott kép nem található!")
+
+            frameSize = self.emailFrame.size()
+            pixmap = pixmap.scaled(frameSize, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                   QtCore.Qt.TransformationMode.SmoothTransformation)
+
+            self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.label.setGeometry(self.emailFrame.rect())
+            self.label.setPixmap(pixmap)
+
+        except Exception as e:
+            logger.error(f"Hiba: {e}")
 
     def closeEmailWindow(self):
         self.hide()
