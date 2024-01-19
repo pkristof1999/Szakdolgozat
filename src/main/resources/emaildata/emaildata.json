@@ -27,25 +27,25 @@
         "ID": 5,
         "subject": "Teszt5",
         "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
-        "isMalicious": false
+        "isMalicious": true
     },
     "email6": {
         "ID": 6,
         "subject": "Teszt6",
         "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
-        "isMalicious": false
+        "isMalicious": true
     },
     "email7": {
         "ID": 7,
         "subject": "Teszt7",
         "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
-        "isMalicious": false
+        "isMalicious": true
     },
     "email8": {
         "ID": 8,
         "subject": "Teszt8",
         "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
-        "isMalicious": false
+        "isMalicious": true
     },
     "email9": {
         "ID": 9,

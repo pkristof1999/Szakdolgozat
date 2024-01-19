@@ -47,6 +47,9 @@ class EmailWindowUI(QMainWindow):
             self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
 
+            self.maliciousButtonHiddenState = False
+            self.genuineButtonHiddenState = False
+
             self.email1ID = ""
             self.email2ID = ""
             self.email3ID = ""
@@ -57,6 +60,17 @@ class EmailWindowUI(QMainWindow):
             self.email8ID = ""
             self.email9ID = ""
             self.email10ID = ""
+
+            self.email1IsMalicious = False
+            self.email2IsMalicious = False
+            self.email3IsMalicious = False
+            self.email4IsMalicious = False
+            self.email5IsMalicious = False
+            self.email6IsMalicious = False
+            self.email7IsMalicious = False
+            self.email8IsMalicious = False
+            self.email9IsMalicious = False
+            self.email10IsMalicious = False
 
             self.label = QLabel(self.emailFrame)
 
@@ -69,9 +83,7 @@ class EmailWindowUI(QMainWindow):
             self.closeEvent = lambda event: parent.exitWindow(event)
 
             self.loadSubjects()
-            self.loadDefaultImage()
-            self.defaultButtonBehaviour()
-            print(self.email1ID)
+            self.loadDefaults()
 
         except Exception as e:
             errorMessage(e)
@@ -96,22 +108,50 @@ class EmailWindowUI(QMainWindow):
         for i in range(10):
             buttonName = f"email{i + 1}Button"
             buttonID = f"email{i + 1}ID"
+            emailIsMalicious = f"email{i + 1}IsMalicious"
             button = getattr(self, buttonName, None)
 
             button.setText(self.emailBank[i]["subject"])
             setattr(self, buttonID, self.emailBank[i]["ID"])
+            if self.emailBank[i]["isMalicious"]:
+                print(self.emailBank[i]["isMalicious"])
+                setattr(self, emailIsMalicious, True)
 
-    def loadDefaultImage(self):
+    def loadDefaults(self):
+        self.buttonBehaviour("hidden")
         self.loadImage("../resources/emaildata/emails/default_email_icon.png")
+        logger.info("Email mód betöltve!")
 
-    def defaultButtonBehaviour(self):
-        style = """                  
-                    * {
-                        border: None;
-                        background-color: white;
-                        color: white;
-                    }
-                """
+    def buttonBehaviour(self, isHidden=None):
+        style = ""
+
+        if isHidden == "hidden":
+            style = """                  
+                        * {
+                            border: None;
+                            background-color: white;
+                            color: white;
+                        }
+                    """
+
+            self.maliciousButtonHiddenState = True
+            self.genuineButtonHiddenState = True
+
+        elif isHidden == "present":
+            style = """                  
+                        * {
+                            background-color: white;
+                            color: grey;
+                        }
+                        
+                        *:hover {
+                            background-color: rgb(120, 120, 220);
+	                        color: white;
+                        }
+                    """
+
+            self.maliciousButtonHiddenState = False
+            self.genuineButtonHiddenState = False
 
         self.maliciousButton.setStyleSheet(style)
         self.genuineButton.setStyleSheet(style)
