@@ -46,6 +46,17 @@ class EmailWindowUI(QMainWindow):
             self.checkButton = self.findChild(QPushButton, "checkButton")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
 
+            self.email1ID = ""
+            self.email2ID = ""
+            self.email3ID = ""
+            self.email4ID = ""
+            self.email5ID = ""
+            self.email6ID = ""
+            self.email7ID = ""
+            self.email8ID = ""
+            self.email9ID = ""
+            self.email10ID = ""
+
             self.label = QLabel(self.emailFrame)
 
             self.emailBank = []
@@ -58,6 +69,7 @@ class EmailWindowUI(QMainWindow):
 
             self.loadSubjects()
             self.loadImage("../resources/emaildata/emails/example_legit_email.png")
+            print(self.email1ID)
 
         except Exception as e:
             errorMessage(e)
@@ -81,9 +93,11 @@ class EmailWindowUI(QMainWindow):
 
         for i in range(10):
             buttonName = f"email{i + 1}Button"
+            buttonID = f"email{i + 1}ID"
             button = getattr(self, buttonName, None)
 
             button.setText(self.emailBank[i]["subject"])
+            setattr(self, buttonID, self.emailBank[i]["ID"])
 
     def loadImage(self, imagePath):
         try:
