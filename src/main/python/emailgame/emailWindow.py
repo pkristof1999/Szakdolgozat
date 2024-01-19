@@ -62,6 +62,7 @@ class EmailWindowUI(QMainWindow):
             self.email9ID = ""
             self.email10ID = ""
 
+            self.selectedButton = ""
             self.selectedEmailID = ""
 
             self.email1Path = ""
@@ -217,16 +218,18 @@ class EmailWindowUI(QMainWindow):
             logger.error(f"Hiba: {e}")
 
     def loadNextEmail(self, button, ID, path):
+        self.selectedButton = button
         self.selectedEmailID = ID
         self.buttonBehaviour("present")
         self.loadImage(path)
 
         for i in self.emailBank:
             if i["ID"] == ID:
-                print("Selected Button", button.text())
+                logger.info(f"{button.text()} kiválasztva.")
 
     def chooseEmailType(self, ID, isMalicious):
-        pass
+        print(ID)
+        print(isMalicious)
 
     def closeEmailWindow(self):
         self.hide()
