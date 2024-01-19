@@ -228,8 +228,23 @@ class EmailWindowUI(QMainWindow):
                 logger.info(f"{button.text()} kiválasztva.")
 
     def chooseEmailType(self, ID, isMalicious):
-        print(ID)
-        print(isMalicious)
+        greenStyle = """                  
+                    * {
+                        background-color: rgb(167, 255, 111);
+                        color: white;
+                    }
+                """
+        redStyle = """                  
+                    * {
+                        background-color: rgb(255, 173, 173);
+                        color: white;
+                    }
+                """
+
+        if isMalicious:
+            self.selectedButton.setStyleSheet(greenStyle)
+        else:
+            self.selectedButton.setStyleSheet(redStyle)
 
     def closeEmailWindow(self):
         self.hide()
