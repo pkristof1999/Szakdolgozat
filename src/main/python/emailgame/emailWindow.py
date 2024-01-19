@@ -62,6 +62,19 @@ class EmailWindowUI(QMainWindow):
             self.email9ID = ""
             self.email10ID = ""
 
+            self.selectedEmailID = ""
+
+            self.email1Path = ""
+            self.email2Path = ""
+            self.email3Path = ""
+            self.email4Path = ""
+            self.email5Path = ""
+            self.email6Path = ""
+            self.email7Path = ""
+            self.email8Path = ""
+            self.email9Path = ""
+            self.email10Path = ""
+
             self.email1IsMalicious = False
             self.email2IsMalicious = False
             self.email3IsMalicious = False
@@ -86,16 +99,16 @@ class EmailWindowUI(QMainWindow):
             self.loadSubjects()
             self.loadDefaults()
 
-            self.email1Button.clicked.connect(lambda: self.loadNextEmail(self.email1ID))
-            self.email2Button.clicked.connect(lambda: self.loadNextEmail(self.email2ID))
-            self.email3Button.clicked.connect(lambda: self.loadNextEmail(self.email3ID))
-            self.email4Button.clicked.connect(lambda: self.loadNextEmail(self.email4ID))
-            self.email5Button.clicked.connect(lambda: self.loadNextEmail(self.email5ID))
-            self.email6Button.clicked.connect(lambda: self.loadNextEmail(self.email6ID))
-            self.email7Button.clicked.connect(lambda: self.loadNextEmail(self.email7ID))
-            self.email8Button.clicked.connect(lambda: self.loadNextEmail(self.email8ID))
-            self.email9Button.clicked.connect(lambda: self.loadNextEmail(self.email9ID))
-            self.email10Button.clicked.connect(lambda: self.loadNextEmail(self.email10ID))
+            self.email1Button.clicked.connect(lambda: self.loadNextEmail(self.email1ID, self.email1Path))
+            self.email2Button.clicked.connect(lambda: self.loadNextEmail(self.email2ID, self.email2Path))
+            self.email3Button.clicked.connect(lambda: self.loadNextEmail(self.email3ID, self.email3Path))
+            self.email4Button.clicked.connect(lambda: self.loadNextEmail(self.email4ID, self.email4Path))
+            self.email5Button.clicked.connect(lambda: self.loadNextEmail(self.email5ID, self.email5Path))
+            self.email6Button.clicked.connect(lambda: self.loadNextEmail(self.email6ID, self.email6Path))
+            self.email7Button.clicked.connect(lambda: self.loadNextEmail(self.email7ID, self.email7Path))
+            self.email8Button.clicked.connect(lambda: self.loadNextEmail(self.email8ID, self.email8Path))
+            self.email9Button.clicked.connect(lambda: self.loadNextEmail(self.email9ID, self.email9Path))
+            self.email10Button.clicked.connect(lambda: self.loadNextEmail(self.email10ID, self.email10Path))
 
         except Exception as e:
             errorMessage(e)
@@ -120,11 +133,13 @@ class EmailWindowUI(QMainWindow):
         for i in range(10):
             buttonName = f"email{i + 1}Button"
             buttonID = f"email{i + 1}ID"
+            emailPath = f"email{i + 1}Path"
             emailIsMalicious = f"email{i + 1}IsMalicious"
             button = getattr(self, buttonName, None)
 
             button.setText(self.emailBank[i]["subject"])
             setattr(self, buttonID, self.emailBank[i]["ID"])
+            setattr(self, emailPath, self.emailBank[i]["pathToEmail"])
             if self.emailBank[i]["isMalicious"]:
                 setattr(self, emailIsMalicious, True)
 
@@ -186,9 +201,12 @@ class EmailWindowUI(QMainWindow):
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
-    def loadNextEmail(self, ID):
-        print(ID)
+    def loadNextEmail(self, ID, path):
+        self.selectedEmailID = ID
         self.buttonBehaviour("present")
+        self.loadImage(path)
+
+
 
     def closeEmailWindow(self):
         self.hide()
