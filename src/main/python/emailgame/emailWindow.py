@@ -137,7 +137,8 @@ class EmailWindowUI(QMainWindow):
             emailIsMalicious = f"email{i + 1}IsMalicious"
             button = getattr(self, buttonName, None)
 
-            button.setText(self.emailBank[i]["subject"])
+            # button.setText(self.emailBank[i]["subject"])
+            button.setText(f"{self.emailBank[i]['subject']} - {self.emailBank[i]['isMalicious']}")
             setattr(self, buttonID, self.emailBank[i]["ID"])
             setattr(self, emailPath, self.emailBank[i]["pathToEmail"])
             if self.emailBank[i]["isMalicious"]:
@@ -205,8 +206,6 @@ class EmailWindowUI(QMainWindow):
         self.selectedEmailID = ID
         self.buttonBehaviour("present")
         self.loadImage(path)
-
-
 
     def closeEmailWindow(self):
         self.hide()
