@@ -381,42 +381,6 @@ class EmailWindowUI(QMainWindow):
                 setattr(self, done, True)
                 setattr(self, selectMalicious, isMalicious)
 
-        print("IsMalicious: ",
-              self.email1IsMalicious,
-              self.email2IsMalicious,
-              self.email3IsMalicious,
-              self.email4IsMalicious,
-              self.email5IsMalicious,
-              self.email6IsMalicious,
-              self.email7IsMalicious,
-              self.email8IsMalicious,
-              self.email9IsMalicious,
-              self.email10IsMalicious)
-
-        print("SelectedIsMalicious: ",
-              self.selectedEmail1IsMalicious,
-              self.selectedEmail2IsMalicious,
-              self.selectedEmail3IsMalicious,
-              self.selectedEmail4IsMalicious,
-              self.selectedEmail5IsMalicious,
-              self.selectedEmail6IsMalicious,
-              self.selectedEmail7IsMalicious,
-              self.selectedEmail8IsMalicious,
-              self.selectedEmail9IsMalicious,
-              self.selectedEmail10IsMalicious)
-
-        print("IsDone: ",
-              self.email1IsDone,
-              self.email2IsDone,
-              self.email3IsDone,
-              self.email4IsDone,
-              self.email5IsDone,
-              self.email6IsDone,
-              self.email7IsDone,
-              self.email8IsDone,
-              self.email9IsDone,
-              self.email10IsDone)
-
     def checkResults(self):
         canProceed = False
 
@@ -508,7 +472,6 @@ class EmailWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
-                print(seconds)
                 times = 0
 
             if self.terminateTimerThread.is_set():
