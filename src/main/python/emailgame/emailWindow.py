@@ -45,9 +45,12 @@ class EmailWindowUI(QMainWindow):
             self.genuineButton = self.findChild(QPushButton, "genuineButton")
             self.backButton = self.findChild(QPushButton, "backButton")
             self.checkButton = self.findChild(QPushButton, "checkButton")
+            self.subjectLabel = self.findChild(QLabel, "subjectLabel")
             self.emailFrame = self.findChild(QFrame, "emailFrame")
-            self.horizontalLine = self.findChild(QFrame, "horizontalLine")
+            self.horizontalLine1 = self.findChild(QFrame, "horizontalLine1")
+            self.horizontalLine2 = self.findChild(QFrame, "horizontalLine2")
 
+            self.subjectLabel.setText("")
             self.maliciousButtonHiddenState = False
             self.genuineButtonHiddenState = False
 
@@ -197,7 +200,8 @@ class EmailWindowUI(QMainWindow):
 
         self.maliciousButton.setStyleSheet(style)
         self.genuineButton.setStyleSheet(style)
-        self.horizontalLine.setStyleSheet(style)
+        self.horizontalLine1.setStyleSheet(style)
+        self.horizontalLine2.setStyleSheet(style)
 
     def loadImage(self, imagePath):
         try:
@@ -223,6 +227,8 @@ class EmailWindowUI(QMainWindow):
         self.buttonBehaviour("present")
         self.loadImage(path)
 
+        self.subjectLabel.setText(button.text())
+
         for i in self.emailBank:
             if i["ID"] == ID:
                 logger.info(f"{button.text()} kiválasztva.")
@@ -234,7 +240,7 @@ class EmailWindowUI(QMainWindow):
                                 border-radius: 0;
                                 border-top-left-radius: 10px;
                                 border-top-right-radius: 10px;
-                                color: white;
+                                color: grey;
                              }
                           """
         lastGreenStyle = """
@@ -243,7 +249,7 @@ class EmailWindowUI(QMainWindow):
                                 border-radius: 0;
                                 border-bottom-left-radius: 10px;
                                 border-bottom-right-radius: 10px;
-                                color: white;
+                                color: grey;
                              }
                           """
         firstRedStyle = """
@@ -252,7 +258,7 @@ class EmailWindowUI(QMainWindow):
                               border-radius: 0;
                               border-top-left-radius: 10px;
                               border-top-right-radius: 10px;
-                              color: white;
+                              color: grey;
                            }
                           """
         lastRedStyle = """
@@ -261,21 +267,21 @@ class EmailWindowUI(QMainWindow):
                                 border-radius: 0;
                                 border-bottom-left-radius: 10px;
                                 border-bottom-right-radius: 10px;
-                                color: white;
+                                color: grey;
                              }
                           """
         greenStyle = """                  
                     * {
                         background-color: rgb(167, 255, 111);
                         border-radius: 0;
-                        color: white;
+                        color: grey;
                     }
                 """
         redStyle = """                  
                     * {
                         background-color: rgb(255, 173, 173);
                         border-radius: 0;
-                        color: white;
+                        color: grey;
                     }
                 """
 
