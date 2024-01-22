@@ -4,9 +4,8 @@ import random
 import threading
 
 from PyQt6 import QtCore
-from PyQt6.QtCore import Qt, QLine
 from PyQt6.QtGui import QIcon, QPixmap
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup, QFrame, QLineEdit
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QFrame
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -50,6 +49,8 @@ class EmailWindowUI(QMainWindow):
             self.horizontalLine1 = self.findChild(QFrame, "horizontalLine1")
             self.horizontalLine2 = self.findChild(QFrame, "horizontalLine2")
 
+            self.resultsWindow = None
+
             self.subjectLabel.setText("")
             self.maliciousButtonHiddenState = False
             self.genuineButtonHiddenState = False
@@ -90,6 +91,17 @@ class EmailWindowUI(QMainWindow):
             self.email9IsMalicious = False
             self.email10IsMalicious = False
 
+            self.selectedEmail1IsMalicious = False
+            self.selectedEmail2IsMalicious = False
+            self.selectedEmail3IsMalicious = False
+            self.selectedEmail4IsMalicious = False
+            self.selectedEmail5IsMalicious = False
+            self.selectedEmail6IsMalicious = False
+            self.selectedEmail7IsMalicious = False
+            self.selectedEmail8IsMalicious = False
+            self.selectedEmail9IsMalicious = False
+            self.selectedEmail10IsMalicious = False
+
             self.email1IsDone = False
             self.email2IsDone = False
             self.email3IsDone = False
@@ -107,9 +119,15 @@ class EmailWindowUI(QMainWindow):
             self.emailIndex = 0
             self.previousEmails = []
 
+            self.terminateTimerThread = threading.Event()
+            self.timerThread = None
+            self.timeSpent = 0
+
+            self.startEmailTimer(self.timeSpent)
+
             self.backButton.clicked.connect(self.closeEmailWindow)
 
-            self.closeEvent = lambda event: parent.exitWindow(event)
+            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread)
 
             self.loadSubjects()
             self.loadDefaults()
@@ -361,12 +379,12 @@ class EmailWindowUI(QMainWindow):
                 self.selectedButton.setStyleSheet(redStyle)
 
         for i in range(10):
-            malicious = f"email{i + 1}IsMalicious"
+            selectMalicious = f"selectedEmail{i + 1}IsMalicious"
             done = f"email{i + 1}IsDone"
 
             if self.emailBank[i]["ID"] == ID:
                 setattr(self, done, True)
-                setattr(self, malicious, isMalicious)
+                setattr(self, selectMalicious, isMalicious)
 
         print("IsMalicious: ",
               self.email1IsMalicious,
@@ -379,6 +397,18 @@ class EmailWindowUI(QMainWindow):
               self.email8IsMalicious,
               self.email9IsMalicious,
               self.email10IsMalicious)
+
+        print("SelectedIsMalicious: ",
+              self.selectedEmail1IsMalicious,
+              self.selectedEmail2IsMalicious,
+              self.selectedEmail3IsMalicious,
+              self.selectedEmail4IsMalicious,
+              self.selectedEmail5IsMalicious,
+              self.selectedEmail6IsMalicious,
+              self.selectedEmail7IsMalicious,
+              self.selectedEmail8IsMalicious,
+              self.selectedEmail9IsMalicious,
+              self.selectedEmail10IsMalicious)
 
         print("IsDone: ",
               self.email1IsDone,
@@ -406,8 +436,40 @@ class EmailWindowUI(QMainWindow):
                 canProceed = True
 
         if canProceed:
-            print("Email")
+            self.resultsWindow = None
+            info = "Email"
+            if not self.resultsWindow:
+                self.resultsWindow = resultsScreen.ResultsScreenUI(info, self, self.parent, "default")
+
+            self.resultsWindow.show()
+            self.hide()
+
+    def startEmailTimer(self, seconds):
+        self.terminateTimerThread.clear()
+        self.timerThread = threading.Thread(target=self.timerThreadCounter, args=(seconds,))
+        self.timerThread.start()
+
+    def timerThreadCounter(self, seconds):
+        times = 0
+        while True:
+            time.sleep(0.1)
+            times += 1
+            if times == 10:
+                seconds += 1
+                print(seconds)
+                times = 0
+
+            if self.terminateTimerThread.is_set():
+                self.timeSpent = seconds
+                break
 
     def closeEmailWindow(self):
+        self.terminateTimerThread.set()
+
+        if self.timerThread and self.timerThread.is_alive():
+            self.timerThread.join()
+
+        self.timerThread = None
+
         self.hide()
         self.parent.show()

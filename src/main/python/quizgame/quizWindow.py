@@ -292,6 +292,7 @@ class QuizWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
+                print(seconds)
                 times = 0
 
             if self.terminateQuizThread.is_set():
