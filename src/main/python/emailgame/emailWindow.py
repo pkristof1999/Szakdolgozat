@@ -114,16 +114,45 @@ class EmailWindowUI(QMainWindow):
             self.loadSubjects()
             self.loadDefaults()
 
-            self.email1Button.clicked.connect(lambda: self.loadNextEmail(self.email1Button, self.email1ID, self.email1Path))
-            self.email2Button.clicked.connect(lambda: self.loadNextEmail(self.email2Button, self.email2ID, self.email2Path))
-            self.email3Button.clicked.connect(lambda: self.loadNextEmail(self.email3Button, self.email3ID, self.email3Path))
-            self.email4Button.clicked.connect(lambda: self.loadNextEmail(self.email4Button, self.email4ID, self.email4Path))
-            self.email5Button.clicked.connect(lambda: self.loadNextEmail(self.email5Button, self.email5ID, self.email5Path))
-            self.email6Button.clicked.connect(lambda: self.loadNextEmail(self.email6Button, self.email6ID, self.email6Path))
-            self.email7Button.clicked.connect(lambda: self.loadNextEmail(self.email7Button, self.email7ID, self.email7Path))
-            self.email8Button.clicked.connect(lambda: self.loadNextEmail(self.email8Button, self.email8ID, self.email8Path))
-            self.email9Button.clicked.connect(lambda: self.loadNextEmail(self.email9Button, self.email9ID, self.email9Path))
-            self.email10Button.clicked.connect(lambda: self.loadNextEmail(self.email10Button, self.email10ID, self.email10Path))
+            self.email1Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email1Button, self.email1ID, self.email1Path))
+
+            self.email2Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email2Button, self.email2ID, self.email2Path))
+
+            self.email3Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email3Button, self.email3ID, self.email3Path))
+
+            self.email4Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email4Button, self.email4ID, self.email4Path))
+
+            self.email5Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email5Button, self.email5ID, self.email5Path))
+
+            self.email6Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email6Button, self.email6ID, self.email6Path))
+
+            self.email7Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email7Button, self.email7ID, self.email7Path))
+
+            self.email8Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email8Button, self.email8ID, self.email8Path))
+
+            self.email9Button.clicked.connect(lambda:
+                                              self.loadNextEmail(
+                                                  self.email9Button, self.email9ID, self.email9Path))
+
+            self.email10Button.clicked.connect(lambda:
+                                               self.loadNextEmail(
+                                                   self.email10Button, self.email10ID, self.email10Path))
 
             self.maliciousButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, False))
             self.genuineButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, True))
@@ -242,6 +271,11 @@ class EmailWindowUI(QMainWindow):
                                 border-top-right-radius: 10px;
                                 color: grey;
                              }
+                             
+                             *:hover {
+                                 background-color: rgb(120, 120, 220);
+                                 color: white;
+                             }
                           """
         lastGreenStyle = """
                              * {
@@ -250,6 +284,11 @@ class EmailWindowUI(QMainWindow):
                                 border-bottom-left-radius: 10px;
                                 border-bottom-right-radius: 10px;
                                 color: grey;
+                             }
+                             
+                             *:hover {
+                                 background-color: rgb(120, 120, 220);
+                                 color: white;
                              }
                           """
         firstRedStyle = """
@@ -260,6 +299,10 @@ class EmailWindowUI(QMainWindow):
                               border-top-right-radius: 10px;
                               color: grey;
                            }
+                           *:hover {
+                               background-color: rgb(120, 120, 220);
+                               color: white;
+                           }
                           """
         lastRedStyle = """
                              * {
@@ -269,6 +312,11 @@ class EmailWindowUI(QMainWindow):
                                 border-bottom-right-radius: 10px;
                                 color: grey;
                              }
+                             
+                             *:hover {
+                                 background-color: rgb(120, 120, 220);
+                                 color: white;
+                             }
                           """
         greenStyle = """                  
                     * {
@@ -276,12 +324,22 @@ class EmailWindowUI(QMainWindow):
                         border-radius: 0;
                         color: grey;
                     }
+                    
+                    *:hover {
+                        background-color: rgb(120, 120, 220);
+                        color: white;
+                    }
                 """
         redStyle = """                  
                     * {
                         background-color: rgb(255, 173, 173);
                         border-radius: 0;
                         color: grey;
+                    }
+                    
+                    *:hover {
+                        background-color: rgb(120, 120, 220);
+                        color: white;
                     }
                 """
 
@@ -299,6 +357,38 @@ class EmailWindowUI(QMainWindow):
                 self.selectedButton.setStyleSheet(lastRedStyle)
             else:
                 self.selectedButton.setStyleSheet(redStyle)
+
+        for i in range(10):
+            malicious = f"email{i + 1}IsMalicious"
+            done = f"email{i + 1}IsDone"
+
+            if self.emailBank[i]["ID"] == ID:
+                setattr(self, done, True)
+                setattr(self, malicious, isMalicious)
+
+        print("IsMalicious: ",
+              self.email1IsMalicious,
+              self.email2IsMalicious,
+              self.email3IsMalicious,
+              self.email4IsMalicious,
+              self.email5IsMalicious,
+              self.email6IsMalicious,
+              self.email7IsMalicious,
+              self.email8IsMalicious,
+              self.email9IsMalicious,
+              self.email10IsMalicious)
+
+        print("IsDone: ",
+              self.email1IsDone,
+              self.email2IsDone,
+              self.email3IsDone,
+              self.email4IsDone,
+              self.email5IsDone,
+              self.email6IsDone,
+              self.email7IsDone,
+              self.email8IsDone,
+              self.email9IsDone,
+              self.email10IsDone)
 
     def closeEmailWindow(self):
         self.hide()
