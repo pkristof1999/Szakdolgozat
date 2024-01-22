@@ -55,9 +55,9 @@ class QuizWindowUI(QMainWindow):
             self.goodAnswers = 0
 
             self.terminateThread = threading.Event()
+            self.timerThreadCompleted = False
             self.timerThread = None
             self.isTimesUp = False
-            self.lastTimesUp = False
             self.countdown = 30
 
             self.terminateQuizThread = threading.Event()
@@ -174,7 +174,7 @@ class QuizWindowUI(QMainWindow):
                         self.timerThread.join()
 
                 self.isTimesUp = False
-                self.startCountdown(30)
+                self.startCountdown(5)
             else:
                 for button in self.answerButtonGroup.buttons():
                     if button.isChecked():
@@ -184,22 +184,21 @@ class QuizWindowUI(QMainWindow):
 
                 self.resultsWindow = None
 
-                if self.timerThread is not None and not self.lastTimesUp:
+                if self.timerThread is not None:
                     if self.timerThread and self.timerThread.is_alive():
                         self.terminateThread.set()
                         self.timerThread.join()
 
-                if self.quizTimerThread and self.quizTimerThread.is_alive():
-                    self.terminateQuizThread.set()
-                    self.quizTimerThread.join()
+                if self.quizTimerThread is not None:
+                    if self.quizTimerThread and self.quizTimerThread.is_alive():
+                        self.terminateQuizThread.set()
+                        self.quizTimerThread.join()
 
-                if self.timerThread is not None and not self.lastTimesUp:
-                    while True:
-                        if not self.timerThread.is_alive() and not self.quizTimerThread.is_alive():
-                            break
-
-                self.timerThread = None
-                self.quizTimerThread = None
+                while True:
+                    if not self.timerThread.is_alive() and not self.quizTimerThread.is_alive():
+                        self.timerThread = None
+                        self.quizTimerThread = None
+                        break
 
                 badge1 = False
                 badge2 = False
@@ -282,8 +281,13 @@ class QuizWindowUI(QMainWindow):
             if self.questionIndex < 9:
                 self.nextQuestion()
             else:
-                pass
-                # TODO
+                for button in self.answerButtonGroup.buttons():
+                    if button.isChecked():
+                        button.setStyleSheet("background-color: red")
+
+                    button.setEnabled(False)
+
+                errorMessage("Lejárt az idő!")
 
     def quizTimer(self, seconds):
         times = 0
@@ -292,8 +296,11 @@ class QuizWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
-                print(seconds)
                 times = 0
+
+            if self.isTimesUp:
+                self.terminateThread.set()
+                self.timerThread.join()
 
             if self.terminateQuizThread.is_set():
                 self.timeSpent = seconds
