@@ -174,7 +174,7 @@ class QuizWindowUI(QMainWindow):
                         self.timerThread.join()
 
                 self.isTimesUp = False
-                self.startCountdown(5)
+                self.startCountdown(30)
             else:
                 for button in self.answerButtonGroup.buttons():
                     if button.isChecked():
@@ -283,11 +283,21 @@ class QuizWindowUI(QMainWindow):
             else:
                 for button in self.answerButtonGroup.buttons():
                     if button.isChecked():
-                        button.setStyleSheet("background-color: red")
+                        button.setStyleSheet("""
+                                                * {
+                                                    background-color: #ff0000;
+                                                }
+                                             """)
+                    else:
+                        button.setStyleSheet("""
+                                                * {
+                                                    background-color: #dadadd;
+                                                    color: grey;
+                                                }
+                                             """)
 
                     button.setEnabled(False)
-
-                errorMessage("Lejárt az idő!")
+                    self.timerLabel.setText("Lejárt!")
 
     def quizTimer(self, seconds):
         times = 0
