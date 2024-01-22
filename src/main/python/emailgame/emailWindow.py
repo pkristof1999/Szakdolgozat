@@ -157,6 +157,8 @@ class EmailWindowUI(QMainWindow):
             self.maliciousButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, False))
             self.genuineButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, True))
 
+            self.checkButton.clicked.connect(self.checkResults)
+
         except Exception as e:
             errorMessage(e)
             self.hide()
@@ -389,6 +391,22 @@ class EmailWindowUI(QMainWindow):
               self.email8IsDone,
               self.email9IsDone,
               self.email10IsDone)
+
+    def checkResults(self):
+        canProceed = False
+
+        for i in range(10):
+            done = f"email{i + 1}IsDone"
+            IsDone = getattr(self, done)
+            if not IsDone:
+                errorMessage("Nem döntöttél minden Emailről!")
+                canProceed = False
+                break
+            else:
+                canProceed = True
+
+        if canProceed:
+            print("Email")
 
     def closeEmailWindow(self):
         self.hide()
