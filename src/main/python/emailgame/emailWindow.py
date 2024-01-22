@@ -118,6 +118,7 @@ class EmailWindowUI(QMainWindow):
             self.emailBank = []
             self.emailIndex = 0
             self.previousEmails = []
+            self.pointsEarned = 0
 
             self.terminateTimerThread = threading.Event()
             self.timerThread = None
@@ -293,8 +294,7 @@ class EmailWindowUI(QMainWindow):
                              }
                              
                              *:hover {
-                                 background-color: rgb(120, 120, 220);
-                                 color: white;
+                                 background-color: yellow;
                              }
                           """
         lastGreenStyle = """
@@ -307,8 +307,7 @@ class EmailWindowUI(QMainWindow):
                              }
                              
                              *:hover {
-                                 background-color: rgb(120, 120, 220);
-                                 color: white;
+                                 background-color: yellow;
                              }
                           """
         firstRedStyle = """
@@ -320,8 +319,7 @@ class EmailWindowUI(QMainWindow):
                               color: grey;
                            }
                            *:hover {
-                               background-color: rgb(120, 120, 220);
-                               color: white;
+                               background-color: yellow;
                            }
                           """
         lastRedStyle = """
@@ -334,8 +332,7 @@ class EmailWindowUI(QMainWindow):
                              }
                              
                              *:hover {
-                                 background-color: rgb(120, 120, 220);
-                                 color: white;
+                                 background-color: yellow;
                              }
                           """
         greenStyle = """                  
@@ -346,8 +343,7 @@ class EmailWindowUI(QMainWindow):
                     }
                     
                     *:hover {
-                        background-color: rgb(120, 120, 220);
-                        color: white;
+                        background-color: yellow;
                     }
                 """
         redStyle = """                  
@@ -358,8 +354,7 @@ class EmailWindowUI(QMainWindow):
                     }
                     
                     *:hover {
-                        background-color: rgb(120, 120, 220);
-                        color: white;
+                        background-color: yellow;
                     }
                 """
 
@@ -436,8 +431,65 @@ class EmailWindowUI(QMainWindow):
                 canProceed = True
 
         if canProceed:
+            self.terminateTimerThread.set()
+
+            if self.timerThread and self.timerThread.is_alive():
+                self.timerThread.join()
+
+            if self.timerThread is not None:
+                while True:
+                    if not self.timerThread.is_alive():
+                        break
+
+            self.timerThread = None
             self.resultsWindow = None
-            info = "Email"
+
+            badge1 = False
+            badge2 = False
+            numberOfRightAnswers = 0
+
+            for i in range(10):
+                getEmailMaliciousName = f"email{i + 1}IsMalicious"
+                givenEmailMaliciousName = f"selectedEmail{i + 1}IsMalicious"
+
+                getEmailMalicious = getattr(self, getEmailMaliciousName)
+                givenEmailMalicious = getattr(self, givenEmailMaliciousName)
+
+                if getEmailMalicious != givenEmailMalicious:
+                    numberOfRightAnswers += 1
+
+            minutes, seconds = divmod(self.timeSpent, 60)
+
+            if self.timeSpent <= 3600:
+                info = f"""
+                            A helyes válaszok száma: 10/{numberOfRightAnswers} ({int(numberOfRightAnswers / 10 * 100)}%)
+                            Email móddal töltött idő: {minutes:02d}:{seconds:02d}
+                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
+            else:
+                info = f"""
+                            A helyes válaszok száma: 10/{numberOfRightAnswers} ({int(numberOfRightAnswers / 10 * 100)}%)
+                            Email móddal töltött idő: Több, mint egy óra
+                            Kitűzőt szereztél teljesítésre! Értéke: 100 pont*"""
+
+            if numberOfRightAnswers == 10:
+                info += """
+                            Minden válaszod helyes volt!
+                            Kitűzőt szereztél pontosságra! Értéke: 250 pont*"""
+                badge1 = True
+
+                if self.timeSpent <= 120:
+                    info += """
+                                Teljesítetted az email módot 02:00-n belül!
+                                Kitűzőt szereztél sebességre! Értéke: 1000 pont*
+                            """
+                    badge2 = True
+
+            info += """
+                        * Csak akkor kerül beszámításra, ha eddig nem volt meg!
+                    """
+
+            self.saveResults(badge1, badge2)
+
             if not self.resultsWindow:
                 self.resultsWindow = resultsScreen.ResultsScreenUI(info, self, self.parent, "default")
 
@@ -462,6 +514,61 @@ class EmailWindowUI(QMainWindow):
             if self.terminateTimerThread.is_set():
                 self.timeSpent = seconds
                 break
+
+    def saveResults(self, badge1, badge2):
+        try:
+            if self.username == "Vendég":
+                dataPath = "../../../userdata/profiles/guestProfile.json"
+            else:
+                dataPath = "../../../userdata/profiles/profiles.json"
+
+            with open(dataPath, 'r') as jsonFile:
+                fileContents = json.load(jsonFile)
+
+            if self.username in fileContents:
+                if badge1 and badge2:
+                    if fileContents[self.username]["EmailMedal"] == 0 and \
+                            fileContents[self.username]["badge05"] == 0 and \
+                            fileContents[self.username]["badge06"] == 0:
+                        self.pointsEarned = 1350
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["EmailMedal"] == 1 and \
+                            fileContents[self.username]["badge05"] == 0 and \
+                            fileContents[self.username]["badge06"] == 0:
+                        self.pointsEarned = 1250
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["EmailMedal"] == 1 and \
+                            fileContents[self.username]["badge05"] == 1 and \
+                            fileContents[self.username]["badge06"] == 0:
+                        self.pointsEarned = 1000
+                        fileContents[self.username]["Score"] += self.pointsEarned
+
+                    fileContents[self.username]["EmailMedal"] = 1
+                    fileContents[self.username]["badge05"] = 1
+                    fileContents[self.username]["badge06"] = 1
+                elif badge1:
+                    if fileContents[self.username]["EmailMedal"] == 0 and \
+                            fileContents[self.username]["badge05"] == 0:
+                        self.pointsEarned = 350
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    elif fileContents[self.username]["EmailMedal"] == 1 and \
+                            fileContents[self.username]["badge05"] == 0:
+                        self.pointsEarned = 250
+                        fileContents[self.username]["Score"] += self.pointsEarned
+
+                    fileContents[self.username]["EmailMedal"] = 1
+                    fileContents[self.username]["badge05"] = 1
+                else:
+                    if fileContents[self.username]["EmailMedal"] == 0:
+                        self.pointsEarned = 100
+                        fileContents[self.username]["Score"] += self.pointsEarned
+                    fileContents[self.username]["EmailMedal"] = 1
+
+            with open(dataPath, 'w') as jsonFile:
+                json.dump(fileContents, jsonFile, indent=4)
+
+        except Exception as e:
+            errorMessage(f"Hiba: {e}")
 
     def closeEmailWindow(self):
         self.terminateTimerThread.set()
