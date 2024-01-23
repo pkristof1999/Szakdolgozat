@@ -1,9 +1,13 @@
 {
     "Önsokszorosító kártevők" : {
-        "data" : "",
+        "data" : "testData",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "question1": "testQuestion1",
+            "goodAnswer1" : "testGoodAnswer1",
+            "question1": "testQuestion1",
+            "goodAnswer1" : "testGoodAnswer1",
+            "question1": "testQuestion1",
+            "goodAnswer1" : "testGoodAnswer1"
         }
     },
     "Megtévesztő kártevők" : {

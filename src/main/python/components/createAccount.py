@@ -10,6 +10,8 @@ def createAccount(username, userAge, password, profilePicturePath):
             "UserAge": userAge,
             "Password": encodePassword(password),
             "ProfilePicturePath": profilePicturePath,
+            "timeSpentInLearn": 0,
+            "goodAnswersInLearn": 0,
             "LearnMedal": 0,
             "QuizMedal": 0,
             "EmailMedal": 0,
