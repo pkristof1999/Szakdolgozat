@@ -1,5 +1,5 @@
 {
-    "Önsokszorosító kártevők" : {
+    "\u00d6nsokszoros\u00edt\u00f3 k\u00e1rtev\u0151k" : {
         "data" : "testData",
         "questions" : {
             "question1": "testQuestion1",
@@ -10,63 +10,63 @@
             "goodAnswer1" : "testGoodAnswer1"
         }
     },
-    "Megtévesztő kártevők" : {
+    "Megt\u00e9veszt\u0151 k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Zavaró kártevők" : {
+    "Zavar\u00f3 k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Rejtőzködő kártevők" : {
+    "Rejt\u0151zk\u00f6d\u0151 k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Adatlopó kártevők" : {
+    "Adatlop\u00f3 k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Hálózati kártevők" : {
+    "H\u00e1l\u00f3zati k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Terjedésre specializált kártevők" : {
+    "Terjed\u00e9sre specializ\u00e1lt k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Észleléselkerülő kártevők" : {
+    "\u00c9szlel\u00e9selker\u00fcl\u0151 k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Pszichológiai kártevők" : {
+    "Pszichol\u00f3giai k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
-    "Egyéb célpontú kártevők" : {
+    "Egy\u00e9b c\u00e9lpont\u00fa k\u00e1rtev\u0151k" : {
         "data" : "",
         "questions" : {
             "question1": "",

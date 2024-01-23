@@ -1,3 +1,5 @@
+import json
+
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
@@ -31,6 +33,8 @@ class LearnWindowUI(QMainWindow):
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
             self.titleLabel.setText(typeOfLesson)
+            self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
+            self.contentLabel.setText(self.learnContent["data"])
 
             self.backButton.clicked.connect(lambda: self.closeLearnWindow(parent, grandParent))
 
@@ -46,3 +50,16 @@ class LearnWindowUI(QMainWindow):
         parent.raise_()
         self.hide()
         logger.info("Tanulós játémód bezárása!")
+
+    def loadLearnContentIntoArray(self, typeOfLesson):
+        try:
+            lessons = {}
+            with open("../resources/learningdata/lessons.json", "r") as jsonFile:
+                fileContents = jsonFile.read()
+                if fileContents.strip():
+                    lessons = json.loads(fileContents)
+
+            return lessons[typeOfLesson]
+
+        except Exception as e:
+            errorMessage(e)

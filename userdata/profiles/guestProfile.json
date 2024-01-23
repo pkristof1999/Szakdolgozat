@@ -2,36 +2,16 @@
     "Vend\u00e9g": {
         "ProfilePicturePath": "../resources/pictures/userDefault.png",
         "timeSpentInLearn": {
-            "lesson1": [
-                0
-            ],
-            "lesson2": [
-                0
-            ],
-            "lesson3": [
-                0
-            ],
-            "lesson4": [
-                0
-            ],
-            "lesson5": [
-                0
-            ],
-            "lesson6": [
-                0
-            ],
-            "lesson7": [
-                0
-            ],
-            "lesson8": [
-                0
-            ],
-            "lesson9": [
-                0
-            ],
-            "lesson10": [
-                0
-            ]
+            "lesson1": 0,
+            "lesson2": 0,
+            "lesson3": 0,
+            "lesson4": 0,
+            "lesson5": 0,
+            "lesson6": 0,
+            "lesson7": 0,
+            "lesson8": 0,
+            "lesson9": 0,
+            "lesson10": 0
         },
         "goodAnswersInLearn": {
             "lesson1": 0,
