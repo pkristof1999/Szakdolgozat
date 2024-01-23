@@ -10,8 +10,30 @@ def createAccount(username, userAge, password, profilePicturePath):
             "UserAge": userAge,
             "Password": encodePassword(password),
             "ProfilePicturePath": profilePicturePath,
-            "timeSpentInLearn": 0,
-            "goodAnswersInLearn": 0,
+            "timeSpentInLearn": {
+                "lesson1": 0,
+                "lesson2": 0,
+                "lesson3": 0,
+                "lesson4": 0,
+                "lesson5": 0,
+                "lesson6": 0,
+                "lesson7": 0,
+                "lesson8": 0,
+                "lesson9": 0,
+                "lesson10": 0
+            },
+            "goodAnswersInLearn": {
+                "lesson1": 0,
+                "lesson2": 0,
+                "lesson3": 0,
+                "lesson4": 0,
+                "lesson5": 0,
+                "lesson6": 0,
+                "lesson7": 0,
+                "lesson8": 0,
+                "lesson9": 0,
+                "lesson10": 0
+            },
             "LearnMedal": 0,
             "QuizMedal": 0,
             "EmailMedal": 0,
@@ -27,7 +49,7 @@ def createAccount(username, userAge, password, profilePicturePath):
     }
 
     saveDirectory = "../../../userdata/profiles"
-    os.makedirs(saveDirectory, exist_ok = True)
+    os.makedirs(saveDirectory, exist_ok=True)
 
     savePath = os.path.join(saveDirectory, "profiles.json")
 

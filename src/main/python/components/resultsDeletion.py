@@ -9,8 +9,11 @@ def resultsDeletion(username, dataPath):
             fileContents = json.load(jsonFile)
 
         if username in fileContents:
-            fileContents[username]["timeSpentInLearn"] = 0,
-            fileContents[username]["goodAnswersInLearn"] = 0,
+            for i in range(10):
+                lesson = f"lesson{i + 1}"
+                fileContents[username]["timeSpentInLearn"][lesson] = 0
+                fileContents[username]["goodAnswersInLearn"][lesson] = 0
+
             fileContents[username]["LearnMedal"] = 0
             fileContents[username]["QuizMedal"] = 0
             fileContents[username]["EmailMedal"] = 0
