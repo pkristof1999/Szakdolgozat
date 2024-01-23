@@ -1,0 +1,72 @@
+{
+    "Önsokszorosító kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Megtévesztő kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Zavaró kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Rejtőzködő kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Adatlopó kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Hálózati kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Terjedésre specializált kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Észleléselkerülő kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Pszichológiai kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    },
+    "Egyéb célpontú kártevők" : {
+        "data" : "",
+        "questions" : {
+            "question1": "",
+            "goodAnswer1" : ""
+        }
+    }
+}
