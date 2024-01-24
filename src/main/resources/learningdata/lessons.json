@@ -1,73 +1,75 @@
 {
     "\u00d6nsokszoros\u00edt\u00f3 k\u00e1rtev\u0151k" : {
-        "data" : "testData",
+        "dataPage1" : "testData",
+        "dataPage2" : "testData",
+        "dataPage3" : "testData",
         "questions" : {
             "question1": "testQuestion1",
             "goodAnswer1" : "testGoodAnswer1",
-            "question1": "testQuestion1",
-            "goodAnswer1" : "testGoodAnswer1",
-            "question1": "testQuestion1",
-            "goodAnswer1" : "testGoodAnswer1"
+            "question2": "testQuestion1",
+            "goodAnswer2" : "testGoodAnswer1",
+            "question3": "testQuestion1",
+            "goodAnswer3" : "testGoodAnswer1"
         }
     },
     "Megt\u00e9veszt\u0151 k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Zavar\u00f3 k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Rejt\u0151zk\u00f6d\u0151 k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Adatlop\u00f3 k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "H\u00e1l\u00f3zati k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Terjed\u00e9sre specializ\u00e1lt k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "\u00c9szlel\u00e9selker\u00fcl\u0151 k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Pszichol\u00f3giai k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""
         }
     },
     "Egy\u00e9b c\u00e9lpont\u00fa k\u00e1rtev\u0151k" : {
-        "data" : "",
+        "dataPage1" : "",
         "questions" : {
             "question1": "",
             "goodAnswer1" : ""

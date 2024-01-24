@@ -34,7 +34,19 @@ class LearnWindowUI(QMainWindow):
 
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
-            self.contentLabel.setText(self.learnContent["data"])
+
+            self.numberOfDataPages = 0
+            for i in self.learnContent:
+                if "dataPage" in i:
+                    self.numberOfDataPages += 1
+
+            self.numberOfInteractiveQuestions = 0
+            for i in self.learnContent["questions"]:
+                if "question" in i:
+                    self.numberOfInteractiveQuestions += 1
+
+            print(self.numberOfDataPages)
+            print(self.numberOfInteractiveQuestions)
 
             self.backButton.clicked.connect(lambda: self.closeLearnWindow(parent, grandParent))
 
@@ -45,6 +57,7 @@ class LearnWindowUI(QMainWindow):
             self.hide()
 
     def closeLearnWindow(self, parent, grandParent):
+        # TODO
         parent.show()
         grandParent.show()
         parent.raise_()
@@ -63,3 +76,6 @@ class LearnWindowUI(QMainWindow):
 
         except Exception as e:
             errorMessage(e)
+
+    def loadInteractiveQuestion(self):
+        pass
