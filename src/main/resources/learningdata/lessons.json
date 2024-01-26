@@ -1,8 +1,8 @@
 {
     "\u00d6nsokszoros\u00edt\u00f3 k\u00e1rtev\u0151k" : {
         "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
-        "dataPage2Path" : "testData",
-        "dataPage3Path" : "testData",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
             "question1": "testQuestion1",
             "goodAnswer1" : "testGoodAnswer1",

@@ -52,12 +52,12 @@ class LearnWindowUI(QMainWindow):
             print(self.numberOfDataPages)
             print(self.numberOfInteractiveQuestions)
 
-            self.backButton.clicked.connect(lambda: self.closeLearnWindow(parent, grandParent))
+            self.backButton.clicked.connect(self.backButtonClicked)
+            self.nextButton.clicked.connect(self.nextButtonClicked)
 
             self.closeEvent = grandParent.exitWindow
 
             self.loadCurrentPage()
-            self.nextPage()
 
         except Exception as e:
             errorMessage(e)
@@ -104,8 +104,14 @@ class LearnWindowUI(QMainWindow):
     def loadInteractiveQuestion(self):
         pass
 
-    def nextPage(self):
-        if self.numberOfInteractiveQuestions > 0:
-            self.nextButton.setText("Következő")
+    def nextButtonClicked(self):
+        if self.indexOfCurrentPage < self.numberOfDataPages:
+            self.indexOfCurrentPage += 1
+            self.loadCurrentPage()
+
+    def backButtonClicked(self):
+        if self.indexOfCurrentPage == 1:
+            self.closeLearnWindow(self.parent, self.grandParent)
         else:
-            self.nextButton.setText("Értékelés")
+            self.indexOfCurrentPage -= 1
+            self.loadCurrentPage()

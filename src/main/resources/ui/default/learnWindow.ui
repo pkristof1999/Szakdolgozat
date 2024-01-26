@@ -97,7 +97,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>setTextHere</string>
+      <string>Következő</string>
      </property>
     </widget>
     <widget class="QLabel" name="titleLabel">
