@@ -40,70 +40,80 @@ class ChooseLearningUI(QMainWindow):
             self.selfReplicating.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Önsokszorosító kártevők"
+                                             typeOfLesson = "Önsokszorosító kártevők",
+                                             nameOfData = "selfrecplicating"
                                              )
             )
 
             self.deceptive.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Megtévesztő kártevők"
+                                             typeOfLesson = "Megtévesztő kártevők",
+                                             nameOfData="deceptive"
                                              )
             )
 
             self.nuisance.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Zavaró kártevők"
+                                             typeOfLesson = "Zavaró kártevők",
+                                             nameOfData="nuisance"
                                              )
             )
 
             self.concealing.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Rejtőzködő kártevők"
+                                             typeOfLesson = "Rejtőzködő kártevők",
+                                             nameOfData="concealing"
                                              )
             )
 
             self.informationTheft.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Adatlopó kártevők"
+                                             typeOfLesson="Adatlopó kártevők",
+                                             nameOfData="informationtheft"
                                              )
             )
 
             self.networkBased.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Hálózati kártevők"
+                                             typeOfLesson="Hálózati kártevők",
+                                             nameOfData="networkbased"
                                              )
             )
 
             self.deliveryMechanism.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Terjedésre specializált kártevők"
+                                             typeOfLesson="Terjedésre specializált kártevők",
+                                             nameOfData="deliverymechanism"
                                              )
             )
 
             self.evading.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Észleléselkerülő kártevők"
+                                             typeOfLesson="Észleléselkerülő kártevők",
+                                             nameOfData="evading"
                                              )
             )
 
             self.psychologicalBased.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Pszichológiai kártevők"
+                                             typeOfLesson="Pszichológiai kártevők",
+                                             nameOfData="psychologicalbased"
                                              )
             )
 
             self.otherTargeted.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Egyéb célpontú kártevők"
+                                             typeOfLesson="Egyéb célpontú kártevők",
+                                             nameOfData="othertargeted"
                                              )
             )
 
@@ -113,12 +123,12 @@ class ChooseLearningUI(QMainWindow):
             errorMessage(e)
             self.hide()
 
-    def openLearnWindow(self, username, parent, typeOfLesson):
+    def openLearnWindow(self, username, parent, typeOfLesson, nameOfData):
         if not self.learnScreen:
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData)
         else:
             self.learnScreen = None
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson)
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData)
         self.learnScreen.show()
         self.hide()
         self.parent.hide()

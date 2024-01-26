@@ -9,13 +9,14 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class LearnWindowUI(QMainWindow):
-    def __init__(self, parent, username, grandParent, typeOfLesson):
+    def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
             self.typeOfLesson = typeOfLesson
+            self.nameOfData = nameOfData
             default = "default"
 
             super(LearnWindowUI, self).__init__()
@@ -52,6 +53,8 @@ class LearnWindowUI(QMainWindow):
 
             self.closeEvent = grandParent.exitWindow
 
+            self.nextPage()
+
         except Exception as e:
             errorMessage(e)
             self.hide()
@@ -79,3 +82,9 @@ class LearnWindowUI(QMainWindow):
 
     def loadInteractiveQuestion(self):
         pass
+
+    def nextPage(self):
+        if self.numberOfInteractiveQuestions > 0:
+            self.nextButton.setText("Következő")
+        else:
+            self.nextButton.setText("Értékelés")

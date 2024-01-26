@@ -1,15 +1,15 @@
 {
     "\u00d6nsokszoros\u00edt\u00f3 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "testData",
-        "dataPage2" : "testData",
-        "dataPage3" : "testData",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "testData",
+        "dataPage3Path" : "testData",
         "questions" : {
             "question1": "testQuestion1",
             "goodAnswer1" : "testGoodAnswer1",
-            "question2": "testQuestion1",
-            "goodAnswer2" : "testGoodAnswer1",
-            "question3": "testQuestion1",
-            "goodAnswer3" : "testGoodAnswer1"
+            "question2": "testQuestion2",
+            "goodAnswer2" : "testGoodAnswer2",
+            "question3": "testQuestion3",
+            "goodAnswer3" : "testGoodAnswer3"
         }
     },
     "Megt\u00e9veszt\u0151 k\u00e1rtev\u0151k" : {
