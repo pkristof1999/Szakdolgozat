@@ -36,6 +36,9 @@ class LearnWindowUI(QMainWindow):
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
 
+            self.currentPage = ""
+            self.indexOfCurrentPage = 1
+
             self.numberOfDataPages = 0
             for i in self.learnContent:
                 if "dataPage" in i:
@@ -53,6 +56,7 @@ class LearnWindowUI(QMainWindow):
 
             self.closeEvent = grandParent.exitWindow
 
+            self.loadCurrentPage()
             self.nextPage()
 
         except Exception as e:
@@ -76,6 +80,23 @@ class LearnWindowUI(QMainWindow):
                     lessons = json.loads(fileContents)
 
             return lessons[typeOfLesson]
+
+        except Exception as e:
+            errorMessage(e)
+
+    def loadCurrentPage(self):
+        pathToDataPage = ""
+        dataPageKey = f"dataPage{self.indexOfCurrentPage}Path"
+
+        for i in range(self.numberOfDataPages + 1):
+            if i == self.indexOfCurrentPage:
+                pathToDataPage = self.learnContent[dataPageKey]
+
+        try:
+            with open(pathToDataPage, 'r', encoding='utf-8') as htmlFile:
+                htmlContent = htmlFile.read()
+
+            self.contentLabel.setText(htmlContent)
 
         except Exception as e:
             errorMessage(e)
