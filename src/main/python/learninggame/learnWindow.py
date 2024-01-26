@@ -6,7 +6,7 @@ from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
-
+from src.main.python.learninggame import learningWindowQuestion
 
 class LearnWindowUI(QMainWindow):
     def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData):
@@ -35,6 +35,8 @@ class LearnWindowUI(QMainWindow):
 
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
+
+            self.questionWindow = None
 
             self.currentPage = ""
             self.indexOfCurrentPage = 1
@@ -101,10 +103,23 @@ class LearnWindowUI(QMainWindow):
         except Exception as e:
             errorMessage(e)
 
-    def loadInteractiveQuestion(self):
-        pass
+    def nextButtonClicked(self, username):
+        if not self.questionWindow:
+            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(self.username, self)
+        else:
+            self.questionWindow = None
+            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(self.username, self)
 
-    def nextButtonClicked(self):
+        self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
+
+        self.questionWindow.show()
+
+    def handleNextPage(self, result):
+        if result == "Next":
+            print("milestone")
+            self.loadNextPage()
+
+    def loadNextPage(self):
         if self.indexOfCurrentPage < self.numberOfDataPages:
             self.indexOfCurrentPage += 1
             self.loadCurrentPage()

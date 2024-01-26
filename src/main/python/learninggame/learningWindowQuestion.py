@@ -3,6 +3,7 @@ import time
 import random
 import threading
 
+from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
 from PyQt6.uic import loadUi
@@ -13,6 +14,8 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class LearningWindowQuestionUI(QMainWindow):
+    finished = pyqtSignal(str)
+
     def __init__(self, username, parent):
         try:
             if username is None or username == "":
@@ -44,6 +47,19 @@ class LearningWindowQuestionUI(QMainWindow):
             self.answerButtonGroup.addButton(self.answer2Button)
             self.answerButtonGroup.addButton(self.answer3Button)
 
+            self.nextButton.clicked.connect(self.acceptAnswer)
+            self.backButton.clicked.connect(self.declineAnswer)
+
         except Exception as e:
             errorMessage(e)
             self.hide()
+
+    def declineAnswer(self):
+        self.finished.emit("Back")
+        self.parent.show()
+        self.hide()
+
+    def acceptAnswer(self):
+        self.finished.emit("Next")
+        self.parent.show()
+        self.hide()
