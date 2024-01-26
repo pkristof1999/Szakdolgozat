@@ -103,7 +103,7 @@ class LearnWindowUI(QMainWindow):
         except Exception as e:
             errorMessage(e)
 
-    def nextButtonClicked(self, username):
+    def nextButtonClicked(self):
         if not self.questionWindow:
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(self.username, self)
         else:
