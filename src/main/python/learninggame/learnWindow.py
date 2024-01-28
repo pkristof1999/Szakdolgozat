@@ -1,12 +1,15 @@
 import json
 
+from PyQt6.QtCore import QTimer
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
+from src.main.python.infoscreens import resultsScreen
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.learninggame import learningWindowQuestion
+
 
 class LearnWindowUI(QMainWindow):
     def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData):
@@ -38,6 +41,7 @@ class LearnWindowUI(QMainWindow):
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
 
             self.questionWindow = None
+            self.resultsWindow = None
 
             self.currentPage = ""
             self.indexOfCurrentPage = 1
@@ -117,14 +121,24 @@ class LearnWindowUI(QMainWindow):
         self.questionWindow.show()
 
     def handleNextPage(self, result):
-        if result == "Next":
-            print("milestone")
+        if result == "Next" and self.indexOfCurrentPage == self.numberOfDataPages:
+            self.showResults()
+        elif result == "Next":
             self.loadNextPage()
 
     def loadNextPage(self):
         if self.indexOfCurrentPage < self.numberOfDataPages:
             self.indexOfCurrentPage += 1
             self.loadCurrentPage()
+
+    def showResults(self):
+        self.resultsWindow = None
+        info = "Utolsó kérdés"
+        if not self.resultsWindow:
+            self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, self.grandParent, "default")
+
+        self.resultsWindow.show()
+        QTimer.singleShot(100, lambda: self.hide())
 
     def backButtonClicked(self):
         if self.indexOfCurrentPage != 1:
