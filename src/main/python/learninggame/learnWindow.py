@@ -30,6 +30,7 @@ class LearnWindowUI(QMainWindow):
 
             self.titleLabel = self.findChild(QLabel, "titleLabel")
             self.contentLabel = self.findChild(QLabel, "contentLabel")
+            self.exitButton = self.findChild(QPushButton, "exitButton")
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
@@ -54,6 +55,7 @@ class LearnWindowUI(QMainWindow):
             print(self.numberOfDataPages)
             print(self.numberOfInteractiveQuestions)
 
+            self.exitButton.clicked.connect(self.exitButtonClicked)
             self.backButton.clicked.connect(self.backButtonClicked)
             self.nextButton.clicked.connect(self.nextButtonClicked)
 
@@ -125,8 +127,9 @@ class LearnWindowUI(QMainWindow):
             self.loadCurrentPage()
 
     def backButtonClicked(self):
-        if self.indexOfCurrentPage == 1:
-            self.closeLearnWindow(self.parent, self.grandParent)
-        else:
+        if self.indexOfCurrentPage != 1:
             self.indexOfCurrentPage -= 1
             self.loadCurrentPage()
+
+    def exitButtonClicked(self):
+        self.closeLearnWindow(self.parent, self.grandParent)
