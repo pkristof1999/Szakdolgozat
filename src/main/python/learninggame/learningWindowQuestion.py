@@ -1,15 +1,9 @@
-import json
-import time
-import random
-import threading
-
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QButtonGroup
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
-from src.main.python.infoscreens import resultsScreen
 from src.main.python.infoscreens.errorMessage import errorMessage
 
 
@@ -47,6 +41,8 @@ class LearningWindowQuestionUI(QMainWindow):
             self.answerButtonGroup.addButton(self.answer2Button)
             self.answerButtonGroup.addButton(self.answer3Button)
 
+            self.answerButtonGroup.buttonClicked.connect(self.handleAnswerSelection)
+
             self.nextButton.clicked.connect(self.acceptAnswer)
             self.backButton.clicked.connect(self.declineAnswer)
 
@@ -54,12 +50,43 @@ class LearningWindowQuestionUI(QMainWindow):
             errorMessage(e)
             self.hide()
 
+    def handleAnswerSelection(self, selectedButton):
+        for button in self.answerButtonGroup.buttons():
+            if button is not selectedButton:
+                button.setChecked(False)
+                button.setStyleSheet("""
+                                     * {
+                                         background-color: white;
+                                         color: grey;
+                                     }
+
+                                     *:hover {
+                                         background-color: rgb(120, 120, 220);
+                                         color: white;
+                                     }
+                                     """)
+
+        if selectedButton.isChecked():
+            logger.info(f"{selectedButton.text()} megjelölve válaszként.")
+            selectedButton.setStyleSheet("""
+                                             * {
+                                                 background-color: rgb(120, 120, 220);
+                                                 color: white;
+                                             }
+                                             """
+                                         )
+
     def declineAnswer(self):
         self.finished.emit("Back")
         self.parent.show()
         self.hide()
 
     def acceptAnswer(self):
-        self.finished.emit("Next")
-        self.parent.show()
-        self.hide()
+        if self.answer1Button.isChecked() or \
+                self.answer2Button.isChecked() or \
+                self.answer3Button.isChecked():
+            self.finished.emit("Next")
+            self.parent.show()
+            self.hide()
+        else:
+            errorMessage("Nem választott választ!")

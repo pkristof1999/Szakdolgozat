@@ -52,9 +52,15 @@ class LearnWindowUI(QMainWindow):
                     self.numberOfDataPages += 1
 
             self.numberOfInteractiveQuestions = 0
+            self.arrayOfQuestions = []
+            self.arrayOfAnswers = []
+
             for i in self.learnContent["questions"]:
                 if "question" in i:
                     self.numberOfInteractiveQuestions += 1
+                    self.arrayOfQuestions.append(self.learnContent["questions"][i])
+
+            print(self.arrayOfQuestions)
 
             print(self.numberOfDataPages)
             print(self.numberOfInteractiveQuestions)
@@ -139,6 +145,14 @@ class LearnWindowUI(QMainWindow):
 
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())
+
+    def addToArrayOfAnswers(self, answer):
+        self.arrayOfAnswers.append(answer)
+        logger.info(f"{self.arrayOfAnswers} hozzáadva a válaszokhoz!")
+
+    def removeFromArrayOfAnswers(self, answer):
+        self.arrayOfAnswers.remove(answer)
+        logger.info(f"{self.arrayOfAnswers} eltávolítva a válaszokból!")
 
     def backButtonClicked(self):
         if self.indexOfCurrentPage != 1:
