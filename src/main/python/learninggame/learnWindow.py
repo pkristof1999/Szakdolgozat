@@ -55,6 +55,7 @@ class LearnWindowUI(QMainWindow):
             self.arrayOfQuestions = []
             self.arrayOfAnswers = []
             self.numberOfGivenAnswers = 0
+            self.numberOfGoodAnswers = 0
 
             for i in self.learnContent["questions"]:
                 if "questions" in i:
@@ -141,18 +142,22 @@ class LearnWindowUI(QMainWindow):
             self.loadCurrentPage()
 
     def showResults(self):
-        self.saveResults()
+        for i in range(len(self.arrayOfAnswers)):
+            if self.arrayOfQuestions[i]["goodAnswer"] == self.arrayOfAnswers[i]:
+                self.numberOfGoodAnswers += 1
+
         self.resultsWindow = None
         info = "Utolsó kérdés"
         if not self.resultsWindow:
             self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, self.grandParent, "default")
 
+        self.saveResults()
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())
 
     def saveResults(self):
-        # TODO
         pass
+
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)
