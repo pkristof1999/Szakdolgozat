@@ -141,6 +141,7 @@ class LearnWindowUI(QMainWindow):
             self.loadCurrentPage()
 
     def showResults(self):
+        self.saveResults()
         self.resultsWindow = None
         info = "Utolsó kérdés"
         if not self.resultsWindow:
@@ -148,6 +149,10 @@ class LearnWindowUI(QMainWindow):
 
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())
+
+    def saveResults(self):
+        # TODO
+        pass
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)

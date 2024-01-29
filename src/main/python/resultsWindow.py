@@ -102,9 +102,6 @@ class ResultsUI(QMainWindow):
             label.setGeometry(medal.rect())
             label.setPixmap(pixmap)
 
-            path, to, badge = pathToBadge.split("/")
-            logger.info(f"{badge} sikeresen betöltésre került!")
-
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
@@ -208,6 +205,8 @@ class ResultsUI(QMainWindow):
                 )
             else:
                 raise Exception("Hiba a 'badge06' jelvény betöltésekor!")
+
+            logger.info(f"Jelvények sikeresen betöltve!")
 
         except Exception as f:
             logger.error(f"Hiba: {f}")
