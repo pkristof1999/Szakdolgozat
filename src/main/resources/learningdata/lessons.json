@@ -4,12 +4,27 @@
         "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
         "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "testQuestion1",
-            "goodAnswer1" : "testGoodAnswer1",
-            "question2": "testQuestion2",
-            "goodAnswer2" : "testGoodAnswer2",
-            "question3": "testQuestion3",
-            "goodAnswer3" : "testGoodAnswer3"
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Megt\u00e9veszt\u0151 k\u00e1rtev\u0151k" : {

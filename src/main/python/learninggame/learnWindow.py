@@ -54,14 +54,14 @@ class LearnWindowUI(QMainWindow):
             self.numberOfInteractiveQuestions = 0
             self.arrayOfQuestions = []
             self.arrayOfAnswers = []
+            self.numberOfGivenAnswers = 0
 
             for i in self.learnContent["questions"]:
-                if "question" in i:
+                if "questions" in i:
                     self.numberOfInteractiveQuestions += 1
                     self.arrayOfQuestions.append(self.learnContent["questions"][i])
 
             print(self.arrayOfQuestions)
-
             print(self.numberOfDataPages)
             print(self.numberOfInteractiveQuestions)
 
@@ -78,7 +78,6 @@ class LearnWindowUI(QMainWindow):
             self.hide()
 
     def closeLearnWindow(self, parent, grandParent):
-        # TODO
         parent.show()
         grandParent.show()
         parent.raise_()
@@ -117,10 +116,14 @@ class LearnWindowUI(QMainWindow):
 
     def nextButtonClicked(self):
         if not self.questionWindow:
-            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(self.username, self)
+            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
+                self.username, self, self.typeOfLesson
+            )
         else:
             self.questionWindow = None
-            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(self.username, self)
+            self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
+                self.username, self, self.typeOfLesson
+            )
 
         self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
 
@@ -148,15 +151,19 @@ class LearnWindowUI(QMainWindow):
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)
-        logger.info(f"{self.arrayOfAnswers} hozzáadva a válaszokhoz!")
+        self.numberOfGivenAnswers += 1
+        logger.info(f"Válaszok listája: {self.arrayOfAnswers}")
 
-    def removeFromArrayOfAnswers(self, answer):
-        self.arrayOfAnswers.remove(answer)
-        logger.info(f"{self.arrayOfAnswers} eltávolítva a válaszokból!")
+    def removeFromArrayOfAnswers(self):
+        if self.arrayOfAnswers and self.arrayOfAnswers[-1]:
+            self.arrayOfAnswers.pop()
+            self.numberOfGivenAnswers -= 1
+            logger.info(f"Válaszok listája: {self.arrayOfAnswers}")
 
     def backButtonClicked(self):
         if self.indexOfCurrentPage != 1:
             self.indexOfCurrentPage -= 1
+            self.removeFromArrayOfAnswers()
             self.loadCurrentPage()
 
     def exitButtonClicked(self):
