@@ -2,6 +2,7 @@ from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QPushButton, QMainWindow
 from PyQt6.uic import loadUi
 
+from src.main.python.components.logger import *
 from src.main.python.infoscreens.errorMessage import errorMessage
 from src.main.python.learninggame import learnWindow
 
@@ -129,6 +130,8 @@ class ChooseLearningUI(QMainWindow):
         else:
             self.learnScreen = None
             self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData)
+
+        logger.info(f"{typeOfLesson} lecke megnyitása!")
         self.learnScreen.show()
         self.hide()
         self.parent.hide()
