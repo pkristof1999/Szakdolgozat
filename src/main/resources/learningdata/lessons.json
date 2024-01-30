@@ -28,66 +28,255 @@
         }
     },
     "Megt\u00e9veszt\u0151 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Zavar\u00f3 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Rejt\u0151zk\u00f6d\u0151 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Adatlop\u00f3 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "H\u00e1l\u00f3zati k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Terjed\u00e9sre specializ\u00e1lt k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "\u00c9szlel\u00e9selker\u00fcl\u0151 k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Pszichol\u00f3giai k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     },
     "Egy\u00e9b c\u00e9lpont\u00fa k\u00e1rtev\u0151k" : {
-        "dataPage1" : "",
+        "dataPage1Path" : "../resources/learningdata/selfreplicating/page1.html",
+        "dataPage2Path" : "../resources/learningdata/selfreplicating/page2.html",
+        "dataPage3Path" : "../resources/learningdata/selfreplicating/page3.html",
         "questions" : {
-            "question1": "",
-            "goodAnswer1" : ""
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
         }
     }
 }

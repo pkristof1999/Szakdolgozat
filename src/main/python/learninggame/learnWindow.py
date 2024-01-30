@@ -212,16 +212,18 @@ class LearnWindowUI(QMainWindow):
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)
 
+            percent = int(self.numberOfGoodAnswers / self.numberOfInteractiveQuestions * 100)
+
             if self.timeSpent <= 3600:
                 self.info = f"""
-                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers} ({int(self.numberOfGoodAnswers / 10 * 100)}%)
+                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers}({percent}%)
                             A leckével töltött idő: {minutes:02d}:{seconds:02d}"""
 
                 fileContents[self.username]["completedLessonInLearn"][self.currentLesson] = 1
 
             else:
                 self.info = f"""
-                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers} ({int(self.numberOfGoodAnswers / 10 * 100)}%)
+                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers} ({percent}%)
                             A leckével töltött töltött idő: Több, mint egy óra"""
 
                 fileContents[self.username]["completedLessonInLearn"][self.currentLesson] = 1
