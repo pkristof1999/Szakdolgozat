@@ -46,6 +46,7 @@ def createAccount(username, userAge, password, profilePicturePath):
                 "lesson9": 0,
                 "lesson10": 0
             },
+            "LearnMessageShown": False,
             "LearnMedal": 0,
             "QuizMedal": 0,
             "EmailMedal": 0,

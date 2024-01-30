@@ -14,6 +14,7 @@ def resultsDeletion(username, dataPath):
                 fileContents[username]["completedLessonInLearn"][lesson] = 0
                 fileContents[username]["timeSpentInLearn"][lesson] = 0
                 fileContents[username]["goodAnswersInLearn"][lesson] = 0
+            fileContents[username]["LearnMessageShow"] = False
             fileContents[username]["LearnMedal"] = 0
             fileContents[username]["QuizMedal"] = 0
             fileContents[username]["EmailMedal"] = 0

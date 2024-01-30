@@ -59,6 +59,7 @@ class LearnWindowUI(QMainWindow):
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
 
             self.info = ""
+            self.pointsEarned = 0
 
             self.questionWindow = None
             self.resultsWindow = None
@@ -197,6 +198,7 @@ class LearnWindowUI(QMainWindow):
 
         self.timerThread = None
 
+        badge1, badge2, badge3 = False, False, False
         minutes, seconds = divmod(self.timeSpent, 60)
 
         for i in range(len(self.arrayOfAnswers)):
@@ -241,11 +243,96 @@ class LearnWindowUI(QMainWindow):
 
                     fileContents[self.username]["timeSpentInLearn"][self.currentLesson] = 1
 
+            badge1, badge2, badge3 = self.checkIfAllComplete(fileContents)
+
+            if badge1 and badge2 and badge3:
+                if fileContents[self.username]["LearnMedal"] == 0 and \
+                        fileContents[self.username]["badge01"] == 0 and \
+                        fileContents[self.username]["badge02"] == 0:
+                    self.pointsEarned = 1350
+                    fileContents[self.username]["Score"] += self.pointsEarned
+                elif fileContents[self.username]["LearnMedal"] == 1 and \
+                        fileContents[self.username]["badge01"] == 0 and \
+                        fileContents[self.username]["badge02"] == 0:
+                    self.pointsEarned = 1250
+                    fileContents[self.username]["Score"] += self.pointsEarned
+                elif fileContents[self.username]["LearnMedal"] == 1 and \
+                        fileContents[self.username]["badge01"] == 1 and \
+                        fileContents[self.username]["badge02"] == 0:
+                    self.pointsEarned = 1000
+                    fileContents[self.username]["Score"] += self.pointsEarned
+
+                fileContents[self.username]["LearnMedal"] = 1
+                fileContents[self.username]["badge01"] = 1
+                fileContents[self.username]["badge02"] = 1
+
+                self.info += """Gratulálok, sikeresen teljesítetted időben az összes leckét és kérdést!
+                                Ezzel kitűzőt szereztél! Értéke: 1350 pont*"""
+
+            elif badge1 and badge2:
+                if fileContents[self.username]["LearnMedal"] == 0 and \
+                        fileContents[self.username]["badge01"] == 0:
+                    self.pointsEarned = 350
+                    fileContents[self.username]["Score"] += self.pointsEarned
+                elif fileContents[self.username]["LearnMedal"] == 1 and \
+                        fileContents[self.username]["badge01"] == 0:
+                    self.pointsEarned = 250
+                    fileContents[self.username]["Score"] += self.pointsEarned
+
+                fileContents[self.username]["LearnMedal"] = 1
+                fileContents[self.username]["badge01"] = 1
+
+                self.info += """Gratulálok, sikeresen teljesítetted az összes leckét és kérdést!
+                                Ezzel kitűzőt szereztél! Értéke: 350 pont*"""
+
+            elif badge1:
+                if fileContents[self.username]["LearnMedal"] == 0:
+                    self.pointsEarned = 100
+                    fileContents[self.username]["Score"] += self.pointsEarned
+                fileContents[self.username]["LearnMedal"] = 1
+
+                self.info += """Gratulálok, sikeresen teljesítetted az összes leckét!
+                                Ezzel kitűzőt szereztél! Értéke: 100 pont*"""
+
+            if badge1 or badge2 or badge3:
+                self.info += """\n* Csak akkor kerül beszámításra, ha eddig nem volt meg!"""
+
             with open(dataPath, 'w') as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
 
         except Exception as e:
             errorMessage(e)
+
+    def checkIfAllComplete(self, fileContents):
+        timeSpentInLearn = False
+        goodAnswersInLearn = False
+        completedLessonInLearn = False
+
+        for i in range(10):
+            lessonNum = f"lesson{i + 1}"
+            if fileContents[self.username]["timeSpentInLearn"][lessonNum] == 0:
+                timeSpentInLearn = False
+                break
+            else:
+                timeSpentInLearn = True
+
+        for i in range(10):
+            lessonNum = f"lesson{i + 1}"
+            if fileContents[self.username]["goodAnswersInLearn"][lessonNum] == 0:
+                goodAnswersInLearn = False
+                break
+            else:
+                goodAnswersInLearn = True
+
+        for i in range(10):
+            lessonNum = f"lesson{i + 1}"
+            if fileContents[self.username]["completedLessonInLearn"][lessonNum] == 0:
+                completedLessonInLearn = False
+                break
+            else:
+                completedLessonInLearn = True
+
+        return completedLessonInLearn, goodAnswersInLearn, timeSpentInLearn
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)
