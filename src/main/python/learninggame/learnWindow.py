@@ -1,4 +1,6 @@
 import json
+import threading
+import time
 
 from PyQt6.QtCore import QTimer
 from PyQt6.QtGui import QIcon
@@ -43,6 +45,12 @@ class LearnWindowUI(QMainWindow):
             self.questionWindow = None
             self.resultsWindow = None
 
+            self.terminateTimerThread = threading.Event()
+            self.timerThread = None
+            self.timeSpent = 0
+
+            self.startEmailTimer(self.timeSpent)
+
             self.currentPage = ""
             self.indexOfCurrentPage = 1
 
@@ -78,12 +86,23 @@ class LearnWindowUI(QMainWindow):
             errorMessage(e)
             self.hide()
 
-    def closeLearnWindow(self, parent, grandParent):
-        parent.show()
-        grandParent.show()
-        parent.raise_()
-        self.hide()
-        logger.info("Tanulós játémód bezárása!")
+    def startEmailTimer(self, seconds):
+        self.terminateTimerThread.clear()
+        self.timerThread = threading.Thread(target=self.timerThreadCounter, args=(seconds,))
+        self.timerThread.start()
+
+    def timerThreadCounter(self, seconds):
+        times = 0
+        while True:
+            time.sleep(0.1)
+            times += 1
+            if times == 10:
+                seconds += 1
+                times = 0
+
+            if self.terminateTimerThread.is_set():
+                self.timeSpent = seconds
+                break
 
     def loadLearnContentIntoArray(self, typeOfLesson):
         try:
@@ -142,10 +161,6 @@ class LearnWindowUI(QMainWindow):
             self.loadCurrentPage()
 
     def showResults(self):
-        for i in range(len(self.arrayOfAnswers)):
-            if self.arrayOfQuestions[i]["goodAnswer"] == self.arrayOfAnswers[i]:
-                self.numberOfGoodAnswers += 1
-
         self.resultsWindow = None
         info = "Utolsó kérdés"
         if not self.resultsWindow:
@@ -156,8 +171,21 @@ class LearnWindowUI(QMainWindow):
         QTimer.singleShot(100, lambda: self.hide())
 
     def saveResults(self):
-        pass
+        self.terminateTimerThread.set()
 
+        if self.timerThread and self.timerThread.is_alive():
+            self.timerThread.join()
+
+        if self.timerThread is not None:
+            while True:
+                if not self.timerThread.is_alive():
+                    break
+
+        self.timerThread = None
+        for i in range(len(self.arrayOfAnswers)):
+            if self.arrayOfAnswers[i] == self.arrayOfQuestions[i]["goodAnswer"]:
+                self.numberOfGoodAnswers += 1
+        pass
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)
@@ -178,3 +206,17 @@ class LearnWindowUI(QMainWindow):
 
     def exitButtonClicked(self):
         self.closeLearnWindow(self.parent, self.grandParent)
+
+    def closeLearnWindow(self, parent, grandParent):
+        self.terminateTimerThread.set()
+
+        if self.timerThread and self.timerThread.is_alive():
+            self.timerThread.join()
+
+        self.timerThread = None
+
+        parent.show()
+        grandParent.show()
+        parent.raise_()
+        self.hide()
+        logger.info("Tanulós játémód bezárása!")

@@ -541,5 +541,6 @@ class EmailWindowUI(QMainWindow):
 
         self.timerThread = None
 
-        self.hide()
         self.parent.show()
+        self.hide()
+        logger.info("Email játékmód bezárása!")
