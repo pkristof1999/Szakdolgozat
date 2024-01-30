@@ -70,10 +70,6 @@ class LearnWindowUI(QMainWindow):
                     self.numberOfInteractiveQuestions += 1
                     self.arrayOfQuestions.append(self.learnContent["questions"][i])
 
-            print(self.arrayOfQuestions)
-            print(self.numberOfDataPages)
-            print(self.numberOfInteractiveQuestions)
-
             self.exitButton.clicked.connect(self.exitButtonClicked)
             self.backButton.clicked.connect(self.backButtonClicked)
             self.nextButton.clicked.connect(self.nextButtonClicked)
@@ -98,7 +94,6 @@ class LearnWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
-                print(seconds)
                 times = 0
 
             if self.terminateTimerThread.is_set():
@@ -183,10 +178,14 @@ class LearnWindowUI(QMainWindow):
                     break
 
         self.timerThread = None
+
+        minutes, seconds = divmod(self.timeSpent, 60)
+
         for i in range(len(self.arrayOfAnswers)):
             if self.arrayOfAnswers[i] == self.arrayOfQuestions[i]["goodAnswer"]:
                 self.numberOfGoodAnswers += 1
-        pass
+
+
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)

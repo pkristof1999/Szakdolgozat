@@ -11,9 +11,9 @@ def resultsDeletion(username, dataPath):
         if username in fileContents:
             for i in range(10):
                 lesson = f"lesson{i + 1}"
+                fileContents[username]["completedLessonInLearn"][lesson] = 0
                 fileContents[username]["timeSpentInLearn"][lesson] = 0
                 fileContents[username]["goodAnswersInLearn"][lesson] = 0
-
             fileContents[username]["LearnMedal"] = 0
             fileContents[username]["QuizMedal"] = 0
             fileContents[username]["EmailMedal"] = 0

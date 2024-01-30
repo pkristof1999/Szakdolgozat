@@ -10,6 +10,18 @@ def createAccount(username, userAge, password, profilePicturePath):
             "UserAge": userAge,
             "Password": encodePassword(password),
             "ProfilePicturePath": profilePicturePath,
+            "completedLessonInLearn": {
+                "lesson1": 0,
+                "lesson2": 0,
+                "lesson3": 0,
+                "lesson4": 0,
+                "lesson5": 0,
+                "lesson6": 0,
+                "lesson7": 0,
+                "lesson8": 0,
+                "lesson9": 0,
+                "lesson10": 0
+            },
             "timeSpentInLearn": {
                 "lesson1": 0,
                 "lesson2": 0,
