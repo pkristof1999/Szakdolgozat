@@ -22,7 +22,23 @@ class LearnWindowUI(QMainWindow):
             self.username = username
             self.typeOfLesson = typeOfLesson
             self.nameOfData = nameOfData
+            self.currentLesson = ""
             default = "default"
+
+            lessonMapping = {
+                "Önsokszorosító kártevők": "lesson1",
+                "Megtévesztő kártevők": "lesson2",
+                "Zavaró kártevők": "lesson3",
+                "Rejtőzködő kártevők": "lesson4",
+                "Adatlopó kártevők": "lesson5",
+                "Hálózati kártevők": "lesson6",
+                "Terjedésre specializált kártevők": "lesson7",
+                "Észleléselkerülő kártevők": "lesson8",
+                "Pszichológiai kártevők": "lesson9",
+                "Egyéb célpontú kártevők": "lesson10",
+            }
+
+            self.currentLesson = lessonMapping.get(typeOfLesson, "")
 
             super(LearnWindowUI, self).__init__()
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
@@ -41,6 +57,8 @@ class LearnWindowUI(QMainWindow):
 
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
+
+            self.info = ""
 
             self.questionWindow = None
             self.resultsWindow = None
@@ -158,11 +176,11 @@ class LearnWindowUI(QMainWindow):
 
     def showResults(self):
         self.resultsWindow = None
-        info = "Utolsó kérdés"
-        if not self.resultsWindow:
-            self.resultsWindow = resultsScreen.ResultsScreenUI(info, self.parent, self.grandParent, "default")
-
         self.saveResults()
+
+        if not self.resultsWindow:
+            self.resultsWindow = resultsScreen.ResultsScreenUI(self.info, self.parent, self.grandParent, "default")
+
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())
 
@@ -185,7 +203,47 @@ class LearnWindowUI(QMainWindow):
             if self.arrayOfAnswers[i] == self.arrayOfQuestions[i]["goodAnswer"]:
                 self.numberOfGoodAnswers += 1
 
+        try:
+            if self.username == "Vendég":
+                dataPath = "../../../userdata/profiles/guestProfile.json"
+            else:
+                dataPath = "../../../userdata/profiles/profiles.json"
 
+            with open(dataPath, 'r') as jsonFile:
+                fileContents = json.load(jsonFile)
+
+            if self.timeSpent <= 3600:
+                self.info = f"""
+                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers} ({int(self.numberOfGoodAnswers / 10 * 100)}%)
+                            A leckével töltött idő: {minutes:02d}:{seconds:02d}"""
+
+                fileContents[self.username]["completedLessonInLearn"][self.currentLesson] = 1
+
+            else:
+                self.info = f"""
+                            A helyes válaszok száma: {self.numberOfInteractiveQuestions}/{self.numberOfGoodAnswers} ({int(self.numberOfGoodAnswers / 10 * 100)}%)
+                            A leckével töltött töltött idő: Több, mint egy óra"""
+
+                fileContents[self.username]["completedLessonInLearn"][self.currentLesson] = 1
+
+            if self.numberOfGoodAnswers == len(self.arrayOfAnswers):
+                self.info += """
+                            Minden válaszod helyes volt!"""
+
+                fileContents[self.username]["goodAnswersInLearn"][self.currentLesson] = 1
+
+                if self.timeSpent <= 300:
+                    self.info += """
+                                Teljesítetted a leckét 05:00-n belül!
+                            """
+
+                    fileContents[self.username]["timeSpentInLearn"][self.currentLesson] = 1
+
+            with open(dataPath, 'w') as jsonFile:
+                json.dump(fileContents, jsonFile, indent=4)
+
+        except Exception as e:
+            errorMessage(e)
 
     def addToArrayOfAnswers(self, answer):
         self.arrayOfAnswers.append(answer)
