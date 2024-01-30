@@ -78,7 +78,7 @@ class LearnWindowUI(QMainWindow):
             self.backButton.clicked.connect(self.backButtonClicked)
             self.nextButton.clicked.connect(self.nextButtonClicked)
 
-            self.closeEvent = grandParent.exitWindow
+            self.closeEvent = lambda event: grandParent.exitWindow(event, self.timerThread)
 
             self.loadCurrentPage()
 
@@ -98,6 +98,7 @@ class LearnWindowUI(QMainWindow):
             times += 1
             if times == 10:
                 seconds += 1
+                print(seconds)
                 times = 0
 
             if self.terminateTimerThread.is_set():
