@@ -6,26 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
+    <width>410</width>
     <height>472</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Anyagok</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	background-color: #8f8f91;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget_2" native="true">
+   <widget class="QWidget" name="widget_3" native="true">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>371</width>
+      <width>391</width>
       <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(100, 100, 200);
+	background-color: white;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -33,42 +38,10 @@
 	font-weight: bold;
 }</string>
     </property>
-    <widget class="QPushButton" name="selfReplicating">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Önsokszorosító
-kártevők</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>100</x>
        <y>390</y>
        <width>191</width>
        <height>27</height>
@@ -96,24 +69,43 @@ kártevők</string>
       <string>Vissza</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="deceptive">
+    <widget class="QWidget" name="widget_2" native="true">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>10</x>
        <y>10</y>
-       <width>171</width>
-       <height>61</height>
+       <width>371</width>
+       <height>361</height>
       </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">* {
+	background-color: rgb(100, 100, 200);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}</string>
+     </property>
+     <widget class="QPushButton" name="selfReplicating">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
 	background-color: white;
 	color: grey;
 }
@@ -122,185 +114,30 @@ kártevők</string>
 	background-color: rgb(120, 120, 220);
 	color: white;
 }</string>
-     </property>
-     <property name="text">
-      <string>Megtévesztő kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="concealing">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>80</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Rejtőzködő kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="nuisance">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Zavaró kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="informationTheft">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>150</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Adatlopó kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="networkBased">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>150</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Hálózati kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="evading">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>220</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Észleléselkerülő
+      </property>
+      <property name="text">
+       <string>Önsokszorosító
 kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="deliveryMechanism">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>220</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deceptive">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
 	background-color: white;
 	color: grey;
 }
@@ -309,30 +146,185 @@ kártevők</string>
 	background-color: rgb(120, 120, 220);
 	color: white;
 }</string>
-     </property>
-     <property name="text">
-      <string>Terjedésre specializált
+      </property>
+      <property name="text">
+       <string>Megtévesztő kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="concealing">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>80</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rejtőzködő kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="nuisance">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Zavaró kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="informationTheft">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Adatlopó kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="networkBased">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>150</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Hálózati kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="evading">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>220</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Észleléselkerülő
 kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="psychologicalBased">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>290</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deliveryMechanism">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
 	background-color: white;
 	color: grey;
 }
@@ -341,42 +333,75 @@ kártevők</string>
 	background-color: rgb(120, 120, 220);
 	color: white;
 }</string>
-     </property>
-     <property name="text">
-      <string>Pszichológiai kártevők</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="otherTargeted">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>290</y>
-       <width>171</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Egyéb célpontú
+      </property>
+      <property name="text">
+       <string>Terjedésre specializált
 kártevők</string>
-     </property>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="psychologicalBased">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Pszichológiai kártevők</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="otherTargeted">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>290</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: white;
+	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string>Egyéb célpontú
+kártevők</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
