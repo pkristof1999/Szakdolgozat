@@ -146,12 +146,12 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
+	background-color: rgb(255, 205, 201);
 	color: grey;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: rgb(255, 102, 89);
 	color: white;
 }</string>
       </property>
