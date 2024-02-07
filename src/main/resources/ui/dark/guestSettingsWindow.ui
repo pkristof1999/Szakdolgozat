@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #8f8f91;
+	background-color: black;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,7 +30,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
+	background-color: #3d3d7b;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -49,10 +49,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -75,10 +75,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -101,7 +101,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(100, 100, 200);
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -202,6 +202,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>

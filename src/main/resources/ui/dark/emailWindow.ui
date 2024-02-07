@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #8f8f91;
+	background-color: black;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -177,14 +177,14 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>251</width>
-      <height>631</height>
+      <y>20</y>
+      <width>240</width>
+      <height>605</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color:  #8f8f91;
+	background-color: black;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -196,7 +196,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>10</y>
+       <y>0</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -210,11 +210,11 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -230,7 +230,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>70</y>
+       <y>60</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -244,9 +244,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -262,7 +262,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>130</y>
+       <y>120</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -276,9 +276,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -294,7 +294,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>190</y>
+       <y>180</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -308,9 +308,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -326,7 +326,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>250</y>
+       <y>240</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -340,9 +340,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -358,7 +358,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>430</y>
+       <y>420</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -372,9 +372,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -390,7 +390,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>370</y>
+       <y>360</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -404,9 +404,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -422,7 +422,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>310</y>
+       <y>300</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -436,9 +436,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -454,7 +454,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>490</y>
+       <y>480</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -468,9 +468,9 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -486,7 +486,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>550</y>
+       <y>540</y>
        <width>240</width>
        <height>65</height>
       </rect>
@@ -500,11 +500,11 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border-radius: 0px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -535,10 +535,10 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid rgb(120, 120, 220);
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -570,10 +570,10 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid rgb(120, 120, 220);
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 	font-size: 16px;
 	font-weight: bold;
 }

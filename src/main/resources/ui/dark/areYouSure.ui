@@ -14,7 +14,9 @@
    <string>Megerősítés</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">* {
+	background-color: rgb(70, 70, 100);
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
@@ -28,7 +30,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: rgb(70, 70, 100);
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -51,10 +53,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -84,10 +86,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -124,7 +126,7 @@
      <property name="styleSheet">
       <string notr="true">* {
 	font-size: 16pt;
-	color: grey;
+	color: whitesmoke;
 }</string>
      </property>
      <property name="frameShape">

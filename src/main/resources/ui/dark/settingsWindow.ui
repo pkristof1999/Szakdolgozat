@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #8f8f91;
+	background-color: black;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,7 +30,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -49,10 +49,8 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
@@ -75,10 +73,8 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
@@ -101,7 +97,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(100, 100, 200);
+	background-color: #3d3d7b;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -146,8 +142,8 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
@@ -268,8 +264,8 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
@@ -292,11 +288,13 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	font-size: 16px;
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
 }</string>
       </property>
       <property name="text">
@@ -333,11 +331,13 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	font-size: 16px;
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
 }</string>
       </property>
       <property name="echoMode">
@@ -371,11 +371,13 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	font-size: 16px;
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
 }</string>
       </property>
       <property name="echoMode">
@@ -409,11 +411,13 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	font-size: 16px;
-	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
 }</string>
       </property>
       <property name="echoMode">
@@ -439,7 +443,8 @@
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">* {
+       <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>
@@ -464,6 +469,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>
@@ -488,6 +494,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>
@@ -512,6 +519,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>
@@ -536,6 +544,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
+	color: whitesmoke;
 	border: none;
 }</string>
       </property>
