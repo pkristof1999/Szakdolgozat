@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Főképernyő</string>
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #8f8f91;
+	background-color: #000000;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,13 +30,14 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
-    border: 2px solid #8f8f91;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-}</string>
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+</string>
     </property>
     <widget class="QPushButton" name="learningGameButton">
      <property name="geometry">
@@ -56,12 +57,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -87,12 +88,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -118,12 +119,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -143,7 +144,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(100, 100, 200);
+	background-color: rgb(61, 61, 123);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -188,12 +189,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -219,12 +220,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -250,12 +251,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -281,12 +282,12 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color:  rgb(70, 70, 100);
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: #3d3d7b;
 	color: white;
 }</string>
      </property>
@@ -304,10 +305,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-style: none; color: white;</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
+      <string notr="true">border-style: none; color: whitesmoke;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

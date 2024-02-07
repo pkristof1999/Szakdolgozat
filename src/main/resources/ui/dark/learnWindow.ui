@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mainWindow</class>
- <widget class="QMainWindow" name="mainWindow">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
-    <height>200</height>
+    <width>973</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Megerősítés</string>
+   <string>Tanulás</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">* {
+	background-color: #8f8f91;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>361</width>
-      <height>181</height>
+      <x>10</x>
+      <y>10</y>
+      <width>951</width>
+      <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: white;
+    border: 2px solid #8f8f91;
+    border-radius: 10px;
+    color: white;
     font-size: 16px;
     font-weight: bold;
 }</string>
     </property>
-    <widget class="QPushButton" name="yesButton">
+    <widget class="QPushButton" name="exitButton">
      <property name="geometry">
       <rect>
        <x>190</x>
-       <y>140</y>
-       <width>128</width>
-       <height>32</height>
+       <y>540</y>
+       <width>171</width>
+       <height>27</height>
       </rect>
      </property>
      <property name="font">
@@ -52,8 +57,6 @@
      <property name="styleSheet">
       <string notr="true">* {
 	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
 	color: grey;
 }
 
@@ -63,16 +66,16 @@
 }</string>
      </property>
      <property name="text">
-      <string>Igen</string>
+      <string>Vissza</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="noButton">
+    <widget class="QPushButton" name="nextButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>140</y>
-       <width>128</width>
-       <height>32</height>
+       <x>590</x>
+       <y>540</y>
+       <width>171</width>
+       <height>27</height>
       </rect>
      </property>
      <property name="font">
@@ -85,8 +88,6 @@
      <property name="styleSheet">
       <string notr="true">* {
 	background-color: white;
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
 	color: grey;
 }
 
@@ -96,51 +97,79 @@
 }</string>
      </property>
      <property name="text">
-      <string>Nem</string>
+      <string>Következő</string>
      </property>
     </widget>
-    <widget class="QLabel" name="questionLabel">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
+    <widget class="QLabel" name="titleLabel">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
-       <width>321</width>
-       <height>101</height>
+       <y>15</y>
+       <width>911</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	font-size: 30px;
+	color: grey;
+}</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="contentLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>911</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	border: none;
+	color: grey;
+}</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="backButton">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>540</y>
+       <width>171</width>
+       <height>27</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Corbel</family>
-       <pointsize>16</pointsize>
+       <pointsize>-1</pointsize>
        <bold>true</bold>
       </font>
      </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
      <property name="styleSheet">
       <string notr="true">* {
-	font-size: 16pt;
+	background-color: white;
 	color: grey;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
 }</string>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="textFormat">
-      <enum>Qt::PlainText</enum>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>Előző</string>
      </property>
     </widget>
    </widget>

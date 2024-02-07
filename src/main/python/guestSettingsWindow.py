@@ -84,7 +84,7 @@ class GuestSettingsWindowUI(QMainWindow):
 
             self.label = QLabel(self.profilePicture)
             self.loadImage()
-            self.loadThemes()
+            self.loadThemes(username)
 
         except Exception as e:
             errorMessage(e)
@@ -109,12 +109,24 @@ class GuestSettingsWindowUI(QMainWindow):
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
-    def loadThemes(self):
-        dataPath = "../resources/ui/themes.json"
+    def loadThemes(self, username):
+        themeDataPath = "../resources/ui/themes.json"
+        dataPath = "../../../userdata/profiles/guestProfile.json"
+
+        selectedTheme = ""
 
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+
+                userData = json.loads(fileContents.strip(username))
+                userTheme = userData[username]["Theme"]
+
+                selectedTheme = translateTheme(userTheme, False)
+
+            if os.path.exists(themeDataPath):
+                with open(themeDataPath, 'r') as jsonFile:
                     fileContents = jsonFile.read()
 
                     if not fileContents.strip() or fileContents.strip() == "{}":
@@ -122,11 +134,12 @@ class GuestSettingsWindowUI(QMainWindow):
                     else:
                         existingAccounts = json.loads(fileContents)
                         themes = existingAccounts.get("Themes", {})
-                        theme_names = list(themes.values())
-                        self.changeThemeBox.addItems(theme_names)
+                        themeNames = list(themes.values())
+                        self.changeThemeBox.addItems(themeNames)
+                        self.changeThemeBox.setCurrentText(selectedTheme)
 
             else:
-                self.changeThemeBox.addItem("Alap Téma")
+                self.changeThemeBox.addItem("Hiba")
 
         except Exception as e:
             errorMessage(f"Hiba: {e}")
@@ -151,7 +164,7 @@ class GuestSettingsWindowUI(QMainWindow):
             self.saveAndCloseSettings(username)
 
     def saveAndCloseSettings(self, username):
-        theme = translateTheme(self.changeThemeBox.currentText())
+        theme = translateTheme(self.changeThemeBox.currentText(), True)
         overWriteGuestAccount(username, theme)
 
         self.parent.refreshWindow()

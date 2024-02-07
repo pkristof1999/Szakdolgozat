@@ -27,8 +27,10 @@ class SettingsWindowUI(QMainWindow):
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
+            self.getTheme = "pass"
+
             super(SettingsWindowUI, self).__init__()
-            loadUi("../resources/ui/default/settingsWindow.ui", self)
+            loadUi(f"../resources/ui/{self.getTheme}/settingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
@@ -293,7 +295,7 @@ class SettingsWindowUI(QMainWindow):
         oldPwd = self.oldPassword.text().strip()
         newPwd1 = self.newPassword1.text().strip()
         newPwd2 = self.newPassword2.text().strip()
-        theme = translateTheme(self.changeThemeBox.currentText())
+        theme = translateTheme(self.changeThemeBox.currentText(), True)
 
         try:
             if os.path.exists(dataPath):

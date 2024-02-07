@@ -28,7 +28,7 @@ class MainWindowUI(QMainWindow):
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
-            default = "default"
+            default = "dark"
 
             super(MainWindowUI, self).__init__()
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))

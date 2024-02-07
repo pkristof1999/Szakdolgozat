@@ -1,9 +1,12 @@
-def translateTheme(theme):
-    if theme == "Alap téma":
-        return "default"
+def translateTheme(themeName, leftToRight):
+    themeMappingLeft = {
+        "Alap téma": "default",
+        "Sötét téma": "dark"
+    }
 
-    if theme == "Sötét téma":
-        return "dark"
+    themeMappingRight = {
+        "default": "Alap téma",
+        "dark": "Sötét téma"
+    }
 
-    if theme == "TODO":
-        return "todo"
+    return themeMappingLeft.get(themeName, "") if leftToRight else themeMappingRight.get(themeName, "")
