@@ -108,6 +108,7 @@ class MainWindowUI(QMainWindow):
 
             self.logOutResult = False
             self.exitResult = False
+
             self.closeEvent = self.exitWindow
 
         except Exception as e:
@@ -268,18 +269,10 @@ class MainWindowUI(QMainWindow):
             self.hide()
 
     def refreshWindow(self):
-        self.resultsScreen = None
-        self.settingsScreen = None
-        self.guestSettingsScreen = None
-        self.loginWindow = None
-        self.infoWindow = None
-        self.chooseLearningWindow = None
-        self.quizWindow = None
-        self.emailWindow = None
-        self.welcomeWindow = None
-        self.questionWindow = None
-        self.imagePath = self.getImagePath(self.username)
-        self.loadImage(self.imagePath)
+        self.deleteLater()
+
+        newMainWindow = MainWindowUI(self.username)
+        newMainWindow.show()
 
     def closeOpenWindows(self):
         openWindows = QApplication.topLevelWidgets()
