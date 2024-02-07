@@ -270,6 +270,9 @@ class MainWindowUI(QMainWindow):
 
     def refreshWindow(self):
         self.deleteLater()
+        for window in QApplication.topLevelWidgets():
+            if isinstance(window, QMainWindow):
+                window.deleteLater()
 
         newMainWindow = MainWindowUI(self.username)
         newMainWindow.show()
