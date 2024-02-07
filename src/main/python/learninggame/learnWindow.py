@@ -14,7 +14,7 @@ from src.main.python.learninggame import learningWindowQuestion
 
 
 class LearnWindowUI(QMainWindow):
-    def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData):
+    def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
@@ -23,7 +23,6 @@ class LearnWindowUI(QMainWindow):
             self.typeOfLesson = typeOfLesson
             self.nameOfData = nameOfData
             self.currentLesson = ""
-            default = "default"
 
             lessonMapping = {
                 "Önsokszorosító kártevők": "lesson1",
@@ -40,9 +39,10 @@ class LearnWindowUI(QMainWindow):
 
             self.currentLesson = lessonMapping.get(typeOfLesson, "")
 
+            self.theme = theme
             super(LearnWindowUI, self).__init__()
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{default}/learnWindow.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/learnWindow.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -152,12 +152,12 @@ class LearnWindowUI(QMainWindow):
     def nextButtonClicked(self):
         if not self.questionWindow:
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
-                self.username, self, self.typeOfLesson
+                self.username, self, self.typeOfLesson, self.theme
             )
         else:
             self.questionWindow = None
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
-                self.username, self, self.typeOfLesson
+                self.username, self, self.typeOfLesson, self.theme
             )
 
         self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
@@ -180,7 +180,7 @@ class LearnWindowUI(QMainWindow):
         self.saveResults()
 
         if not self.resultsWindow:
-            self.resultsWindow = resultsScreen.ResultsScreenUI(self.info, self.parent, self.grandParent, "default")
+            self.resultsWindow = resultsScreen.ResultsScreenUI(self.info, self.parent, self.grandParent, self.theme)
 
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())

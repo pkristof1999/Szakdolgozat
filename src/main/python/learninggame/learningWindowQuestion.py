@@ -12,17 +12,18 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class LearningWindowQuestionUI(QMainWindow):
     finished = pyqtSignal(str)
 
-    def __init__(self, username, parent, typeOfLesson):
+    def __init__(self, username, parent, typeOfLesson, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
-            default = "default"
 
             super(LearningWindowQuestionUI, self).__init__()
+
+            self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{default}/learningWindowQuestion.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/learningWindowQuestion.ui", self)
 
             self.setFixedSize(self.size())
 

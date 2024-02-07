@@ -233,6 +233,11 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: rgb(70, 70, 100);
+}</string>
+      </property>
       <property name="editable">
        <bool>true</bool>
       </property>

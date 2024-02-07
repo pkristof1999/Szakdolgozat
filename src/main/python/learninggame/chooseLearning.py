@@ -128,10 +128,10 @@ class ChooseLearningUI(QMainWindow):
 
     def openLearnWindow(self, username, parent, typeOfLesson, nameOfData):
         if not self.learnScreen:
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData)
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData, self.theme)
         else:
             self.learnScreen = None
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData)
+            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData, self.theme)
 
         logger.info(f"{typeOfLesson} lecke megnyitása!")
         self.learnScreen.show()
