@@ -8,7 +8,7 @@ from src.main.python.learninggame import learnWindow
 
 
 class ChooseLearningUI(QMainWindow):
-    def __init__(self, username, parent):
+    def __init__(self, username, parent, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
@@ -17,8 +17,10 @@ class ChooseLearningUI(QMainWindow):
             default = "default"
 
             super(ChooseLearningUI, self).__init__()
+
+            self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{default}/chooseLearning.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/chooseLearning.ui", self)
 
             self.setFixedSize(self.size())
 

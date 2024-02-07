@@ -11,13 +11,15 @@ from src.main.python.components.logger import *
 
 
 class ResultsUI(QMainWindow):
-    def __init__(self, parent, username):
+    def __init__(self, parent, username, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             super(ResultsUI, self).__init__()
-            loadUi(f"../resources/ui/default/resultsWindow.ui", self)
+
+            self.theme = theme
+            loadUi(f"../resources/ui/{ self.theme}/resultsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())

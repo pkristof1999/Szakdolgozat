@@ -1,3 +1,5 @@
+import json
+
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
@@ -54,6 +56,26 @@ class WelcomeUI(QMainWindow):
             self.playAsGuest(username)
 
     def playAsGuest(self, username):
+        path = "../../../userdata/profiles/guestProfile.json"
+
+        try:
+            existingAccounts = {}
+
+            if os.path.exists(path):
+                with open(path, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    if fileContents.strip():
+                        existingAccounts = json.loads(fileContents)
+
+            existingAccounts[username]["Theme"] = "default"
+
+            with open(path, 'w') as jsonFile:
+                json.dump(existingAccounts, jsonFile, indent=4)
+
+        except Exception as e:
+            logger.info(f"Hiba: {e}")
+            return False
+
         if not self.appMainWindow:
             self.appMainWindow = mainWindow.MainWindowUI(username)
         self.appMainWindow.show()

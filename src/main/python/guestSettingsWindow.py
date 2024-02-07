@@ -12,13 +12,15 @@ from src.main.python.components.overwriteAccount import *
 
 
 class GuestSettingsWindowUI(QMainWindow):
-    def __init__(self, parent, username):
+    def __init__(self, parent, username, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             super(GuestSettingsWindowUI, self).__init__()
-            loadUi("../resources/ui/default/guestSettingsWindow.ui", self)
+
+            self.theme = theme
+            loadUi(f"../resources/ui/{self.theme}/guestSettingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
@@ -140,6 +142,22 @@ class GuestSettingsWindowUI(QMainWindow):
 
             else:
                 self.changeThemeBox.addItem("Hiba")
+
+        except Exception as e:
+            errorMessage(f"Hiba: {e}")
+
+    def loadCurrentTheme(self, username):
+        dataPath = "../../../userdata/profiles/guestProfile.json"
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+
+                userData = json.loads(fileContents.strip(username))
+                userTheme = userData[username]["Theme"]
+
+                return userTheme
 
         except Exception as e:
             errorMessage(f"Hiba: {e}")

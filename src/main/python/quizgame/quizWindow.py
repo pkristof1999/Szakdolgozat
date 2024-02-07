@@ -13,17 +13,18 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class QuizWindowUI(QMainWindow):
-    def __init__(self, username, parent):
+    def __init__(self, username, parent, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
-            default = "default"
 
             super(QuizWindowUI, self).__init__()
+
+            self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{default}/quizScreen.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/quizScreen.ui", self)
 
             self.setFixedSize(self.size())
 

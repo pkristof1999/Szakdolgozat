@@ -22,15 +22,15 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class SettingsWindowUI(QMainWindow):
-    def __init__(self, parent, username):
+    def __init__(self, parent, username, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
-            self.getTheme = "pass"
-
             super(SettingsWindowUI, self).__init__()
-            loadUi(f"../resources/ui/{self.getTheme}/settingsWindow.ui", self)
+
+            self.theme = theme
+            loadUi(f"../resources/ui/{self.theme}/settingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
@@ -123,7 +123,7 @@ class SettingsWindowUI(QMainWindow):
 
             self.loadImage(self.imagePath)
             self.loadUserAge(username)
-            self.loadThemes()
+            self.loadThemes(username)
 
         except Exception as e:
             errorMessage(e)
@@ -212,12 +212,24 @@ class SettingsWindowUI(QMainWindow):
 
         self.changeUserAge.setText(str(storedUserAge))
 
-    def loadThemes(self):
-        dataPath = "../resources/ui/themes.json"
+    def loadThemes(self, username):
+        themeDataPath = "../resources/ui/themes.json"
+        dataPath = "../../../userdata/profiles/profiles.json"
+
+        selectedTheme = ""
 
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+
+                userData = json.loads(fileContents.strip(username))
+                userTheme = userData[username]["Theme"]
+
+                selectedTheme = translateTheme(userTheme, False)
+
+            if os.path.exists(themeDataPath):
+                with open(themeDataPath, 'r') as jsonFile:
                     fileContents = jsonFile.read()
 
                     if not fileContents.strip() or fileContents.strip() == "{}":
@@ -225,11 +237,12 @@ class SettingsWindowUI(QMainWindow):
                     else:
                         existingAccounts = json.loads(fileContents)
                         themes = existingAccounts.get("Themes", {})
-                        theme_names = list(themes.values())
-                        self.changeThemeBox.addItems(theme_names)
+                        themeNames = list(themes.values())
+                        self.changeThemeBox.addItems(themeNames)
+                        self.changeThemeBox.setCurrentText(selectedTheme)
 
             else:
-                self.changeThemeBox.addItem("Alap Téma")
+                self.changeThemeBox.addItem("Hiba")
 
         except Exception as e:
             errorMessage(f"Hiba: {e}")

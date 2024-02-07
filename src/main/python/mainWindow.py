@@ -4,7 +4,7 @@ import sys
 from PyQt6 import QtCore
 from PyQt6.QtCore import QEventLoop
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QMessageBox
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QMessageBox, QWidget
 from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
@@ -28,11 +28,11 @@ class MainWindowUI(QMainWindow):
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
-            default = "dark"
+            self.theme = self.getUserTheme(username)
 
             super(MainWindowUI, self).__init__()
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{default}/mainWindow.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/mainWindow.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -151,9 +151,26 @@ class MainWindowUI(QMainWindow):
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
+    def getUserTheme(self, username):
+        if username != "Vendég":
+            dataPath = "../../../userdata/profiles/profiles.json"
+        else:
+            dataPath = "../../../userdata/profiles/guestProfile.json"
+
+        try:
+            if os.path.exists(dataPath):
+                with open(dataPath, 'r') as jsonFile:
+                    fileContents = jsonFile.read()
+                    existingAccounts = json.loads(fileContents)
+
+                return existingAccounts[username]["Theme"]
+
+        except Exception as e:
+            errorMessage(f"Hiba: {e}")
+
     def openResults(self):
         if not self.resultsScreen:
-            self.resultsScreen = resultsWindow.ResultsUI(self, self.username)
+            self.resultsScreen = resultsWindow.ResultsUI(self, self.username, self.theme)
 
         self.resultsScreen.loadUserAchievements(self.username)
         self.resultsScreen.show()
@@ -162,19 +179,19 @@ class MainWindowUI(QMainWindow):
     def openSettings(self, username):
         if username == "Vendég":
             if not self.guestSettingsScreen:
-                self.guestSettingsScreen = guestSettingsWindow.GuestSettingsWindowUI(self, username)
+                self.guestSettingsScreen = guestSettingsWindow.GuestSettingsWindowUI(self, username, self.theme)
             self.guestSettingsScreen.show()
             self.guestSettingsScreen = None
         else:
             if not self.settingsScreen:
-                self.settingsScreen = settingsWindow.SettingsWindowUI(self, username)
+                self.settingsScreen = settingsWindow.SettingsWindowUI(self, username, self.theme)
             self.settingsScreen.show()
             self.settingsScreen = None
 
     def openQuestionWindow(self, info, handler, username=None):
         self.infoWindow = None
         if not self.infoWindow:
-            self.infoWindow = gameModeInfo.GameModeInfoUI(info, "default")
+            self.infoWindow = gameModeInfo.GameModeInfoUI(info, self.theme)
 
         if username is not None:
             self.infoWindow.finished.connect(lambda result: handler(result, username))
@@ -198,14 +215,14 @@ class MainWindowUI(QMainWindow):
     def openLearningGame(self, username):
         self.chooseLearningWindow = None
         if not self.chooseLearningWindow:
-            self.chooseLearningWindow = chooseLearning.ChooseLearningUI(username, self)
+            self.chooseLearningWindow = chooseLearning.ChooseLearningUI(username, self, self.theme)
         self.chooseLearningWindow.show()
         logger.info("Tanulós játékmódhoz az anyagválasztó megnyitása!")
 
     def openQuizGame(self, username):
         self.quizWindow = None
         if not self.quizWindow:
-            self.quizWindow = quizWindow.QuizWindowUI(username, self)
+            self.quizWindow = quizWindow.QuizWindowUI(username, self, self.theme)
         self.quizWindow.show()
         self.hide()
         logger.info("Kvíz játékmód megnyitása!")
@@ -213,7 +230,7 @@ class MainWindowUI(QMainWindow):
     def openEmailGame(self, username):
         self.emailWindow = None
         if not self.emailWindow:
-            self.emailWindow = emailWindow.EmailWindowUI(username, self)
+            self.emailWindow = emailWindow.EmailWindowUI(username, self, self.theme)
         self.emailWindow.show()
         self.hide()
         logger.info("Email játékmód megnyitása!")
@@ -223,7 +240,7 @@ class MainWindowUI(QMainWindow):
         if self.username == "Vendég":
             self.openLogOutExitWindow("Biztosan kijelentkezik?\n"
                                       "Eredményei törlődnek!",
-                                      self.handleLogOutButton)
+                                      self.handleLogOutButton,)
         else:
             self.openLogOutExitWindow("Biztosan kijelentkezik?",
                                       self.handleLogOutButton)
@@ -317,7 +334,7 @@ class MainWindowUI(QMainWindow):
     def openLogOutExitWindow(self, info, handler):
         self.questionWindow = None
         if not self.questionWindow:
-            self.questionWindow = areYouSure.AreYouSureUI(info, "default")
+            self.questionWindow = areYouSure.AreYouSureUI(info, self.theme)
 
         self.questionWindow.finished.connect(handler)
         self.questionWindow.show()
