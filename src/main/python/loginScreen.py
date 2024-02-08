@@ -15,7 +15,7 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class LoginScreenUI(QMainWindow):
     def __init__(self):
         super(LoginScreenUI, self).__init__()
-        loadUi("../resources/ui/default/loginScreen.ui", self)
+        loadUi("../resources/ui/default/defaultLoginScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())

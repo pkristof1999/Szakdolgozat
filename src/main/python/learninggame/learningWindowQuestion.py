@@ -23,7 +23,7 @@ class LearningWindowQuestionUI(QMainWindow):
 
             self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/learningWindowQuestion.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/{self.theme}LearningWindowQuestion.ui", self)
 
             self.setFixedSize(self.size())
 

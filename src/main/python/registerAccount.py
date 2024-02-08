@@ -19,7 +19,7 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class RegisterAccountUI(QMainWindow):
     def __init__(self):
         super(RegisterAccountUI, self).__init__()
-        loadUi("../resources/ui/default/registerAccount.ui", self)
+        loadUi("../resources/ui/default/defaultRegisterAccount.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())

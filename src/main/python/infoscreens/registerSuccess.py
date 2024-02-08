@@ -10,7 +10,7 @@ from src.main.python.components.logger import *
 class RegisterSuccessUI(QMainWindow):
     def __init__(self):
         super(RegisterSuccessUI, self).__init__()
-        loadUi("../resources/ui/default/registerSuccess.ui", self)
+        loadUi("../resources/ui/default/defaultRegisterSuccess.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())

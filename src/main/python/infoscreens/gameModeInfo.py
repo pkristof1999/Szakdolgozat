@@ -13,7 +13,7 @@ class GameModeInfoUI(QMainWindow):
         super(GameModeInfoUI, self).__init__()
 
         self.theme = theme
-        loadUi(f"../resources/ui/{self.theme}/gameModeInfo.ui", self)
+        loadUi(f"../resources/ui/{self.theme}/{self.theme}GameModeInfo.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())

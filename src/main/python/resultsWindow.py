@@ -19,7 +19,7 @@ class ResultsUI(QMainWindow):
             super(ResultsUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"../resources/ui/{ self.theme}/resultsWindow.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/{self.theme}ResultsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())

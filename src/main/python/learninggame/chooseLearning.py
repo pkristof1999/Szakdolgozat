@@ -20,7 +20,7 @@ class ChooseLearningUI(QMainWindow):
 
             self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/chooseLearning.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/{self.theme}ChooseLearning.ui", self)
 
             self.setFixedSize(self.size())
 

@@ -30,7 +30,7 @@ class SettingsWindowUI(QMainWindow):
             super(SettingsWindowUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"../resources/ui/{self.theme}/settingsWindow.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/{self.theme}SettingsWindow.ui", self)
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())

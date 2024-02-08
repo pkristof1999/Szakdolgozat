@@ -11,7 +11,7 @@ class AreYouSureUI(QMainWindow):
         super(AreYouSureUI, self).__init__()
 
         self.theme = theme
-        loadUi(f"../resources/ui/{self.theme}/areYouSure.ui", self)
+        loadUi(f"../resources/ui/{self.theme}/{self.theme}AreYouSure.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())

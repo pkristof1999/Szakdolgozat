@@ -24,7 +24,7 @@ class QuizWindowUI(QMainWindow):
 
             self.theme = theme
             self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/quizScreen.ui", self)
+            loadUi(f"../resources/ui/{self.theme}/{self.theme}QuizScreen.ui", self)
 
             self.setFixedSize(self.size())
 

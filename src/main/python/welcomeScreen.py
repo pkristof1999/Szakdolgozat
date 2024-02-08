@@ -14,7 +14,7 @@ from src.main.python.infoscreens import areYouSure
 class WelcomeUI(QMainWindow):
     def __init__(self):
         super(WelcomeUI, self).__init__()
-        loadUi(f"../resources/ui/default/welcomeScreen.ui", self)
+        loadUi(f"../resources/ui/default/defaultWelcomeScreen.ui", self)
         self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
