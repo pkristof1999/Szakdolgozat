@@ -305,7 +305,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-style: none; color: whitesmoke;</string>
+      <string notr="true">border-style: none; color: white;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
