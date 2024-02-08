@@ -269,7 +269,6 @@ class MainWindowUI(QMainWindow):
             self.hide()
 
     def refreshWindow(self):
-        self.deleteLater()
         for window in QApplication.topLevelWidgets():
             if isinstance(window, QMainWindow):
                 window.deleteLater()
