@@ -2,7 +2,7 @@
     "Vend\u00e9g": {
         "ProfilePicturePath": "../resources/pictures/userDefault.png",
         "completedLessonInLearn": {
-            "lesson1": 0,
+            "lesson1": 1,
             "lesson2": 0,
             "lesson3": 0,
             "lesson4": 0,
@@ -48,7 +48,7 @@
         "badge05": 0,
         "badge06": 0,
         "Score": 0,
-        "Theme": "default",
+        "Theme": "highContrast",
         "LearnMessageShow": false
     }
 }

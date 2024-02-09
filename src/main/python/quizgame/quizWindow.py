@@ -77,7 +77,7 @@ class QuizWindowUI(QMainWindow):
 
             self.highContrastBorder = "yellow" if self.theme == "highContrast" else "#8f8f91"
             self.highContrastText = "black" if self.theme == "highContrast" else "grey"
-            self.highContrastTextSelected = "yellow" if self.theme == "highContrast" else "whitesmoke"
+            self.highContrastTextSelected = "black" if self.theme == "highContrast" else "whitesmoke"
             self.highContrastTextHover = "yellow" if self.theme == "highContrast" else "whitesmoke"
             self.highContrastBackground = "rgb(150, 150, 0)" if self.theme == "highContrast" else "rgb(120, 120, 220)"
             self.highContrastBackgroundHover = "rgb(50, 50, 50)" if self.theme == "highContrast" else "rgb(120, 120, 220)"

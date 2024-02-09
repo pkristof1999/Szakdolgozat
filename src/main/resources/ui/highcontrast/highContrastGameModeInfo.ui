@@ -15,9 +15,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: black;
 	font-size: 16pt;
-	color: grey;
+	color: white;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -32,7 +32,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: black;
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -55,15 +55,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -88,15 +88,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -128,7 +128,7 @@
      <property name="styleSheet">
       <string notr="true">* {
 	font-size: 12pt;
-	color: whitesmoke;
+	color: white;
 }</string>
      </property>
      <property name="frameShape">

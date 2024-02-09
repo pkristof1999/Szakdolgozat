@@ -50,6 +50,27 @@ class LearningWindowQuestionUI(QMainWindow):
             self.nextButton.clicked.connect(lambda: self.acceptAnswer(parent))
             self.backButton.clicked.connect(self.declineAnswer)
 
+            self.highContrastBorder = "yellow" if self.theme == "highContrast" else "#8f8f91"
+            self.highContrastText = "black" if self.theme == "highContrast" else "grey"
+            self.highContrastTextSelected = "black" if self.theme == "highContrast" else "whitesmoke"
+            self.highContrastTextHover = "yellow" if self.theme == "highContrast" else "whitesmoke"
+            self.highContrastBackground = "rgb(150, 150, 0)" if self.theme == "highContrast" else "rgb(120, 120, 220)"
+            self.highContrastBackgroundHover = "rgb(50, 50, 50)" if self.theme == "highContrast" else "rgb(120, 120, 220)"
+
+            for button in self.answerButtonGroup.buttons():
+                button.setStyleSheet(f"""
+                                         * {{
+                                             background-color: white;
+                                             border: 2px solid {self.highContrastBorder};
+                                             color: {self.highContrastText};
+                                         }}
+
+                                         *:hover {{
+                                             background-color: {self.highContrastBackgroundHover};
+                                             color: {self.highContrastTextHover};
+                                         }}
+                                     """)
+
             self.showQuestionWithAnswers(parent)
 
         except Exception as e:
@@ -60,26 +81,28 @@ class LearningWindowQuestionUI(QMainWindow):
         for button in self.answerButtonGroup.buttons():
             if button is not selectedButton:
                 button.setChecked(False)
-                button.setStyleSheet("""
-                                     * {
+                button.setStyleSheet(f"""
+                                     * {{
                                          background-color: white;
-                                         color: grey;
-                                     }
+                                         border: 2px solid {self.highContrastBorder};
+                                         color: {self.highContrastText};
+                                     }}
 
-                                     *:hover {
-                                         background-color: rgb(120, 120, 220);
-                                         color: white;
-                                     }
+                                     *:hover {{
+                                         background-color: {self.highContrastBackgroundHover};
+                                         color: {self.highContrastTextHover};
+                                     }}
                                      """)
 
         if selectedButton.isChecked():
             logger.info(f"{selectedButton.text()} megjelölve válaszként.")
-            selectedButton.setStyleSheet("""
-                                             * {
-                                                 background-color: rgb(120, 120, 220);
-                                                 color: white;
-                                             }
-                                             """
+            selectedButton.setStyleSheet(f"""
+                                         * {{
+                                             background-color: {self.highContrastBackground};
+                                             border: 2px solid {self.highContrastBorder};
+                                             color: {self.highContrastTextSelected};
+                                         }}
+                                         """
                                          )
 
     def declineAnswer(self):

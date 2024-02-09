@@ -30,8 +30,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: #3d3d7b;
-	border: 2px solid #8f8f91;
+	background-color: black;
 	border-radius: 10px;
 	color: white;
 	font-size: 16px;
@@ -49,15 +48,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -75,15 +74,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -101,8 +100,8 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
 	color: white;
 	font-size: 16px;
@@ -177,7 +176,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 }</string>
       </property>
       <property name="editable">
@@ -207,7 +206,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">*{
-	color: whitesmoke;
+	color: white;
 	border: none;
 }</string>
       </property>
