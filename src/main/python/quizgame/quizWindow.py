@@ -294,17 +294,19 @@ class QuizWindowUI(QMainWindow):
             else:
                 for button in self.answerButtonGroup.buttons():
                     if button.isChecked():
-                        button.setStyleSheet("""
-                                                * {
+                        button.setStyleSheet(f"""
+                                                * {{
                                                     background-color: #ff0000;
-                                                }
+                                                    border: 2px solid {self.highContrastBorder};
+                                                }}
                                              """)
                     else:
-                        button.setStyleSheet("""
-                                                * {
+                        button.setStyleSheet(f"""
+                                                * {{
                                                     background-color: #dadadd;
+                                                    border: 2px solid {self.highContrastBorder};
                                                     color: grey;
-                                                }
+                                                }}
                                              """)
 
                     button.setEnabled(False)

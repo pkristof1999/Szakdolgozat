@@ -43,6 +43,7 @@ class LoginScreenUI(QMainWindow):
             
             *::drop-down {
                 border: thin solid grey;
+                border-radius: 0px;
                 right: 8px;
             }
             

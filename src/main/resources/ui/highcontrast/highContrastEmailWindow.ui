@@ -31,7 +31,7 @@
     <property name="styleSheet">
      <string notr="true">* {
 	background-color: white;
-	border: 2px solid #8f8f91;
+	border: 2px solid yellow;
 	border-radius: 10px;
 	color: white;
 	font-size: 16px;
@@ -61,68 +61,6 @@
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="maliciousButton">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>557</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Káros</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="genuineButton">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>557</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: white;
-	color: grey;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Hiteles</string>
-     </property>
-    </widget>
     <widget class="Line" name="horizontalLine1">
      <property name="geometry">
       <rect>
@@ -149,28 +87,126 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="subjectLabel">
+    <widget class="QWidget" name="widget_3" native="true">
      <property name="geometry">
       <rect>
-       <x>8</x>
-       <y>5</y>
-       <width>601</width>
-       <height>51</height>
+       <x>0</x>
+       <y>540</y>
+       <width>621</width>
+       <height>65</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	font-size: 16pt;
-	color: grey;
-	border: None;
+	background-color: rgb(20, 20, 20);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 }</string>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
+     <widget class="QPushButton" name="maliciousButton">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: rgb(50, 50, 50);
+	border-radius: 10px;
+	color: white;
+}
+
+*:hover {
+	background-color: rgb(20, 20, 20);
+	color: yellow;
+}</string>
+      </property>
+      <property name="text">
+       <string>Káros</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="genuineButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>20</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Corbel</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	background-color: rgb(50, 50, 50);
+	border-radius: 10px;
+	color: white;
+}
+
+*:hover {
+	background-color: rgb(20, 20, 20);
+	color: yellow;
+}</string>
+      </property>
+      <property name="text">
+       <string>Hiteles</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>621</width>
+       <height>65</height>
+      </rect>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: rgb(20, 20, 20);
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}</string>
      </property>
+     <widget class="QLabel" name="subjectLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>601</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	font-size: 16pt;
+	color: white;
+	border: None;
+}</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="widget_2" native="true">
@@ -185,7 +221,7 @@
     <property name="styleSheet">
      <string notr="true">* {
 	background-color: black;
-	border: 2px solid #8f8f91;
+	border: 2px solid yellow;
 	border-radius: 10px;
 	color: white;
 	font-size: 16px;
@@ -210,16 +246,16 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -244,14 +280,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -276,14 +312,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -308,14 +344,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -340,14 +376,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -372,14 +408,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -404,14 +440,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -436,14 +472,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -468,14 +504,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -500,16 +536,16 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: rgb(50, 50, 50);
 	border-radius: 0px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	color: whitesmoke;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -535,17 +571,17 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid rgb(120, 120, 220);
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 	font-size: 16px;
 	font-weight: bold;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
     </property>
     <property name="text">
@@ -570,17 +606,17 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid rgb(120, 120, 220);
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: white;
 	font-size: 16px;
 	font-weight: bold;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
     </property>
     <property name="text">

@@ -174,9 +174,6 @@ class EmailWindowUI(QMainWindow):
                                                self.loadNextEmail(
                                                    self.email10Button, self.email10ID, self.email10Path))
 
-            self.maliciousButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, False))
-            self.genuineButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, True))
-
             self.checkButton.clicked.connect(self.checkResults)
 
         except Exception as e:
@@ -249,10 +246,14 @@ class EmailWindowUI(QMainWindow):
             self.maliciousButtonHiddenState = False
             self.genuineButtonHiddenState = False
 
+            self.maliciousButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, False))
+            self.genuineButton.clicked.connect(lambda: self.chooseEmailType(self.selectedEmailID, True))
+
         self.maliciousButton.setStyleSheet(style)
         self.genuineButton.setStyleSheet(style)
         self.horizontalLine1.setStyleSheet(style)
         self.horizontalLine2.setStyleSheet(style)
+
 
     def loadImage(self, imagePath):
         try:
