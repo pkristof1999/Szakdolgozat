@@ -236,6 +236,7 @@
       <property name="styleSheet">
        <string notr="true">* {
 	background-color: rgb(70, 70, 100);
+	border-radius: 0;
 }</string>
       </property>
       <property name="editable">
@@ -294,6 +295,7 @@
       <property name="styleSheet">
        <string notr="true">* {
 	background-color: rgb(70, 70, 100);
+	border-radius: 0;
 	color: whitesmoke;
 }
 
@@ -337,6 +339,7 @@
       <property name="styleSheet">
        <string notr="true">* {
 	background-color: rgb(70, 70, 100);
+	border-radius: 0;
 	color: whitesmoke;
 }
 
@@ -377,6 +380,7 @@
       <property name="styleSheet">
        <string notr="true">* {
 	background-color: rgb(70, 70, 100);
+	border-radius: 0;
 	color: whitesmoke;
 }
 
@@ -417,6 +421,7 @@
       <property name="styleSheet">
        <string notr="true">* {
 	background-color: rgb(70, 70, 100);
+	border-radius: 0;
 	color: whitesmoke;
 }
 

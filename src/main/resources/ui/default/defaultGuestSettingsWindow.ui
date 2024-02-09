@@ -175,6 +175,11 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">* {
+	border-radius: 0;
+}</string>
+      </property>
       <property name="editable">
        <bool>true</bool>
       </property>

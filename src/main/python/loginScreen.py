@@ -37,7 +37,7 @@ class LoginScreenUI(QMainWindow):
             * {
                 background-color: white;
                 border: 2px solid #8f8f91;
-                border-radius: 10px;
+                border-radius: 0px;
                 color: grey;
             }
             
