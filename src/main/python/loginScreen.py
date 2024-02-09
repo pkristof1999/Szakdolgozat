@@ -41,6 +41,16 @@ class LoginScreenUI(QMainWindow):
                 color: grey;
             }
             
+            *::item {
+                color: #8f8f91;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            *::item:hover {
+                color: whitesmoke;
+                background-color: #8f8f91;
+            }
+
             *::drop-down {
                 border: thin solid grey;
                 border-radius: 0px;

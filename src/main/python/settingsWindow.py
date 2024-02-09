@@ -61,24 +61,50 @@ class SettingsWindowUI(QMainWindow):
             clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
             clickableLineEdit.setReadOnly(True)
 
-            self.changeThemeBox.setStyleSheet("""
-                        * {
-                            background-color: white;
-                            border: 2px solid #8f8f91;
-                            border-radius: 0;
-                            color: grey;
-                        }
-    
-                        *::drop-down {
-                            border: thin solid grey;
-                            right: 8px;
-                        }
-    
-                        *::down-arrow {
-                            image: url("../resources/pictures/Arrow.png");
-                            width: 16px;
-                            height: 16px;
-                        }""")
+            dropDownColor = "rgb(255, 255, 255)" if self.theme == "default" \
+                else "rgb(70, 70, 100)" if self.theme == "dark" \
+                else "rgb(50, 50, 50)" if self.theme == "highContrast" \
+                else "white"
+
+            dropDownTextColor = "grey" if self.theme == "default" \
+                else "whitesmoke" if self.theme == "dark" \
+                else "white" if self.theme == "highContrast" \
+                else "white"
+
+            dropDownBorderColor = "yellow" if self.theme == "highContrast" else "#8f8f91"
+            dropDownHoverTextColor = "yellow" if self.theme == "highContrast" else "whitesmoke"
+            dropDownBackgroundColor = "rgb(20, 20, 20)" if self.theme == "highContrast" else "#8f8f91"
+
+            self.changeThemeBox.setStyleSheet(f"""
+                                                * {{
+                                                    background-color: {dropDownColor};
+                                                    border: 2px solid {dropDownBorderColor};
+                                                    border-radius: 0;
+                                                    color: {dropDownTextColor};
+                                                }}
+
+                                                *::drop-down {{
+                                                    border: thin solid grey;
+                                                    right: 8px;
+                                                }}
+
+                                                *::item {{
+                                                    color: {dropDownTextColor};
+                                                    background-color: rgba(0, 0, 0, 0);
+                                                }}
+
+                                                *::item:hover {{
+                                                    color: {dropDownHoverTextColor};
+                                                    background-color: {dropDownBackgroundColor};
+                                                }}
+
+                                                *::down-arrow {{
+                                                    image: url("../resources/pictures/Arrow.png");
+                                                    width: 16px;
+                                                    height: 16px;
+                                                }}
+                                                """
+                                              )
 
             self.changeProfilePictureButton.clicked.connect(
                 lambda: self.openQuestionWindow("Biztosan lecseréli a profilképét?",
