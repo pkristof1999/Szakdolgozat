@@ -51,16 +51,23 @@ class GuestSettingsWindowUI(QMainWindow):
             dropDownColor = "rgb(255, 255, 255)" if self.theme == "default" \
                 else "rgb(70, 70, 100)" if self.theme == "dark" \
                 else "rgb(50, 50, 50)" if self.theme == "highContrast" \
+                else "#FF9C00" if self.theme == "yellow" \
                 else "white"
 
             dropDownTextColor = "grey" if self.theme == "default" \
                 else "whitesmoke" if self.theme == "dark" \
-                else "white" if self.theme == "highContrast" \
-                else "white"
+                else "white" if self.theme == "highContrast" or self.theme == "yellow" \
+                else "#8f8f91"
 
             dropDownBorderColor = "yellow" if self.theme == "highContrast" else "#8f8f91"
-            dropDownHoverTextColor = "yellow" if self.theme == "highContrast" else "whitesmoke"
-            dropDownBackgroundColor = "rgb(20, 20, 20)" if self.theme == "highContrast" else "#8f8f91"
+
+            dropDownHoverTextColor = "yellow" if self.theme == "highContrast" \
+                else "#8f8f91" if self.theme == "yellow" \
+                else "whitesmoke"
+
+            dropDownBackgroundColor = "rgb(20, 20, 20)" if self.theme == "highContrast" \
+                else "#FFF200" if self.theme == "yellow" \
+                else "#8f8f91"
 
             self.changeThemeBox.setStyleSheet(f"""
                                                 * {{

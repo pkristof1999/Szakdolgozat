@@ -54,8 +54,12 @@ class LearningWindowQuestionUI(QMainWindow):
             self.highContrastText = "black" if self.theme == "highContrast" else "grey"
             self.highContrastTextSelected = "black" if self.theme == "highContrast" else "whitesmoke"
             self.highContrastTextHover = "yellow" if self.theme == "highContrast" else "whitesmoke"
-            self.highContrastBackground = "rgb(150, 150, 0)" if self.theme == "highContrast" else "rgb(120, 120, 220)"
-            self.highContrastBackgroundHover = "rgb(50, 50, 50)" if self.theme == "highContrast" else "rgb(120, 120, 220)"
+            self.highContrastBackground = "rgb(150, 150, 0)" if self.theme == "highContrast" \
+                else "#FF9C00" if self.theme == "yellow" \
+                else "rgb(120, 120, 220)"
+            self.highContrastBackgroundHover = "rgb(50, 50, 50)" if self.theme == "highContrast" \
+                else "#FF9C00" if self.theme == "yellow" \
+                else "rgb(120, 120, 220)"
 
             for button in self.answerButtonGroup.buttons():
                 button.setStyleSheet(f"""
