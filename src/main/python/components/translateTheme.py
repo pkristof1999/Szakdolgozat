@@ -1,13 +1,17 @@
 def translateTheme(themeName, leftToRight):
     themeMappingLeft = {
-        "Alap téma": "default",
-        "Sötét téma": "dark",
+        "Alap Kék": "default",
+        "Alap Sötétkék": "dark",
+        "Élénk Sárga": "yellow",
+        "Vidám Zöld": "green",
         "Nagy Kontrasztú": "highContrast"
     }
 
     themeMappingRight = {
-        "default": "Alap téma",
-        "dark": "Sötét téma",
+        "default": "Alap Kék",
+        "dark": "Alap Sötétkék",
+        "yellow": "Élénk Sárga",
+        "green": "Vidám Zöld",
         "highContrast": "Nagy Kontrasztú"
     }
 

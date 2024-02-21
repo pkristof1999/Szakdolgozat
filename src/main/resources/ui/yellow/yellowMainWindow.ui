@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #000000;
+	background-color: #FFFFFF;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,7 +30,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(70, 70, 100);
+	background-color: #FFF200;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -57,13 +57,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color:  #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -88,13 +88,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color:  #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -119,13 +119,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color:  #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -144,7 +144,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: rgb(61, 61, 123);
+	background-color: #FF9C00;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
 	color: white;
@@ -189,13 +189,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color: #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -220,13 +220,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color: #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -251,13 +251,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color: #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -282,13 +282,13 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color:  rgb(70, 70, 100);
+	background-color: #FF9C00;
 	color: whitesmoke;
 }
 
 *:hover {
-	background-color: #3d3d7b;
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">

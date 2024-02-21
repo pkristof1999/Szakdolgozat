@@ -131,6 +131,8 @@ class EmailWindowUI(QMainWindow):
 
             self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread)
 
+            self.answerButtonStyleSheet = self.maliciousButton.styleSheet()
+
             self.loadSubjects()
             self.loadDefaults()
 
@@ -218,30 +220,23 @@ class EmailWindowUI(QMainWindow):
     def buttonBehaviour(self, isHidden=None):
         style = ""
 
+        backgroundColor = "rgb(20, 20, 20)" if self.theme == "highContrast" else "white"
+        textColor = "rgb(20, 20, 20)" if self.theme == "highContrast" else "white"
+
         if isHidden == "hidden":
-            style = """                  
-                        * {
+            style = f"""                  
+                        * {{
                             border: None;
-                            background-color: white;
-                            color: white;
-                        }
+                            background-color: {backgroundColor};
+                            color: {textColor};
+                        }}
                     """
 
             self.maliciousButtonHiddenState = True
             self.genuineButtonHiddenState = True
 
         elif isHidden == "present":
-            style = """                  
-                        * {
-                            background-color: white;
-                            color: grey;
-                        }
-                        
-                        *:hover {
-                            background-color: rgb(120, 120, 220);
-	                        color: white;
-                        }
-                    """
+            style = self.answerButtonStyleSheet
 
             self.maliciousButtonHiddenState = False
             self.genuineButtonHiddenState = False

@@ -126,9 +126,9 @@
     <widget class="Line" name="horizontalLine1">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>2</x>
        <y>540</y>
-       <width>621</width>
+       <width>617</width>
        <height>2</height>
       </rect>
      </property>
@@ -139,9 +139,9 @@
     <widget class="Line" name="horizontalLine2">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>2</x>
        <y>60</y>
-       <width>621</width>
+       <width>617</width>
        <height>2</height>
       </rect>
      </property>
