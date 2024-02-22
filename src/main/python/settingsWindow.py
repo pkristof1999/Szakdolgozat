@@ -65,11 +65,12 @@ class SettingsWindowUI(QMainWindow):
                 else "rgb(70, 70, 100)" if self.theme == "dark" \
                 else "rgb(50, 50, 50)" if self.theme == "highContrast" \
                 else "#FF9C00" if self.theme == "yellow" \
+                else "rgb(50, 150, 50)" if self.theme == "green" \
                 else "white"
 
             dropDownTextColor = "grey" if self.theme == "default" \
                 else "whitesmoke" if self.theme == "dark" \
-                else "white" if self.theme == "highContrast" or self.theme == "yellow" \
+                else "white" if self.theme == "highContrast" or self.theme == "yellow" or self.theme == "green" \
                 else "#8f8f91"
 
             dropDownBorderColor = "yellow" if self.theme == "highContrast" else "#8f8f91"
@@ -80,6 +81,7 @@ class SettingsWindowUI(QMainWindow):
 
             dropDownBackgroundColor = "rgb(20, 20, 20)" if self.theme == "highContrast" \
                 else "#FFF200" if self.theme == "yellow" \
+                else "rgb(80, 220, 80)" if self.theme == "green" \
                 else "#8f8f91"
 
             self.changeThemeBox.setStyleSheet(f"""
