@@ -355,13 +355,6 @@ class EmailWindowUI(QMainWindow):
                     }
                 """
 
-        textOfSelectedButton = self.selectedButton.text()
-        if "\u2714" not in textOfSelectedButton:
-            textOfSelectedButton += "\u2714"
-            self.selectedButton.setText(textOfSelectedButton)
-
-        textOfSelectedButton = ""
-
         if isMalicious:
             if self.selectedButton == self.email1Button:
                 self.selectedButton.setStyleSheet(firstGreenStyle)
