@@ -20,8 +20,8 @@ class GuestSettingsWindowUI(QMainWindow):
             super(GuestSettingsWindowUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}GuestSettingsWindow.ui", self)
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}GuestSettingsWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
 
@@ -95,7 +95,7 @@ class GuestSettingsWindowUI(QMainWindow):
                                                 }}
 
                                                 *::down-arrow {{
-                                                    image: url("../resources/pictures/Arrow.png");
+                                                    image: url("src/main/resources/pictures/Arrow.png");
                                                     width: 16px;
                                                     height: 16px;
                                                 }}
@@ -130,9 +130,9 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def loadImage(self):
         try:
-            pixmap = QPixmap("../resources/pictures/userDefault.png")
+            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
 
-            if not os.path.exists("../resources/pictures/userDefault.png"):
+            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -147,8 +147,8 @@ class GuestSettingsWindowUI(QMainWindow):
             logger.error(f"Hiba: {e}")
 
     def loadThemes(self, username):
-        themeDataPath = "../resources/ui/themes.json"
-        dataPath = "../../../userdata/profiles/guestProfile.json"
+        themeDataPath = "src/main/resources/ui/themes.json"
+        dataPath = "userdata/profiles/guestProfile.json"
 
         selectedTheme = ""
 
@@ -182,7 +182,7 @@ class GuestSettingsWindowUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
     def loadCurrentTheme(self, username):
-        dataPath = "../../../userdata/profiles/guestProfile.json"
+        dataPath = "userdata/profiles/guestProfile.json"
 
         try:
             if os.path.exists(dataPath):
@@ -227,4 +227,4 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
-            resultsDeletion(username, "../../../userdata/profiles/guestProfile.json")
+            resultsDeletion(username, "userdata/profiles/guestProfile.json")

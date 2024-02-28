@@ -19,8 +19,8 @@ class ResultsUI(QMainWindow):
             super(ResultsUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}ResultsWindow.ui", self)
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}ResultsWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
 
@@ -60,9 +60,9 @@ class ResultsUI(QMainWindow):
         self.userScore.setText(f"{username} felhasználó pontszáma: {self.getUserScore(username)}.")
 
         if username != "Vendég":
-            dataPath = "../../../userdata/profiles/profiles.json"
+            dataPath = "userdata/profiles/profiles.json"
         else:
-            dataPath = "../../../userdata/profiles/guestProfile.json"
+            dataPath = "userdata/profiles/guestProfile.json"
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
@@ -76,9 +76,9 @@ class ResultsUI(QMainWindow):
 
     def getUserScore(self, username):
         if username != "Vendég":
-            dataPath = "../../../userdata/profiles/profiles.json"
+            dataPath = "userdata/profiles/profiles.json"
         else:
-            dataPath = "../../../userdata/profiles/guestProfile.json"
+            dataPath = "userdata/profiles/guestProfile.json"
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
@@ -91,9 +91,9 @@ class ResultsUI(QMainWindow):
 
     def badgeLoader(self, pathToBadge, medal, label):
         try:
-            pixmap = QPixmap(f"../resources/emblems{pathToBadge}")
+            pixmap = QPixmap(f"src/main/resources/emblems{pathToBadge}")
 
-            if not os.path.exists(f"../resources/emblems{pathToBadge}"):
+            if not os.path.exists(f"src/main/resources/emblems{pathToBadge}"):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = medal.size()

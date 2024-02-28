@@ -19,8 +19,8 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class RegisterAccountUI(QMainWindow):
     def __init__(self):
         super(RegisterAccountUI, self).__init__()
-        loadUi("../resources/ui/default/defaultRegisterAccount.ui", self)
-        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+        loadUi("src/main/resources/ui/default/defaultRegisterAccount.ui", self)
+        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 
@@ -34,7 +34,7 @@ class RegisterAccountUI(QMainWindow):
         self.inputPwd2 = self.findChild(QLineEdit, "inputPwd2")
         self.profilePicture = self.findChild(QFrame, "profilePicture")
 
-        self.imagePath = "../resources/pictures/userDefault.png"
+        self.imagePath = "src/main/resources/pictures/userDefault.png"
         self.label = QLabel(self.profilePicture)
 
         self.welcomeWindow = None
@@ -83,9 +83,9 @@ class RegisterAccountUI(QMainWindow):
 
     def loadDefaultImage(self):
         try:
-            pixmap = QPixmap("../resources/pictures/userDefault.png")
+            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
 
-            if not os.path.exists("../resources/pictures/userDefault.png"):
+            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -174,17 +174,17 @@ class RegisterAccountUI(QMainWindow):
             errorMessage(message)
 
         if saveData:
-            if self.imagePath != "../resources/pictures/userDefault.png":
+            if self.imagePath != "src/main/resources/pictures/userDefault.png":
                 randomNumber = random.randint(1000, 9999)
                 currentTime = datetime.now()
                 formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
-                pictureDirectory = "../../../userdata/profiles/profilepicture"
+                pictureDirectory = "userdata/profiles/profilepicture"
                 os.makedirs(pictureDirectory, exist_ok=True)
 
                 shutil.copy(self.imagePath,
-                            f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
-                newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                            f"userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+                newImagePath = f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
 
                 if createAccount(username, int(userAge), password2, newImagePath):
                     createAccount(username, int(userAge), password2, newImagePath)

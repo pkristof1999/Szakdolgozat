@@ -15,8 +15,8 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class LoginScreenUI(QMainWindow):
     def __init__(self):
         super(LoginScreenUI, self).__init__()
-        loadUi("../resources/ui/default/defaultLoginScreen.ui", self)
-        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+        loadUi("src/main/resources/ui/default/defaultLoginScreen.ui", self)
+        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 
@@ -58,7 +58,7 @@ class LoginScreenUI(QMainWindow):
             }
             
             *::down-arrow {
-                image: url("../resources/pictures/Arrow.png");
+                image: url("src/main/resources/pictures/Arrow.png");
                 width: 16px;
                 height: 16px;
             }""")
@@ -73,7 +73,7 @@ class LoginScreenUI(QMainWindow):
         self.loadUserNames()
 
     def loadUserNames(self):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         try:
             if os.path.exists(dataPath):
@@ -94,7 +94,7 @@ class LoginScreenUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
     def authenticateUser(self):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         username = self.userNameBox.currentText()
         inputPassword = self.inputPwd.text().strip()

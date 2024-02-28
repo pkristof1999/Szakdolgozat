@@ -9,8 +9,8 @@ class ResultsScreenUI(QMainWindow):
         super(ResultsScreenUI, self).__init__()
 
         self.theme = theme
-        loadUi(f"../resources/ui/{self.theme}/{self.theme}ResultsScreen.ui", self)
-        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+        loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}ResultsScreen.ui", self)
+        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 

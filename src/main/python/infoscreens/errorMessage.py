@@ -7,7 +7,7 @@ from src.main.python.components.logger import *
 def errorMessage(message):
     logger.error(message)
     errorDialog = QMessageBox()
-    errorDialog.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+    errorDialog.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
     errorDialog.setWindowTitle("Hiba!")
     errorDialog.setStyleSheet("""
                 * {

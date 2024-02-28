@@ -61,7 +61,7 @@ def createAccount(username, userAge, password, profilePicturePath):
         }
     }
 
-    saveDirectory = "../../../userdata/profiles"
+    saveDirectory = "userdata/profiles"
     os.makedirs(saveDirectory, exist_ok=True)
 
     savePath = os.path.join(saveDirectory, "profiles.json")

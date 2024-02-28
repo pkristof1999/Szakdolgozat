@@ -30,8 +30,8 @@ class SettingsWindowUI(QMainWindow):
             super(SettingsWindowUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}SettingsWindow.ui", self)
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}SettingsWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
 
             self.setFixedSize(self.size())
 
@@ -108,7 +108,7 @@ class SettingsWindowUI(QMainWindow):
                                                 }}
 
                                                 *::down-arrow {{
-                                                    image: url("../resources/pictures/Arrow.png");
+                                                    image: url("src/main/resources/pictures/Arrow.png");
                                                     width: 16px;
                                                     height: 16px;
                                                 }}
@@ -179,17 +179,15 @@ class SettingsWindowUI(QMainWindow):
                 logger.info("Új profilkép kiválasztásra került!")
 
     def getImagePath(self, username):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         try:
             if os.path.exists(dataPath):
                 with open(dataPath, 'r') as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
-                    if "avatar" in existingAccounts[username]["ProfilePicturePath"]:
-                        return "../../" + existingAccounts[username]["ProfilePicturePath"]
-                    else:
-                        return existingAccounts[username]["ProfilePicturePath"]
+
+                    return existingAccounts[username]["ProfilePicturePath"]
 
         except Exception as e:
             logger.info(f"Hiba: {e}")
@@ -214,9 +212,9 @@ class SettingsWindowUI(QMainWindow):
 
     def loadDefaultImage(self):
         try:
-            pixmap = QPixmap("../resources/pictures/userDefault.png")
+            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
 
-            if not os.path.exists("../resources/pictures/userDefault.png"):
+            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -226,14 +224,14 @@ class SettingsWindowUI(QMainWindow):
             self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
             self.label.setGeometry(self.profilePicture.rect())
             self.label.setPixmap(pixmap)
-            self.imagePath = "../resources/pictures/userDefault.png"
+            self.imagePath = "src/main/resources/pictures/userDefault.png"
             logger.info("Alap profilkép betöltésre került!")
 
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
     def loadUserAge(self, username):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         try:
             if os.path.exists(dataPath):
@@ -248,8 +246,8 @@ class SettingsWindowUI(QMainWindow):
         self.changeUserAge.setText(str(storedUserAge))
 
     def loadThemes(self, username):
-        themeDataPath = "../resources/ui/themes.json"
-        dataPath = "../../../userdata/profiles/profiles.json"
+        themeDataPath = "src/main/resources/ui/themes.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         selectedTheme = ""
 
@@ -337,7 +335,7 @@ class SettingsWindowUI(QMainWindow):
 
         saveData = True
         newPassword = False
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
 
         userAge = self.changeUserAge.text().strip()
         oldPwd = self.oldPassword.text().strip()
@@ -424,26 +422,26 @@ class SettingsWindowUI(QMainWindow):
             errorMessage(message)
 
         if saveData:
-            if self.imagePath != "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+            if self.imagePath != "src/main/resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
                 randomNumber = random.randint(1000, 9999)
                 currentTime = datetime.now()
                 formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
-                pictureDirectory = "../../../userdata/profiles/profilepicture"
+                pictureDirectory = "userdata/profiles/profilepicture"
                 os.makedirs(pictureDirectory, exist_ok=True)
 
                 shutil.copy(self.imagePath,
-                            f"../../../userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+                            f"userdata/profiles/profilepicture/avatar_{formattedTime}.png")
 
                 try:
-                    if not self.oldImage == "../resources/pictures/userDefault.png":
+                    if not self.oldImage == "src/main/resources/pictures/userDefault.png":
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
 
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 
-                newImagePath = f"../userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                newImagePath = f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
 
                 """Elég csak a jelszót vizsgálni, mert az titkosított,
                 így nem lehet a beolvasottal egyszerűen felülírni."""
@@ -451,10 +449,10 @@ class SettingsWindowUI(QMainWindow):
                     overWrite(username, userAge, newImagePath, theme, newPwd1)
                 else:
                     overWrite(username, userAge, newImagePath, theme)
-            elif self.imagePath == "../resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+            elif self.imagePath == "src/main/resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
 
                 try:
-                    if not self.oldImage == "../resources/pictures/userDefault.png":
+                    if not self.oldImage == "src/main/resources/pictures/userDefault.png":
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
                 except OSError as e:
@@ -477,14 +475,14 @@ class SettingsWindowUI(QMainWindow):
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
-            resultsDeletion(username, "../../../userdata/profiles/profiles.json")
+            resultsDeletion(username, "userdata/profiles/profiles.json")
 
     def handleProfileDeletion(self, result, username):
         if result == "Yes":
             self.userDeletion(username)
 
     def userDeletion(self, username):
-        dataPath = "../../../userdata/profiles/profiles.json"
+        dataPath = "userdata/profiles/profiles.json"
         try:
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)
@@ -492,8 +490,7 @@ class SettingsWindowUI(QMainWindow):
             if username in fileContents:
                 profilePictureDeletion = fileContents[username]["ProfilePicturePath"]
 
-                if profilePictureDeletion != "../resources/pictures/userDefault.png":
-                    profilePictureDeletion = "../../" + profilePictureDeletion
+                if profilePictureDeletion != "src/main/resources/pictures/userDefault.png":
                     try:
                         os.remove(profilePictureDeletion)
                         logger.info("Profilkép törlésre került!")

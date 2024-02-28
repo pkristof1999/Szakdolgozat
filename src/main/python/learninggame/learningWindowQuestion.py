@@ -22,8 +22,8 @@ class LearningWindowQuestionUI(QMainWindow):
             super(LearningWindowQuestionUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}LearningWindowQuestion.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}LearningWindowQuestion.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -134,7 +134,7 @@ class LearningWindowQuestionUI(QMainWindow):
     def loadQuestionWithAnswersIntoArray(self):
         lesson = []
         try:
-            with open("../resources/learningdata/lessons.json", "r") as jsonFile:
+            with open("src/main/resources/learningdata/lessons.json", "r") as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lesson = json.loads(fileContents)

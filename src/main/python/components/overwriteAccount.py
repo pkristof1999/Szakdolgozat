@@ -5,7 +5,7 @@ from src.main.python.components.securePwd import encodePassword
 
 
 def overwriteAccount(username, userAge, profilePicturePath, theme, password=None):
-    saveDirectory = "../../../userdata/profiles"
+    saveDirectory = "userdata/profiles"
     savePath = os.path.join(saveDirectory, "profiles.json")
 
     try:
@@ -35,7 +35,7 @@ def overwriteAccount(username, userAge, profilePicturePath, theme, password=None
 
 
 def overWriteGuestAccount(username, theme):
-    saveDirectory = "../../../userdata/profiles"
+    saveDirectory = "userdata/profiles"
     savePath = os.path.join(saveDirectory, "guestProfile.json")
 
     try:

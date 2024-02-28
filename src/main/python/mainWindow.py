@@ -31,8 +31,8 @@ class MainWindowUI(QMainWindow):
             self.theme = self.getUserTheme(username)
 
             super(MainWindowUI, self).__init__()
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}MainWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}MainWindow.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -117,9 +117,9 @@ class MainWindowUI(QMainWindow):
 
     def getImagePath(self, username):
         if username != "Vendég":
-            dataPath = "../../../userdata/profiles/profiles.json"
+            dataPath = "userdata/profiles/profiles.json"
         else:
-            dataPath = "../../../userdata/profiles/guestProfile.json"
+            dataPath = "userdata/profiles/guestProfile.json"
 
         try:
             if os.path.exists(dataPath):
@@ -127,7 +127,7 @@ class MainWindowUI(QMainWindow):
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     if "avatar" in existingAccounts[username]["ProfilePicturePath"]:
-                        return "../../" + existingAccounts[username]["ProfilePicturePath"]
+                        return existingAccounts[username]["ProfilePicturePath"]
                     else:
                         return existingAccounts[username]["ProfilePicturePath"]
 
@@ -154,9 +154,9 @@ class MainWindowUI(QMainWindow):
 
     def getUserTheme(self, username):
         if username != "Vendég":
-            dataPath = "../../../userdata/profiles/profiles.json"
+            dataPath = "userdata/profiles/profiles.json"
         else:
-            dataPath = "../../../userdata/profiles/guestProfile.json"
+            dataPath = "userdata/profiles/guestProfile.json"
 
         try:
             if os.path.exists(dataPath):

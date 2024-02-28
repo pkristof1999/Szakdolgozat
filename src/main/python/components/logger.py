@@ -1,7 +1,7 @@
 import os
 import logging
 
-logDirectory = "../log"
+logDirectory = "src/main/log"
 os.makedirs(logDirectory, exist_ok=True)
 
 logger = logging.getLogger("app")

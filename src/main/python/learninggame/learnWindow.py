@@ -41,8 +41,8 @@ class LearnWindowUI(QMainWindow):
 
             self.theme = theme
             super(LearnWindowUI, self).__init__()
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}LearnWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}LearnWindow.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -122,7 +122,7 @@ class LearnWindowUI(QMainWindow):
     def loadLearnContentIntoArray(self, typeOfLesson):
         try:
             lessons = {}
-            with open("../resources/learningdata/lessons.json", "r") as jsonFile:
+            with open("src/main/resources/learningdata/lessons.json", "r") as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lessons = json.loads(fileContents)
@@ -207,9 +207,9 @@ class LearnWindowUI(QMainWindow):
 
         try:
             if self.username == "Vendég":
-                dataPath = "../../../userdata/profiles/guestProfile.json"
+                dataPath = "userdata/profiles/guestProfile.json"
             else:
-                dataPath = "../../../userdata/profiles/profiles.json"
+                dataPath = "userdata/profiles/profiles.json"
 
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)

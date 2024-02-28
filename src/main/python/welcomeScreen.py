@@ -14,8 +14,8 @@ from src.main.python.infoscreens import areYouSure
 class WelcomeUI(QMainWindow):
     def __init__(self):
         super(WelcomeUI, self).__init__()
-        loadUi(f"../resources/ui/default/defaultWelcomeScreen.ui", self)
-        self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
+        loadUi(f"src/main/resources/ui/default/defaultWelcomeScreen.ui", self)
+        self.setWindowIcon(QIcon("src/main//resources/icon/icon.ico"))
 
         self.setFixedSize(self.size())
 
@@ -52,11 +52,11 @@ class WelcomeUI(QMainWindow):
 
     def handlePlayAsGuest(self, result, username):
         if result == "Yes":
-            resultsDeletion(username, "../../../userdata/profiles/guestProfile.json")
+            resultsDeletion(username, "userdata/profiles/guestProfile.json")
             self.playAsGuest(username)
 
     def playAsGuest(self, username):
-        path = "../../../userdata/profiles/guestProfile.json"
+        path = "userdata/profiles/guestProfile.json"
 
         try:
             existingAccounts = {}

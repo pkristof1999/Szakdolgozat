@@ -24,8 +24,8 @@ class EmailWindowUI(QMainWindow):
             super(EmailWindowUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}EmailWindow.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}EmailWindow.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -184,7 +184,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadEmailsIntoArray(self):
         try:
-            with open("../resources/emaildata/emaildata.json", "r") as jsonFile:
+            with open("src/main/resources/emaildata/emaildata.json", "r") as jsonFile:
                 emailBank = json.load(jsonFile)
 
             shuffledEmails = list(emailBank.values())
@@ -214,7 +214,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadDefaults(self):
         self.buttonBehaviour("hidden")
-        self.loadImage("../resources/emaildata/emails/default_email_icon.png")
+        self.loadImage("src/main/resources/emaildata/emails/default_email_icon.png")
         logger.info("Email mód betöltve!")
 
     def buttonBehaviour(self, isHidden=None):
@@ -478,9 +478,9 @@ class EmailWindowUI(QMainWindow):
     def saveResults(self, badge1, badge2):
         try:
             if self.username == "Vendég":
-                dataPath = "../../../userdata/profiles/guestProfile.json"
+                dataPath = "userdata/profiles/guestProfile.json"
             else:
-                dataPath = "../../../userdata/profiles/profiles.json"
+                dataPath = "userdata/profiles/profiles.json"
 
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)

@@ -23,8 +23,8 @@ class QuizWindowUI(QMainWindow):
             super(QuizWindowUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("../resources/icon/icon.ico"))
-            loadUi(f"../resources/ui/{self.theme}/{self.theme}QuizScreen.ui", self)
+            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}QuizScreen.ui", self)
 
             self.setFixedSize(self.size())
 
@@ -141,7 +141,7 @@ class QuizWindowUI(QMainWindow):
 
     def loadQuestionsIntoArray(self):
         try:
-            with open("../resources/quiz/questions.json", "r") as jsonFile:
+            with open("src/main/resources/quiz/questions.json", "r") as jsonFile:
                 questionBank = json.load(jsonFile)
 
             shuffledQuestions = list(questionBank.values())
@@ -338,9 +338,9 @@ class QuizWindowUI(QMainWindow):
     def saveResults(self, badge1, badge2):
         try:
             if self.username == "Vendég":
-                dataPath = "../../../userdata/profiles/guestProfile.json"
+                dataPath = "userdata/profiles/guestProfile.json"
             else:
-                dataPath = "../../../userdata/profiles/profiles.json"
+                dataPath = "userdata/profiles/profiles.json"
 
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)
