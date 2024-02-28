@@ -370,6 +370,11 @@ class EmailWindowUI(QMainWindow):
             else:
                 self.selectedButton.setStyleSheet(redStyle)
 
+        tmpSelectedButton = self.selectedButton.text()
+        if "\u2713" not in tmpSelectedButton:
+            tmpSelectedButton += "\u2713"
+        self.selectedButton.setText(tmpSelectedButton)
+
         for i in range(10):
             selectMalicious = f"selectedEmail{i + 1}IsMalicious"
             done = f"email{i + 1}IsDone"

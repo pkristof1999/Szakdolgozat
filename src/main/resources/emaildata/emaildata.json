@@ -2,121 +2,121 @@
     "email1": {
         "ID": 1,
         "subject": "Teszt1",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email2": {
         "ID": 2,
         "subject": "Teszt2",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email3": {
         "ID": 3,
         "subject": "Teszt3",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email4": {
         "ID": 4,
         "subject": "Teszt4",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email5": {
         "ID": 5,
         "subject": "Teszt5",
-        "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true
     },
     "email6": {
         "ID": 6,
         "subject": "Teszt6",
-        "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true
     },
     "email7": {
         "ID": 7,
         "subject": "Teszt7",
-        "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true
     },
     "email8": {
         "ID": 8,
         "subject": "Teszt8",
-        "pathToEmail": "../resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true
     },
     "email9": {
         "ID": 9,
         "subject": "Teszt9",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email10": {
         "ID": 10,
         "subject": "Teszt10",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email11": {
         "ID": 11,
         "subject": "Teszt11",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email12": {
         "ID": 12,
         "subject": "Teszt12",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email13": {
         "ID": 13,
         "subject": "Teszt13",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email14": {
         "ID": 14,
         "subject": "Teszt14",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email15": {
         "ID": 15,
         "subject": "Teszt15",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email16": {
         "ID": 16,
         "subject": "Teszt16",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email17": {
         "ID": 17,
         "subject": "Teszt17",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email18": {
         "ID": 18,
         "subject": "Teszt18",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email19": {
         "ID": 19,
         "subject": "Teszt19",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     },
     "email20": {
         "ID": 20,
         "subject": "Teszt20",
-        "pathToEmail": "../resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false
     }
 }
