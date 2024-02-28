@@ -14,7 +14,6 @@ class ChooseLearningUI(QMainWindow):
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
-            default = "default"
 
             super(ChooseLearningUI, self).__init__()
 
@@ -26,97 +25,79 @@ class ChooseLearningUI(QMainWindow):
 
             self.parent = parent
 
-            self.selfReplicating = self.findChild(QPushButton, "selfReplicating")
-            self.deceptive = self.findChild(QPushButton, "deceptive")
-            self.nuisance = self.findChild(QPushButton, "nuisance")
-            self.concealing = self.findChild(QPushButton, "concealing")
-            self.informationTheft = self.findChild(QPushButton, "informationTheft")
-            self.networkBased = self.findChild(QPushButton, "networkBased")
-            self.deliveryMechanism = self.findChild(QPushButton, "deliveryMechanism")
-            self.evading = self.findChild(QPushButton, "evading")
-            self.psychologicalBased = self.findChild(QPushButton, "psychologicalBased")
-            self.otherTargeted = self.findChild(QPushButton, "otherTargeted")
+            self.viruses = self.findChild(QPushButton, "viruses")
+            self.worms = self.findChild(QPushButton, "worms")
+            self.trojans = self.findChild(QPushButton, "trojans")
+            self.ransomwares = self.findChild(QPushButton, "ransomwares")
+            self.spywares = self.findChild(QPushButton, "spywares")
+            self.adwares = self.findChild(QPushButton, "adwares")
+            self.rootkits = self.findChild(QPushButton, "rootkits")
+            self.keyloggers = self.findChild(QPushButton, "keyloggers")
             self.backButton = self.findChild(QPushButton, "backButton")
 
             self.learnScreen = None
 
-            self.selfReplicating.clicked.connect(
+            self.viruses.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Önsokszorosító kártevők",
-                                             nameOfData = "selfrecplicating"
+                                             typeOfLesson = "Vírusok",
+                                             nameOfData = "viruses"
                                              )
             )
 
-            self.deceptive.clicked.connect(
+            self.worms.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Megtévesztő kártevők",
-                                             nameOfData="deceptive"
+                                             typeOfLesson = "Férgek",
+                                             nameOfData="worms"
                                              )
             )
 
-            self.nuisance.clicked.connect(
+            self.trojans.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Zavaró kártevők",
-                                             nameOfData="nuisance"
+                                             typeOfLesson = "Trójai Vírusok",
+                                             nameOfData="trojans"
                                              )
             )
 
-            self.concealing.clicked.connect(
+            self.ransomwares.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson = "Rejtőzködő kártevők",
-                                             nameOfData="concealing"
+                                             typeOfLesson = "Zsarolóvírusok",
+                                             nameOfData="ransomwares"
                                              )
             )
 
-            self.informationTheft.clicked.connect(
+            self.spywares.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Adatlopó kártevők",
-                                             nameOfData="informationtheft"
+                                             typeOfLesson="Kémprogramok",
+                                             nameOfData="spywares"
                                              )
             )
 
-            self.networkBased.clicked.connect(
+            self.adwares.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Hálózati kártevők",
-                                             nameOfData="networkbased"
+                                             typeOfLesson="Reklámprogramok",
+                                             nameOfData="adwares"
                                              )
             )
 
-            self.deliveryMechanism.clicked.connect(
+            self.rootkits.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Terjedésre specializált kártevők",
-                                             nameOfData="deliverymechanism"
+                                             typeOfLesson="Rootkitek",
+                                             nameOfData="rootkits"
                                              )
             )
 
-            self.evading.clicked.connect(
+            self.keyloggers.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Észleléselkerülő kártevők",
-                                             nameOfData="evading"
-                                             )
-            )
-
-            self.psychologicalBased.clicked.connect(
-                lambda: self.openLearnWindow(username,
-                                             parent,
-                                             typeOfLesson="Pszichológiai kártevők",
-                                             nameOfData="psychologicalbased"
-                                             )
-            )
-
-            self.otherTargeted.clicked.connect(
-                lambda: self.openLearnWindow(username,
-                                             parent,
-                                             typeOfLesson="Egyéb célpontú kártevők",
-                                             nameOfData="othertargeted"
+                                             typeOfLesson="Billentyűnaplózó Programok",
+                                             nameOfData="keyloggers"
                                              )
             )
 

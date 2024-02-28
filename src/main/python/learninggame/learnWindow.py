@@ -25,16 +25,14 @@ class LearnWindowUI(QMainWindow):
             self.currentLesson = ""
 
             lessonMapping = {
-                "Önsokszorosító kártevők": "lesson1",
-                "Megtévesztő kártevők": "lesson2",
-                "Zavaró kártevők": "lesson3",
-                "Rejtőzködő kártevők": "lesson4",
-                "Adatlopó kártevők": "lesson5",
-                "Hálózati kártevők": "lesson6",
-                "Terjedésre specializált kártevők": "lesson7",
-                "Észleléselkerülő kártevők": "lesson8",
-                "Pszichológiai kártevők": "lesson9",
-                "Egyéb célpontú kártevők": "lesson10",
+                "Vírusok": "lesson1",
+                "Férgek": "lesson2",
+                "Trójai Vírusok": "lesson3",
+                "Kémprogramok": "lesson4",
+                "Reklámprogramok": "lesson5",
+                "Zsarolóvírusok": "lesson6",
+                "Rootkitek": "lesson7",
+                "Billentyűnaplózó Programok": "lesson8"
             }
 
             self.currentLesson = lessonMapping.get(typeOfLesson, "")
