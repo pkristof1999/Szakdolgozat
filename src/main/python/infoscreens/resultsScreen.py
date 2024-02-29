@@ -3,11 +3,12 @@ from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
 
 from src.main.python.infoscreens import solutionScreen
+from src.main.python.infoscreens import solutionScreenForEmail
 
 
 class ResultsScreenUI(QMainWindow):
 
-    def __init__(self, info, parent, grandParent, theme, arrayOfSolutions = None, typeOfGameMode = None):
+    def __init__(self, info, parent, grandParent, theme, arrayOfSolutions, typeOfGameMode = None):
         super(ResultsScreenUI, self).__init__()
 
         self.theme = theme
@@ -46,7 +47,7 @@ class ResultsScreenUI(QMainWindow):
     def openSolutions(self, parent, grandParent, typeOfGameMode):
         if not self.solutionWindow:
             if typeOfGameMode == "emailGame":
-                self.solutionWindow = solutionScreen.SolutionScreenUI(
+                self.solutionWindow = solutionScreenForEmail.SolutionScreenForEmailUI(
                     self, parent, grandParent, self.theme, self.arrayOfSolutions
                 )
             else:
