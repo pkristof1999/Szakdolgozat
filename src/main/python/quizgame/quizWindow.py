@@ -253,7 +253,9 @@ class QuizWindowUI(QMainWindow):
                 self.saveResults(badge1, badge2)
 
                 if not self.resultsWindow:
-                    self.resultsWindow = resultsScreen.ResultsScreenUI(info, self, self.parent, self.theme)
+                    self.resultsWindow = resultsScreen.ResultsScreenUI(
+                        info, self, self.parent, self.theme, self.questionBank, "quizGame"
+                    )
 
                 self.resultsWindow.show()
                 self.hide()

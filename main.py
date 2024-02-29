@@ -9,7 +9,7 @@ from src.main.python.components.logger import *
 if __name__ == "__main__":
     logger.info("Az alkalmazás elindult!")
     app = QApplication(sys.argv)
-    iconPath = "resources/icon/icon.ico"
+    iconPath = "src/resources/icon/icon.ico"
     appIcon = QIcon(iconPath)
     app.setWindowIcon(appIcon)
     welcomeWindow = welcomeScreen.WelcomeUI()
