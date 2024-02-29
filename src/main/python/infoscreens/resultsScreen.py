@@ -46,7 +46,9 @@ class ResultsScreenUI(QMainWindow):
     def openSolutions(self, parent, grandParent, typeOfGameMode):
         if not self.solutionWindow:
             if typeOfGameMode == "emailGame":
-                pass
+                self.solutionWindow = solutionScreen.SolutionScreenUI(
+                    self, parent, grandParent, self.theme, self.arrayOfSolutions
+                )
             else:
                 self.solutionWindow = solutionScreen.SolutionScreenUI(
                     self, parent, grandParent, self.theme, self.arrayOfSolutions
