@@ -1,15 +1,19 @@
+import os
+
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
 
 
 class SolutionScreenUI(QMainWindow):
-    def __init__(self, parent, grandParent, greatGrandParent, theme, arrayOfSolutions):
+    def __init__(self, basePath, parent, grandParent, greatGrandParent, theme, arrayOfSolutions):
         super(SolutionScreenUI, self).__init__()
 
-        self.theme = theme
-        loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}SolutionScreen.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+        self.theme = "default"
+        self.basePath = basePath
+
+        loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}SolutionScreen.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 

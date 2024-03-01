@@ -12,7 +12,7 @@ from src.main.python.components.overwriteAccount import *
 
 
 class GuestSettingsWindowUI(QMainWindow):
-    def __init__(self, parent, username, theme):
+    def __init__(self, basePath, parent, username, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
@@ -20,8 +20,12 @@ class GuestSettingsWindowUI(QMainWindow):
             super(GuestSettingsWindowUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}GuestSettingsWindow.ui", self)
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            self.basePath = basePath
+
+            loadUi(os.path.join(
+                self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}GuestSettingsWindow.ui"), self
+            )
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
             self.setFixedSize(self.size())
 
@@ -130,9 +134,9 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def loadImage(self):
         try:
-            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
+            pixmap = QPixmap(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"))
 
-            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
+            if not os.path.exists(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png")):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -147,8 +151,8 @@ class GuestSettingsWindowUI(QMainWindow):
             logger.error(f"Hiba: {e}")
 
     def loadThemes(self, username):
-        themeDataPath = "src/main/resources/ui/themes.json"
-        dataPath = "userdata/profiles/guestProfile.json"
+        themeDataPath = os.path.join(self.basePath, "src/main/resources/ui/themes.json")
+        dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
 
         selectedTheme = ""
 
@@ -182,7 +186,7 @@ class GuestSettingsWindowUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
     def loadCurrentTheme(self, username):
-        dataPath = "userdata/profiles/guestProfile.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
 
         try:
             if os.path.exists(dataPath):
@@ -200,7 +204,7 @@ class GuestSettingsWindowUI(QMainWindow):
     def openQuestionWindow(self, question, handler, username = None):
         self.questionWindow = None
         if not self.questionWindow:
-            self.questionWindow = areYouSure.AreYouSureUI(question, self.theme)
+            self.questionWindow = areYouSure.AreYouSureUI(self.basePath, question, self.theme)
 
         if username is not None:
             self.questionWindow.finished.connect(lambda result: handler(result, username))
@@ -218,7 +222,7 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def saveAndCloseSettings(self, username):
         theme = translateTheme(self.changeThemeBox.currentText(), True)
-        overWriteGuestAccount(username, theme)
+        overWriteGuestAccount(self.basePath, username, theme)
 
         self.parent.refreshWindow()
         self.hide()
@@ -227,4 +231,4 @@ class GuestSettingsWindowUI(QMainWindow):
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
-            resultsDeletion(username, "userdata/profiles/guestProfile.json")
+            resultsDeletion(username, os.path.join(self.basePath, "userdata/profiles/guestProfile.json"))

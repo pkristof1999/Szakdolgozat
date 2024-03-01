@@ -14,18 +14,21 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class EmailWindowUI(QMainWindow):
-    def __init__(self, username, parent, theme):
+    def __init__(self, basePath, username, parent, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
+            self.basePath = basePath
 
             super(EmailWindowUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}EmailWindow.ui", self)
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
+            loadUi(os.path.join(
+                self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}EmailWindow.ui"), self
+            )
 
             self.setFixedSize(self.size())
 
@@ -184,7 +187,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadEmailsIntoArray(self):
         try:
-            with open("src/main/resources/emaildata/emaildata.json", "r") as jsonFile:
+            with open(os.path.join(self.basePath, "src/main/resources/emaildata/emaildata.json"), "r") as jsonFile:
                 emailBank = json.load(jsonFile)
 
             shuffledEmails = list(emailBank.values())
@@ -214,7 +217,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadDefaults(self):
         self.buttonBehaviour("hidden")
-        self.loadImage("src/main/resources/emaildata/emails/default_email_icon.png")
+        self.loadImage(os.path.join(self.basePath, "src/main/resources/emaildata/emails/default_email_icon.png"))
         logger.info("Email mód betöltve!")
 
     def buttonBehaviour(self, isHidden=None):
@@ -458,7 +461,7 @@ class EmailWindowUI(QMainWindow):
 
             if not self.resultsWindow:
                 self.resultsWindow = resultsScreen.ResultsScreenUI(
-                    info, self, self.parent, self.theme, self.emailBank, "emailGame")
+                    self.basePath, info, self, self.parent, self.theme, self.emailBank, "emailGame")
 
             self.resultsWindow.show()
             self.hide()
@@ -484,9 +487,9 @@ class EmailWindowUI(QMainWindow):
     def saveResults(self, badge1, badge2):
         try:
             if self.username == "Vendég":
-                dataPath = "userdata/profiles/guestProfile.json"
+                dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
             else:
-                dataPath = "userdata/profiles/profiles.json"
+                dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)

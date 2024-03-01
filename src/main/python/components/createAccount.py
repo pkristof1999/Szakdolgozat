@@ -4,12 +4,19 @@ from src.main.python.components.logger import *
 from src.main.python.components.securePwd import encodePassword
 
 
-def createAccount(username, userAge, password, profilePicturePath):
+def createAccount(basePath, username, userAge, password, profilePicturePath, notDefault):
+    if notDefault:
+        path = profilePicturePath.split("userdata", 1)
+        root = "userdata"
+    else:
+        path = profilePicturePath.split("src", 1)
+        root = "src"
+
     accountData = {
         username: {
             "UserAge": userAge,
             "Password": encodePassword(password),
-            "ProfilePicturePath": profilePicturePath,
+            "ProfilePicturePath": root + path[1],
             "completedLessonInLearn": {
                 "lesson1": 0,
                 "lesson2": 0,
@@ -61,7 +68,7 @@ def createAccount(username, userAge, password, profilePicturePath):
         }
     }
 
-    saveDirectory = "userdata/profiles"
+    saveDirectory = os.path.join(basePath, "userdata/profiles")
     os.makedirs(saveDirectory, exist_ok=True)
 
     savePath = os.path.join(saveDirectory, "profiles.json")

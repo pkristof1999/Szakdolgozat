@@ -11,6 +11,7 @@ if getattr(sys, 'frozen', False):
 else:
     basePath = os.path.abspath(".")
 
+
 if __name__ == "__main__":
     logger.info("Az alkalmazás elindult!")
     app = QApplication(sys.argv)

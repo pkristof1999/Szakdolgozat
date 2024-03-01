@@ -13,10 +13,13 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class LoginScreenUI(QMainWindow):
-    def __init__(self):
+    def __init__(self, basePath):
         super(LoginScreenUI, self).__init__()
-        loadUi("src/main/resources/ui/default/defaultLoginScreen.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+
+        self.basePath = basePath
+
+        loadUi(os.path.join(self.basePath, "src/main/resources/ui/default/defaultLoginScreen.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 
@@ -33,35 +36,35 @@ class LoginScreenUI(QMainWindow):
         clickableLineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         clickableLineEdit.setReadOnly(True)
 
-        self.userNameBox.setStyleSheet("""
-            * {
+        self.userNameBox.setStyleSheet(f"""
+            * {{
                 background-color: white;
                 border: 2px solid #8f8f91;
                 border-radius: 0px;
                 color: grey;
-            }
+            }}
             
-            *::item {
+            *::item {{
                 color: #8f8f91;
                 background-color: rgba(0, 0, 0, 0);
-            }
+            }}
 
-            *::item:hover {
+            *::item:hover {{
                 color: whitesmoke;
                 background-color: #8f8f91;
-            }
+            }}
 
-            *::drop-down {
+            *::drop-down {{
                 border: thin solid grey;
                 border-radius: 0px;
                 right: 8px;
-            }
+            }}
             
-            *::down-arrow {
-                image: url("src/main/resources/pictures/Arrow.png");
+            *::down-arrow {{
+                image: url({os.path.join(self.basePath, "src/main/resources/pictures/Arrow.png")});
                 width: 16px;
                 height: 16px;
-            }""")
+            }}""")
 
         self.welcomeWindow = None
         self.appMainWindow = None
@@ -73,7 +76,7 @@ class LoginScreenUI(QMainWindow):
         self.loadUserNames()
 
     def loadUserNames(self):
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         try:
             if os.path.exists(dataPath):
@@ -94,7 +97,7 @@ class LoginScreenUI(QMainWindow):
             errorMessage(f"Hiba: {e}")
 
     def authenticateUser(self):
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         username = self.userNameBox.currentText()
         inputPassword = self.inputPwd.text().strip()
@@ -120,14 +123,14 @@ class LoginScreenUI(QMainWindow):
 
     def openMainUI(self, username):
         if not self.appMainWindow:
-            self.appMainWindow = mainWindow.MainWindowUI(username)
+            self.appMainWindow = mainWindow.MainWindowUI(self.basePath, username)
         self.appMainWindow.show()
         logger.info("Továbblépés a fő felületre.")
         self.hide()
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:
-            self.welcomeWindow = welcomeScreen.WelcomeUI()
+            self.welcomeWindow = welcomeScreen.WelcomeUI(self.basePath)
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
         self.hide()

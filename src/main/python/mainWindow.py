@@ -1,10 +1,9 @@
 import json
-import sys
 
 from PyQt6 import QtCore
 from PyQt6.QtCore import QEventLoop
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QMessageBox, QWidget
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication
 from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
@@ -22,17 +21,19 @@ from src.main.python.emailgame import emailWindow
 
 
 class MainWindowUI(QMainWindow):
-    def __init__(self, username):
+    def __init__(self, basePath, username):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
+            self.basePath = basePath
             self.theme = self.getUserTheme(username)
 
             super(MainWindowUI, self).__init__()
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}MainWindow.ui", self)
+
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
+            loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}MainWindow.ui"), self)
 
             self.setFixedSize(self.size())
 
@@ -117,9 +118,9 @@ class MainWindowUI(QMainWindow):
 
     def getImagePath(self, username):
         if username != "Vendég":
-            dataPath = "userdata/profiles/profiles.json"
+            dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
         else:
-            dataPath = "userdata/profiles/guestProfile.json"
+            dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
 
         try:
             if os.path.exists(dataPath):
@@ -154,9 +155,9 @@ class MainWindowUI(QMainWindow):
 
     def getUserTheme(self, username):
         if username != "Vendég":
-            dataPath = "userdata/profiles/profiles.json"
+            dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
         else:
-            dataPath = "userdata/profiles/guestProfile.json"
+            dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
 
         try:
             if os.path.exists(dataPath):
@@ -171,7 +172,7 @@ class MainWindowUI(QMainWindow):
 
     def openResults(self):
         if not self.resultsScreen:
-            self.resultsScreen = resultsWindow.ResultsUI(self, self.username, self.theme)
+            self.resultsScreen = resultsWindow.ResultsUI(self.basePath, self, self.username, self.theme)
 
         self.resultsScreen.loadUserAchievements(self.username)
         self.resultsScreen.show()
@@ -180,19 +181,21 @@ class MainWindowUI(QMainWindow):
     def openSettings(self, username):
         if username == "Vendég":
             if not self.guestSettingsScreen:
-                self.guestSettingsScreen = guestSettingsWindow.GuestSettingsWindowUI(self, username, self.theme)
+                self.guestSettingsScreen = guestSettingsWindow.GuestSettingsWindowUI(
+                    self.basePath, self, username, self.theme
+                )
             self.guestSettingsScreen.show()
             self.guestSettingsScreen = None
         else:
             if not self.settingsScreen:
-                self.settingsScreen = settingsWindow.SettingsWindowUI(self, username, self.theme)
+                self.settingsScreen = settingsWindow.SettingsWindowUI(self.basePath, self, username, self.theme)
             self.settingsScreen.show()
             self.settingsScreen = None
 
     def openQuestionWindow(self, info, handler, username=None):
         self.infoWindow = None
         if not self.infoWindow:
-            self.infoWindow = gameModeInfo.GameModeInfoUI(info, self.theme)
+            self.infoWindow = gameModeInfo.GameModeInfoUI(self.basePath, info, self.theme)
 
         if username is not None:
             self.infoWindow.finished.connect(lambda result: handler(result, username))
@@ -216,14 +219,14 @@ class MainWindowUI(QMainWindow):
     def openLearningGame(self, username):
         self.chooseLearningWindow = None
         if not self.chooseLearningWindow:
-            self.chooseLearningWindow = chooseLearning.ChooseLearningUI(username, self, self.theme)
+            self.chooseLearningWindow = chooseLearning.ChooseLearningUI(self.basePath, username, self, self.theme)
         self.chooseLearningWindow.show()
         logger.info("Tanulós játékmódhoz az anyagválasztó megnyitása!")
 
     def openQuizGame(self, username):
         self.quizWindow = None
         if not self.quizWindow:
-            self.quizWindow = quizWindow.QuizWindowUI(username, self, self.theme)
+            self.quizWindow = quizWindow.QuizWindowUI(self.basePath, username, self, self.theme)
         self.quizWindow.show()
         self.hide()
         logger.info("Kvíz játékmód megnyitása!")
@@ -231,7 +234,7 @@ class MainWindowUI(QMainWindow):
     def openEmailGame(self, username):
         self.emailWindow = None
         if not self.emailWindow:
-            self.emailWindow = emailWindow.EmailWindowUI(username, self, self.theme)
+            self.emailWindow = emailWindow.EmailWindowUI(self.basePath, username, self, self.theme)
         self.emailWindow.show()
         self.hide()
         logger.info("Email játékmód megnyitása!")
@@ -256,11 +259,11 @@ class MainWindowUI(QMainWindow):
 
             if username == "Vendég":
                 if not self.welcomeWindow:
-                    self.welcomeWindow = welcomeScreen.WelcomeUI()
+                    self.welcomeWindow = welcomeScreen.WelcomeUI(self.basePath)
                 self.welcomeWindow.show()
             else:
                 if not self.loginWindow:
-                    self.loginWindow = loginScreen.LoginScreenUI()
+                    self.loginWindow = loginScreen.LoginScreenUI(self.basePath)
                 self.loginWindow.show()
 
             logger.info("Sikeres kijelentkezés!")
@@ -273,7 +276,7 @@ class MainWindowUI(QMainWindow):
             if isinstance(window, QMainWindow):
                 window.deleteLater()
 
-        newMainWindow = MainWindowUI(self.username)
+        newMainWindow = MainWindowUI(self.basePath, self.username)
         newMainWindow.show()
 
     def closeOpenWindows(self):
@@ -329,7 +332,7 @@ class MainWindowUI(QMainWindow):
     def openLogOutExitWindow(self, info, handler):
         self.questionWindow = None
         if not self.questionWindow:
-            self.questionWindow = areYouSure.AreYouSureUI(info, self.theme)
+            self.questionWindow = areYouSure.AreYouSureUI(self.basePath, info, self.theme)
 
         self.questionWindow.finished.connect(handler)
         self.questionWindow.show()

@@ -14,7 +14,7 @@ from src.main.python.learninggame import learningWindowQuestion
 
 
 class LearnWindowUI(QMainWindow):
-    def __init__(self, parent, username, grandParent, typeOfLesson, nameOfData, theme):
+    def __init__(self, basePath, parent, username, grandParent, typeOfLesson, nameOfData, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
@@ -22,6 +22,7 @@ class LearnWindowUI(QMainWindow):
             self.username = username
             self.typeOfLesson = typeOfLesson
             self.nameOfData = nameOfData
+            self.basePath = basePath
             self.currentLesson = ""
 
             lessonMapping = {
@@ -39,8 +40,8 @@ class LearnWindowUI(QMainWindow):
 
             self.theme = theme
             super(LearnWindowUI, self).__init__()
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}LearnWindow.ui", self)
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
+            loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}LearnWindow.ui"), self)
 
             self.setFixedSize(self.size())
 
@@ -120,7 +121,7 @@ class LearnWindowUI(QMainWindow):
     def loadLearnContentIntoArray(self, typeOfLesson):
         try:
             lessons = {}
-            with open("src/main/resources/learningdata/lessons.json", "r") as jsonFile:
+            with open(os.path.join(self.basePath, "src/main/resources/learningdata/lessons.json"), "r") as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lessons = json.loads(fileContents)
@@ -150,12 +151,12 @@ class LearnWindowUI(QMainWindow):
     def nextButtonClicked(self):
         if not self.questionWindow:
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
-                self.username, self, self.typeOfLesson, self.theme
+                self.basePath, self.username, self, self.typeOfLesson, self.theme
             )
         else:
             self.questionWindow = None
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
-                self.username, self, self.typeOfLesson, self.theme
+                self.basePath, self.username, self, self.typeOfLesson, self.theme
             )
 
         self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
@@ -178,7 +179,9 @@ class LearnWindowUI(QMainWindow):
         self.saveResults()
 
         if not self.resultsWindow:
-            self.resultsWindow = resultsScreen.ResultsScreenUI(self.info, self.parent, self.grandParent, self.theme)
+            self.resultsWindow = resultsScreen.ResultsScreenUI(
+                self.basePath, self.info, self.parent, self.grandParent, self.theme, ["pass"]
+            )
 
         self.resultsWindow.show()
         QTimer.singleShot(100, lambda: self.hide())
@@ -205,9 +208,9 @@ class LearnWindowUI(QMainWindow):
 
         try:
             if self.username == "Vendég":
-                dataPath = "userdata/profiles/guestProfile.json"
+                dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
             else:
-                dataPath = "userdata/profiles/profiles.json"
+                dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)

@@ -8,10 +8,13 @@ from src.main.python.components.logger import *
 
 
 class RegisterSuccessUI(QMainWindow):
-    def __init__(self):
+    def __init__(self, basePath):
         super(RegisterSuccessUI, self).__init__()
-        loadUi("src/main/resources/ui/default/defaultRegisterSuccess.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+
+        self.basePath = basePath
+
+        loadUi(os.path.join(self.basePath, "src/main/resources/ui/default/defaultRegisterSuccess.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 
@@ -26,13 +29,13 @@ class RegisterSuccessUI(QMainWindow):
 
     def openLoginScreen(self):
         if not self.loginWindow:
-            self.loginWindow = loginScreen.LoginScreenUI()
+            self.loginWindow = loginScreen.LoginScreenUI(self.basePath)
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.hide()
 
     def showRegisterScreen(self):
         if not self.registerWindow:
-            self.registerWindow = registerAccount.RegisterAccountUI()
+            self.registerWindow = registerAccount.RegisterAccountUI(self.basePath)
         self.registerWindow.show()
         self.hide()

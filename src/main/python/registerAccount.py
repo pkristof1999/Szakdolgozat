@@ -17,10 +17,13 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class RegisterAccountUI(QMainWindow):
-    def __init__(self):
+    def __init__(self, basePath):
         super(RegisterAccountUI, self).__init__()
-        loadUi("src/main/resources/ui/default/defaultRegisterAccount.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+
+        self.basePath = basePath
+
+        loadUi(os.path.join(self.basePath, "src/main/resources/ui/default/defaultRegisterAccount.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 
@@ -34,7 +37,7 @@ class RegisterAccountUI(QMainWindow):
         self.inputPwd2 = self.findChild(QLineEdit, "inputPwd2")
         self.profilePicture = self.findChild(QFrame, "profilePicture")
 
-        self.imagePath = "src/main/resources/pictures/userDefault.png"
+        self.imagePath = os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png")
         self.label = QLabel(self.profilePicture)
 
         self.welcomeWindow = None
@@ -83,9 +86,9 @@ class RegisterAccountUI(QMainWindow):
 
     def loadDefaultImage(self):
         try:
-            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
+            pixmap = QPixmap(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"))
 
-            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
+            if not os.path.exists(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png")):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -174,28 +177,30 @@ class RegisterAccountUI(QMainWindow):
             errorMessage(message)
 
         if saveData:
-            if self.imagePath != "src/main/resources/pictures/userDefault.png":
+            if self.imagePath != os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
                 randomNumber = random.randint(1000, 9999)
                 currentTime = datetime.now()
                 formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
-                pictureDirectory = "userdata/profiles/profilepicture"
+                pictureDirectory = os.path.join(self.basePath, "userdata/profiles/profilepicture")
                 os.makedirs(pictureDirectory, exist_ok=True)
 
                 shutil.copy(self.imagePath,
-                            f"userdata/profiles/profilepicture/avatar_{formattedTime}.png")
-                newImagePath = f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                            os.path.join(self.basePath, f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"))
+                newImagePath = os.path.join(
+                    self.basePath, f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                )
 
-                if createAccount(username, int(userAge), password2, newImagePath):
-                    createAccount(username, int(userAge), password2, newImagePath)
+                if createAccount(self.basePath, username, int(userAge), password2, newImagePath, True):
+                    createAccount(self.basePath, username, int(userAge), password2, newImagePath, True)
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
                 else:
                     errorMessage("A megadott felhasználónév foglalt!")
 
             else:
-                if createAccount(username, int(userAge), password2, self.imagePath):
-                    createAccount(username, int(userAge), password2, self.imagePath)
+                if createAccount(self.basePath, username, int(userAge), password2, self.imagePath, False):
+                    createAccount(self.basePath, username, int(userAge), password2, self.imagePath, False)
                     logger.warning("Profilkép nem került feltöltésre!")
                     logger.info("Sikeres regisztráció!")
                     self.openRegisterSuccessUI()
@@ -227,14 +232,14 @@ class RegisterAccountUI(QMainWindow):
 
     def openWelcomeUI(self):
         if not self.welcomeWindow:
-            self.welcomeWindow = welcomeScreen.WelcomeUI()
+            self.welcomeWindow = welcomeScreen.WelcomeUI(self.basePath)
         self.welcomeWindow.show()
         logger.info("Visszalépés az indítóképernyőre.")
         self.hide()
 
     def openRegisterSuccessUI(self):
         if not self.registerWindow:
-            self.registerWindow = registerSuccess.RegisterSuccessUI()
+            self.registerWindow = registerSuccess.RegisterSuccessUI(self.basePath)
         self.registerWindow.show()
         logger.info("Sikeres regisztráció ablak megnyitása.")
         self.hide()

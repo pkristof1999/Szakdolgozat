@@ -9,12 +9,14 @@ from src.main.python.components.logger import *
 class GameModeInfoUI(QMainWindow):
     finished = pyqtSignal(str)
 
-    def __init__(self, question, theme):
+    def __init__(self, basePath, question, theme):
         super(GameModeInfoUI, self).__init__()
 
         self.theme = theme
-        loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}GameModeInfo.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+        self.basePath = basePath
+
+        loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}GameModeInfo.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 

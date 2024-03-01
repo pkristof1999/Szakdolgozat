@@ -8,18 +8,21 @@ from src.main.python.learninggame import learnWindow
 
 
 class ChooseLearningUI(QMainWindow):
-    def __init__(self, username, parent, theme):
+    def __init__(self, basePath, username, parent, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
+            self.basePath = basePath
 
             super(ChooseLearningUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}ChooseLearning.ui", self)
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
+            loadUi(os.path.join(
+                self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}ChooseLearning.ui"), self
+            )
 
             self.setFixedSize(self.size())
 
@@ -109,10 +112,14 @@ class ChooseLearningUI(QMainWindow):
 
     def openLearnWindow(self, username, parent, typeOfLesson, nameOfData):
         if not self.learnScreen:
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData, self.theme)
+            self.learnScreen = learnWindow.LearnWindowUI(
+                self.basePath, self, username, parent, typeOfLesson, nameOfData, self.theme
+            )
         else:
             self.learnScreen = None
-            self.learnScreen = learnWindow.LearnWindowUI(self, username, parent, typeOfLesson, nameOfData, self.theme)
+            self.learnScreen = learnWindow.LearnWindowUI(
+                self.basePath, self, username, parent, typeOfLesson, nameOfData, self.theme
+            )
 
         logger.info(f"{typeOfLesson} lecke megnyitása!")
         self.learnScreen.show()

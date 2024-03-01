@@ -1,3 +1,5 @@
+import os
+
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
@@ -7,12 +9,14 @@ from PyQt6.QtCore import pyqtSignal
 class AreYouSureUI(QMainWindow):
     finished = pyqtSignal(str)
 
-    def __init__(self, question, theme = "default"):
+    def __init__(self, basePath, question, theme = "default"):
         super(AreYouSureUI, self).__init__()
 
+        self.basePath = basePath
+
         self.theme = theme
-        loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}AreYouSure.ui", self)
-        self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+        loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}AreYouSure.ui"), self)
+        self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
         self.setFixedSize(self.size())
 

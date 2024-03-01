@@ -22,16 +22,20 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 
 class SettingsWindowUI(QMainWindow):
-    def __init__(self, parent, username, theme):
+    def __init__(self, basePath, parent, username, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
+            self.basePath = basePath
+
             super(SettingsWindowUI, self).__init__()
 
             self.theme = theme
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}SettingsWindow.ui", self)
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
+            loadUi(os.path.join(
+                self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}SettingsWindow.ui"), self
+            )
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
 
             self.setFixedSize(self.size())
 
@@ -108,7 +112,9 @@ class SettingsWindowUI(QMainWindow):
                                                 }}
 
                                                 *::down-arrow {{
-                                                    image: url("src/main/resources/pictures/Arrow.png");
+                                                    image: url({
+            os.path.join(self.basePath, "src/main/resources/pictures/Arrow.png"
+                         )});
                                                     width: 16px;
                                                     height: 16px;
                                                 }}
@@ -179,7 +185,7 @@ class SettingsWindowUI(QMainWindow):
                 logger.info("Új profilkép kiválasztásra került!")
 
     def getImagePath(self, username):
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         try:
             if os.path.exists(dataPath):
@@ -212,9 +218,9 @@ class SettingsWindowUI(QMainWindow):
 
     def loadDefaultImage(self):
         try:
-            pixmap = QPixmap("src/main/resources/pictures/userDefault.png")
+            pixmap = QPixmap(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"))
 
-            if not os.path.exists("src/main/resources/pictures/userDefault.png"):
+            if not os.path.exists(os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png")):
                 raise Exception("A megadott kép nem található!")
 
             frameSize = self.profilePicture.size()
@@ -224,14 +230,14 @@ class SettingsWindowUI(QMainWindow):
             self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
             self.label.setGeometry(self.profilePicture.rect())
             self.label.setPixmap(pixmap)
-            self.imagePath = "src/main/resources/pictures/userDefault.png"
+            self.imagePath = os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png")
             logger.info("Alap profilkép betöltésre került!")
 
         except Exception as e:
             logger.error(f"Hiba: {e}")
 
     def loadUserAge(self, username):
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         try:
             if os.path.exists(dataPath):
@@ -246,8 +252,8 @@ class SettingsWindowUI(QMainWindow):
         self.changeUserAge.setText(str(storedUserAge))
 
     def loadThemes(self, username):
-        themeDataPath = "src/main/resources/ui/themes.json"
-        dataPath = "userdata/profiles/profiles.json"
+        themeDataPath = os.path.join(self.basePath, "src/main/resources/ui/themes.json")
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         selectedTheme = ""
 
@@ -280,10 +286,10 @@ class SettingsWindowUI(QMainWindow):
         except Exception as e:
             errorMessage(f"Hiba: {e}")
 
-    def openQuestionWindow(self, question, handler, username = None):
+    def openQuestionWindow(self, question, handler, username=None):
         self.questionWindow = None
         if not self.questionWindow:
-            self.questionWindow = areYouSure.AreYouSureUI(question, self.theme)
+            self.questionWindow = areYouSure.AreYouSureUI(self.basePath, question, self.theme)
 
         if username is not None:
             self.questionWindow.finished.connect(lambda result: handler(result, username))
@@ -335,7 +341,7 @@ class SettingsWindowUI(QMainWindow):
 
         saveData = True
         newPassword = False
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
         userAge = self.changeUserAge.text().strip()
         oldPwd = self.oldPassword.text().strip()
@@ -422,51 +428,58 @@ class SettingsWindowUI(QMainWindow):
             errorMessage(message)
 
         if saveData:
-            if self.imagePath != "src/main/resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+            if self.imagePath != os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png") \
+                    and self.imagePath != self.oldImage:
                 randomNumber = random.randint(1000, 9999)
                 currentTime = datetime.now()
                 formattedTime = currentTime.strftime("%Y%m%d_%H%M%S_") + f"{randomNumber}"
 
-                pictureDirectory = "userdata/profiles/profilepicture"
+                pictureDirectory = os.path.join(self.basePath, "userdata/profiles/profilepicture")
                 os.makedirs(pictureDirectory, exist_ok=True)
 
                 shutil.copy(self.imagePath,
-                            f"userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+                            os.path.join(self.basePath,
+                                         f"userdata/profiles/profilepicture/avatar_{formattedTime}.png")
+                            )
 
                 try:
-                    if not self.oldImage == "src/main/resources/pictures/userDefault.png":
+                    if not self.oldImage == os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
 
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 
-                newImagePath = f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                newImagePath = os.path.join(
+                    self.basePath, f"userdata/profiles/profilepicture/avatar_{formattedTime}.png"
+                )
 
                 """Elég csak a jelszót vizsgálni, mert az titkosított,
                 így nem lehet a beolvasottal egyszerűen felülírni."""
                 if newPassword:
-                    overWrite(username, userAge, newImagePath, theme, newPwd1)
+                    overWrite(self.basePath, username, userAge, newImagePath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, newImagePath, theme)
-            elif self.imagePath == "src/main/resources/pictures/userDefault.png" and self.imagePath != self.oldImage:
+                    overWrite(self.basePath, username, userAge, newImagePath, theme)
+
+            elif self.imagePath == os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png") \
+                    and self.imagePath != self.oldImage:
 
                 try:
-                    if not self.oldImage == "src/main/resources/pictures/userDefault.png":
+                    if not self.oldImage == os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 
                 if newPassword:
-                    overWrite(username, userAge, self.imagePath, theme, newPwd1)
+                    overWrite(self.basePath, username, userAge, self.imagePath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, self.imagePath, theme)
+                    overWrite(self.basePath, username, userAge, self.imagePath, theme)
             else:
                 if newPassword:
-                    overWrite(username, userAge, storedPPath, theme, newPwd1)
+                    overWrite(self.basePath, username, userAge, storedPPath, theme, newPwd1)
                 else:
-                    overWrite(username, userAge, storedPPath, theme)
+                    overWrite(self.basePath, username, userAge, storedPPath, theme)
 
             self.parent.refreshWindow()
             self.hide()
@@ -475,14 +488,14 @@ class SettingsWindowUI(QMainWindow):
 
     def handleResultsDeletion(self, result, username):
         if result == "Yes":
-            resultsDeletion(username, "userdata/profiles/profiles.json")
+            resultsDeletion(username, os.path.join(self.basePath, "userdata/profiles/profiles.json"))
 
     def handleProfileDeletion(self, result, username):
         if result == "Yes":
             self.userDeletion(username)
 
     def userDeletion(self, username):
-        dataPath = "userdata/profiles/profiles.json"
+        dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
         try:
             with open(dataPath, 'r') as jsonFile:
                 fileContents = json.load(jsonFile)
@@ -490,7 +503,7 @@ class SettingsWindowUI(QMainWindow):
             if username in fileContents:
                 profilePictureDeletion = fileContents[username]["ProfilePicturePath"]
 
-                if profilePictureDeletion != "src/main/resources/pictures/userDefault.png":
+                if profilePictureDeletion != os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
                     try:
                         os.remove(profilePictureDeletion)
                         logger.info("Profilkép törlésre került!")
@@ -513,7 +526,7 @@ class SettingsWindowUI(QMainWindow):
 
     def openLoginUI(self):
         if not self.loginWindow:
-            self.loginWindow = loginScreen.LoginScreenUI()
+            self.loginWindow = loginScreen.LoginScreenUI(self.basePath)
         self.loginWindow.show()
         logger.info("Bejelentkezési képernyő megnyitásra került!")
         self.hide()

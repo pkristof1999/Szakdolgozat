@@ -12,18 +12,21 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 class LearningWindowQuestionUI(QMainWindow):
     finished = pyqtSignal(str)
 
-    def __init__(self, username, parent, typeOfLesson, theme):
+    def __init__(self, basePath, username, parent, typeOfLesson, theme):
         try:
             if username is None or username == "":
                 raise Exception("Hiba: Felhasználó nem található!")
 
             self.username = username
+            self.basePath = basePath
 
             super(LearningWindowQuestionUI, self).__init__()
 
             self.theme = theme
-            self.setWindowIcon(QIcon("src/main/resources/icon/icon.ico"))
-            loadUi(f"src/main/resources/ui/{self.theme}/{self.theme}LearningWindowQuestion.ui", self)
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
+            loadUi(os.path.join(
+                self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}LearningWindowQuestion.ui"), self
+            )
 
             self.setFixedSize(self.size())
 
@@ -134,7 +137,7 @@ class LearningWindowQuestionUI(QMainWindow):
     def loadQuestionWithAnswersIntoArray(self):
         lesson = []
         try:
-            with open("src/main/resources/learningdata/lessons.json", "r") as jsonFile:
+            with open(os.path.join(self.basePath, "src/main/resources/learningdata/lessons.json"), "r") as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lesson = json.loads(fileContents)

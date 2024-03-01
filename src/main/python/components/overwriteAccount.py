@@ -4,8 +4,9 @@ from src.main.python.components.logger import *
 from src.main.python.components.securePwd import encodePassword
 
 
-def overwriteAccount(username, userAge, profilePicturePath, theme, password=None):
-    saveDirectory = "userdata/profiles"
+def overwriteAccount(basePath, username, userAge, profilePicturePath, theme, password=None):
+
+    saveDirectory = os.path.join(basePath, "userdata/profiles")
     savePath = os.path.join(saveDirectory, "profiles.json")
 
     try:
@@ -34,8 +35,8 @@ def overwriteAccount(username, userAge, profilePicturePath, theme, password=None
         return False
 
 
-def overWriteGuestAccount(username, theme):
-    saveDirectory = "userdata/profiles"
+def overWriteGuestAccount(basePath, username, theme):
+    saveDirectory = os.path.join(basePath, "userdata/profiles")
     savePath = os.path.join(saveDirectory, "guestProfile.json")
 
     try:
