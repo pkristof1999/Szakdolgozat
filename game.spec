@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['game.py'],
+    ['Game.py'],
     pathex=[],
     binaries=[],
-    datas=[('.\\src', 'src'), ('.\\userdata', 'userdata'), ('.\\game.py', '.')],
+    datas=[('.\\src', 'src'), ('.\\userdata', 'userdata'), ('.\\Game.py', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -21,7 +21,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='game',
+    name='Game',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
