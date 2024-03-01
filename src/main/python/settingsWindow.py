@@ -193,7 +193,7 @@ class SettingsWindowUI(QMainWindow):
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
 
-                    return existingAccounts[username]["ProfilePicturePath"]
+                    return os.path.join(self.basePath, existingAccounts[username]["ProfilePicturePath"])
 
         except Exception as e:
             logger.info(f"Hiba: {e}")
@@ -428,6 +428,16 @@ class SettingsWindowUI(QMainWindow):
             errorMessage(message)
 
         if saveData:
+            tmpOldImage = self.oldImage
+            if "src" in tmpOldImage:
+                tmpOldImage = tmpOldImage.split("src", 1)
+                defaultImage = tmpOldImage[1]
+                defaultImage = "src" + defaultImage
+            else:
+                tmpOldImage = tmpOldImage.split("userdata", 1)
+                defaultImage = tmpOldImage[1]
+                defaultImage = "userdata" + defaultImage
+
             if self.imagePath != os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png") \
                     and self.imagePath != self.oldImage:
                 randomNumber = random.randint(1000, 9999)
@@ -443,12 +453,6 @@ class SettingsWindowUI(QMainWindow):
                             )
 
                 try:
-                    tmpOldImage = self.oldImage
-                    tmpOldImage = tmpOldImage.split("src", 1)
-                    defaultImage = tmpOldImage[1]
-                    defaultImage = "src" + defaultImage
-                    print(defaultImage)
-
                     if not defaultImage == "src/main/resources/pictures/userDefault.png":
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
@@ -471,9 +475,10 @@ class SettingsWindowUI(QMainWindow):
                     and self.imagePath != self.oldImage:
 
                 try:
-                    if not self.oldImage == os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
+                    if not defaultImage == "src/main/resources/pictures/userDefault.png":
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
+
                 except OSError as e:
                     errorMessage(f"Hiba: {e}")
 

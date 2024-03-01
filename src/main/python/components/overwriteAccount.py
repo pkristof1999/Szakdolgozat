@@ -9,6 +9,13 @@ def overwriteAccount(basePath, username, userAge, profilePicturePath, theme, pas
     saveDirectory = os.path.join(basePath, "userdata/profiles")
     savePath = os.path.join(saveDirectory, "profiles.json")
 
+    if "src" in profilePicturePath:
+        path = profilePicturePath.split("src", 1)
+        root = "src"
+    else:
+        path = profilePicturePath.split("userdata", 1)
+        root = "userdata"
+
     try:
         existingAccounts = {}
 
@@ -19,7 +26,7 @@ def overwriteAccount(basePath, username, userAge, profilePicturePath, theme, pas
                     existingAccounts = json.loads(fileContents)
 
         existingAccounts[username]["UserAge"] = userAge
-        existingAccounts[username]["ProfilePicturePath"] = profilePicturePath
+        existingAccounts[username]["ProfilePicturePath"] = root + path[1]
         existingAccounts[username]["Theme"] = theme
 
         if password is not None:

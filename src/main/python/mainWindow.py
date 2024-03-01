@@ -129,9 +129,9 @@ class MainWindowUI(QMainWindow):
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     if "avatar" in existingAccounts[username]["ProfilePicturePath"]:
-                        return existingAccounts[username]["ProfilePicturePath"]
+                        return os.path.join(self.basePath, existingAccounts[username]["ProfilePicturePath"])
                     else:
-                        return existingAccounts[username]["ProfilePicturePath"]
+                        return os.path.join(self.basePath, existingAccounts[username]["ProfilePicturePath"])
 
         except Exception as e:
             errorMessage(f"Hiba: {e}")
