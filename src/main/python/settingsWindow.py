@@ -443,7 +443,13 @@ class SettingsWindowUI(QMainWindow):
                             )
 
                 try:
-                    if not self.oldImage == os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
+                    tmpOldImage = self.oldImage
+                    tmpOldImage = tmpOldImage.split("src", 1)
+                    defaultImage = tmpOldImage[1]
+                    defaultImage = "src" + defaultImage
+                    print(defaultImage)
+
+                    if not defaultImage == "src/main/resources/pictures/userDefault.png":
                         os.remove(self.oldImage)
                         logger.info("Régi profilkép törlésre került!")
 
