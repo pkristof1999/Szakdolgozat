@@ -113,8 +113,8 @@ class SettingsWindowUI(QMainWindow):
 
                                                 *::down-arrow {{
                                                     image: url({
-            os.path.join(self.basePath, "src/main/resources/pictures/Arrow.png"
-                         )});
+                                                os.path.join(self.basePath, "src/main/resources/pictures/Arrow.png"
+                                                             )});
                                                     width: 16px;
                                                     height: 16px;
                                                 }}
