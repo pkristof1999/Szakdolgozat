@@ -503,9 +503,9 @@ class SettingsWindowUI(QMainWindow):
             if username in fileContents:
                 profilePictureDeletion = fileContents[username]["ProfilePicturePath"]
 
-                if profilePictureDeletion != os.path.join(self.basePath, "src/main/resources/pictures/userDefault.png"):
+                if profilePictureDeletion != "src/main/resources/pictures/userDefault.png":
                     try:
-                        os.remove(profilePictureDeletion)
+                        os.remove(os.path.join(self.basePath, profilePictureDeletion))
                         logger.info("Profilkép törlésre került!")
                     except OSError as e:
                         errorMessage(f"Hiba: {e}")
