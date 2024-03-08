@@ -181,7 +181,8 @@ class LearnWindowUI(QMainWindow):
 
         if not self.resultsWindow:
             self.resultsWindow = resultsScreen.ResultsScreenUI(
-                self.basePath, self.info, self.parent, self.grandParent, self.theme, ["pass"]
+                self.basePath, self.info, self.parent, self.grandParent, self.theme,
+                self.arrayOfQuestions, self.arrayOfAnswers
             )
 
         self.resultsWindow.show()

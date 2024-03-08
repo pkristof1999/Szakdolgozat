@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel
 
 
 class SolutionScreenForEmailUI(QMainWindow):
-    def __init__(self, basePath, parent, grandParent, greatGrandParent, theme, arrayOfSolutions):
+    def __init__(self, basePath, parent, grandParent, greatGrandParent, theme, arrayOfQuestions, arrayOfSolutions):
         super(SolutionScreenForEmailUI, self).__init__()
 
         self.theme = "default"
@@ -22,8 +22,10 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.parent = parent
         self.grandParent = grandParent
         self.greatGrandParent = greatGrandParent
+        self.arrayOfQuestions = arrayOfQuestions
         self.arrayOfSolutions = arrayOfSolutions
 
+        print(arrayOfQuestions)
         print(arrayOfSolutions)
 
         self.questionField = self.findChild(QLabel, "questionField")
