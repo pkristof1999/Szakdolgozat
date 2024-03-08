@@ -286,7 +286,7 @@ class MainWindowUI(QMainWindow):
             if scene.windowTitle() != "Főképernyő":
                 scene.hide()
 
-    def exitWindow(self, event, thread1=None, thread2=None):
+    def exitWindow(self, event, thread1=None, terminateThread1=None, thread2=None, terminateThread2=None):
         self.exitResult = False
         if self.username == "Vendég":
             self.openLogOutExitWindow("Biztosan kilép az alkalmazásból?\n"
@@ -303,9 +303,11 @@ class MainWindowUI(QMainWindow):
 
         if self.exitResult:
             if thread1 is not None:
-                thread1.set()
+                terminateThread1.set()
+                thread1.join()
             if thread2 is not None:
-                thread2.set()
+                terminateThread2.set()
+                thread2.join()
             logger.info("Kilépés az alkalmazásból!")
             event.accept()
         else:

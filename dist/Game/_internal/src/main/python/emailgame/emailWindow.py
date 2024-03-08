@@ -132,7 +132,7 @@ class EmailWindowUI(QMainWindow):
 
             self.backButton.clicked.connect(self.closeEmailWindow)
 
-            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread)
+            self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread, self.terminateTimerThread)
 
             self.answerButtonStyleSheet = self.maliciousButton.styleSheet()
 

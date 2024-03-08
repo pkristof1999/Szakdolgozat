@@ -90,7 +90,11 @@ class QuizWindowUI(QMainWindow):
                     else "rgb(50, 150, 50)" if self.theme == "green" \
                     else "rgb(120, 120, 220)"
 
-                self.closeEvent = lambda event: parent.exitWindow(event, self.timerThread, self.quizTimerThread)
+                self.closeEvent = lambda event: parent.exitWindow(
+                    event,
+                    self.timerThread, self.terminateThread,
+                    self.quizTimerThread, self.terminateQuizThread
+                )
 
             except Exception as e:
                 errorMessage(e)

@@ -92,7 +92,7 @@ class LearnWindowUI(QMainWindow):
             self.backButton.clicked.connect(self.backButtonClicked)
             self.nextButton.clicked.connect(self.nextButtonClicked)
 
-            self.closeEvent = lambda event: grandParent.exitWindow(event, self.timerThread)
+            self.closeEvent = lambda event: grandParent.exitWindow(event, self.timerThread, self.terminateTimerThread)
 
             self.loadCurrentPage()
 
@@ -138,6 +138,7 @@ class LearnWindowUI(QMainWindow):
         for i in range(self.numberOfDataPages + 1):
             if i == self.indexOfCurrentPage:
                 pathToDataPage = self.learnContent[dataPageKey]
+                pathToDataPage = os.path.join(self.basePath, pathToDataPage)
 
         try:
             with open(pathToDataPage, 'r', encoding='utf-8') as htmlFile:
