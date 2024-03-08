@@ -6,7 +6,9 @@ src/main/python/learninggame/__pycache__
 src/main/python/quizgame/__pycache__/
 src/main/python/emailgame/__pycache__/
 src/main/log
-dist/Game/_internal
+dist/Game/_internal/userdata
+dist/Game/_internal/src
+dist/Game/src
 userdata/profiles/profilepicture
 userdata/profiles/profiles.json
 Munkaterv_JN8PXT.pdf
