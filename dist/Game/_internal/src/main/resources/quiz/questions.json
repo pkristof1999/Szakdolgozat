@@ -1,0 +1,90 @@
+{
+    "question1": {
+        "question": "Teszt1",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question2": {
+        "question": "Teszt2",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question3": {
+        "question": "Teszt3",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question4": {
+        "question": "Teszt4",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question5": {
+        "question": "Teszt5",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question6": {
+        "question": "Teszt6",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question7": {
+        "question": "Teszt7",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question8": {
+        "question": "Teszt8",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question9": {
+        "question": "Teszt9",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question10": {
+        "question": "Teszt10",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    },
+    "question11": {
+        "question": "Teszt11",
+        "rightAnswer": "Teszt1",
+        "answer1": "Teszt1",
+        "answer2": "Teszt2",
+        "answer3": "Teszt3",
+        "answer4": "Teszt4"
+    }
+}

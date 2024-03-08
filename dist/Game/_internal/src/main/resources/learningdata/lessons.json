@@ -1,0 +1,226 @@
+{
+    "V\u00edrusok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "F\u00e9rgek" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "Tr\u00f3jai V\u00edrusok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "K\u00e9mprogramok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "Rekl\u00e1mprogramok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "Zsarol\u00f3v\u00edrusok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "Rootkitek" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    },
+    "Billenty\u0171napl\u00f3z\u00f3 Programok" : {
+        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "questions" : {
+            "questions1": {
+                "question" : "testQuestion1",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions2": {
+                "question" : "testQuestion2",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            },
+            "questions3": {
+                "question" : "testQuestion3",
+                "answer1" : "testAnswer1",
+                "answer2" : "testAnswer2",
+                "answer3" : "testAnswer3",
+                "goodAnswer" : "testAnswer1"
+            }
+        }
+    }
+}
