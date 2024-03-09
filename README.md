@@ -1,7 +1,7 @@
 <div>
     <h1>Futtatáshoz szükséges csomagok:</h1>
     <h3>pip3 install pyqt6 pyqt6-tools bcrypt pyinstaller</h3>
-    <h3>exe létrehozása: pyinstaller --onefile --add-data ".\src;src" --add-data ".\userdata;userdata" --add-data ".\Game.py;." --icon "icon.ico" --noconsole --distpath . Game.py</h3>
+    <h3>exe létrehozása: pyinstaller --add-data ".\src;src" --add-data ".\userdata;userdata" --add-data ".\Game.py;." --icon "icon.ico" --noconsole Game.py</h3>
 <div>
     <h1><u>Szakdolgozat</u></h1>
     <p>Játékos oktatóprogram fejlesztése</p>
