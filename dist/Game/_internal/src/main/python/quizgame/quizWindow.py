@@ -26,7 +26,9 @@ class QuizWindowUI(QMainWindow):
 
                 self.theme = theme
                 self.setWindowIcon(QIcon(os.path.join(self.basePath, "src/main/resources/icon/icon.ico")))
-                loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}QuizScreen.ui"), self)
+                loadUi(os.path.join(
+                    self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}QuizScreen.ui"), self
+                )
 
                 self.setFixedSize(self.size())
 
@@ -54,6 +56,7 @@ class QuizWindowUI(QMainWindow):
                 self.questionBank = []
                 self.questionIndex = 0
                 self.previousQuestions = []
+                self.arrayOfSolutions = []
 
                 self.goodAnswers = 0
 
@@ -179,6 +182,7 @@ class QuizWindowUI(QMainWindow):
                 if self.questionIndex < 10:
                     for button in self.answerButtonGroup.buttons():
                         if button.isChecked():
+                            self.arrayOfSolutions.append(button.text())
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
@@ -201,6 +205,7 @@ class QuizWindowUI(QMainWindow):
                 else:
                     for button in self.answerButtonGroup.buttons():
                         if button.isChecked():
+                            self.arrayOfSolutions.append(button.text())
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
                             if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
                                 self.goodAnswers += 1
@@ -260,7 +265,8 @@ class QuizWindowUI(QMainWindow):
 
                     if not self.resultsWindow:
                         self.resultsWindow = resultsScreen.ResultsScreenUI(
-                            self.basePath, info, self, self.parent, self.theme, self.questionBank, "quizGame"
+                            self.basePath, info, self, self.parent, self.theme,
+                            self.questionBank, self.arrayOfSolutions, "quizMode"
                         )
 
                     self.resultsWindow.show()

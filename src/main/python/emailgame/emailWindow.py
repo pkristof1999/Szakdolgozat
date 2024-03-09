@@ -256,6 +256,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadImage(self, imagePath):
         try:
+            imagePath = os.path.join(self.basePath, imagePath)
             pixmap = QPixmap(imagePath)
 
             if not os.path.exists(imagePath):

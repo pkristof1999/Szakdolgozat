@@ -11,7 +11,10 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 class ResultsScreenUI(QMainWindow):
     try:
-        def __init__(self, basePath, info, parent, grandParent, theme, arrayOfSolutions, typeOfGameMode = None):
+        def __init__(
+                self, basePath, info, parent, grandParent, theme,
+                arrayOfQuestions, arrayOfSolutions, typeOfGameMode = None
+        ):
             super(ResultsScreenUI, self).__init__()
 
             self.theme = theme
@@ -25,6 +28,7 @@ class ResultsScreenUI(QMainWindow):
             self.setFixedSize(self.size())
             self.parent = parent
             self.grandParent = grandParent
+            self.arrayOfQuestions = arrayOfQuestions
             self.arrayOfSolutions = arrayOfSolutions
             self.typeOfGameMode = typeOfGameMode
             self.pathToQuestions = (
@@ -42,7 +46,7 @@ class ResultsScreenUI(QMainWindow):
             self.infoLabel.setText(info.replace("  ", ""))
             self.infoLabel.setWordWrap(True)
             self.nextButton.clicked.connect(self.nextButtonClick)
-            # self.solutionButton.clicked.connect(lambda: self.openSolutions(parent, grandParent, typeOfGameMode))
+            self.solutionButton.clicked.connect(lambda: self.openSolutions(parent, grandParent, typeOfGameMode))
             self.closeEvent = grandParent.exitWindow
 
         def nextButtonClick(self):
@@ -50,19 +54,20 @@ class ResultsScreenUI(QMainWindow):
             self.grandParent.show()
 
         def openSolutions(self, parent, grandParent, typeOfGameMode):
-            pass
-            """if not self.solutionWindow:
-                if typeOfGameMode == "emailGame":
+            if not self.solutionWindow:
+                if typeOfGameMode == "emailMode":
                     self.solutionWindow = solutionScreenForEmail.SolutionScreenForEmailUI(
-                        self.basePath, self, parent, grandParent, "default", self.arrayOfSolutions
+                        self.basePath, self, parent, grandParent, "default",
+                        self.arrayOfQuestions, self.arrayOfSolutions
                     )
                 else:
                     self.solutionWindow = solutionScreen.SolutionScreenUI(
-                        self.basePath, self, parent, grandParent, "default", self.arrayOfSolutions
+                        self.basePath, self, parent, grandParent, "default",
+                        self.arrayOfQuestions, self.arrayOfSolutions, typeOfGameMode
                     )
 
             self.solutionWindow.show()
-            self.hide()"""
+            self.hide()
 
     except Exception as e:
         errorMessage(e)

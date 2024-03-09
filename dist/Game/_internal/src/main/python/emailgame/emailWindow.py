@@ -123,6 +123,7 @@ class EmailWindowUI(QMainWindow):
             self.emailIndex = 0
             self.previousEmails = []
             self.pointsEarned = 0
+            self.givenAnswers = []
 
             self.terminateTimerThread = threading.Event()
             self.timerThread = None
@@ -255,6 +256,7 @@ class EmailWindowUI(QMainWindow):
 
     def loadImage(self, imagePath):
         try:
+            imagePath = os.path.join(self.basePath, imagePath)
             pixmap = QPixmap(imagePath)
 
             if not os.path.exists(imagePath):
@@ -423,6 +425,7 @@ class EmailWindowUI(QMainWindow):
 
                 getEmailMalicious = getattr(self, getEmailMaliciousName)
                 givenEmailMalicious = getattr(self, givenEmailMaliciousName)
+                self.givenAnswers.append(givenEmailMalicious)
 
                 if getEmailMalicious != givenEmailMalicious:
                     numberOfRightAnswers += 1
@@ -461,7 +464,8 @@ class EmailWindowUI(QMainWindow):
 
             if not self.resultsWindow:
                 self.resultsWindow = resultsScreen.ResultsScreenUI(
-                    self.basePath, info, self, self.parent, self.theme, self.emailBank, "emailGame")
+                    self.basePath, info, self, self.parent, self.theme,
+                    self.emailBank, self.givenAnswers, "emailMode")
 
             self.resultsWindow.show()
             self.hide()
