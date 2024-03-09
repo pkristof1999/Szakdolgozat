@@ -23,7 +23,7 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>0</y>
       <width>741</width>
       <height>621</height>
@@ -69,7 +69,7 @@
       <string>Következő</string>
      </property>
     </widget>
-    <widget class="QLabel" name="questionField">
+    <widget class="QLabel" name="emailFrame">
      <property name="enabled">
       <bool>true</bool>
      </property>

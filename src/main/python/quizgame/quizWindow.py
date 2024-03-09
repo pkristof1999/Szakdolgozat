@@ -266,7 +266,7 @@ class QuizWindowUI(QMainWindow):
                     if not self.resultsWindow:
                         self.resultsWindow = resultsScreen.ResultsScreenUI(
                             self.basePath, info, self, self.parent, self.theme,
-                            self.questionBank, self.arrayOfSolutions, "quizGame"
+                            self.questionBank, self.arrayOfSolutions, "quizMode"
                         )
 
                     self.resultsWindow.show()

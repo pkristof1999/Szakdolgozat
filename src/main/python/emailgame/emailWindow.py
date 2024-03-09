@@ -464,7 +464,7 @@ class EmailWindowUI(QMainWindow):
             if not self.resultsWindow:
                 self.resultsWindow = resultsScreen.ResultsScreenUI(
                     self.basePath, info, self, self.parent, self.theme,
-                    self.emailBank, self.givenAnswers, "emailGame")
+                    self.emailBank, self.givenAnswers, "emailMode")
 
             self.resultsWindow.show()
             self.hide()
