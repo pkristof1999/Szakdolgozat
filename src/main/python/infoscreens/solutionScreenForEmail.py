@@ -55,9 +55,9 @@ class SolutionScreenForEmailUI(QMainWindow):
 
         self.answerField.setWordWrap(True)
 
-        self.backButton.clicked.connect(lambda: self.backButtonClick(parent))
+        self.backButton.clicked.connect(lambda: self.backButtonClick(greatGrandParent))
         self.previousButton.clicked.connect(self.previousButtonClick)
-        self.nextButton.clicked.connect(lambda: self.nextButtonClick(parent))
+        self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
         self.loadFirstQuestion()
 
@@ -65,16 +65,50 @@ class SolutionScreenForEmailUI(QMainWindow):
 
     def loadFirstQuestion(self):
         self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[0]))
+        self.answerField.setText(f"""
+        Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[0])}
+        A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[0])}
+        Az indoklás: {self.sortedArrayOfReasons[0]}
+                                    """)
+
+    def translateRightAnswers(self, answer):
+        return "Hiteles" if not answer else "Káros"
+
+    def translateSolutions(self, solution):
+        return "Hiteles" if solution else "Káros"
 
     def previousButtonClick(self):
-        pass
+        if self.questionIndex > 0:
+            self.questionIndex -= 1
 
-    def nextButtonClick(self, parent):
-        pass
+        self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[self.questionIndex]))
+        self.answerField.setText(f"""
+        Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
+        A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
+        Az indoklás: {self.sortedArrayOfReasons[0]}
+                                    """)
 
-    def backButtonClick(self, parent):
+        self.checkNextButtonState()
+
+    def nextButtonClick(self, greatGrandParent):
+        self.questionIndex += 1
+        if self.questionIndex < len(self.arrayOfSolutions):
+            self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[self.questionIndex]))
+            self.answerField.setText(f"""
+            Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
+            A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
+            Az indoklás: {self.sortedArrayOfReasons[0]}
+                                        """)
+
+        if self.nextButtonExitState:
+            self.hide()
+            greatGrandParent.show()
+
+        self.checkNextButtonState()
+
+    def backButtonClick(self, greatGrandParent):
         self.hide()
-        parent.show()
+        greatGrandParent.show()
 
     def checkNextButtonState(self):
         if self.questionIndex == len(self.arrayOfSolutions) - 1:

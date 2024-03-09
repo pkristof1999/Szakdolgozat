@@ -45,9 +45,9 @@
         "badge02": 0,
         "badge03": 0,
         "badge04": 0,
-        "badge05": 0,
-        "badge06": 0,
-        "Score": 100,
+        "badge05": 1,
+        "badge06": 1,
+        "Score": 1350,
         "Theme": "default",
         "LearnMessageShow": false
     }

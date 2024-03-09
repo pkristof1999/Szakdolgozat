@@ -54,9 +54,9 @@ class SolutionScreenUI(QMainWindow):
         self.questionField.setWordWrap(True)
         self.answerField.setWordWrap(True)
 
-        self.backButton.clicked.connect(lambda: self.backButtonClick(parent))
+        self.backButton.clicked.connect(lambda: self.backButtonClick(greatGrandParent))
         self.previousButton.clicked.connect(self.previousButtonClick)
-        self.nextButton.clicked.connect(lambda: self.nextButtonClick(parent))
+        self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
         self.loadFirstQuestion()
 
@@ -82,10 +82,9 @@ class SolutionScreenUI(QMainWindow):
 
         self.checkNextButtonState()
 
-    def nextButtonClick(self, parent):
+    def nextButtonClick(self, greatGrandParent):
         self.questionIndex += 1
         if self.questionIndex < len(self.arrayOfSolutions):
-            self.nextButton.setText("Következő")
             self.questionField.setText(self.sortedArrayOfQuestions[self.questionIndex])
             self.answerField.setText(f"""
             Helyes válasz a kérdésre: {self.sortedArrayOfRightAnswers[self.questionIndex]}
@@ -94,13 +93,13 @@ class SolutionScreenUI(QMainWindow):
 
         if self.nextButtonExitState:
             self.hide()
-            parent.show()
+            greatGrandParent.show()
 
         self.checkNextButtonState()
 
-    def backButtonClick(self, parent):
+    def backButtonClick(self, greatGrandParent):
         self.hide()
-        parent.show()
+        greatGrandParent.show()
 
     def checkNextButtonState(self):
         if self.questionIndex == len(self.arrayOfSolutions) - 1:
