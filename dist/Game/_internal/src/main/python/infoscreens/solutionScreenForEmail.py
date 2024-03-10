@@ -12,7 +12,7 @@ class SolutionScreenForEmailUI(QMainWindow):
     def __init__(self, basePath, parent, grandParent, greatGrandParent, theme, arrayOfQuestions, arrayOfSolutions):
         super(SolutionScreenForEmailUI, self).__init__()
 
-        self.theme = "default"
+        self.theme = theme
         self.basePath = basePath
 
         loadUi(os.path.join(

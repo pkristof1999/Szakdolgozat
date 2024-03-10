@@ -23473,3 +23473,381 @@ Az új jelszavak nem egyeznek!
 2024-03-09 15:57:13,234 - INFO - Jelvények sikeresen betöltve!
 2024-03-09 15:57:21,007 - INFO - Jelvények sikeresen betöltve!
 2024-03-09 15:57:24,719 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:00:12,360 - INFO - Az alkalmazás elindult!
+2024-03-10 13:00:13,676 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:00:14,954 - INFO - Email mód betöltve!
+2024-03-10 13:00:14,964 - INFO - Email játékmód megnyitása!
+2024-03-10 13:00:15,617 - INFO - Teszt19 kiválasztva.
+2024-03-10 13:00:17,000 - INFO - Teszt10 kiválasztva.
+2024-03-10 13:00:18,233 - INFO - Teszt18 kiválasztva.
+2024-03-10 13:00:19,302 - INFO - Teszt7 kiválasztva.
+2024-03-10 13:00:20,338 - INFO - Teszt13 kiválasztva.
+2024-03-10 13:00:21,349 - INFO - Teszt12 kiválasztva.
+2024-03-10 13:00:22,236 - INFO - Teszt1 kiválasztva.
+2024-03-10 13:00:23,285 - INFO - Teszt5 kiválasztva.
+2024-03-10 13:00:24,281 - INFO - Teszt20 kiválasztva.
+2024-03-10 13:00:25,138 - INFO - Teszt6 kiválasztva.
+2024-03-10 13:00:51,144 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:19:09,657 - INFO - Az alkalmazás elindult!
+2024-03-10 13:20:09,555 - INFO - Az alkalmazás elindult!
+2024-03-10 13:20:10,472 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:20:14,008 - INFO - Adatok mentve!
+2024-03-10 13:20:16,747 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-03-10 13:20:17,434 - INFO - Vírusok lecke megnyitása!
+2024-03-10 13:20:18,877 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:20:19,382 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:20:19,382 - INFO - Válaszok listája: ['testAnswer1']
+2024-03-10 13:20:20,442 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:20:20,965 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:20:20,965 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer1']
+2024-03-10 13:20:21,943 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:20:22,477 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:20:22,477 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer1', 'testAnswer1']
+2024-03-10 13:20:31,252 - INFO - Adatok mentve!
+2024-03-10 13:20:32,218 - ERROR - D:\Files\Projects\Szakdolgozat\src/main/resources/ui/dark/darkChooseLearning.ui: invalid Qt Designer file: [Errno 2] No such file or directory: 'D:\\Files\\Projects\\Szakdolgozat\\src/main/resources/ui/dark/darkChooseLearning.ui'
+2024-03-10 13:20:59,270 - INFO - Az alkalmazás elindult!
+2024-03-10 13:21:00,606 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:21:07,540 - INFO - Adatok mentve!
+2024-03-10 13:21:08,904 - ERROR - D:\Files\Projects\Szakdolgozat\src/main/resources/ui/dark/darkChooseLearning.ui: invalid Qt Designer file: [Errno 2] No such file or directory: 'D:\\Files\\Projects\\Szakdolgozat\\src/main/resources/ui/dark/darkChooseLearning.ui'
+2024-03-10 13:24:28,502 - INFO - Az alkalmazás elindult!
+2024-03-10 13:24:30,156 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:24:33,811 - INFO - Adatok mentve!
+2024-03-10 13:24:34,733 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-03-10 13:24:35,694 - INFO - Vírusok lecke megnyitása!
+2024-03-10 13:24:37,879 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:24:38,346 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:24:38,346 - INFO - Válaszok listája: ['testAnswer1']
+2024-03-10 13:24:39,264 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:24:39,653 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:24:39,653 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer1']
+2024-03-10 13:24:40,470 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:24:41,112 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:24:41,113 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer1', 'testAnswer1']
+2024-03-10 13:24:49,114 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:24:49,546 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:49,915 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:50,218 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:50,822 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:51,142 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:51,923 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:52,231 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:52,569 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:52,853 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:53,156 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:53,454 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:54,630 - ERROR - Nem választott választ!
+2024-03-10 13:24:55,615 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:56,262 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:24:56,647 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:57,788 - ERROR - Nem választott választ!
+2024-03-10 13:24:59,041 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:24:59,968 - ERROR - Nem választott választ!
+2024-03-10 13:25:01,357 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:01,826 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:02,206 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:02,630 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:02,972 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:03,347 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:03,685 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:04,086 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:07,377 - INFO - Jelvények sikeresen betöltve!
+2024-03-10 13:25:07,380 - INFO - Jelvények sikeresen betöltve!
+2024-03-10 13:25:09,790 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:25:10,370 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:10,789 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:11,079 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:11,735 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:12,049 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:12,420 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:12,745 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:13,088 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:13,404 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:13,783 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:14,056 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:14,446 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:14,736 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:15,088 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:15,414 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:15,739 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:16,044 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:16,374 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:16,640 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:25:16,989 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:25:25,694 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:26:35,402 - INFO - Az alkalmazás elindult!
+2024-03-10 13:26:36,410 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:26:37,345 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:26:38,180 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:26:39,595 - ERROR - Nem választott választ!
+2024-03-10 13:26:44,656 - ERROR - Nem választott választ!
+2024-03-10 13:26:45,975 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:26:47,475 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:28:45,174 - INFO - Az alkalmazás elindult!
+2024-03-10 13:28:46,175 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:28:47,219 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:28:47,657 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:28:48,400 - ERROR - Nem választott választ!
+2024-03-10 13:28:50,326 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:28:51,174 - ERROR - Nem választott választ!
+2024-03-10 13:28:56,752 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:28:58,171 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:29:09,920 - INFO - Az alkalmazás elindult!
+2024-03-10 13:29:10,952 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:29:11,935 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:29:12,538 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:29:14,331 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:29:19,556 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:29:49,086 - INFO - Az alkalmazás elindult!
+2024-03-10 13:29:50,053 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:29:50,999 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:29:51,539 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:29:52,909 - ERROR - Nem választott választ!
+2024-03-10 13:29:54,864 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:29:56,187 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:29:57,394 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:29:58,624 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:30:00,009 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:30:36,051 - INFO - Az alkalmazás elindult!
+2024-03-10 13:30:37,279 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:30:38,138 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:30:40,206 - ERROR - Nem választott választ!
+2024-03-10 13:30:42,017 - ERROR - Nem választott választ!
+2024-03-10 13:30:44,450 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:31:24,497 - INFO - Az alkalmazás elindult!
+2024-03-10 13:31:25,528 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:31:26,348 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:31:26,795 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:26,795 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:26,795 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:26,795 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:28,571 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:31:28,571 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:31:28,571 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:31:28,571 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:31:29,468 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:29,469 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:29,469 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:29,469 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:30,320 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:31:31,220 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:31,221 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:31,221 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:31,221 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:32,229 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:32,229 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:32,229 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:32,229 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:33,776 - ERROR - Nem választott választ!
+2024-03-10 13:31:39,017 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:39,017 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:39,017 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:39,017 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:40,676 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:31:40,676 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:31:40,677 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:31:40,677 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:31:41,357 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:41,358 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:41,358 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:41,358 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:31:41,718 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:41,719 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:41,719 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:41,719 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:31:43,101 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:31:44,558 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:32:32,272 - INFO - Az alkalmazás elindult!
+2024-03-10 13:32:33,258 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:32:34,148 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:32:34,665 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:32:36,789 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:32:43,680 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:32:45,145 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:33:04,759 - INFO - Az alkalmazás elindult!
+2024-03-10 13:33:05,818 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:33:06,635 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:33:07,121 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:07,808 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:08,681 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:10,047 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:33:10,647 - INFO - Teszt2 megjelölve válaszként.
+2024-03-10 13:33:11,208 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-03-10 13:33:12,149 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:12,398 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:12,790 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:13,257 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:13,652 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:13,990 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:14,740 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:33:19,177 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:33:20,527 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:33:43,085 - INFO - Az alkalmazás elindult!
+2024-03-10 13:33:44,277 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:33:45,224 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:33:45,677 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:47,248 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:33:47,727 - ERROR - Nem választott választ!
+2024-03-10 13:33:49,375 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:49,555 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:49,731 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:49,896 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:50,051 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:50,204 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:50,643 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-03-10 13:33:52,071 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:33:52,512 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:33:52,949 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-03-10 13:33:54,844 - INFO - Teszt4 megjelölve válaszként.
+2024-03-10 13:33:55,220 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-03-10 13:33:55,526 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:55,870 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:33:56,260 - INFO - Teszt3 megjelölve válaszként.
+2024-03-10 13:33:56,648 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-03-10 13:33:57,365 - INFO - Kvíz játékmód bezárása!
+2024-03-10 13:33:58,508 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:33:58,941 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,152 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,305 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,469 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,631 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,781 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:33:59,953 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:00,592 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:00,944 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:01,346 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:01,689 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:02,056 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:02,395 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:02,566 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:03,099 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:03,492 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:03,858 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:04,204 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:04,595 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:04,879 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:05,049 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:05,463 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:05,776 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:06,191 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:06,489 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:06,673 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:07,108 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:07,469 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:34:07,812 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:34:20,819 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:34:35,457 - INFO - Az alkalmazás elindult!
+2024-03-10 13:34:36,836 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:34:37,893 - INFO - Email mód betöltve!
+2024-03-10 13:34:37,902 - INFO - Email játékmód megnyitása!
+2024-03-10 13:34:47,024 - INFO - Teszt6 kiválasztva.
+2024-03-10 13:34:48,434 - INFO - Teszt19 kiválasztva.
+2024-03-10 13:34:49,942 - INFO - Teszt10 kiválasztva.
+2024-03-10 13:34:50,900 - INFO - Teszt16 kiválasztva.
+2024-03-10 13:34:52,138 - INFO - Teszt20 kiválasztva.
+2024-03-10 13:34:53,475 - INFO - Teszt16 kiválasztva.
+2024-03-10 13:34:54,393 - INFO - Teszt7 kiválasztva.
+2024-03-10 13:34:55,254 - INFO - Teszt13 kiválasztva.
+2024-03-10 13:34:56,235 - INFO - Teszt1 kiválasztva.
+2024-03-10 13:34:57,250 - INFO - Teszt9 kiválasztva.
+2024-03-10 13:34:57,948 - INFO - Teszt11 kiválasztva.
+2024-03-10 13:35:08,915 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:38:20,931 - INFO - Az alkalmazás elindult!
+2024-03-10 13:38:22,183 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:38:23,907 - INFO - Email mód betöltve!
+2024-03-10 13:38:23,918 - INFO - Email játékmód megnyitása!
+2024-03-10 13:38:58,297 - INFO - Teszt13 kiválasztva.
+2024-03-10 13:38:59,704 - INFO - Teszt20 kiválasztva.
+2024-03-10 13:39:00,967 - INFO - Teszt15 kiválasztva.
+2024-03-10 13:39:02,069 - INFO - Teszt8 kiválasztva.
+2024-03-10 13:39:03,342 - INFO - Teszt1 kiválasztva.
+2024-03-10 13:39:04,304 - INFO - Teszt12 kiválasztva.
+2024-03-10 13:39:05,208 - INFO - Teszt19 kiválasztva.
+2024-03-10 13:39:06,172 - INFO - Teszt10 kiválasztva.
+2024-03-10 13:39:06,951 - INFO - Teszt4 kiválasztva.
+2024-03-10 13:39:07,858 - INFO - Teszt11 kiválasztva.
+2024-03-10 13:39:26,139 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:41:37,206 - INFO - Az alkalmazás elindult!
+2024-03-10 13:41:38,477 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:41:42,324 - INFO - Adatok mentve!
+2024-03-10 13:41:43,309 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-03-10 13:41:43,883 - INFO - Vírusok lecke megnyitása!
+2024-03-10 13:41:45,136 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:41:45,542 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:41:45,542 - INFO - Válaszok listája: ['testAnswer1']
+2024-03-10 13:41:46,633 - INFO - testAnswer2 megjelölve válaszként.
+2024-03-10 13:41:47,003 - INFO - testAnswer2 sikeresen leadva válaszként!
+2024-03-10 13:41:47,003 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer2']
+2024-03-10 13:41:47,915 - INFO - testAnswer1 megjelölve válaszként.
+2024-03-10 13:41:48,318 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-03-10 13:41:48,318 - INFO - Válaszok listája: ['testAnswer1', 'testAnswer2', 'testAnswer1']
+2024-03-10 13:41:58,471 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:47:40,281 - INFO - Az alkalmazás elindult!
+2024-03-10 13:47:42,158 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:47:44,986 - INFO - Adatok mentve!
+2024-03-10 13:47:45,947 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:47:46,506 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:46,986 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:47,338 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:47,741 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:48,036 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:48,428 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:48,758 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:49,088 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:49,425 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:49,779 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:50,092 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:50,412 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:50,770 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:51,448 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:51,833 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:52,184 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:52,563 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:52,957 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:47:53,304 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:47:53,665 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:48:01,227 - INFO - Email mód betöltve!
+2024-03-10 13:48:01,235 - INFO - Email játékmód megnyitása!
+2024-03-10 13:48:01,891 - INFO - Teszt6 kiválasztva.
+2024-03-10 13:48:03,995 - INFO - Teszt4 kiválasztva.
+2024-03-10 13:48:05,355 - INFO - Teszt11 kiválasztva.
+2024-03-10 13:48:06,415 - INFO - Teszt13 kiválasztva.
+2024-03-10 13:48:07,721 - INFO - Teszt1 kiválasztva.
+2024-03-10 13:48:08,846 - INFO - Teszt17 kiválasztva.
+2024-03-10 13:48:09,789 - INFO - Teszt18 kiválasztva.
+2024-03-10 13:48:10,570 - INFO - Teszt2 kiválasztva.
+2024-03-10 13:48:11,965 - INFO - Teszt10 kiválasztva.
+2024-03-10 13:48:12,814 - INFO - Teszt12 kiválasztva.
+2024-03-10 13:48:22,558 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:52:26,001 - INFO - Az alkalmazás elindult!
+2024-03-10 13:52:27,252 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:52:31,912 - INFO - Adatok mentve!
+2024-03-10 13:52:34,197 - INFO - Kvíz játékmód megnyitása!
+2024-03-10 13:52:34,867 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:35,607 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:35,942 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:36,605 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:36,968 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:37,333 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:37,765 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:38,164 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:38,592 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:39,036 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:39,442 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:40,035 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:40,441 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:40,866 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:41,231 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:41,597 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:41,968 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:42,397 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:52:42,780 - INFO - Teszt1 megjelölve válaszként.
+2024-03-10 13:52:43,246 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-03-10 13:53:12,340 - INFO - Kilépés az alkalmazásból!
+2024-03-10 13:57:54,600 - INFO - Az alkalmazás elindult!
+2024-03-10 13:57:56,133 - INFO - Alap profilkép betöltésre került!
+2024-03-10 13:57:56,141 - INFO - Regisztrációs képernyő megnyitásra került!
+2024-03-10 13:57:57,075 - INFO - Visszalépés az indítóképernyőre.
+2024-03-10 13:57:57,811 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-03-10 13:57:58,983 - INFO - Visszalépés az indítóképernyőre.
+2024-03-10 13:58:00,713 - INFO - Továbblépés a fő felületre.
+2024-03-10 13:58:04,338 - INFO - Kilépés az alkalmazásból!

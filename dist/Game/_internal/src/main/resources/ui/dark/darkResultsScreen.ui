@@ -37,39 +37,6 @@
     font-weight: bold;
 }</string>
     </property>
-    <widget class="QPushButton" name="nextButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>220</y>
-       <width>151</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Corbel</family>
-       <pointsize>-1</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">* {
-	background-color: rgb(70, 70, 100);
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: whitesmoke;
-}
-
-*:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
-}</string>
-     </property>
-     <property name="text">
-      <string>Kezdőképernyő</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="infoLabel">
      <property name="enabled">
       <bool>true</bool>
@@ -112,6 +79,72 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="nextButton">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>220</y>
+       <width>151</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Kezdőképernyő</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="solutionButton">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>220</y>
+       <width>151</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Corbel</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
+}
+
+*:hover {
+	background-color: rgb(120, 120, 220);
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Megoldókulcs</string>
      </property>
     </widget>
    </widget>

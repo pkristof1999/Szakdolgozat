@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
+    <width>730</width>
     <height>654</height>
    </rect>
   </property>
@@ -95,6 +95,7 @@
       <string notr="true">* {
 	border: 2px solid grey;
 	border-radius: 10px;
+	background-color: white;
 	font-size: 12pt;
 	color: grey;
 }</string>

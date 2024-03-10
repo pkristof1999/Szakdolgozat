@@ -120,6 +120,9 @@ class QuizWindowUI(QMainWindow):
                                          }}
                                          """)
 
+                else:
+                    button.setChecked(True)
+
             if selectedButton.isChecked():
                 logger.info(f"{selectedButton.text()} megjelölve válaszként.")
                 selectedButton.setStyleSheet(f"""
