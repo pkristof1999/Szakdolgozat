@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>730</width>
-    <height>654</height>
+    <width>691</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
+	background-color: black;
 	font-size: 16pt;
 	color: grey;
 }</string>
@@ -23,15 +24,15 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>-10</x>
+      <x>0</x>
       <y>0</y>
-      <width>741</width>
-      <height>621</height>
+      <width>691</width>
+      <height>481</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: black;
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -39,8 +40,8 @@
     <widget class="QPushButton" name="nextButton">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>570</y>
+       <x>420</x>
+       <y>420</y>
        <width>141</width>
        <height>32</height>
       </rect>
@@ -54,22 +55,22 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
       <string>Következő</string>
      </property>
     </widget>
-    <widget class="QLabel" name="emailFrame">
+    <widget class="QLabel" name="questionField">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -77,8 +78,8 @@
       <rect>
        <x>190</x>
        <y>20</y>
-       <width>531</width>
-       <height>361</height>
+       <width>471</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="font">
@@ -93,11 +94,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	border: 2px solid grey;
+	border: 2px solid yellow;
 	border-radius: 10px;
-	background-color: white;
 	font-size: 12pt;
-	color: grey;
+	color: white;
 }</string>
      </property>
      <property name="frameShape">
@@ -119,8 +119,8 @@
     <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>570</y>
+       <x>120</x>
+       <y>420</y>
        <width>141</width>
        <height>32</height>
       </rect>
@@ -134,15 +134,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -152,8 +152,8 @@
     <widget class="QPushButton" name="previousButton">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>570</y>
+       <x>270</x>
+       <y>420</y>
        <width>141</width>
        <height>32</height>
       </rect>
@@ -167,15 +167,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -185,27 +185,37 @@
     <widget class="QLabel" name="questionLabel">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>160</y>
+       <x>68</x>
+       <y>60</y>
        <width>101</width>
        <height>71</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: white;
+}</string>
+     </property>
      <property name="text">
-      <string>Email:</string>
+      <string>Kérdés:</string>
      </property>
     </widget>
     <widget class="QLabel" name="answerLabel">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>430</y>
+       <x>70</x>
+       <y>240</y>
        <width>101</width>
        <height>71</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: white;
+}</string>
+     </property>
      <property name="text">
-      <string>Megoldás:</string>
+      <string>Válasz:</string>
      </property>
     </widget>
     <widget class="QLabel" name="answerField">
@@ -215,8 +225,8 @@
      <property name="geometry">
       <rect>
        <x>190</x>
-       <y>390</y>
-       <width>531</width>
+       <y>200</y>
+       <width>471</width>
        <height>151</height>
       </rect>
      </property>
@@ -232,10 +242,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	border: 2px solid grey;
+	border: 2px solid yellow;
 	border-radius: 10px;
 	font-size: 12pt;
-	color: grey;
+	color: white;
 }</string>
      </property>
      <property name="frameShape">

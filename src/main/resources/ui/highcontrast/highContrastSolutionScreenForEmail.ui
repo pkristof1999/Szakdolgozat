@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
+	background-color: black;
 	font-size: 16pt;
 	color: grey;
 }</string>
@@ -31,7 +32,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: black;
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -54,15 +55,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -93,7 +94,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	border: 2px solid grey;
+	border: 2px solid yellow;
 	border-radius: 10px;
 	background-color: white;
 	font-size: 12pt;
@@ -134,15 +135,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -167,15 +168,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	border: 2px solid #8f8f91;
+	background-color: rgb(50, 50, 50);
+	border: 2px solid yellow;
 	border-radius: 10px;
-	color: grey;
+	color: white;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: rgb(20, 20, 20);
+	color: yellow;
 }</string>
      </property>
      <property name="text">
@@ -191,6 +192,11 @@
        <height>71</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: white;
+}</string>
+     </property>
      <property name="text">
       <string>Email:</string>
      </property>
@@ -203,6 +209,11 @@
        <width>101</width>
        <height>71</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: white;
+}</string>
      </property>
      <property name="text">
       <string>Megoldás:</string>
@@ -232,10 +243,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	border: 2px solid grey;
+	border: 2px solid yellow;
 	border-radius: 10px;
 	font-size: 12pt;
-	color: grey;
+	color: white;
 }</string>
      </property>
      <property name="frameShape">

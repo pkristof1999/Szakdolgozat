@@ -129,7 +129,7 @@ class EmailWindowUI(QMainWindow):
             self.timerThread = None
             self.timeSpent = 0
 
-            self.startEmailTimer(self.timeSpent)
+            self.isTimerRunning = False
 
             self.backButton.clicked.connect(self.closeEmailWindow)
 
@@ -280,6 +280,9 @@ class EmailWindowUI(QMainWindow):
         self.loadImage(path)
 
         self.subjectLabel.setText(button.text())
+
+        if not self.isTimerRunning:
+            self.startEmailTimer(self.timeSpent)
 
         for i in self.emailBank:
             if i["ID"] == ID:
@@ -471,6 +474,7 @@ class EmailWindowUI(QMainWindow):
             self.hide()
 
     def startEmailTimer(self, seconds):
+        self.isTimerRunning = True
         self.terminateTimerThread.clear()
         self.timerThread = threading.Thread(target=self.timerThreadCounter, args=(seconds,))
         self.timerThread.start()

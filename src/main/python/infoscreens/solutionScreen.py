@@ -12,7 +12,7 @@ class SolutionScreenUI(QMainWindow):
     ):
         super(SolutionScreenUI, self).__init__()
 
-        self.theme = "default"
+        self.theme = theme
         self.basePath = basePath
 
         loadUi(os.path.join(self.basePath, f"src/main/resources/ui/{self.theme}/{self.theme}SolutionScreen.ui"), self)

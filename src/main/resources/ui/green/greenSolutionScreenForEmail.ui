@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
+	background-color: rgb(50, 150, 50);
 	font-size: 16pt;
 	color: grey;
 }</string>
@@ -31,7 +32,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: rgb(50, 150, 50);
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -54,14 +55,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color:  rgb(50, 150, 50);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: rgb(80, 220, 80);
 	color: white;
 }</string>
      </property>
@@ -134,14 +135,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color:  rgb(50, 150, 50);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: rgb(80, 220, 80);
 	color: white;
 }</string>
      </property>
@@ -167,14 +168,14 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color:  rgb(50, 150, 50);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
+	background-color: rgb(80, 220, 80);
 	color: white;
 }</string>
      </property>
@@ -191,6 +192,11 @@
        <height>71</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: whitesmoke;
+}</string>
+     </property>
      <property name="text">
       <string>Email:</string>
      </property>
@@ -203,6 +209,11 @@
        <width>101</width>
        <height>71</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: whitesmoke;
+}</string>
      </property>
      <property name="text">
       <string>Megoldás:</string>
@@ -235,7 +246,7 @@
 	border: 2px solid grey;
 	border-radius: 10px;
 	font-size: 12pt;
-	color: grey;
+	color: whitesmoke;
 }</string>
      </property>
      <property name="frameShape">

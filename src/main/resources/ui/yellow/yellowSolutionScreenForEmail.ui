@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
+	background-color: #FF9C00;
 	font-size: 16pt;
 	color: grey;
 }</string>
@@ -31,7 +32,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: whitesmoke;
+	background-color: #FF9C00;
     font-size: 16px;
     font-weight: bold;
 }</string>
@@ -54,15 +55,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: #FF9C00;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -134,15 +135,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: #FF9C00;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -167,15 +168,15 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
+	background-color: #FF9C00;
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: grey;
+	color: whitesmoke;
 }
 
 *:hover {
-	background-color: rgb(120, 120, 220);
-	color: white;
+	background-color: #FFF200;
+	color: #8f8f91;
 }</string>
      </property>
      <property name="text">
@@ -191,6 +192,11 @@
        <height>71</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: whitesmoke;
+}</string>
+     </property>
      <property name="text">
       <string>Email:</string>
      </property>
@@ -203,6 +209,11 @@
        <width>101</width>
        <height>71</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+	color: whitesmoke;
+}</string>
      </property>
      <property name="text">
       <string>Megoldás:</string>
@@ -235,7 +246,7 @@
 	border: 2px solid grey;
 	border-radius: 10px;
 	font-size: 12pt;
-	color: grey;
+	color: whitesmoke;
 }</string>
      </property>
      <property name="frameShape">

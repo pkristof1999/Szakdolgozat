@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">* {
-	background-color: #8f8f91;
+	background-color: black;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,10 +30,10 @@
     </property>
     <property name="styleSheet">
      <string notr="true">* {
-	background-color: white;
+	background-color: rgb(70, 70, 100);
 	border: 2px solid #8f8f91;
 	border-radius: 10px;
-	color: white;
+	color: rgb(100, 100, 200);
 	font-size: 16px;
 	font-weight: bold;
 }</string>
@@ -56,8 +56,10 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -80,12 +82,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">* {
-	background-color: rgb(100, 100, 200);
-	border: 2px solid #8f8f91;
-	border-radius: 10px;
-	color: white;
-	font-size: 16px;
-	font-weight: bold;
+	background-color: #3d3d7b;
 }</string>
      </property>
      <widget class="QPushButton" name="viruses">
@@ -106,8 +103,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -137,8 +136,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -168,8 +169,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -199,8 +202,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -230,8 +235,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -261,8 +268,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -292,8 +301,10 @@
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
@@ -324,8 +335,10 @@ Programok</string>
       </property>
       <property name="styleSheet">
        <string notr="true">* {
-	background-color: white;
-	color: grey;
+	background-color: rgb(70, 70, 100);
+	border: 2px solid #8f8f91;
+	border-radius: 10px;
+	color: whitesmoke;
 }
 
 *:hover {
