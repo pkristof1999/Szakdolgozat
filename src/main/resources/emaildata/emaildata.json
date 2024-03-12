@@ -1,21 +1,24 @@
 {
     "email1": {
         "ID": 1,
-        "subject": "Teszt1",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "subject": "Login Notification",
+        "sender": "no-reply@spotify.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesít? email a Spotify Rendszerét?l."
     },
     "email2": {
         "ID": 2,
-        "subject": "Teszt2",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
+        "subject": "Vermächtnis Übertragung",
+        "sender": "alainmiche1377@gmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/german_scam_email.png",
+        "isMalicious": true,
+        "reason": "Ez egy becsapáshoz vezet? email, ahol vélhet?en el kell küldenünk a bankkártyás adatainkat."
     },
     "email3": {
         "ID": 3,
         "subject": "Teszt3",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false,
         "reason": "reason"
@@ -23,13 +26,15 @@
     "email4": {
         "ID": 4,
         "subject": "Teszt4",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "sender": "no-reply@spotify.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesít? email a Spotify Rendszerét?l."
     },
     "email5": {
         "ID": 5,
         "subject": "Teszt5",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true,
         "reason": "reason"
@@ -37,6 +42,7 @@
     "email6": {
         "ID": 6,
         "subject": "Teszt6",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true,
         "reason": "reason"
@@ -44,13 +50,15 @@
     "email7": {
         "ID": 7,
         "subject": "Teszt7",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
-        "isMalicious": true,
-        "reason": "reason"
+        "sender": "no-reply@spotify.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "isMalicious": false,
+        "reason": "Ez egy hiteles értesít? email a Spotify Rendszerét?l."
     },
     "email8": {
         "ID": 8,
         "subject": "Teszt8",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
         "isMalicious": true,
         "reason": "reason"
@@ -58,6 +66,7 @@
     "email9": {
         "ID": 9,
         "subject": "Teszt9",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false,
         "reason": "reason"
@@ -65,76 +74,15 @@
     "email10": {
         "ID": 10,
         "subject": "Teszt10",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "sender": "no-reply@spotify.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesít? email a Spotify Rendszerét?l."
     },
     "email11": {
         "ID": 11,
         "subject": "Teszt11",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email12": {
-        "ID": 12,
-        "subject": "Teszt12",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email13": {
-        "ID": 13,
-        "subject": "Teszt13",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email14": {
-        "ID": 14,
-        "subject": "Teszt14",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email15": {
-        "ID": 15,
-        "subject": "Teszt15",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email16": {
-        "ID": 16,
-        "subject": "Teszt16",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email17": {
-        "ID": 17,
-        "subject": "Teszt17",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email18": {
-        "ID": 18,
-        "subject": "Teszt18",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email19": {
-        "ID": 19,
-        "subject": "Teszt19",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
-        "isMalicious": false,
-        "reason": "reason"
-    },
-    "email20": {
-        "ID": 20,
-        "subject": "Teszt20",
+        "sender": "",
         "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
         "isMalicious": false,
         "reason": "reason"

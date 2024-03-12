@@ -53,8 +53,6 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.solutionWindow = None
         self.label = QLabel(self.emailFrame)
 
-        self.answerField.setWordWrap(True)
-
         self.backButton.clicked.connect(lambda: self.backButtonClick(greatGrandParent))
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))

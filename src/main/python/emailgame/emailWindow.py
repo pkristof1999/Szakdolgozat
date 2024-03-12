@@ -72,6 +72,7 @@ class EmailWindowUI(QMainWindow):
 
             self.selectedButton = ""
             self.selectedEmailID = ""
+            self.senderAddress = ""
 
             self.email1Path = ""
             self.email2Path = ""
@@ -209,8 +210,8 @@ class EmailWindowUI(QMainWindow):
             emailIsMalicious = f"email{i + 1}IsMalicious"
             button = getattr(self, buttonName, None)
 
-            button.setText(self.emailBank[i]["subject"])
-            # button.setText(f"{self.emailBank[i]['subject']} - {self.emailBank[i]['isMalicious']}")
+            self.senderAddress = self.emailBank[i]["sender"]
+            button.setText(f"{self.emailBank[i]["subject"]}\n{self.senderAddress}")
             setattr(self, buttonID, self.emailBank[i]["ID"])
             setattr(self, emailPath, self.emailBank[i]["pathToEmail"])
             if self.emailBank[i]["isMalicious"]:
@@ -279,7 +280,13 @@ class EmailWindowUI(QMainWindow):
         self.buttonBehaviour("present")
         self.loadImage(path)
 
-        self.subjectLabel.setText(button.text())
+        for i in self.emailBank:
+            if i["ID"] == ID:
+                self.senderAddress = i["sender"]
+
+        subject = button.text().replace(f"\n{self.senderAddress}", "")
+
+        self.subjectLabel.setText(subject)
 
         if not self.isTimerRunning:
             self.startEmailTimer(self.timeSpent)
