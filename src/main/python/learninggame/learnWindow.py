@@ -121,7 +121,9 @@ class LearnWindowUI(QMainWindow):
     def loadLearnContentIntoArray(self, typeOfLesson):
         try:
             lessons = {}
-            with open(os.path.join(self.basePath, "src/main/resources/learningdata/lessons.json"), "r") as jsonFile:
+            with open(os.path.join(
+                    self.basePath, "src/main/resources/learningdata/lessons.json"), "r", encoding = "UTF-8"
+            ) as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lessons = json.loads(fileContents)
@@ -141,7 +143,7 @@ class LearnWindowUI(QMainWindow):
                 pathToDataPage = os.path.join(self.basePath, pathToDataPage)
 
         try:
-            with open(pathToDataPage, 'r', encoding='utf-8') as htmlFile:
+            with open(pathToDataPage, 'r', encoding = "UTF-8") as htmlFile:
                 htmlContent = htmlFile.read()
 
             self.contentLabel.setText(htmlContent)
@@ -214,7 +216,7 @@ class LearnWindowUI(QMainWindow):
             else:
                 dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
-            with open(dataPath, 'r') as jsonFile:
+            with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                 fileContents = json.load(jsonFile)
 
             percent = int(self.numberOfGoodAnswers / self.numberOfInteractiveQuestions * 100)
@@ -300,7 +302,7 @@ class LearnWindowUI(QMainWindow):
             if badge1 or badge2 or badge3:
                 self.info += """\n* Csak akkor kerül beszámításra, ha eddig nem volt meg!"""
 
-            with open(dataPath, 'w') as jsonFile:
+            with open(dataPath, 'w', encoding = "UTF-8") as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
 
         except Exception as e:

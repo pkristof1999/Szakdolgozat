@@ -54,7 +54,7 @@ class SolutionScreenUI(QMainWindow):
         self.questionField.setWordWrap(True)
         self.answerField.setWordWrap(True)
 
-        self.backButton.clicked.connect(lambda: self.backButtonClick(greatGrandParent))
+        self.backButton.clicked.connect(lambda: self.backButtonClick(parent))
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
@@ -97,9 +97,9 @@ class SolutionScreenUI(QMainWindow):
 
         self.checkNextButtonState()
 
-    def backButtonClick(self, greatGrandParent):
+    def backButtonClick(self, parent):
         self.hide()
-        greatGrandParent.show()
+        parent.show()
 
     def checkNextButtonState(self):
         if self.questionIndex == len(self.arrayOfSolutions) - 1:

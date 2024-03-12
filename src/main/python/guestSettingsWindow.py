@@ -158,7 +158,7 @@ class GuestSettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
 
                 userData = json.loads(fileContents.strip(username))
@@ -167,7 +167,7 @@ class GuestSettingsWindowUI(QMainWindow):
                 selectedTheme = translateTheme(userTheme, False)
 
             if os.path.exists(themeDataPath):
-                with open(themeDataPath, 'r') as jsonFile:
+                with open(themeDataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
 
                     if not fileContents.strip() or fileContents.strip() == "{}":
@@ -190,7 +190,7 @@ class GuestSettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
 
                 userData = json.loads(fileContents.strip(username))

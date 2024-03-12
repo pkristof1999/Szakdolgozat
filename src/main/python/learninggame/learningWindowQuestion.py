@@ -137,7 +137,9 @@ class LearningWindowQuestionUI(QMainWindow):
     def loadQuestionWithAnswersIntoArray(self):
         lesson = []
         try:
-            with open(os.path.join(self.basePath, "src/main/resources/learningdata/lessons.json"), "r") as jsonFile:
+            with open(os.path.join(
+                    self.basePath, "src/main/resources/learningdata/lessons.json"), "r", encoding = "UTF-8"
+            ) as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     lesson = json.loads(fileContents)

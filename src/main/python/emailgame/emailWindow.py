@@ -189,11 +189,13 @@ class EmailWindowUI(QMainWindow):
 
     def loadEmailsIntoArray(self):
         try:
-            with open(os.path.join(self.basePath, "src/main/resources/emaildata/emaildata.json"), "r") as jsonFile:
+            with open(os.path.join(
+                    self.basePath, "src/main/resources/emaildata/emaildata.json"), "r", encoding = "UTF-8") as jsonFile:
                 emailBank = json.load(jsonFile)
 
             shuffledEmails = list(emailBank.values())
             random.shuffle(shuffledEmails)
+            print(shuffledEmails)
 
             return shuffledEmails
 
@@ -506,7 +508,7 @@ class EmailWindowUI(QMainWindow):
             else:
                 dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
-            with open(dataPath, 'r') as jsonFile:
+            with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                 fileContents = json.load(jsonFile)
 
             if self.username in fileContents:
@@ -548,7 +550,7 @@ class EmailWindowUI(QMainWindow):
                         fileContents[self.username]["Score"] += self.pointsEarned
                     fileContents[self.username]["EmailMedal"] = 1
 
-            with open(dataPath, 'w') as jsonFile:
+            with open(dataPath, 'w', encoding = "UTF-8") as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
 
         except Exception as e:

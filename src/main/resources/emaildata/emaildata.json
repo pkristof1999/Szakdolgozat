@@ -5,23 +5,23 @@
         "sender": "no-reply@spotify.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles �rtes�t? email a Spotify Rendszer�t?l."
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email2": {
         "ID": 2,
-        "subject": "Verm�chtnis �bertragung",
+        "subject": "Vermächtnis Übertragung",
         "sender": "alainmiche1377@gmail.com",
         "pathToEmail": "src/main/resources/emaildata/emails/german_scam_email.png",
         "isMalicious": true,
-        "reason": "Ez egy becsap�shoz vezet? email, ahol v�lhet?en el kell k�lden�nk a bankk�rty�s adatainkat."
+        "reason": "Ez egy becsapáshoz vezető email, ahol vélhetően el kell küldenünk a bankkártyás adatainkat."
     },
     "email3": {
         "ID": 3,
         "subject": "Teszt3",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email4": {
         "ID": 4,
@@ -29,23 +29,23 @@
         "sender": "no-reply@spotify.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles �rtes�t? email a Spotify Rendszer�t?l."
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email5": {
         "ID": 5,
         "subject": "Teszt5",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": true,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email6": {
         "ID": 6,
         "subject": "Teszt6",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": true,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email7": {
         "ID": 7,
@@ -53,23 +53,23 @@
         "sender": "no-reply@spotify.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles �rtes�t? email a Spotify Rendszer�t?l."
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email8": {
         "ID": 8,
         "subject": "Teszt8",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_scam_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": true,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email9": {
         "ID": 9,
         "subject": "Teszt9",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email10": {
         "ID": 10,
@@ -77,14 +77,14 @@
         "sender": "no-reply@spotify.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles �rtes�t? email a Spotify Rendszer�t?l."
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     },
     "email11": {
         "ID": 11,
         "subject": "Teszt11",
         "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/example_legit_email.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "reason"
+        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
     }
 }

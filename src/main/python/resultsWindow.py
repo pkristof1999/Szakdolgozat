@@ -67,7 +67,7 @@ class ResultsUI(QMainWindow):
             dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
 
@@ -83,7 +83,7 @@ class ResultsUI(QMainWindow):
             dataPath = os.path.join(self.basePath, "userdata/profiles/guestProfile.json")
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     return existingAccounts[username]["Score"]

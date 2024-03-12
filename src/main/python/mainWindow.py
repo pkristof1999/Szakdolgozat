@@ -125,7 +125,7 @@ class MainWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     if "avatar" in existingAccounts[username]["ProfilePicturePath"]:
@@ -162,7 +162,7 @@ class MainWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
 

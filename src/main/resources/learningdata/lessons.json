@@ -1,5 +1,5 @@
 {
-    "VÌrusok" : {
+    "V√≠rusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -27,7 +27,7 @@
             }
         }
     },
-    "FÈrgek" : {
+    "F√©rgek" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -55,7 +55,7 @@
             }
         }
     },
-    "TrÛjai VÌrusok" : {
+    "Tr√≥jai V√≠rusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -83,7 +83,7 @@
             }
         }
     },
-    "KÈmprogramok" : {
+    "K√©mprogramok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -111,7 +111,7 @@
             }
         }
     },
-    "Rekl·mprogramok" : {
+    "Rekl√°mprogramok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -139,7 +139,7 @@
             }
         }
     },
-    "ZsarolÛvÌrusok" : {
+    "Zsarol√≥v√≠rusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -195,7 +195,7 @@
             }
         }
     },
-    "Billenty?naplÛzÛ Programok" : {
+    "Billenty≈±napl√≥z√≥ Programok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",

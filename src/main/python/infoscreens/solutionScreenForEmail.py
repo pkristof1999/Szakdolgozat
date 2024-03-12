@@ -53,7 +53,9 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.solutionWindow = None
         self.label = QLabel(self.emailFrame)
 
-        self.backButton.clicked.connect(lambda: self.backButtonClick(greatGrandParent))
+        self.answerField.setWordWrap(True)
+
+        self.backButton.clicked.connect(lambda: self.backButtonClick(parent))
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
@@ -83,7 +85,7 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.answerField.setText(f"""
         Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
         A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
-        Az indoklás: {self.sortedArrayOfReasons[0]}
+        Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
                                     """)
 
         self.checkNextButtonState()
@@ -95,7 +97,7 @@ class SolutionScreenForEmailUI(QMainWindow):
             self.answerField.setText(f"""
             Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
             A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
-            Az indoklás: {self.sortedArrayOfReasons[0]}
+            Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
                                         """)
 
         if self.nextButtonExitState:
@@ -104,9 +106,9 @@ class SolutionScreenForEmailUI(QMainWindow):
 
         self.checkNextButtonState()
 
-    def backButtonClick(self, greatGrandParent):
+    def backButtonClick(self, parent):
         self.hide()
-        greatGrandParent.show()
+        parent.show()
 
     def checkNextButtonState(self):
         if self.questionIndex == len(self.arrayOfSolutions) - 1:

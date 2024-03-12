@@ -5,7 +5,7 @@ from src.main.python.infoscreens.errorMessage import errorMessage
 
 def resultsDeletion(username, dataPath):
     try:
-        with open(dataPath, 'r') as jsonFile:
+        with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
             fileContents = json.load(jsonFile)
 
         if username in fileContents:
@@ -26,7 +26,7 @@ def resultsDeletion(username, dataPath):
             fileContents[username]["badge06"] = 0
             fileContents[username]["Score"] = 0
 
-            with open(dataPath, 'w') as jsonFile:
+            with open(dataPath, 'w', encoding = "UTF-8") as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
 
     except Exception as e:

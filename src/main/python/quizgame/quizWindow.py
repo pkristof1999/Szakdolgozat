@@ -153,7 +153,9 @@ class QuizWindowUI(QMainWindow):
 
         def loadQuestionsIntoArray(self):
             try:
-                with open(os.path.join(self.basePath, "src/main/resources/quiz/questions.json"), "r") as jsonFile:
+                with open(
+                        os.path.join(self.basePath, "src/main/resources/quiz/questions.json"), "r", encoding = "UTF-8"
+                ) as jsonFile:
                     questionBank = json.load(jsonFile)
 
                 shuffledQuestions = list(questionBank.values())
@@ -359,7 +361,7 @@ class QuizWindowUI(QMainWindow):
                 else:
                     dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = json.load(jsonFile)
 
                 if self.username in fileContents:
@@ -401,7 +403,7 @@ class QuizWindowUI(QMainWindow):
                             fileContents[self.username]["Score"] += self.pointsEarned
                         fileContents[self.username]["QuizMedal"] = 1
 
-                with open(dataPath, 'w') as jsonFile:
+                with open(dataPath, 'w', encoding = "UTF-8") as jsonFile:
                     json.dump(fileContents, jsonFile, indent=4)
 
             except Exception as e:

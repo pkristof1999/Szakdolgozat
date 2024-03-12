@@ -1,9 +1,9 @@
 {
   "Themes": {
-    "default" : "Alap Kék",
-    "dark": "Alap Sötékék",
-    "yellow": "Élénk Sárga",
-    "green": "Vidám Zöld",
-    "highContrast": "Nagy Kontrasztú"
+    "default" : "Alap KÃ©k",
+    "dark": "Alap SÃ¶tÃ©kÃ©k",
+    "yellow": "Ã‰lÃ©nk SÃ¡rga",
+    "green": "VidÃ¡m ZÃ¶ld",
+    "highContrast": "Nagy KontrasztÃº"
   }
 }
