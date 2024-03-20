@@ -11,6 +11,7 @@ from PyQt6.uic import loadUi
 from src.main.python.components.logger import *
 from src.main.python.infoscreens import resultsScreen
 from src.main.python.infoscreens.errorMessage import errorMessage
+from src.main.python.infoscreens.alertMessage import alertMessage
 
 
 class EmailWindowUI(QMainWindow):
@@ -33,6 +34,9 @@ class EmailWindowUI(QMainWindow):
             self.setFixedSize(self.size())
 
             self.parent = parent
+
+            alertMessage("Figyelem!\nA felhasznált emailek valós átveréseket tartalmazhatnak. "
+                         "A bennük látható linkeket, illetve címeket nem érdemes felkeresni!")
 
             self.email1Button = self.findChild(QPushButton, "email1Button")
             self.email2Button = self.findChild(QPushButton, "email2Button")
@@ -72,6 +76,7 @@ class EmailWindowUI(QMainWindow):
 
             self.selectedButton = ""
             self.selectedEmailID = ""
+            self.senderAddress = ""
 
             self.email1Path = ""
             self.email2Path = ""
@@ -188,11 +193,13 @@ class EmailWindowUI(QMainWindow):
 
     def loadEmailsIntoArray(self):
         try:
-            with open(os.path.join(self.basePath, "src/main/resources/emaildata/emaildata.json"), "r") as jsonFile:
+            with open(os.path.join(
+                    self.basePath, "src/main/resources/emaildata/emaildata.json"), "r", encoding = "UTF-8") as jsonFile:
                 emailBank = json.load(jsonFile)
 
             shuffledEmails = list(emailBank.values())
             random.shuffle(shuffledEmails)
+            print(shuffledEmails)
 
             return shuffledEmails
 
@@ -209,8 +216,8 @@ class EmailWindowUI(QMainWindow):
             emailIsMalicious = f"email{i + 1}IsMalicious"
             button = getattr(self, buttonName, None)
 
-            button.setText(self.emailBank[i]["subject"])
-            # button.setText(f"{self.emailBank[i]['subject']} - {self.emailBank[i]['isMalicious']}")
+            self.senderAddress = self.emailBank[i]["sender"]
+            button.setText(f"{self.emailBank[i]["subject"]}\n{self.senderAddress}")
             setattr(self, buttonID, self.emailBank[i]["ID"])
             setattr(self, emailPath, self.emailBank[i]["pathToEmail"])
             if self.emailBank[i]["isMalicious"]:
@@ -279,7 +286,13 @@ class EmailWindowUI(QMainWindow):
         self.buttonBehaviour("present")
         self.loadImage(path)
 
-        self.subjectLabel.setText(button.text())
+        for i in self.emailBank:
+            if i["ID"] == ID:
+                self.senderAddress = i["sender"]
+
+        subject = button.text().replace(f"\n{self.senderAddress}", "")
+
+        self.subjectLabel.setText(subject)
 
         if not self.isTimerRunning:
             self.startEmailTimer(self.timeSpent)
@@ -378,10 +391,10 @@ class EmailWindowUI(QMainWindow):
             else:
                 self.selectedButton.setStyleSheet(redStyle)
 
-        tmpSelectedButton = self.selectedButton.text()
+        tmpSelectedButton, tmpSender = self.selectedButton.text().split("\n")
         if "\u2713" not in tmpSelectedButton:
-            tmpSelectedButton += "\u2713"
-        self.selectedButton.setText(tmpSelectedButton)
+            tmpSelectedButton += " [ \u2713 ]"
+        self.selectedButton.setText(f"{tmpSelectedButton}\n{tmpSender}")
 
         for i in range(10):
             selectMalicious = f"selectedEmail{i + 1}IsMalicious"
@@ -499,7 +512,7 @@ class EmailWindowUI(QMainWindow):
             else:
                 dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
 
-            with open(dataPath, 'r') as jsonFile:
+            with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                 fileContents = json.load(jsonFile)
 
             if self.username in fileContents:
@@ -541,7 +554,7 @@ class EmailWindowUI(QMainWindow):
                         fileContents[self.username]["Score"] += self.pointsEarned
                     fileContents[self.username]["EmailMedal"] = 1
 
-            with open(dataPath, 'w') as jsonFile:
+            with open(dataPath, 'w', encoding = "UTF-8") as jsonFile:
                 json.dump(fileContents, jsonFile, indent=4)
 
         except Exception as e:

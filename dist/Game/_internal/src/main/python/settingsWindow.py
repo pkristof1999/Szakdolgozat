@@ -189,7 +189,7 @@ class SettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
 
@@ -241,7 +241,7 @@ class SettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     storedUserAge = existingAccounts[username]["UserAge"]
@@ -259,7 +259,7 @@ class SettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
 
                 userData = json.loads(fileContents.strip(username))
@@ -268,7 +268,7 @@ class SettingsWindowUI(QMainWindow):
                 selectedTheme = translateTheme(userTheme, False)
 
             if os.path.exists(themeDataPath):
-                with open(themeDataPath, 'r') as jsonFile:
+                with open(themeDataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
 
                     if not fileContents.strip() or fileContents.strip() == "{}":
@@ -351,7 +351,7 @@ class SettingsWindowUI(QMainWindow):
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r') as jsonFile:
+                with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                     fileContents = jsonFile.read()
                     existingAccounts = json.loads(fileContents)
                     storedPwd = existingAccounts[username]["Password"]
@@ -508,7 +508,7 @@ class SettingsWindowUI(QMainWindow):
     def userDeletion(self, username):
         dataPath = os.path.join(self.basePath, "userdata/profiles/profiles.json")
         try:
-            with open(dataPath, 'r') as jsonFile:
+            with open(dataPath, 'r', encoding = "UTF-8") as jsonFile:
                 fileContents = json.load(jsonFile)
 
             if username in fileContents:
@@ -523,7 +523,7 @@ class SettingsWindowUI(QMainWindow):
 
                 del fileContents[username]
 
-            with open(dataPath, 'w') as json_file:
+            with open(dataPath, 'w', encoding = "UTF-8") as json_file:
                 json.dump(fileContents, json_file, indent=4)
 
             logger.info("Felhasználó sikeresen törölve!")

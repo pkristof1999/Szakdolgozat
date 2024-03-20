@@ -66,14 +66,14 @@ class WelcomeUI(QMainWindow):
                 existingAccounts = {}
 
                 if os.path.exists(path):
-                    with open(path, 'r') as jsonFile:
+                    with open(path, 'r', encoding = "UTF-8") as jsonFile:
                         fileContents = jsonFile.read()
                         if fileContents.strip():
                             existingAccounts = json.loads(fileContents)
 
                 existingAccounts[username]["Theme"] = "default"
 
-                with open(path, 'w') as jsonFile:
+                with open(path, 'w', encoding = "UTF-8") as jsonFile:
                     json.dump(existingAccounts, jsonFile, indent=4)
 
             except Exception as e:

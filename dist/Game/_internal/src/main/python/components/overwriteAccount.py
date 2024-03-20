@@ -20,7 +20,7 @@ def overwriteAccount(basePath, username, userAge, profilePicturePath, theme, pas
         existingAccounts = {}
 
         if os.path.exists(savePath):
-            with open(savePath, 'r') as jsonFile:
+            with open(savePath, 'r', encoding = "UTF-8") as jsonFile:
                 fileContents = jsonFile.read()
                 if fileContents.strip():
                     existingAccounts = json.loads(fileContents)
@@ -32,7 +32,7 @@ def overwriteAccount(basePath, username, userAge, profilePicturePath, theme, pas
         if password is not None:
             existingAccounts[username]["Password"] = encodePassword(password)
 
-        with open(savePath, 'w') as jsonFile:
+        with open(savePath, 'w', encoding = "UTF-8") as jsonFile:
             json.dump(existingAccounts, jsonFile, indent=4)
 
         return True

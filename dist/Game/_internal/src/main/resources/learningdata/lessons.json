@@ -1,5 +1,5 @@
 {
-    "V\u00edrusok" : {
+    "Vírusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -27,7 +27,7 @@
             }
         }
     },
-    "F\u00e9rgek" : {
+    "Férgek" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -55,7 +55,7 @@
             }
         }
     },
-    "Tr\u00f3jai V\u00edrusok" : {
+    "Trójai Vírusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -83,7 +83,7 @@
             }
         }
     },
-    "K\u00e9mprogramok" : {
+    "Kémprogramok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -111,7 +111,7 @@
             }
         }
     },
-    "Rekl\u00e1mprogramok" : {
+    "Reklámprogramok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -139,7 +139,7 @@
             }
         }
     },
-    "Zsarol\u00f3v\u00edrusok" : {
+    "Zsarolóvírusok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
@@ -195,7 +195,7 @@
             }
         }
     },
-    "Billenty\u0171napl\u00f3z\u00f3 Programok" : {
+    "Billentyűnaplózó Programok" : {
         "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
