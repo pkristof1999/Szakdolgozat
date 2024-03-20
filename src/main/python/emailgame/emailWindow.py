@@ -11,6 +11,7 @@ from PyQt6.uic import loadUi
 from src.main.python.components.logger import *
 from src.main.python.infoscreens import resultsScreen
 from src.main.python.infoscreens.errorMessage import errorMessage
+from src.main.python.infoscreens.alertMessage import alertMessage
 
 
 class EmailWindowUI(QMainWindow):
@@ -33,6 +34,9 @@ class EmailWindowUI(QMainWindow):
             self.setFixedSize(self.size())
 
             self.parent = parent
+
+            alertMessage("Figyelem!\nA felhasznált emailek valós átveréseket tartalmazhatnak. "
+                         "A bennük látható linkeket, illetve címeket nem érdemes felkeresni!")
 
             self.email1Button = self.findChild(QPushButton, "email1Button")
             self.email2Button = self.findChild(QPushButton, "email2Button")
@@ -387,10 +391,10 @@ class EmailWindowUI(QMainWindow):
             else:
                 self.selectedButton.setStyleSheet(redStyle)
 
-        tmpSelectedButton = self.selectedButton.text()
+        tmpSelectedButton, tmpSender = self.selectedButton.text().split("\n")
         if "\u2713" not in tmpSelectedButton:
-            tmpSelectedButton += "\u2713"
-        self.selectedButton.setText(tmpSelectedButton)
+            tmpSelectedButton += " [ \u2713 ]"
+        self.selectedButton.setText(f"{tmpSelectedButton}\n{tmpSender}")
 
         for i in range(10):
             selectMalicious = f"selectedEmail{i + 1}IsMalicious"

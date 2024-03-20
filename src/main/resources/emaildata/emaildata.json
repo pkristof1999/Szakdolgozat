@@ -5,7 +5,7 @@
         "sender": "no-reply@spotify.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy hiteles értesítő email a Spotify rendszerétől."
     },
     "email2": {
         "ID": 2,
@@ -17,74 +17,146 @@
     },
     "email3": {
         "ID": 3,
-        "subject": "Teszt3",
-        "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "subject": "Privacy Notice",
+        "sender": "ebay@info.ebay.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/ebay_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy hiteles értesítő email az eBay rendszerétől."
     },
     "email4": {
         "ID": 4,
-        "subject": "Teszt4",
-        "sender": "no-reply@spotify.com",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "subject": "Szakmai gyakorlat",
+        "sender": "noreply@unideb.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/neptun_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy hiteles értesítő email a Neptun rendszerétől."
     },
     "email5": {
         "ID": 5,
-        "subject": "Teszt5",
-        "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
-        "isMalicious": true,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "subject": "Login Alert",
+        "sender": "security@facebookmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/facebook_login_alert.png",
+        "isMalicious": false,
+        "reason": "Ez egy hiteles értesítő email a Facebook rendszerétől."
     },
     "email6": {
         "ID": 6,
-        "subject": "Teszt6",
-        "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
-        "isMalicious": true,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "subject": "Átvételi értesítés",
+        "sender": "kozponti.ertesites@posta.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/posta_notification.png",
+        "isMalicious": false,
+        "reason": "Ez egy hiteles értesítő email a Magyar Posta rendszerétől."
     },
     "email7": {
         "ID": 7,
-        "subject": "Teszt7",
-        "sender": "no-reply@spotify.com",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "subject": "Feltöltési értesítő",
+        "sender": "noreply@telekom.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/telekom_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy hiteles értesítő email a Telekom rendszerétől."
     },
     "email8": {
         "ID": 8,
-        "subject": "Teszt8",
-        "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
-        "isMalicious": true,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "subject": "Jól jönne 3 millió forint?",
+        "sender": "info@dm.targetmax.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/loan_notification.png",
+        "isMalicious": false,
+        "reason": "Ez egy kéretlen, reklám célú levél, azonban káros tartalomtól mentes."
     },
     "email9": {
         "ID": 9,
-        "subject": "Teszt9",
-        "sender": "",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
-        "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "subject": "Értesítés kiszállítás",
+        "sender": "noreply@tezhdezh.lbsmitfo.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/dpb_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy adathalász email, mely nem létező futárszolgálatnak adja ki magát, és el akarja érni, hogy rákattintsunk a megadott linkre."
     },
     "email10": {
         "ID": 10,
-        "subject": "Teszt10",
-        "sender": "no-reply@spotify.com",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "subject": "Igényeljen napelemet!",
+        "sender": "info@dm.targetmax.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/napelem_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy kéretlen, reklám célú levél, azonban káros tartalomtól mentes."
     },
     "email11": {
         "ID": 11,
-        "subject": "Teszt11",
-        "sender": "",
+        "subject": "OTP alkalmazás frissítése",
+        "sender": "otp@otpbank.net",
+        "pathToEmail": "src/main/resources/emaildata/emails/otp_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy adathalász email, amely az OTP Bank nevében küldött emailt. Fontos tudni, hogy az OTP Bank a saját rendszerét használja levelezésre, és nem irányítana át egy gombbal egy weboldalra."
+    },
+    "email12": {
+        "ID": 12,
+        "subject": "excluive offer",
+        "sender": "FITOS@dbwbd.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/offer_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy becsapáshoz vezető email, ahol vélhetően el kell küldenünk a bankkártyás adatainkat."
+    },
+    "email13": {
+        "ID": 13,
+        "subject": "Your car is due for service",
+        "sender": "toyotaservice@gmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/car_service_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy átverő email, amely sürgetés eszközével próbálja elérni, hogy rákattintsunk a megadott gombra."
+    },
+    "email14": {
+        "ID": 14,
+        "subject": "Szerezzen nagy pénz",
+        "sender": "info@shopexpertforyou.com",
         "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "isMalicious": true,
+        "reason": "Ez egy átverő email, amely pénzt ígér az adataink megadásáért cserébe."
+    },
+    "email15": {
+        "ID": 15,
+        "subject": "Csomagja sikertelen kézbesít",
+        "sender": "pack.gls@packinggroup.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/gls_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy hamis email, amely a GLS futárszolgálatnak adja ki magát. Láthatjuk az email címből és a helyesírásból is, hogy hamis, illetve sürget minket a megadott linkre való kattintásra."
+    },
+    "email16": {
+        "ID": 16,
+        "subject": "Ön nyert egy iPhone",
+        "sender": "jabrulislam34@gmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/telekom_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy hamis email, amely a Telekomnak adja ki magát. Láthatjuk az email címből, hogy hamis, illetve sürget minket a megadott linkre való kattintásra."
+    },
+    "email17": {
+        "ID": 17,
+        "subject": "Write for payment",
+        "sender": "afcreche@fibertel.com.ar",
+        "pathToEmail": "src/main/resources/emaildata/emails/transfer_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy becsapáshoz vezető email, ahol vélhetően el kell küldenünk a bankkártyás adatainkat. Láthatjuk az email címből, hogy hamis."
+    },
+    "email18": {
+        "ID": 18,
+        "subject": "Survey Promo",
+        "sender": "sujanaseka35904@gmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/paypal_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy magát PayPal-nak kiadó hamis email, mely az adataink megadásáért cserébe pénzt igér. Láthatjuk az email címből, hogy hamis."
+    },
+    "email19": {
+        "ID": 19,
+        "subject": "Membership expired",
+        "sender": "maduvhatshicovhi@gmail.com",
+        "pathToEmail": "src/main/resources/emaildata/emails/sams_scam.png",
+        "isMalicious": true,
+        "reason": "Ez egy kéretlen levél, amely arra akar rávenni, hogy kattintsunk a benne lévő gombra, ingyenes tagságot ígérve."
+    },
+    "email20": {
+        "ID": 20,
+        "subject": "Értesítés csomgakövetésről",
+        "sender": "info@sprinter.hu",
+        "pathToEmail": "src/main/resources/emaildata/emails/sprinter_notification.png",
         "isMalicious": false,
-        "reason": "Ez egy hiteles értesítő email a Spotify Rendszerétől."
+        "reason": "Ez egy hiteles értesítő email a Sprinter rendszerétől."
     }
 }
