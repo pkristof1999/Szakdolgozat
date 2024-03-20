@@ -107,7 +107,7 @@
         "ID": 14,
         "subject": "Szerezzen nagy pénz",
         "sender": "info@shopexpertforyou.com",
-        "pathToEmail": "src/main/resources/emaildata/emails/spotify_login_notification.png",
+        "pathToEmail": "src/main/resources/emaildata/emails/big_money_scam.png",
         "isMalicious": true,
         "reason": "Ez egy átverő email, amely pénzt ígér az adataink megadásáért cserébe."
     },
