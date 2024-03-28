@@ -465,9 +465,9 @@ class EmailWindowUI(QMainWindow):
                             Kitűzőt szereztél pontosságra! Értéke: 250 pont*"""
                 badge1 = True
 
-                if self.timeSpent <= 60:
+                if self.timeSpent <= 300:
                     info += """
-                                Teljesítetted az email módot 01:00-n belül!
+                                Teljesítetted az email módot 05:00-n belül!
                                 Kitűzőt szereztél sebességre! Értéke: 1000 pont*
                             """
                     badge2 = True

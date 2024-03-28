@@ -79,8 +79,8 @@ class MainWindowUI(QMainWindow):
 
             self.emailGameInfo = "Ebben a módban egy tíz levélből álló postafiókot kell átnézni! " + \
                                  "Minden email-t jelölni kell, amely alkalmaz kártékony rutint!" + \
-                                 "Ha minden levél helyesen van (vagy nincs) megjelölve, akkor kitűző kapható. " + \
-                                 "Ha minden megadott válasz helyes 1 perc alatt, kitűző szerezhető!"
+                                 "Ha minden levél helyesen van megjelölve, akkor kitűző kapható. " + \
+                                 "Ha minden megadott válasz helyes 5 percen belül, kitűző szerezhető!"
 
             self.learningGameButton.clicked.connect(
                 lambda: self.openQuestionWindow(self.learningGameInfo,
