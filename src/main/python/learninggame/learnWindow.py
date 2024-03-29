@@ -313,7 +313,7 @@ class LearnWindowUI(QMainWindow):
         goodAnswersInLearn = False
         completedLessonInLearn = False
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["timeSpentInLearn"][lessonNum] == 0:
                 timeSpentInLearn = False
@@ -321,7 +321,7 @@ class LearnWindowUI(QMainWindow):
             else:
                 timeSpentInLearn = True
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["goodAnswersInLearn"][lessonNum] == 0:
                 goodAnswersInLearn = False
@@ -329,7 +329,7 @@ class LearnWindowUI(QMainWindow):
             else:
                 goodAnswersInLearn = True
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["completedLessonInLearn"][lessonNum] == 0:
                 completedLessonInLearn = False
