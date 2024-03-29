@@ -14,3 +14,10 @@ userdata/profiles/profiles.json
 Munkaterv_JN8PXT.pdf
 Designer.lnk
 /build/Game/localpycs/
+/src/main/resources/learningdata/viruses/DataDump.txt
+/src/main/resources/learningdata/adwares/DataDump.txt
+/src/main/resources/learningdata/keyloggers/DataDump.txt
+/src/main/resources/learningdata/ransomwares/DataDump.txt
+/src/main/resources/learningdata/rootkits/DataDump.txt
+/src/main/resources/learningdata/spywares/DataDump.txt
+/src/main/resources/learningdata/trojans/DataDump.txt
