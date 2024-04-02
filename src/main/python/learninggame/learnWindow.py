@@ -147,6 +147,7 @@ class LearnWindowUI(QMainWindow):
                 htmlContent = htmlFile.read()
 
             self.contentLabel.setText(htmlContent)
+            self.contentLabel.setWordWrap(True)
 
         except Exception as e:
             errorMessage(e)

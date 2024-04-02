@@ -1,0 +1,2 @@
+A számítógépes vírus egy olyan szoftver, amely képes önmagát reprodukálni, illetve kártékony kódjával felülírni, vagy kiegészíteni a célprogramot. A fertőzött szoftver futtatásakor a vírus a memóriába kerül, és újabb megfertőzhető programok után kutat.
+Terjedése sokféle képp történhet, leggyakoribb előfordulás az internetes csevegőprogramokban vagy emailen keresztül a vírus tovább osztása, de terjedhet különféle fájltípusokok keresztül
