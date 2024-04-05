@@ -146,6 +146,12 @@ class LearnWindowUI(QMainWindow):
             with open(pathToDataPage, 'r', encoding = "UTF-8") as htmlFile:
                 htmlContent = htmlFile.read()
 
+            htmlPicturePath = htmlContent.split('<img src="')[1].split('"')[0]
+            htmlPicturePath = os.path.join(self.basePath, htmlPicturePath)
+            htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
+            print(htmlPicturePath)
+            print(htmlContent)
+
             self.contentLabel.setText(htmlContent)
             self.contentLabel.setWordWrap(True)
 
