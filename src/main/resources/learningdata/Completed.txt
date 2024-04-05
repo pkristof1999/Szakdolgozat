@@ -5,3 +5,10 @@ Terjedése sokféleképp történhet, leggyakoribb előfordulás az internetes c
 A vírusok többféle gazda programot használhatnak (hosts), melyek lehetnek dokumentumokba ágyazott makró utasítások (pl. Microsoft Office programokban elkészített makró kódok), szkript kódok, rendszer betöltő szektorokba jutattot kártékony kód (boot szektorok) és maguk a számítógépes programok.
 Gyakori előfordulás, hogy a vírus egy dokumentum típusnak (pl. pdf) van álcázva azzal, hogy kicserélik a parancsikonját, és a felhasználó ezt gyanútlanul nyitja meg abban a meggyőződésben, hogy egy dokumentumot készül megnyitni.
 Védekezni a vírusok ellen a legegyszerűbben úgy lehet, ha figyelmesek vagyunk, nem kattintunk gyanús tartalmakra, illetve használhatók vírusírtó programok is.
+
+/Vírusok - Danube/
+
+
+
+/Vírusok - Melissa/
+
