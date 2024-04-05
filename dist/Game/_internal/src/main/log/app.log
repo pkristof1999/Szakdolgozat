@@ -26975,3 +26975,325 @@ toyotaservice@gmail.com kiválasztva.
 2024-04-05 12:13:38,476 - INFO - Vírusok lecke megnyitása!
 2024-04-05 12:13:54,832 - INFO - Tanulós játémód bezárása!
 2024-04-05 12:13:56,367 - INFO - Kilépés az alkalmazásból!
+2024-04-05 12:21:00,604 - INFO - Az alkalmazás elindult!
+2024-04-05 12:21:01,641 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:21:02,869 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:21:03,359 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:21:09,128 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:21:10,967 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 12:21:12,390 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 12:21:12,390 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 12:21:12,390 - ERROR - list index out of range
+2024-04-05 12:21:22,721 - INFO - Az alkalmazás elindult!
+2024-04-05 12:21:24,107 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:21:25,557 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:21:26,044 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:21:28,515 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 12:21:29,094 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 12:21:29,095 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 12:21:29,095 - ERROR - list index out of range
+2024-04-05 12:22:19,558 - INFO - Az alkalmazás elindult!
+2024-04-05 12:22:20,821 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:22:21,899 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:22:22,542 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:22:23,654 - INFO - Tanulós játémód bezárása!
+2024-04-05 12:22:24,203 - INFO - Férgek lecke megnyitása!
+2024-04-05 12:22:27,544 - INFO - testAnswer1 megjelölve válaszként.
+2024-04-05 12:22:28,300 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-04-05 12:22:28,300 - INFO - Válaszok listája: ['testAnswer1']
+2024-04-05 12:22:28,300 - ERROR - list index out of range
+2024-04-05 12:23:03,196 - INFO - Az alkalmazás elindult!
+2024-04-05 12:23:04,259 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:23:05,753 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:23:06,203 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:23:07,680 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:23:08,282 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:23:08,282 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:23:08,282 - ERROR - list index out of range
+2024-04-05 12:23:37,165 - INFO - Az alkalmazás elindult!
+2024-04-05 12:23:38,441 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:23:40,071 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:23:40,568 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:23:41,923 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:23:42,520 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:23:42,520 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:23:44,888 - INFO - Tanulós játémód bezárása!
+2024-04-05 12:23:46,705 - INFO - Kilépés az alkalmazásból!
+2024-04-05 12:24:22,882 - INFO - Az alkalmazás elindult!
+2024-04-05 12:24:23,978 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:24:25,219 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:24:25,667 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:24:27,071 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:24:27,608 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:24:27,608 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:24:27,608 - ERROR - list index out of range
+2024-04-05 12:24:53,996 - INFO - Az alkalmazás elindult!
+2024-04-05 12:24:54,984 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:24:56,140 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:24:56,610 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:24:59,017 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:25:00,308 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:25:00,308 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:25:00,308 - ERROR - list index out of range
+2024-04-05 12:25:11,003 - INFO - Az alkalmazás elindult!
+2024-04-05 12:25:12,545 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:25:15,396 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:25:15,854 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:25:17,817 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:25:18,338 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:25:18,338 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:25:18,339 - ERROR - list index out of range
+2024-04-05 12:26:11,436 - INFO - Az alkalmazás elindult!
+2024-04-05 12:26:12,825 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:26:13,976 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:26:14,502 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:26:15,855 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 12:26:16,676 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 12:26:16,676 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 12:26:17,823 - INFO - Tanulós játémód bezárása!
+2024-04-05 12:26:19,611 - INFO - Kilépés az alkalmazásból!
+2024-04-05 12:32:07,657 - INFO - Az alkalmazás elindult!
+2024-04-05 12:32:08,739 - INFO - Továbblépés a fő felületre.
+2024-04-05 12:32:10,056 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 12:32:10,920 - INFO - Vírusok lecke megnyitása!
+2024-04-05 12:32:38,797 - INFO - Tanulós játémód bezárása!
+2024-04-05 12:33:03,547 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:13:31,626 - INFO - Az alkalmazás elindult!
+2024-04-05 13:13:32,591 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:13:33,741 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:13:41,878 - INFO - Adatok mentve!
+2024-04-05 13:13:42,898 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:13:43,793 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:13:53,030 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:13:58,771 - INFO - Adatok mentve!
+2024-04-05 13:13:59,939 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:14:00,924 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:14:15,872 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:14:17,895 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:19:18,300 - INFO - Az alkalmazás elindult!
+2024-04-05 13:19:19,702 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:19:20,739 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:19:21,189 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:19:43,550 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:20:03,311 - INFO - Az alkalmazás elindult!
+2024-04-05 13:20:04,761 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:20:05,675 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:20:06,187 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:20:10,501 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:20:29,694 - INFO - Az alkalmazás elindult!
+2024-04-05 13:20:30,761 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:20:32,435 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:20:32,943 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:20:42,273 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:20:50,031 - INFO - Az alkalmazás elindult!
+2024-04-05 13:20:51,353 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:20:52,258 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:20:52,895 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:21:03,292 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 13:21:04,346 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 13:21:04,949 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 13:21:04,949 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 13:21:06,141 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:21:08,769 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:22:58,482 - INFO - Az alkalmazás elindult!
+2024-04-05 13:22:59,460 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:23:00,402 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:23:00,873 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:23:02,087 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:02,586 - ERROR - [Errno 2] No such file or directory: 'D:\\Files\\Projects\\Szakdolgozat\\src/main/resources/learningdata/worms/page1.html'
+2024-04-05 13:23:02,594 - ERROR - setText(self, a0: Optional[str]): argument 1 has unexpected type 'FileNotFoundError'
+2024-04-05 13:23:27,130 - INFO - Az alkalmazás elindult!
+2024-04-05 13:23:28,450 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:23:29,511 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:23:30,008 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-05 13:23:31,824 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:32,499 - INFO - Kémprogramok lecke megnyitása!
+2024-04-05 13:23:33,312 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:33,999 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-05 13:23:34,811 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:35,317 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-05 13:23:36,129 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:36,609 - INFO - Rootkitek lecke megnyitása!
+2024-04-05 13:23:37,424 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:37,867 - INFO - Billentyűnaplózó Programok lecke megnyitása!
+2024-04-05 13:23:38,882 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:23:39,373 - ERROR - [Errno 2] No such file or directory: 'D:\\Files\\Projects\\Szakdolgozat\\src/main/resources/learningdata/worms/page1.html'
+2024-04-05 13:23:39,381 - ERROR - setText(self, a0: Optional[str]): argument 1 has unexpected type 'FileNotFoundError'
+2024-04-05 13:23:53,465 - INFO - Az alkalmazás elindult!
+2024-04-05 13:23:56,210 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:23:57,342 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:23:57,866 - INFO - Férgek lecke megnyitása!
+2024-04-05 13:24:01,385 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:24:03,016 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:24:22,809 - INFO - Az alkalmazás elindult!
+2024-04-05 13:24:24,131 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:24:27,906 - INFO - Adatok mentve!
+2024-04-05 13:24:28,956 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:24:29,839 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:24:31,452 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:24:35,345 - INFO - Adatok mentve!
+2024-04-05 13:24:36,406 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:24:37,328 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:24:48,167 - INFO - Tanulós játémód bezárása!
+2024-04-05 13:24:49,828 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:28:29,776 - INFO - Az alkalmazás elindult!
+2024-04-05 13:28:30,669 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:28:31,810 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:28:32,340 - INFO - Vírusok lecke megnyitása!
+2024-04-05 13:28:35,298 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 13:28:35,814 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 13:28:36,244 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 13:28:36,245 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 13:28:37,233 - INFO - testAnswer1 megjelölve válaszként.
+2024-04-05 13:28:37,729 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-04-05 13:28:37,729 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'testAnswer1']
+2024-04-05 13:28:38,682 - INFO - testAnswer1 megjelölve válaszként.
+2024-04-05 13:28:39,275 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-04-05 13:28:39,275 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'testAnswer1', 'testAnswer1']
+2024-04-05 13:28:49,778 - INFO - Jelvények sikeresen betöltve!
+2024-04-05 13:28:49,781 - INFO - Jelvények sikeresen betöltve!
+2024-04-05 13:28:51,976 - INFO - Figyelem!
+A felhasznált emailek valós átveréseket tartalmazhatnak. A bennük látható linkeket, illetve címeket nem érdemes felkeresni!
+2024-04-05 13:28:52,827 - INFO - Email mód betöltve!
+2024-04-05 13:28:52,835 - INFO - Email játékmód megnyitása!
+2024-04-05 13:28:54,725 - INFO - Ön nyert egy iPhone
+jabrulislam34@gmail.com kiválasztva.
+2024-04-05 13:28:59,343 - INFO - Email játékmód bezárása!
+2024-04-05 13:29:02,256 - INFO - Kilépés az alkalmazásból!
+2024-04-05 13:33:03,737 - INFO - Az alkalmazás elindult!
+2024-04-05 13:33:04,820 - INFO - Továbblépés a fő felületre.
+2024-04-05 13:33:06,109 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 13:33:06,779 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:12:51,677 - INFO - Az alkalmazás elindult!
+2024-04-05 15:12:52,751 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:12:53,840 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:12:54,549 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:12:57,980 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 15:12:58,509 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 15:12:58,510 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 15:13:01,144 - INFO - Válaszok listája: []
+2024-04-05 15:13:22,820 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:13:27,436 - INFO - Sikeres kijelentkezés!
+2024-04-05 15:13:27,436 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 15:13:28,147 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 15:13:30,527 - INFO - Visszalépés az indítóképernyőre.
+2024-04-05 15:13:32,138 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:13:38,577 - INFO - Kilépés az alkalmazásból!
+2024-04-05 15:16:12,318 - INFO - Az alkalmazás elindult!
+2024-04-05 15:16:13,477 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:16:14,472 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:16:15,121 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:16:16,675 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 15:16:17,318 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 15:16:17,318 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 15:16:31,164 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:16:44,998 - INFO - Kilépés az alkalmazásból!
+2024-04-05 15:17:02,794 - INFO - Az alkalmazás elindult!
+2024-04-05 15:17:03,858 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:17:05,114 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:17:05,829 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:17:07,098 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 15:17:07,742 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 15:17:07,742 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 15:17:11,640 - INFO - Kilépés az alkalmazásból!
+2024-04-05 15:17:34,019 - INFO - Az alkalmazás elindult!
+2024-04-05 15:17:35,594 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:17:36,721 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:17:37,470 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:17:39,022 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 15:17:40,731 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 15:17:40,731 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 15:17:48,404 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:17:50,344 - INFO - Kilépés az alkalmazásból!
+2024-04-05 15:41:03,996 - INFO - Az alkalmazás elindult!
+2024-04-05 15:41:05,122 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:41:06,060 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:41:06,503 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:41:07,807 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 15:41:08,323 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 15:41:08,323 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 15:41:10,423 - INFO - testAnswer1 megjelölve válaszként.
+2024-04-05 15:41:11,120 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-04-05 15:41:11,121 - INFO - Válaszok listája: ['Tűzfal használata', 'testAnswer1']
+2024-04-05 15:41:13,730 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:41:16,267 - INFO - Kilépés az alkalmazásból!
+2024-04-05 15:58:23,590 - INFO - Az alkalmazás elindult!
+2024-04-05 15:58:24,493 - INFO - Továbblépés a fő felületre.
+2024-04-05 15:58:25,628 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 15:58:26,116 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:58:27,726 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:58:28,234 - INFO - Férgek lecke megnyitása!
+2024-04-05 15:58:29,246 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:58:30,032 - INFO - Vírusok lecke megnyitása!
+2024-04-05 15:58:31,545 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-05 15:58:32,082 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-05 15:58:32,082 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-05 15:58:33,694 - INFO - testAnswer2 megjelölve válaszként.
+2024-04-05 15:58:34,197 - INFO - testAnswer2 sikeresen leadva válaszként!
+2024-04-05 15:58:34,198 - INFO - Válaszok listája: ['Tűzfal használata', 'testAnswer2']
+2024-04-05 15:58:36,860 - INFO - Tanulós játémód bezárása!
+2024-04-05 15:58:38,673 - INFO - Kilépés az alkalmazásból!
+2024-04-05 16:18:13,134 - INFO - Az alkalmazás elindult!
+2024-04-05 16:18:14,122 - INFO - Továbblépés a fő felületre.
+2024-04-05 16:18:15,132 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 16:18:15,651 - INFO - Vírusok lecke megnyitása!
+2024-04-05 16:18:18,253 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 16:18:19,099 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 16:18:19,099 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 16:18:20,932 - INFO - Válaszok listája: []
+2024-04-05 16:18:33,381 - ERROR - Nem választott választ!
+2024-04-05 16:18:34,935 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-05 16:18:35,533 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-05 16:18:35,533 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-05 16:18:38,715 - INFO - Tanulós játémód bezárása!
+2024-04-05 16:18:47,668 - INFO - Adatok mentve!
+2024-04-05 16:18:49,254 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-05 16:18:50,851 - INFO - Vírusok lecke megnyitása!
+2024-04-05 16:19:35,273 - INFO - Tanulós játémód bezárása!
+2024-04-05 16:20:39,541 - INFO - Sikeres kijelentkezés!
+2024-04-05 16:20:39,541 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 16:20:43,381 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 16:20:44,290 - INFO - Visszalépés az indítóképernyőre.
+2024-04-05 16:20:44,815 - INFO - Alap profilkép betöltésre került!
+2024-04-05 16:20:44,824 - INFO - Regisztrációs képernyő megnyitásra került!
+2024-04-05 16:20:46,012 - INFO - Visszalépés az indítóképernyőre.
+2024-04-05 16:20:46,949 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 16:20:48,601 - ERROR - Nincs regisztrált felhasználó!
+2024-04-05 16:20:51,325 - INFO - Visszalépés az indítóképernyőre.
+2024-04-05 16:21:15,560 - INFO - Az alkalmazás elindult!
+2024-04-05 16:21:16,753 - INFO - Továbblépés a fő felületre.
+2024-04-05 16:21:18,400 - INFO - Kilépés az alkalmazásból!
+2024-04-05 16:30:00,139 - INFO - Az alkalmazás elindult!
+2024-04-05 16:34:55,884 - INFO - Az alkalmazás elindult!
+2024-04-05 16:44:24,924 - INFO - Az alkalmazás elindult!
+2024-04-05 16:45:09,124 - INFO - Az alkalmazás elindult!
+2024-04-05 16:46:23,625 - INFO - Az alkalmazás elindult!
+2024-04-05 16:46:24,557 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:53:06,156 - INFO - Az alkalmazás elindult!
+2024-04-05 16:54:04,620 - INFO - Az alkalmazás elindult!
+2024-04-05 16:54:40,089 - INFO - Az alkalmazás elindult!
+2024-04-05 16:54:59,637 - INFO - Az alkalmazás elindult!
+2024-04-05 16:55:16,070 - INFO - Az alkalmazás elindult!
+2024-04-05 16:55:33,464 - INFO - Az alkalmazás elindult!
+2024-04-05 16:55:34,228 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:56:02,651 - INFO - Az alkalmazás elindult!
+2024-04-05 16:56:03,365 - ERROR - 'NoneType' object has no attribute 'clicked'
+2024-04-05 16:56:36,436 - INFO - Az alkalmazás elindult!
+2024-04-05 16:56:37,071 - ERROR - argument 1 has unexpected type 'NoneType'
+2024-04-05 16:57:04,607 - INFO - Az alkalmazás elindult!
+2024-04-05 16:57:05,375 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:27,294 - INFO - Az alkalmazás elindult!
+2024-04-05 16:57:28,287 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:29,427 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:31,142 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:32,443 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:33,554 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:35,328 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:57:36,616 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:58:06,359 - INFO - Az alkalmazás elindult!
+2024-04-05 16:58:07,060 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-05 16:58:07,730 - INFO - Visszalépés az üdvözlő képernyőre!
+2024-04-05 16:58:10,402 - INFO - Továbblépés a fő felületre.
+2024-04-05 16:58:12,332 - INFO - Sikeres kijelentkezés!
+2024-04-05 16:58:12,332 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-05 16:58:13,262 - INFO - Névjegy képernyő megnyitásra került!

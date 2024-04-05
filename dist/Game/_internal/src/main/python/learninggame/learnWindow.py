@@ -146,11 +146,10 @@ class LearnWindowUI(QMainWindow):
             with open(pathToDataPage, 'r', encoding = "UTF-8") as htmlFile:
                 htmlContent = htmlFile.read()
 
-            htmlPicturePath = htmlContent.split('<img src="')[1].split('"')[0]
-            htmlPicturePath = os.path.join(self.basePath, htmlPicturePath)
-            htmlContent = htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
-            print(htmlPicturePath)
-            print(htmlContent)
+            if "<img src=" in htmlContent:
+                htmlPicturePath = htmlContent.split('<img src="')[1].split('"')[0]
+                htmlPicturePath = os.path.join(self.basePath, htmlPicturePath)
+                htmlContent = htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
 
             self.contentLabel.setText(htmlContent)
             self.contentLabel.setWordWrap(True)

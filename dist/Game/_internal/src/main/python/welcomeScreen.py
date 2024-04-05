@@ -1,14 +1,13 @@
 import json
 
-from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QSizePolicy
+from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from src.main.python import mainWindow, loginScreen, registerAccount
 from src.main.python.components.logger import *
 from src.main.python.components.resultsDeletion import resultsDeletion
-from src.main.python.infoscreens import areYouSure
+from src.main.python.infoscreens import areYouSure, aboutWindow
 from src.main.python.infoscreens.errorMessage import errorMessage
 
 
@@ -19,21 +18,24 @@ class WelcomeUI(QMainWindow):
             self.basePath = basePath
 
             loadUi(os.path.join(self.basePath, "src/main/resources/ui/default/defaultWelcomeScreen.ui"), self)
-            self.setWindowIcon(QIcon(os.path.join(self.basePath, f"src/main//resources/icon/icon.ico")))
+            self.setWindowIcon(QIcon(os.path.join(self.basePath, f"src/main/resources/icon/icon.ico")))
 
             self.setFixedSize(self.size())
 
             self.loginButton = self.findChild(QPushButton, "loginButton")
             self.registerButton = self.findChild(QPushButton, "registerButton")
             self.playAsGuestButton = self.findChild(QPushButton, "playAsGuestButton")
+            self.aboutButton = self.findChild(QPushButton, "aboutButton")
 
             self.registerWindow = None
             self.loginWindow = None
             self.questionWindow = None
             self.appMainWindow = None
+            self.aboutScreen = None
 
             self.loginButton.clicked.connect(self.openLoginUI)
             self.registerButton.clicked.connect(self.openRegisterUI)
+            self.aboutButton.clicked.connect(self.aboutWindow)
 
             self.playAsGuestButton.clicked.connect(
                 lambda: self.openQuestionWindow("Vendégként nem mentődnek\naz eredmények!\nFolytatja?",
@@ -98,6 +100,13 @@ class WelcomeUI(QMainWindow):
                 self.registerWindow = registerAccount.RegisterAccountUI(self.basePath)
             self.registerWindow.show()
             logger.info("Regisztrációs képernyő megnyitásra került!")
+            self.hide()
+
+        def aboutWindow(self):
+            if not self.aboutScreen:
+                self.aboutScreen = aboutWindow.AboutWindowUI(self, self.basePath)
+            self.aboutScreen.show()
+            logger.info("Névjegy képernyő megnyitásra került!")
             self.hide()
 
     except Exception as e:
