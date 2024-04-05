@@ -146,7 +146,14 @@ class LearnWindowUI(QMainWindow):
             with open(pathToDataPage, 'r', encoding = "UTF-8") as htmlFile:
                 htmlContent = htmlFile.read()
 
+            htmlPicturePath = htmlContent.split('<img src="')[1].split('"')[0]
+            htmlPicturePath = os.path.join(self.basePath, htmlPicturePath)
+            htmlContent = htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
+            print(htmlPicturePath)
+            print(htmlContent)
+
             self.contentLabel.setText(htmlContent)
+            self.contentLabel.setWordWrap(True)
 
         except Exception as e:
             errorMessage(e)
@@ -313,7 +320,7 @@ class LearnWindowUI(QMainWindow):
         goodAnswersInLearn = False
         completedLessonInLearn = False
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["timeSpentInLearn"][lessonNum] == 0:
                 timeSpentInLearn = False
@@ -321,7 +328,7 @@ class LearnWindowUI(QMainWindow):
             else:
                 timeSpentInLearn = True
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["goodAnswersInLearn"][lessonNum] == 0:
                 goodAnswersInLearn = False
@@ -329,7 +336,7 @@ class LearnWindowUI(QMainWindow):
             else:
                 goodAnswersInLearn = True
 
-        for i in range(10):
+        for i in range(8):
             lessonNum = f"lesson{i + 1}"
             if fileContents[self.username]["completedLessonInLearn"][lessonNum] == 0:
                 completedLessonInLearn = False

@@ -5,11 +5,11 @@
         "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Melyik a vírusok elleni védekezés legfontosabb formája?",
+                "answer1" : "Tűzfal használata",
+                "answer2" : "Óvatosság és odafigyelés",
+                "answer3" : "Vírusírtók telepítése",
+                "goodAnswer" : "Óvatosság és odafigyelés"
             },
             "questions2": {
                 "question" : "testQuestion2",

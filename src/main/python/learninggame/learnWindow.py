@@ -148,7 +148,7 @@ class LearnWindowUI(QMainWindow):
 
             htmlPicturePath = htmlContent.split('<img src="')[1].split('"')[0]
             htmlPicturePath = os.path.join(self.basePath, htmlPicturePath)
-            htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
+            htmlContent = htmlContent.replace(htmlContent.split('<img src="')[1].split('"')[0], htmlPicturePath)
             print(htmlPicturePath)
             print(htmlContent)
 

@@ -23,6 +23,8 @@ class EmailWindowUI(QMainWindow):
             self.username = username
             self.basePath = basePath
 
+            self.isHighContrast = True if theme == "highContrast" else False
+
             super(EmailWindowUI, self).__init__()
 
             self.theme = theme
@@ -34,9 +36,11 @@ class EmailWindowUI(QMainWindow):
             self.setFixedSize(self.size())
 
             self.parent = parent
+            print(self.isHighContrast)
 
             alertMessage("Figyelem!\nA felhasznált emailek valós átveréseket tartalmazhatnak. "
-                         "A bennük látható linkeket, illetve címeket nem érdemes felkeresni!")
+                         "A bennük látható linkeket, illetve címeket nem érdemes felkeresni!",
+                         self.isHighContrast)
 
             self.email1Button = self.findChild(QPushButton, "email1Button")
             self.email2Button = self.findChild(QPushButton, "email2Button")

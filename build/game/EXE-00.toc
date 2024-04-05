@@ -1,5 +1,5 @@
 ('D:\\Files\\Projects\\Szakdolgozat\\build\\Game\\Game.exe',
- False,
+ True,
  False,
  True,
  ['D:\\Files\\Projects\\Szakdolgozat\\icon.ico'],
@@ -68,8 +68,8 @@
  [],
  False,
  False,
- 1711638101,
- [('runw.exe',
-   'C:\\Users\\pkris\\PVE312\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
+ 1712312312,
+ [('run.exe',
+   'C:\\Users\\pkris\\PVE312\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],
  'C:\\Python312\\python312.dll')

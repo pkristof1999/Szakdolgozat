@@ -25,9 +25,7 @@ def createAccount(basePath, username, userAge, password, profilePicturePath, not
                 "lesson5": 0,
                 "lesson6": 0,
                 "lesson7": 0,
-                "lesson8": 0,
-                "lesson9": 0,
-                "lesson10": 0
+                "lesson8": 0
             },
             "timeSpentInLearn": {
                 "lesson1": 0,
@@ -37,9 +35,7 @@ def createAccount(basePath, username, userAge, password, profilePicturePath, not
                 "lesson5": 0,
                 "lesson6": 0,
                 "lesson7": 0,
-                "lesson8": 0,
-                "lesson9": 0,
-                "lesson10": 0
+                "lesson8": 0
             },
             "goodAnswersInLearn": {
                 "lesson1": 0,
@@ -49,9 +45,7 @@ def createAccount(basePath, username, userAge, password, profilePicturePath, not
                 "lesson5": 0,
                 "lesson6": 0,
                 "lesson7": 0,
-                "lesson8": 0,
-                "lesson9": 0,
-                "lesson10": 0
+                "lesson8": 0
             },
             "LearnMessageShown": False,
             "LearnMedal": 0,
