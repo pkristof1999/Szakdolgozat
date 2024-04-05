@@ -28,9 +28,9 @@
         }
     },
     "Férgek" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/worms/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/worms/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/worms/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -56,9 +56,9 @@
         }
     },
     "Trójai Vírusok" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/trojans/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/trojans/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/trojans/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -84,9 +84,9 @@
         }
     },
     "Kémprogramok" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/spywares/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/spywares/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/spywares/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -112,9 +112,9 @@
         }
     },
     "Reklámprogramok" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/adwares/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/adwares/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/adwares/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -140,9 +140,9 @@
         }
     },
     "Zsarolóvírusok" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/ransomwares/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/ransomwares/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/ransomwares/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -168,9 +168,9 @@
         }
     },
     "Rootkitek" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/rootkits/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/rootkits/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/rootkits/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
@@ -196,9 +196,9 @@
         }
     },
     "Billentyűnaplózó Programok" : {
-        "dataPage1Path" : "src/main/resources/learningdata/viruses/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/viruses/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/viruses/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/keyloggers/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/keyloggers/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/keyloggers/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",

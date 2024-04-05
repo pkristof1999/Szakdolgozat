@@ -5,6 +5,14 @@ src/main/python/infoscreens/__pycache__
 src/main/python/learninggame/__pycache__
 src/main/python/quizgame/__pycache__/
 src/main/python/emailgame/__pycache__/
+src/main/resources/learningdata/viruses/DataDump.txt
+src/main/resources/learningdata/adwares/DataDump.txt
+src/main/resources/learningdata/keyloggers/DataDump.txt
+src/main/resources/learningdata/ransomwares/DataDump.txt
+src/main/resources/learningdata/rootkits/DataDump.txt
+src/main/resources/learningdata/spywares/DataDump.txt
+src/main/resources/learningdata/trojans/DataDump.txt
+src/main/resources/learningdata/worms/DataDump.txt
 src/main/log
 dist/Game/_internal/userdata
 dist/Game/_internal/src

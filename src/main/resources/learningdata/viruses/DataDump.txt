@@ -24,3 +24,25 @@ A számítógépes vírusok fajtáit több szempont alapján is meghatározhatju
 
 A következőkben bemutatjuk, hogy melyek a számítógépes vírusok legelterjedtebb fajtái! /serco.hu/
 
+--------------------------
+
+Az interneten vagy lokális hálózaton terjedő kártevők elsődleges célja, hogy egy másik számítógépet fertőzzenek meg. A megtámadott számítógép működésébe, annak operációs rendszerébe általában úgy épülnek be, hogy az egy esetleges újraindítást (boot-olást) követően is aktivízálja a kártevő kódját. Ezt általában úgy érik el, hogy a kártevő kódját tartalmazó fájl(oka)t hoznak létre vagy meglévő fájl(oka)t módosítanak, illetve beállítanak néhány bejegyzést a rendszerleíró adatbázisban, ami arra utasítja az induló operációs rendszert, hogy a frissen elhelyezett kártékony kódot is el kell indítani. Emellett - nem közvetlenül az újraindítás érdekében - más területeken (könyvtárakban) is létrehoznak magukból másolatot. Ennek kettős célja van: Egyrészt egy esetleges vírusirtást követően egy eldugott helyen megmaradhatnak a fertőzött állományok, másrészt helyi hálózatokban, megosztott könyvtárakban, peer-to-peer hálózatokban is képes terjedni. Kihasználhatják továbbá a Windows alapértelmezés szerinti beállítását is, miszerint egy létrehozott AUTORUN.INF nevű fájllal el lehet érni, hogy egy meghajtó megnyitásakor is aktivizálódjon a kártékony kód.
+A makróvírusok célja, hogy terjedésük során egy másik dokumentumot megfertőzzenek. Minden olyan adatállomány, mely az adatokon kívül az adatállomány értelmezni képes alkalmazás számára végrehajtható programot tartalmaz makróvírussal megfertőzhető. Természetesen ez csak akkor igaz, ha az alkalmazás számára végrehajtandó utasításkészlet lehetőséget teremt erre.
+A makróvírusok a terjedésük érdekében a megfertőzött dokumentumban makrókat hoznak létre. Ebben helyezik el a terjedésükhöz szükséges kódot, amit aztán a dokumentumot kezelő alkalmazás (például Microsoft Word, Excel) értelmez és végrehajt.
+
+A Melissa egy számítógépes vírus volt, amelyet 1999. március 26-án jelentettek meg. A vírus a Microsoft Word és Microsoft Outlook alapú rendszereket támadta meg, és jelentős adatforgalmat halmozott fel. A vírus e-mailen keresztül fertőzte meg a számítógépeket. A levél címe a következő volt: "Important Message From" (Fontos üzenet), ezt követte a felhasználónév. Ha a levélre kattintottak, ez az üzenet jelent meg: "Here's that document you asked for. Don't show anyone else ;)" (jelentése: "Itt ez az üzenet, amit kértél. Ne mutasd meg senkinek"). Ehhez volt csatolva egy Word dokumentum, amely pornóoldalak listáját, és a hozzájuk tartozó belépési kulcsokat tartalmazta. Ezt követően a vírus elküldte ezt a levelet az első 50 személynek, akik a felhasználó kapcsolatlistáján szerepeltek. A Melissa ezt követően deaktiválta a Microsoft Word és a Microsoft Outlook biztonsági funkcióit.
+
+A vírust David L. Smith terjesztette 1999. március 26-án.[1]
+
+1999. április 1-jén Smith-et New Jersey-ben letartóztatták, az FBI, a New Jersey Állami Rendőrség, a Monmouth Internet, egy svéd számítógépes tudós és mások együttműködésével, illetve 80 millió dollárra büntették az okozott károk miatt.[2]
+
+1999. december 10-én Smith bevallotta, hogy ő terjesztette a vírust.[3]
+
+2002. május 1-jén húsz hónapnyi börtönbüntetésre és 5000 dolláros bírságra ítélték.[4][5]
+
+--------------------------
+
+A Danube számítógépes vírus egy olyan kártevő, amely a Jerusalem vírus egyik változata. Ez egy többrészes vírus, amely képes mind a .COM, mind az .EXE fájlokat, valamint a lemezindító szektorokat megfertőzni1. A fertőzés módja attól függ, hogy a program vagy a lemezindító szektor által terjed-e. Amikor egy fertőzött programot futtatnak, a vírus a memóriában marad, mint egy TSR (Terminate and Stay Resident), és öt kilobájt memóriát foglal magának. A DOS MEM /C parancsával észlelhető a vírus jelenléte, mivel jelentést tesz arról, hogy a futtatott program, mint egy normál TSR, a memóriában maradt2. Ezt követően minden futtatott COM és EXE fájl megfertőződik, kivéve a COMMAND.COM-ot. A vírus ellenőrzi a lemezindító szektort is a fertőzés során2.
+
+
+
