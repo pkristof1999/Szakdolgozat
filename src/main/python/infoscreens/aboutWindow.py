@@ -2,7 +2,7 @@ import os
 
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
-from PyQt6.QtWidgets import QMainWindow, QPushButton, QLabel, QTextBrowser
+from PyQt6.QtWidgets import QMainWindow, QPushButton, QTextBrowser
 
 from src.main.python.components.logger import logger
 from src.main.python.infoscreens.errorMessage import errorMessage

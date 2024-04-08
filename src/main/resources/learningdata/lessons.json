@@ -19,11 +19,11 @@
                 "goodAnswer" : "testAnswer1"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért lehetett ennyire sikeres a Melissa nevezetű makrovírus?",
+                "answer1" : "A számítógépek gyorsan tudták lefuttatni a káros kódot",
+                "answer2" : "Tapasztalatok híjján az emberek megnyitották a különös dokumentumot",
+                "answer3" : "A sérülékeny emailes hálózatok miatt",
+                "goodAnswer" : "Tapasztalatok híjján az emberek megnyitották a különös dokumentumot"
             }
         }
     },
