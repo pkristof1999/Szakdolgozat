@@ -12,11 +12,11 @@
                 "goodAnswer" : "Óvatosság és odafigyelés"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Melyik két módon tudott terjedni a Danube nevezetű vírus?",
+                "answer1" : "SMS és MMS útján",
+                "answer2" : "Emailek és telefonhíváskor létrejövő kapcsolat útján",
+                "answer3" : "Fertőzött adathordozókon és emailek mellékletében",
+                "goodAnswer" : "Fertőzött adathordozókon és emailek mellékletében"
             },
             "questions3": {
                 "question" : "Miért lehetett ennyire sikeres a Melissa nevezetű makrovírus?",
@@ -145,25 +145,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/ransomwares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Általában milyen módon kérik befizetni a váltságdíjat?",
+                "answer1" : "Kripotvalutával (pl. Bitcoin)",
+                "answer2" : "Banki átutalással (bármilyen pénznemben)",
+                "answer3" : "Készpénzes befizetés automatánál",
+                "goodAnswer" : "Kripotvalutával (pl. Bitcoin)"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Érdemes kifizetni a váltságot egy zsarolóvírusnál?\n",
+                "answer1" : "Igen, mert így megszüntethetjük a veszélyt",
+                "answer2" : "Igen, mert a hackerek megdolgoztak a váltságdíjért",
+                "answer3" : "Nem, hiszen nincs rá garancia, hogy a díj elutalásával megszűnik a veszély",
+                "goodAnswer" : "Nem, hiszen nincs rá garancia, hogy a díj elutalásával megszűnik a veszély"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Egy szolgáltató támadásánál mi okozza a legnagyobb károkat?",
+                "answer1" : "Az, hogy nincs produktivitás, amíg nincs megoldva a probléma",
+                "answer2" : "Az, hogy a számítógépeket újra kell telepíteni",
+                "answer3" : "Az, hogy elveszhetnek korábbi fájlok",
+                "goodAnswer" : "Az, hogy nincs produktivitás, amíg nincs megoldva a probléma"
             }
         }
     },
