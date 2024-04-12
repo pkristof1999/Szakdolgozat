@@ -13,4 +13,6 @@ https://www.malwarebytes.com/computer-worm
 https://us.norton.com/blog/malware/what-is-a-computer-worm
 https://www.eset.hu/tamogatas/viruslabor/virusleirasok/%21conficker
 https://www.eset.hu/tamogatas/viruslabor/virusleirasok/conficker
+https://en.wikipedia.org/wiki/Conficker
 https://www.eset.hu/tamogatas/viruslabor/virusleirasok/sasser-d
+https://en.wikipedia.org/wiki/Sasser_(computer_worm)
