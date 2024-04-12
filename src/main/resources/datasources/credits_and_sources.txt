@@ -11,3 +11,6 @@ https://www.f-secure.com/v-descs/jerusale.shtml
 
 https://hu.wikipedia.org/wiki/Melissa_(sz%C3%A1m%C3%ADt%C3%B3g%C3%A9pes_v%C3%ADrus)
 https://www.eset.hu/tamogatas/viruslabor/virusleirasok/melissa-o
+
+https://www.malwarebytes.com/computer-worm
+https://us.norton.com/blog/malware/what-is-a-computer-worm
