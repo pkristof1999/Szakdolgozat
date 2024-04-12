@@ -33,11 +33,11 @@
         "dataPage3Path" : "src/main/resources/learningdata/worms/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Hol fertőznek elsődlegesen a számítógépes férgek?",
+                "answer1" : "A számítógépes hálózatokban",
+                "answer2" : "A levelezőrendszerekben",
+                "answer3" : "A mobiltelefonjaink üzenetküldő alkalmazásaiban",
+                "goodAnswer" : "A számítógépes hálózatokban"
             },
             "questions2": {
                 "question" : "testQuestion2",
