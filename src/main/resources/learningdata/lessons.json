@@ -145,10 +145,10 @@
         "dataPage3Path" : "src/main/resources/learningdata/ransomwares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "Általában milyen módon kérik befizetni a váltságdíjat?",
+                "question" : "Általában milyen módon kérik befizetni a támadók a váltságdíjat?",
                 "answer1" : "Kripotvalutával (pl. Bitcoin)",
                 "answer2" : "Banki átutalással (bármilyen pénznemben)",
-                "answer3" : "Készpénzes befizetés automatánál",
+                "answer3" : "Készpénzes befizetés automatánál, hogy ne lehessen lekövetni",
                 "goodAnswer" : "Kripotvalutával (pl. Bitcoin)"
             },
             "questions2": {
