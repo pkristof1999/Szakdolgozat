@@ -24,6 +24,8 @@ class AboutWindowUI(QMainWindow):
         self.contentBrowser = self.findChild(QTextBrowser, "contentBrowser")
         self.backButton = self.findChild(QPushButton, "backButton")
 
+        self.contentBrowser.setOpenExternalLinks(True)
+
         self.loadContent()
 
         self.backButton.clicked.connect(lambda: self.closeWindow(parent))
