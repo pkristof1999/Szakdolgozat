@@ -54,6 +54,9 @@ class LearnWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
+            self.defaultBackButtonStyle = self.backButton.styleSheet()
+            print(self.defaultBackButtonStyle)
+
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
 
@@ -94,6 +97,7 @@ class LearnWindowUI(QMainWindow):
 
             self.closeEvent = lambda event: grandParent.exitWindow(event, self.timerThread, self.terminateTimerThread)
 
+            self.hideButton(self.backButton)
             self.loadCurrentPage()
 
         except Exception as e:
@@ -182,6 +186,7 @@ class LearnWindowUI(QMainWindow):
         if self.indexOfCurrentPage < self.numberOfDataPages:
             self.indexOfCurrentPage += 1
             self.loadCurrentPage()
+            self.showButton(self.backButton)
 
     def showResults(self):
         self.resultsWindow = None
@@ -350,11 +355,27 @@ class LearnWindowUI(QMainWindow):
         self.numberOfGivenAnswers += 1
         logger.info(f"Válaszok listája: {self.arrayOfAnswers}")
 
+    def hideButton(self, button):
+        button.setEnabled(False)
+        button.setStyleSheet("""* {
+                                    border: None;
+                                    background-color: rgba(0, 0, 0, 0);
+                                    color: rgba(0, 0, 0, 0);
+                                }
+                            """)
+
+    def showButton(self, button):
+        button.setEnabled(True)
+        button.setStyleSheet(self.defaultBackButtonStyle)
+
     def removeFromArrayOfAnswers(self):
         if self.arrayOfAnswers and self.arrayOfAnswers[-1]:
             self.arrayOfAnswers.pop()
             self.numberOfGivenAnswers -= 1
             logger.info(f"Válaszok listája: {self.arrayOfAnswers}")
+
+        if not self.arrayOfAnswers:
+            self.hideButton(self.backButton)
 
     def backButtonClicked(self):
         if self.indexOfCurrentPage != 1:
