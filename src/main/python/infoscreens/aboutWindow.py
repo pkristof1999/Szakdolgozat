@@ -29,12 +29,12 @@ class AboutWindowUI(QMainWindow):
         self.backButton.clicked.connect(lambda: self.closeWindow(parent))
 
     def loadContent(self):
-        dataPath = os.path.join(self.basePath, "src/main/resources/datasources/credits_and_sources.txt")
+        dataPath = os.path.join(self.basePath, "src/main/resources/datasources/credits_and_sources.html")
 
         try:
             if os.path.exists(dataPath):
-                with open(dataPath, 'r', encoding = "UTF-8") as textFile:
-                    fileContents = textFile.read()
+                with open(dataPath, 'r', encoding = "UTF-8") as htmlFile:
+                    fileContents = htmlFile.read()
 
             self.contentBrowser.setText(fileContents)
 
