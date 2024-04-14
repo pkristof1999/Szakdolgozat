@@ -40,18 +40,18 @@
                 "goodAnswer" : "A számítógépes hálózatokban"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért lehetett ennyire sikeres a Conficker nevű féreg?",
+                "answer1" : "Azért, mert a támadás váratlanul érte az embereket",
+                "answer2" : "Azért, mert túl sokáig tartott a sebezhetőség kijavítása",
+                "answer3" : "Azért, mert több fejlett eljárást is bevetett a terjedéshez",
+                "goodAnswer" : "Azért, mert több fejlett eljárást is bevetett a terjedéshez"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Sikeresen meg tudott fertőzni a Sasser minden olyan rendszert, ami útjába esett?",
+                "answer1" : "Igen, mivel nem tett különbséget a hálózaton lévő rendszerek között",
+                "answer2" : "Igen, mivel csak Windows rendszerű számítógépek alkottak hálózatot",
+                "answer3" : "Nem, csak a sebezhető rendszereket sikerült megfertőznie",
+                "goodAnswer" : "Nem, csak a sebezhető rendszereket sikerült megfertőznie"
             }
         }
     },

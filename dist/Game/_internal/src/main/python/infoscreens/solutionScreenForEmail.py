@@ -50,6 +50,8 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.previousButton = self.findChild(QPushButton, "previousButton")
         self.nextButton = self.findChild(QPushButton, "nextButton")
 
+        self.defaultPreviousButtonStyle = self.previousButton.styleSheet()
+
         self.solutionWindow = None
         self.label = QLabel(self.emailFrame)
 
@@ -59,6 +61,7 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
+        self.hideButton(self.previousButton)
         self.loadFirstQuestion()
 
         self.closeEvent = greatGrandParent.exitWindow
@@ -88,6 +91,9 @@ class SolutionScreenForEmailUI(QMainWindow):
         Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
                                     """)
 
+        if self.questionIndex == 0:
+            self.hideButton(self.previousButton)
+
         self.checkNextButtonState()
 
     def nextButtonClick(self, greatGrandParent):
@@ -99,6 +105,8 @@ class SolutionScreenForEmailUI(QMainWindow):
             A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
             Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
                                         """)
+
+        self.showButton(self.previousButton)
 
         if self.nextButtonExitState:
             self.hide()
@@ -117,6 +125,19 @@ class SolutionScreenForEmailUI(QMainWindow):
         else:
             self.nextButton.setText("Következő")
             self.nextButtonExitState = False
+
+    def hideButton(self, button):
+        button.setEnabled(False)
+        button.setStyleSheet("""* {
+                                    border: None;
+                                    background-color: rgba(0, 0, 0, 0);
+                                    color: rgba(0, 0, 0, 0);
+                                }
+                            """)
+
+    def showButton(self, button):
+        button.setEnabled(True)
+        button.setStyleSheet(self.defaultPreviousButtonStyle)
 
     def loadImage(self, imagePath):
         try:
