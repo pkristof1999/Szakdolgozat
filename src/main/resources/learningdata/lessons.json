@@ -152,7 +152,7 @@
                 "goodAnswer" : "Kripotvalutával (pl. Bitcoin)"
             },
             "questions2": {
-                "question" : "Érdemes kifizetni a váltságot egy zsarolóvírusnál?\n",
+                "question" : "Érdemes kifizetni a váltságot egy zsarolóvírusnál?",
                 "answer1" : "Igen, mert így megszüntethetjük a veszélyt",
                 "answer2" : "Igen, mert a hackerek megdolgoztak a váltságdíjért",
                 "answer3" : "Nem, hiszen nincs rá garancia, hogy a díj elutalásával megszűnik a veszély",
