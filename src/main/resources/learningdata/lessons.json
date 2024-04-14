@@ -61,11 +61,11 @@
         "dataPage3Path" : "src/main/resources/learningdata/trojans/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mire használható fel egy botnet?",
+                "answer1" : "Terheléses támadásokra",
+                "answer2" : "A hálózat felhasználásával áramkimaradások okozása",
+                "answer3" : "A fertőzött gépek felhasználóitól váltságdíj szedésére",
+                "goodAnswer" : "Terheléses támadásokra"
             },
             "questions2": {
                 "question" : "testQuestion2",

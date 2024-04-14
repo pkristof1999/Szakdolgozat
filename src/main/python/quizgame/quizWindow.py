@@ -43,6 +43,8 @@ class QuizWindowUI(QMainWindow):
                 self.backButton = self.findChild(QPushButton, "backButton")
                 self.nextButton = self.findChild(QPushButton, "nextButton")
 
+                self.backButton.setText("Bezárás")
+
                 self.resultsWindow = None
                 self.pointsEarned = 0
 

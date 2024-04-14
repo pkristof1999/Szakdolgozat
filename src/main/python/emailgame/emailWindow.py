@@ -61,6 +61,8 @@ class EmailWindowUI(QMainWindow):
             self.horizontalLine1 = self.findChild(QFrame, "horizontalLine1")
             self.horizontalLine2 = self.findChild(QFrame, "horizontalLine2")
 
+            self.backButton.setText("Bezárás")
+
             self.resultsWindow = None
 
             self.subjectLabel.setText("")

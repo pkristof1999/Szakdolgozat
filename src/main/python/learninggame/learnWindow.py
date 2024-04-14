@@ -54,6 +54,8 @@ class LearnWindowUI(QMainWindow):
             self.backButton = self.findChild(QPushButton, "backButton")
             self.nextButton = self.findChild(QPushButton, "nextButton")
 
+            self.exitButton.setText("Bezárás")
+
             self.defaultBackButtonStyle = self.backButton.styleSheet()
             print(self.defaultBackButtonStyle)
 
