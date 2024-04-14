@@ -49,6 +49,8 @@ class SolutionScreenUI(QMainWindow):
         self.previousButton = self.findChild(QPushButton, "previousButton")
         self.nextButton = self.findChild(QPushButton, "nextButton")
 
+        self.defaultPreviousButtonStyle = self.previousButton.styleSheet()
+
         self.solutionWindow = None
 
         self.questionField.setWordWrap(True)
@@ -58,6 +60,7 @@ class SolutionScreenUI(QMainWindow):
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
+        self.hideButton(self.previousButton)
         self.loadFirstQuestion()
 
         self.closeEvent = greatGrandParent.exitWindow
@@ -80,6 +83,9 @@ class SolutionScreenUI(QMainWindow):
             A megadott válasz a kérdésre: {self.arrayOfSolutions[self.questionIndex]}
                                         """)
 
+        if self.questionIndex == 0:
+            self.hideButton(self.previousButton)
+
         self.checkNextButtonState()
 
     def nextButtonClick(self, greatGrandParent):
@@ -91,11 +97,26 @@ class SolutionScreenUI(QMainWindow):
             A megadott válasz a kérdésre: {self.arrayOfSolutions[self.questionIndex]}
                                         """)
 
+        self.showButton(self.previousButton)
+
         if self.nextButtonExitState:
             self.hide()
             greatGrandParent.show()
 
         self.checkNextButtonState()
+
+    def hideButton(self, button):
+        button.setEnabled(False)
+        button.setStyleSheet("""* {
+                                    border: None;
+                                    background-color: rgba(0, 0, 0, 0);
+                                    color: rgba(0, 0, 0, 0);
+                                }
+                            """)
+
+    def showButton(self, button):
+        button.setEnabled(True)
+        button.setStyleSheet(self.defaultPreviousButtonStyle)
 
     def backButtonClick(self, parent):
         self.hide()
