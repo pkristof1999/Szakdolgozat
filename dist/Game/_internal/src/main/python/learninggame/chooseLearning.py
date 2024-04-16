@@ -35,7 +35,7 @@ class ChooseLearningUI(QMainWindow):
             self.spywares = self.findChild(QPushButton, "spywares")
             self.adwares = self.findChild(QPushButton, "adwares")
             self.rootkits = self.findChild(QPushButton, "rootkits")
-            self.keyloggers = self.findChild(QPushButton, "keyloggers")
+            self.fileless = self.findChild(QPushButton, "fileless")
             self.backButton = self.findChild(QPushButton, "backButton")
 
             self.learnScreen = None
@@ -96,11 +96,11 @@ class ChooseLearningUI(QMainWindow):
                                              )
             )
 
-            self.keyloggers.clicked.connect(
+            self.fileless.clicked.connect(
                 lambda: self.openLearnWindow(username,
                                              parent,
-                                             typeOfLesson="Billentyűnaplózó Programok",
-                                             nameOfData="keyloggers"
+                                             typeOfLesson="Fájlnélküli kártevők",
+                                             nameOfData="fileless"
                                              )
             )
 
