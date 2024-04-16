@@ -25,11 +25,11 @@
     },
     "question4": {
         "question": "Mire lehet használni a Rootkiteket?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "",
+        "answer1": "",
+        "answer2": "",
+        "answer3": "",
+        "answer4": ""
     },
     "question5": {
         "question": "Hogyan terjednek a leggyakrabban a számítógépes kártevők?",
@@ -57,7 +57,7 @@
     },
     "question8": {
         "question": "Miről kapta a nevét a trójai vírus?",
-        "rightAnswer": "Teszt1",
+        "rightAnswer": "A görög mitológiákból, a trójai falóról",
         "answer1": "A görög mitológiákból, a trójai falóról",
         "answer2": "Trójából eredő támadási technika",
         "answer3": "Az eredeti vírus készítője Trójában él",
@@ -113,11 +113,11 @@
     },
     "question15": {
         "question": "Mit jelent az, hogy egy kártevő 'Billentyűnaplózó'?",
-        "rightAnswer": "Teszt1",
+        "rightAnswer": "A leütött billentyűket figyeli, és elmenti",
         "answer1": "A leütött billentyűket figyeli, és elmenti",
         "answer2": "A billentyűn lévő karaktereket ismeri csak fel",
         "answer3": "Ez a trójai vírus másnéven",
-        "answer4": "Teszt4"
+        "answer4": "Nincs különösebb jelentése a kártevőknél"
     },
     "question16": {
         "question": "Mi a legfontosabb megelőzés az adataink védelmére?",
@@ -128,12 +128,12 @@
         "answer4": "Biztonsági mentések készítése"
     },
     "question17": {
-        "question": "Mit jelent a hátsóajtó (backdoor)?",
-        "rightAnswer": "Teszt1",
+        "question": "Mit jelent a hátsóajtó (backdoor) sebezhetőség?",
+        "rightAnswer": "Egy sebezhetőség, amin a támadó hozzáférést szerez",
         "answer1": "Teszt1",
         "answer2": "Teszt2",
         "answer3": "Egy sebezhetőség, amin a támadó hozzáférést szerez",
-        "answer4": "Teszt4"
+        "answer4": "Ha nem zárjuk kulcsra a hátsó ajtónkat"
     },
     "question18": {
         "question": "Trójai vírus alkothat botnetet?",
@@ -161,11 +161,11 @@
     },
     "question21": {
         "question": "Fel lehet használni adathordózókat is kártevők terjesztésére?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Általában a kártevők adathordózókkal is terjeszthetőek",
+        "answer1": "Nem, a kártevők csak a hálózaton terjedhetnek",
+        "answer2": "Igen, a kártevők kizárólag adathordozón terjednek",
+        "answer3": "Általában a kártevők adathordózókkal is terjeszthetőek",
+        "answer4": "Nem, a tűzfal úgyis megállítaná"
     },
     "question22": {
         "question": "Segíthet a rendszereink frissen tartása a kártevők elleni védelemben?",
@@ -201,39 +201,39 @@
     },
     "question26": {
         "question": "Melyik vírus fajta álcázza magát legitim szoftverként?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Trójai vírus",
+        "answer1": "Számítógépes féreg",
+        "answer2": "Kémprogramok",
+        "answer3": "Trójai vírus",
+        "answer4": "Zsaroló vírus"
     },
     "question27": {
-        "question": "Melyik vírusfajtára jellemző, hogy titkosítja az adatainkat?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "question": "Melyik kártevőre jellemző, hogy titkosítja az adatainkat?",
+        "rightAnswer": "Zsaroló vírus",
+        "answer1": "Számítógépes féreg",
+        "answer2": "Kémprogramok",
+        "answer3": "Trójai vírus",
+        "answer4": "Zsaroló vírus"
     },
     "question28": {
         "question": "A botnetek képesek emberi beavatkozás nélkül működni?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Igen, lehet a botneteket automatizálni",
+        "answer1": "Nem, mindenképp kell a támadó felügyelete",
+        "answer2": "Igen, lehet a botneteket automatizálni",
+        "answer3": "Igen, a botnetek csak automatikusan üzemelnek",
+        "answer4": "Nem, a botnetek teljesen üzemképtelenek"
     },
     "question29": {
         "question": "Miért lehet gyanús egy banktól kapott email?",
-        "rightAnswer": "Teszt1",
+        "rightAnswer": "Általában a bankok a belső rendszerüket használják",
         "answer1": "Általában a bankok a belső rendszerüket használják",
         "answer2": "Semmilyen szín alatt nem küldhet a bank emailt",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "answer3": "Nem lehet gyanús egy banktól kapott email",
+        "answer4": "A bankok általában SMS útján értesítenek"
     },
     "question30": {
         "question": "Billentyűnaplózó kártevő csak szoftveres lehet?",
-        "rightAnswer": "Teszt1",
+        "rightAnswer": "Nem, hardveresen is megoldható",
         "answer1": "Igen, kártevő csak szoftveres lehet",
         "answer2": "Nem, hardveresen is megoldható",
         "answer3": "Nem, csak hardveresen megoldható",
