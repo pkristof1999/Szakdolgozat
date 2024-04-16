@@ -68,11 +68,11 @@
                 "goodAnswer" : "Terheléses támadásokra"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mi volt az elsődleges célja a Zeus trójai vírusnak?",
+                "answer1" : "Botnetek létrehozása káros emailek küldéséhez",
+                "answer2" : "Botnetek létrehozása terheléses támadásokhoz",
+                "answer3" : "Banki adatok eltulajdonítása",
+                "goodAnswer" : "Banki adatok eltulajdonítása"
             },
             "questions3": {
                 "question" : "testQuestion3",

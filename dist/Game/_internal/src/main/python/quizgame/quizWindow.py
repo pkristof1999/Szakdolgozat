@@ -191,7 +191,7 @@ class QuizWindowUI(QMainWindow):
                         if button.isChecked():
                             self.arrayOfSolutions.append(button.text())
                             logger.info(f"{button.text()} sikeresen leadva válaszként!")
-                            if button.text() == self.questionBank[self.questionIndex]["rightAnswer"]:
+                            if button.text() == self.questionBank[self.questionIndex - 1]["rightAnswer"]:
                                 self.goodAnswers += 1
 
                     nextQuestion = self.questionBank[self.questionIndex]

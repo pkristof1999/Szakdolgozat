@@ -28708,3 +28708,793 @@ FITOS@dbwbd.com kiválasztva.
 2024-04-16 11:57:53,985 - INFO - Zsarolóvírusok lecke megnyitása!
 2024-04-16 11:57:55,604 - INFO - Tanulós játémód bezárása!
 2024-04-16 11:58:02,417 - INFO - Kilépés az alkalmazásból!
+2024-04-16 13:38:23,718 - INFO - Az alkalmazás elindult!
+2024-04-16 13:38:25,445 - INFO - Továbblépés a fő felületre.
+2024-04-16 13:38:27,185 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 13:38:29,135 - INFO - Jelvények sikeresen betöltve!
+2024-04-16 13:38:29,137 - INFO - Jelvények sikeresen betöltve!
+2024-04-16 13:38:34,743 - INFO - Adatok mentve!
+2024-04-16 13:38:36,262 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 13:38:37,372 - INFO - Vírusok lecke megnyitása!
+2024-04-16 13:38:39,518 - INFO - Vírusírtók telepítése megjelölve válaszként.
+2024-04-16 13:38:40,058 - INFO - Vírusírtók telepítése sikeresen leadva válaszként!
+2024-04-16 13:38:40,058 - INFO - Válaszok listája: ['Vírusírtók telepítése']
+2024-04-16 13:38:41,428 - INFO - Emailek és telefonhíváskor létrejövő kapcsolat útján megjelölve válaszként.
+2024-04-16 13:38:41,890 - INFO - Emailek és telefonhíváskor létrejövő kapcsolat útján sikeresen leadva válaszként!
+2024-04-16 13:38:41,890 - INFO - Válaszok listája: ['Vírusírtók telepítése', 'Emailek és telefonhíváskor létrejövő kapcsolat útján']
+2024-04-16 13:38:42,918 - INFO - A számítógépek gyorsan tudták lefuttatni a káros kódot megjelölve válaszként.
+2024-04-16 13:38:43,425 - INFO - A számítógépek gyorsan tudták lefuttatni a káros kódot sikeresen leadva válaszként!
+2024-04-16 13:38:43,425 - INFO - Válaszok listája: ['Vírusírtók telepítése', 'Emailek és telefonhíváskor létrejövő kapcsolat útján', 'A számítógépek gyorsan tudták lefuttatni a káros kódot']
+2024-04-16 13:38:49,454 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 13:38:50,139 - INFO - Vírusok lecke megnyitása!
+2024-04-16 13:38:51,553 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-16 13:38:52,401 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-16 13:38:52,402 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-16 13:38:53,701 - INFO - Fertőzött adathordozókon és emailek mellékletében megjelölve válaszként.
+2024-04-16 13:38:53,998 - INFO - Fertőzött adathordozókon és emailek mellékletében sikeresen leadva válaszként!
+2024-04-16 13:38:53,999 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'Fertőzött adathordozókon és emailek mellékletében']
+2024-04-16 13:38:55,126 - INFO - A számítógépek gyorsan tudták lefuttatni a káros kódot megjelölve válaszként.
+2024-04-16 13:38:55,740 - INFO - A számítógépek gyorsan tudták lefuttatni a káros kódot sikeresen leadva válaszként!
+2024-04-16 13:38:55,740 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'Fertőzött adathordozókon és emailek mellékletében', 'A számítógépek gyorsan tudták lefuttatni a káros kódot']
+2024-04-16 13:39:06,410 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 13:39:08,007 - INFO - Kvíz játékmód bezárása!
+2024-04-16 13:39:09,818 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:02:41,813 - INFO - Az alkalmazás elindult!
+2024-04-16 14:02:43,166 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:02:44,833 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:02:45,903 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:02:47,562 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 14:02:48,009 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 14:02:48,009 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 14:03:02,250 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:05:10,619 - INFO - Az alkalmazás elindult!
+2024-04-16 14:05:11,656 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:05:12,669 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 14:05:13,869 - INFO - Kvíz játékmód bezárása!
+2024-04-16 14:05:14,796 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:05:15,281 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:05:16,454 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 14:05:16,874 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 14:05:16,875 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 14:05:24,322 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:05:25,949 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:06:47,663 - INFO - Az alkalmazás elindult!
+2024-04-16 14:06:51,098 - INFO - Az alkalmazás elindult!
+2024-04-16 14:06:55,838 - INFO - Az alkalmazás elindult!
+2024-04-16 14:06:57,498 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:06:58,836 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:07:00,052 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:07:01,347 - INFO - A fertőzött gépek felhasználóitól váltságdíj szedésére megjelölve válaszként.
+2024-04-16 14:07:01,745 - INFO - A fertőzött gépek felhasználóitól váltságdíj szedésére sikeresen leadva válaszként!
+2024-04-16 14:07:01,746 - INFO - Válaszok listája: ['A fertőzött gépek felhasználóitól váltságdíj szedésére']
+2024-04-16 14:07:03,756 - INFO - Banki adatok eltulajdonítása megjelölve válaszként.
+2024-04-16 14:07:04,276 - INFO - Banki adatok eltulajdonítása sikeresen leadva válaszként!
+2024-04-16 14:07:04,276 - INFO - Válaszok listája: ['A fertőzött gépek felhasználóitól váltságdíj szedésére', 'Banki adatok eltulajdonítása']
+2024-04-16 14:07:05,661 - INFO - testAnswer1 megjelölve válaszként.
+2024-04-16 14:07:06,146 - INFO - testAnswer1 sikeresen leadva válaszként!
+2024-04-16 14:07:06,146 - INFO - Válaszok listája: ['A fertőzött gépek felhasználóitól váltságdíj szedésére', 'Banki adatok eltulajdonítása', 'testAnswer1']
+2024-04-16 14:07:25,753 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:30:45,469 - INFO - Az alkalmazás elindult!
+2024-04-16 14:30:46,491 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:30:48,031 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:30:50,196 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:30:51,643 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 14:30:52,207 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 14:30:52,207 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 14:30:53,812 - INFO - Botnetek létrehozása káros emailek küldéséhez megjelölve válaszként.
+2024-04-16 14:30:54,316 - INFO - Botnetek létrehozása káros emailek küldéséhez sikeresen leadva válaszként!
+2024-04-16 14:30:54,316 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása', 'Botnetek létrehozása káros emailek küldéséhez']
+2024-04-16 14:31:14,282 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:31:17,827 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:31:19,868 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 14:31:20,387 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 14:31:20,387 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 14:31:25,059 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:31:25,735 - INFO - Vírusok lecke megnyitása!
+2024-04-16 14:31:27,272 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-16 14:31:27,964 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-16 14:31:27,964 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-16 14:31:30,650 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:32:43,573 - INFO - Az alkalmazás elindult!
+2024-04-16 14:32:45,054 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:32:46,991 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:32:58,911 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:33:00,376 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 14:33:00,824 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 14:33:00,824 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 14:33:02,529 - INFO - Botnetek létrehozása káros emailek küldéséhez megjelölve válaszként.
+2024-04-16 14:33:03,012 - INFO - Botnetek létrehozása káros emailek küldéséhez sikeresen leadva válaszként!
+2024-04-16 14:33:03,012 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása', 'Botnetek létrehozása káros emailek küldéséhez']
+2024-04-16 14:33:37,840 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:33:40,723 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:34:36,344 - INFO - Az alkalmazás elindult!
+2024-04-16 14:34:37,904 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:34:39,499 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:34:54,374 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:36:06,795 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:37:19,023 - INFO - Az alkalmazás elindult!
+2024-04-16 14:37:20,215 - INFO - Továbblépés a fő felületre.
+2024-04-16 14:37:21,726 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 14:37:23,127 - INFO - Kvíz játékmód bezárása!
+2024-04-16 14:37:24,300 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 14:37:27,136 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-16 14:37:29,953 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:37:32,070 - INFO - Rootkitek lecke megnyitása!
+2024-04-16 14:37:33,884 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:37:34,613 - INFO - Kémprogramok lecke megnyitása!
+2024-04-16 14:37:37,228 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:37:38,372 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 14:37:39,284 - INFO - Tanulós játémód bezárása!
+2024-04-16 14:37:49,408 - INFO - Kilépés az alkalmazásból!
+2024-04-16 14:57:46,862 - INFO - Az alkalmazás elindult!
+2024-04-16 14:57:48,359 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-16 14:57:54,147 - INFO - Visszalépés az üdvözlő képernyőre!
+2024-04-16 15:22:08,777 - INFO - Az alkalmazás elindult!
+2024-04-16 15:22:11,070 - INFO - Továbblépés a fő felületre.
+2024-04-16 15:22:12,767 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 15:22:14,161 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 15:22:16,227 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 15:22:16,617 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 15:22:16,617 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 15:22:17,959 - INFO - Botnetek létrehozása terheléses támadásokhoz megjelölve válaszként.
+2024-04-16 15:22:18,392 - INFO - Botnetek létrehozása terheléses támadásokhoz sikeresen leadva válaszként!
+2024-04-16 15:22:18,392 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása', 'Botnetek létrehozása terheléses támadásokhoz']
+2024-04-16 15:23:04,318 - INFO - Kilépés az alkalmazásból!
+2024-04-16 15:25:52,100 - INFO - Az alkalmazás elindult!
+2024-04-16 15:25:56,965 - INFO - Továbblépés a fő felületre.
+2024-04-16 15:26:01,279 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:12:47,706 - INFO - Az alkalmazás elindult!
+2024-04-16 17:12:49,853 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:12:50,901 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 17:12:52,029 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-16 17:12:53,789 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-16 17:12:54,309 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-16 17:12:54,309 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-16 17:12:55,593 - INFO - Botnetek létrehozása káros emailek küldéséhez megjelölve válaszként.
+2024-04-16 17:12:56,296 - INFO - Botnetek létrehozása káros emailek küldéséhez sikeresen leadva válaszként!
+2024-04-16 17:12:56,296 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása', 'Botnetek létrehozása káros emailek küldéséhez']
+2024-04-16 17:13:07,382 - INFO - Tanulós játémód bezárása!
+2024-04-16 17:13:09,812 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:20:36,408 - INFO - Az alkalmazás elindult!
+2024-04-16 17:20:37,521 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:20:38,814 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:20:40,161 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:20:40,523 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:20:40,926 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:20:41,203 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:20:41,570 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:41,811 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:42,084 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:42,347 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:42,565 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:42,825 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:43,101 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:43,354 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:43,623 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:43,875 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:44,106 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:44,371 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:44,598 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:44,879 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:45,328 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:45,653 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:47,511 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:20:48,377 - ERROR - Nem választott választ!
+2024-04-16 17:20:49,317 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:20:49,650 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:20:49,946 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:20:50,242 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:20:50,491 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:20:50,709 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:20:50,939 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:51,544 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:20:51,875 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:20:52,234 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:20:52,499 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:20:52,749 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:20:52,978 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:20:53,215 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:20:53,459 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:20:53,721 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:20:54,017 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:20:54,464 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:20:54,806 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:20:55,585 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:20:55,931 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:21:01,708 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:21:02,293 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:21:02,694 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:21:02,940 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:03,230 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:03,442 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:04,073 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:21:04,348 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:21:04,606 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:04,847 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:05,110 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:21:05,458 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:21:05,795 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:21:06,133 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:21:06,454 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:21:06,772 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:21:07,118 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:07,434 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:07,724 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:21:08,033 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:21:08,362 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:21:08,705 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:21:11,834 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:21:12,391 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:21:12,748 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:21:13,049 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:21:13,361 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:21:13,615 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:13,912 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:14,247 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:21:14,523 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:21:14,805 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:15,067 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:15,338 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:21:15,638 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:21:15,989 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:21:16,282 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:21:16,977 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:21:17,324 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:21:17,576 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:21:17,844 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:21:18,091 - INFO - Egy szerver vagy hálózat megjelölve válaszként.
+2024-04-16 17:21:19,169 - INFO - Az hálózati kábelekre túlfeszültséget helyeznek megjelölve válaszként.
+2024-04-16 17:21:22,867 - INFO - Kvíz játékmód bezárása!
+2024-04-16 17:21:24,418 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:22:37,548 - INFO - Az alkalmazás elindult!
+2024-04-16 17:22:39,047 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:22:40,060 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:22:40,622 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:41,014 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:41,256 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:41,539 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:41,814 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:22:42,094 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:22:42,339 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:42,589 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:42,840 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:22:43,199 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:22:43,502 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:43,788 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:44,054 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:22:44,313 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:22:44,544 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:44,807 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:45,082 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:22:45,400 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:22:45,761 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:46,068 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:50,186 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:22:50,694 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:51,063 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:51,308 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:51,533 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:51,762 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:22:51,980 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:22:52,378 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:22:52,647 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:22:52,930 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:53,210 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:53,492 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:54,026 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:22:54,281 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:22:54,526 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:54,778 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:55,069 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:55,454 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:55,840 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:22:56,169 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:22:56,518 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:22:56,745 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:22:58,178 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:22:58,643 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:22:59,017 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:22:59,362 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:22:59,603 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:22:59,882 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:23:00,125 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:23:00,429 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:23:01,107 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:23:01,494 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:23:01,771 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:23:02,574 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:23:02,941 - INFO - Hálózati kábelekre súlyt helyeznek megjelölve válaszként.
+2024-04-16 17:23:10,716 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:25:44,122 - INFO - Az alkalmazás elindult!
+2024-04-16 17:25:45,353 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:25:46,371 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:25:48,312 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:25:49,257 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:25:49,636 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:25:49,997 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:25:50,281 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:25:50,760 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:25:51,041 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:25:52,264 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:25:52,768 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:25:53,097 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:25:53,386 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:25:53,709 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:25:54,191 - INFO - Kvíz játékmód bezárása!
+2024-04-16 17:25:55,396 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:26:06,340 - INFO - Az alkalmazás elindult!
+2024-04-16 17:26:07,581 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:26:08,644 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:26:11,452 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:26:12,482 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:26:13,056 - INFO - Kvíz játékmód bezárása!
+2024-04-16 17:26:14,530 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:33:55,670 - INFO - Az alkalmazás elindult!
+2024-04-16 17:33:57,067 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:33:58,206 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:33:59,269 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:33:59,683 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:34:00,047 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:34:00,466 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:34:00,813 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:34:01,056 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:34:01,292 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:34:01,555 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:34:01,841 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:34:02,236 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:34:02,473 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:34:02,774 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:34:03,035 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:34:04,719 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:38:43,193 - INFO - Az alkalmazás elindult!
+2024-04-16 17:38:44,486 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:39:13,071 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:39:17,446 - INFO - Az alkalmazás elindult!
+2024-04-16 17:39:18,585 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:39:19,749 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:39:20,471 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:39:20,731 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:39:21,116 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:39:21,427 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:39:21,718 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:39:22,206 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:39:22,555 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:39:22,767 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:39:23,018 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:39:23,527 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:39:23,776 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:39:24,077 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:39:24,832 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:39:25,176 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:39:26,060 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:39:26,352 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:39:29,683 - INFO - Kvíz játékmód bezárása!
+2024-04-16 17:39:31,084 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:49:04,906 - INFO - Az alkalmazás elindult!
+2024-04-16 17:49:05,946 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:49:07,482 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 17:49:08,208 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:49:08,669 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:49:08,958 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:49:09,244 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:49:09,609 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:49:09,856 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:49:10,168 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:49:10,749 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:49:11,008 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:49:11,292 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:49:11,607 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:49:11,925 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:49:12,337 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 17:49:12,951 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 17:49:13,312 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 17:49:13,622 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 17:49:13,907 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 17:49:14,382 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 17:49:14,854 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 17:49:15,245 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 17:49:18,685 - INFO - Kilépés az alkalmazásból!
+2024-04-16 17:50:54,707 - INFO - Az alkalmazás elindult!
+2024-04-16 17:50:55,839 - INFO - Továbblépés a fő felületre.
+2024-04-16 17:50:57,166 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 17:52:00,773 - INFO - Kilépés az alkalmazásból!
+2024-04-16 18:12:29,019 - INFO - Az alkalmazás elindult!
+2024-04-16 18:12:30,139 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:12:31,123 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:12:32,779 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 18:12:33,247 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 18:12:33,772 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 18:12:34,086 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 18:12:34,530 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 18:12:35,561 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 18:12:39,763 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 18:12:40,648 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 18:12:41,138 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 18:12:41,523 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 18:12:41,817 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:12:42,045 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:12:42,441 - INFO - Hálózati kábelekre súlyt helyeznek megjelölve válaszként.
+2024-04-16 18:12:42,762 - INFO - Hálózati kábelekre súlyt helyeznek sikeresen leadva válaszként!
+2024-04-16 18:12:44,331 - ERROR - Nem választott választ!
+2024-04-16 18:12:45,432 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 18:12:45,812 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 18:12:46,278 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:12:46,678 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:12:47,350 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 18:12:47,940 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 18:12:53,360 - INFO - Kilépés az alkalmazásból!
+2024-04-16 18:14:02,513 - INFO - Az alkalmazás elindult!
+2024-04-16 18:14:03,931 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:14:05,039 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-16 18:14:20,677 - INFO - Kilépés az alkalmazásból!
+2024-04-16 18:27:14,222 - INFO - Az alkalmazás elindult!
+2024-04-16 18:27:15,197 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:27:16,031 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:27:16,724 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 18:27:17,072 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 18:27:17,468 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:17,717 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:18,011 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:18,248 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:18,496 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:18,844 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:19,102 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:19,381 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:19,641 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:20,218 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:20,482 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:20,859 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:21,123 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:21,512 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:21,777 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:22,239 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:22,466 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:22,906 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:23,149 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:24,983 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:27:25,426 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 18:27:25,812 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 18:27:26,216 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:26,473 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:26,763 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:27,045 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:27,325 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:27,590 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:27,882 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:28,154 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:28,443 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-16 18:27:29,044 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-16 18:27:29,436 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:29,716 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:30,035 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:30,323 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:30,621 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:30,905 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:31,300 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:31,568 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:33,116 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:27:33,739 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:34,038 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:34,435 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:34,690 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:35,073 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:35,333 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:35,736 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:36,011 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:42,813 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon megjelölve válaszként.
+2024-04-16 18:27:43,223 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon sikeresen leadva válaszként!
+2024-04-16 18:27:44,023 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:44,280 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:44,844 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:45,133 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:45,522 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:45,774 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:46,159 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:46,393 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:46,769 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:46,996 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:49,262 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:27:49,752 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 18:27:50,143 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 18:27:50,428 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:50,668 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:50,927 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:51,261 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:51,509 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:51,775 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:52,061 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:52,376 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:52,648 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:52,936 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:53,216 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:53,485 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:53,803 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:54,057 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:54,416 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:54,692 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:55,139 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:55,391 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:27:57,319 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:27:57,869 - ERROR - Nem választott választ!
+2024-04-16 18:27:59,623 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:27:59,886 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:28:00,176 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:28:16,174 - INFO - Kvíz játékmód bezárása!
+2024-04-16 18:28:17,203 - INFO - Kilépés az alkalmazásból!
+2024-04-16 18:34:42,486 - INFO - Az alkalmazás elindult!
+2024-04-16 18:34:43,437 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:34:44,384 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:34:45,901 - INFO - Teszt2 megjelölve válaszként.
+2024-04-16 18:34:46,368 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-16 18:34:47,106 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 18:34:47,472 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 18:34:47,862 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 18:34:48,147 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 18:34:51,414 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon megjelölve válaszként.
+2024-04-16 18:34:51,771 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon sikeresen leadva válaszként!
+2024-04-16 18:34:52,274 - INFO - Belső hálózaton keresztül megjelölve válaszként.
+2024-04-16 18:34:52,701 - INFO - Belső hálózaton keresztül sikeresen leadva válaszként!
+2024-04-16 18:34:53,222 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 18:34:53,602 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 18:34:53,941 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:34:54,213 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:34:54,702 - INFO - Trójából eredő támadási technika megjelölve válaszként.
+2024-04-16 18:34:55,191 - INFO - Trójából eredő támadási technika sikeresen leadva válaszként!
+2024-04-16 18:34:55,703 - INFO - Android megjelölve válaszként.
+2024-04-16 18:34:56,100 - INFO - Android sikeresen leadva válaszként!
+2024-04-16 18:34:56,695 - INFO - Van, a vírusírtó a tűzfal egy kisebb része megjelölve válaszként.
+2024-04-16 18:35:00,060 - INFO - Van, a vírusírtó a tűzfal egy kisebb része sikeresen leadva válaszként!
+2024-04-16 18:49:44,066 - INFO - Az alkalmazás elindult!
+2024-04-16 18:49:45,388 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:49:46,306 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:49:51,919 - INFO - Kvíz játékmód bezárása!
+2024-04-16 18:49:54,612 - INFO - Kilépés az alkalmazásból!
+2024-04-16 18:50:03,959 - INFO - Az alkalmazás elindult!
+2024-04-16 18:50:05,216 - INFO - Továbblépés a fő felületre.
+2024-04-16 18:50:06,294 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 18:50:07,035 - ERROR - Nem választott választ!
+2024-04-16 18:50:07,950 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 18:50:08,267 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 18:50:08,627 - INFO - Adathordozók, Emailes mellékletek, hálózati sebezhetőségek megjelölve válaszként.
+2024-04-16 18:50:14,913 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:01:41,452 - INFO - Az alkalmazás elindult!
+2024-04-16 19:01:42,602 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:01:43,517 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:01:44,510 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:44,766 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:45,426 - INFO - Biztonsági mentések készítése megjelölve válaszként.
+2024-04-16 19:01:45,721 - INFO - Biztonsági mentések készítése sikeresen leadva válaszként!
+2024-04-16 19:01:46,392 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:46,659 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:47,133 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:47,372 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:47,766 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:48,029 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:48,473 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:48,720 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:49,205 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:49,482 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:50,473 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-16 19:01:50,886 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-16 19:01:51,550 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:51,807 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:52,327 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:52,561 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:54,262 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:01:54,754 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:55,408 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:55,749 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:56,023 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:56,665 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-16 19:01:57,007 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-16 19:01:57,408 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:57,668 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:58,040 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:58,330 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:01:58,743 - INFO - Figyelemfelkeltés céljából, véletlenszerűen megjelölve válaszként.
+2024-04-16 19:01:59,245 - INFO - Figyelemfelkeltés céljából, véletlenszerűen sikeresen leadva válaszként!
+2024-04-16 19:01:59,643 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:01:59,939 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:02:00,359 - INFO - SMS-ek útján, telefonon megjelölve válaszként.
+2024-04-16 19:02:00,797 - INFO - SMS-ek útján, telefonon sikeresen leadva válaszként!
+2024-04-16 19:02:01,232 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:02:01,508 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:02:10,292 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye, a vírusírtó nem megjelölve válaszként.
+2024-04-16 19:02:10,739 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye, a vírusírtó nem sikeresen leadva válaszként!
+2024-04-16 19:02:13,266 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:03:25,946 - INFO - Az alkalmazás elindult!
+2024-04-16 19:03:26,876 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:03:27,660 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:03:33,374 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:03:34,687 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:03:52,642 - INFO - Az alkalmazás elindult!
+2024-04-16 19:03:53,673 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:03:54,560 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:03:59,567 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:04:03,165 - INFO - Az alkalmazás elindult!
+2024-04-16 19:04:04,243 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:04:05,219 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:04:12,215 - ERROR - Nem választott választ!
+2024-04-16 19:04:13,190 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:04:13,649 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:04:21,761 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:07:57,886 - INFO - Az alkalmazás elindult!
+2024-04-16 19:07:59,438 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:08:00,695 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:08:01,646 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:08:02,003 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:08:02,619 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-16 19:08:02,954 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-16 19:08:03,901 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-16 19:08:04,280 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-16 19:08:04,887 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:08:05,173 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:08:05,548 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:08:05,805 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:08:06,184 - INFO - Megszerzi a postafiókunkat, majd nyilvánosságra hozza megjelölve válaszként.
+2024-04-16 19:08:09,215 - INFO - Megszerzi a postafiókunkat, majd nyilvánosságra hozza sikeresen leadva válaszként!
+2024-04-16 19:08:11,223 - INFO - Biztonsági mentések készítése megjelölve válaszként.
+2024-04-16 19:08:11,620 - INFO - Biztonsági mentések készítése sikeresen leadva válaszként!
+2024-04-16 19:08:12,325 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:08:12,597 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:08:14,826 - INFO - Egy számítógépet egy kártevő túlfeszültség alá helyez megjelölve válaszként.
+2024-04-16 19:08:16,400 - INFO - Egy számítógépet egy kártevő túlfeszültség alá helyez sikeresen leadva válaszként!
+2024-04-16 19:08:17,191 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:08:17,510 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:08:59,674 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:10:08,805 - INFO - Az alkalmazás elindult!
+2024-04-16 19:10:10,003 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:10:11,083 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:10:21,791 - INFO - Titkosítja fájljainkat, váltságdíjért cserébe kínál kulcsot megjelölve válaszként.
+2024-04-16 19:10:22,334 - INFO - Titkosítja fájljainkat, váltságdíjért cserébe kínál kulcsot sikeresen leadva válaszként!
+2024-04-16 19:10:22,874 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:23,202 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:23,505 - INFO - Az eredeti vírus készítője Trójában él megjelölve válaszként.
+2024-04-16 19:10:23,766 - INFO - Az eredeti vírus készítője Trójában él sikeresen leadva válaszként!
+2024-04-16 19:10:24,071 - INFO - Egy sebezhetőség, amin a támadó hozzáférést szerez megjelölve válaszként.
+2024-04-16 19:10:24,328 - INFO - Egy sebezhetőség, amin a támadó hozzáférést szerez sikeresen leadva válaszként!
+2024-04-16 19:10:24,614 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:24,884 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:25,223 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:25,546 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:25,922 - INFO - Nem, csak hardveresen megoldható megjelölve válaszként.
+2024-04-16 19:10:26,202 - INFO - Nem, csak hardveresen megoldható sikeresen leadva válaszként!
+2024-04-16 19:10:26,532 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:26,773 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:27,125 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:27,364 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:27,732 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:10:27,965 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:10:33,254 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:11:13,396 - INFO - Az alkalmazás elindult!
+2024-04-16 19:11:14,430 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:11:15,345 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:11:17,437 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:11:17,757 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:11:18,880 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:11:19,287 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:11:20,333 - INFO - Egy sebezhetőség, amin a támadó hozzáférést szerez megjelölve válaszként.
+2024-04-16 19:11:20,794 - INFO - Egy sebezhetőség, amin a támadó hozzáférést szerez sikeresen leadva válaszként!
+2024-04-16 19:11:21,361 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:11:22,340 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:11:24,443 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:11:25,456 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:11:35,485 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:11:38,123 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:12:55,710 - INFO - Az alkalmazás elindult!
+2024-04-16 19:12:56,847 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:12:58,304 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:12:59,572 - INFO - Igen, kártevő csak szoftveres lehet megjelölve válaszként.
+2024-04-16 19:13:00,080 - INFO - Igen, kártevő csak szoftveres lehet sikeresen leadva válaszként!
+2024-04-16 19:13:03,730 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:13:04,200 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:13:05,027 - INFO - A felhasználók tapasztalata és tudása megjelölve válaszként.
+2024-04-16 19:13:05,579 - INFO - A felhasználók tapasztalata és tudása sikeresen leadva válaszként!
+2024-04-16 19:13:05,954 - INFO - Adathordózók útján (például USB pendrive) megjelölve válaszként.
+2024-04-16 19:13:06,417 - INFO - Adathordózók útján (például USB pendrive) sikeresen leadva válaszként!
+2024-04-16 19:13:06,966 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:13:07,433 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:13:07,749 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:13:08,133 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:13:14,052 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:13:19,300 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:13:38,074 - INFO - Az alkalmazás elindult!
+2024-04-16 19:13:39,152 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:13:39,983 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:13:41,210 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:13:41,929 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:13:43,354 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:13:43,705 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:13:44,792 - INFO - Csak hálózati sebezhetőségek útján megjelölve válaszként.
+2024-04-16 19:13:47,570 - INFO - Csak hálózati sebezhetőségek útján sikeresen leadva válaszként!
+2024-04-16 19:13:51,164 - INFO - Nem, hardveresen is megoldható megjelölve válaszként.
+2024-04-16 19:13:52,147 - INFO - Nem, hardveresen is megoldható sikeresen leadva válaszként!
+2024-04-16 19:14:00,611 - INFO - A felhasználók tapasztalata és tudása megjelölve válaszként.
+2024-04-16 19:14:01,530 - INFO - A felhasználók tapasztalata és tudása sikeresen leadva válaszként!
+2024-04-16 19:14:05,915 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:14:06,694 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:14:08,413 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:14:08,797 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:14:16,268 - INFO - Titkosítja fájljainkat, váltságdíjért cserébe kínál kulcsot megjelölve válaszként.
+2024-04-16 19:14:17,363 - INFO - Titkosítja fájljainkat, váltságdíjért cserébe kínál kulcsot sikeresen leadva válaszként!
+2024-04-16 19:14:30,632 - INFO - Teszt4 megjelölve válaszként.
+2024-04-16 19:14:30,980 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-16 19:14:31,482 - INFO - Teszt3 megjelölve válaszként.
+2024-04-16 19:14:31,741 - INFO - Teszt3 sikeresen leadva válaszként!
+2024-04-16 19:14:40,492 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:15:02,944 - INFO - Az alkalmazás elindult!
+2024-04-16 19:15:03,969 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:15:05,094 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:15:05,544 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:06,014 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:28,765 - INFO - Kvíz játékmód bezárása!
+2024-04-16 19:15:29,826 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:15:38,150 - INFO - Az alkalmazás elindult!
+2024-04-16 19:15:39,156 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:15:39,961 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:15:41,060 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:42,880 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:49,086 - INFO - Kicsi esély van rá, hogy visszakapjuk megjelölve válaszként.
+2024-04-16 19:15:49,753 - INFO - Kicsi esély van rá, hogy visszakapjuk sikeresen leadva válaszként!
+2024-04-16 19:15:51,236 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:51,577 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:51,920 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:52,254 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:52,621 - INFO - Android megjelölve válaszként.
+2024-04-16 19:15:52,921 - INFO - Android sikeresen leadva válaszként!
+2024-04-16 19:15:53,274 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:53,588 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:53,920 - INFO - Hálózati kábelekre súlyt helyeznek megjelölve válaszként.
+2024-04-16 19:15:54,224 - INFO - Hálózati kábelekre súlyt helyeznek sikeresen leadva válaszként!
+2024-04-16 19:15:54,611 - INFO - Nem, hiszen nem számítógépről van szó megjelölve válaszként.
+2024-04-16 19:15:54,919 - INFO - Nem, hiszen nem számítógépről van szó sikeresen leadva válaszként!
+2024-04-16 19:15:55,335 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:15:55,611 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:15:56,022 - INFO - A görög mitológiákból, a trójai falóról megjelölve válaszként.
+2024-04-16 19:15:56,291 - INFO - A görög mitológiákból, a trójai falóról sikeresen leadva válaszként!
+2024-04-16 19:16:03,373 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:16:05,381 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:16:06,133 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:16:11,024 - INFO - Biztonsági mentések készítése megjelölve válaszként.
+2024-04-16 19:16:11,529 - INFO - Biztonsági mentések készítése sikeresen leadva válaszként!
+2024-04-16 19:16:15,668 - INFO - Levelezőrendszerekben, emailek útján megjelölve válaszként.
+2024-04-16 19:16:16,757 - INFO - Levelezőrendszerekben, emailek útján sikeresen leadva válaszként!
+2024-04-16 19:16:23,082 - INFO - Email, adathordozók és hálózati sebezhetőségek megjelölve válaszként.
+2024-04-16 19:16:24,838 - INFO - Email, adathordozók és hálózati sebezhetőségek sikeresen leadva válaszként!
+2024-04-16 19:16:31,096 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:16:31,654 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:16:35,327 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:16:35,773 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:16:36,999 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:16:37,796 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:16:42,184 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye megjelölve válaszként.
+2024-04-16 19:16:43,410 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye sikeresen leadva válaszként!
+2024-04-16 19:16:48,733 - INFO - Általában a bankok a belső rendszerüket használják megjelölve válaszként.
+2024-04-16 19:16:50,467 - INFO - Általában a bankok a belső rendszerüket használják sikeresen leadva válaszként!
+2024-04-16 19:16:53,303 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:16:53,784 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:05,696 - INFO - Kilépés az alkalmazásból!
+2024-04-16 19:17:14,059 - INFO - Az alkalmazás elindult!
+2024-04-16 19:17:15,077 - INFO - Továbblépés a fő felületre.
+2024-04-16 19:17:15,970 - INFO - Kvíz játékmód megnyitása!
+2024-04-16 19:17:24,758 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-16 19:17:25,266 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-16 19:17:27,094 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:27,489 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:30,337 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-16 19:17:30,934 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-16 19:17:32,166 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:32,988 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:33,577 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:34,324 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:35,513 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:36,122 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:37,069 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:37,794 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:40,357 - INFO - A leütött billentyűket figyeli, és elmenti megjelölve válaszként.
+2024-04-16 19:17:41,252 - INFO - A leütött billentyűket figyeli, és elmenti sikeresen leadva válaszként!
+2024-04-16 19:17:43,834 - INFO - Teszt1 megjelölve válaszként.
+2024-04-16 19:17:44,292 - INFO - Teszt1 sikeresen leadva válaszként!
+2024-04-16 19:17:48,459 - INFO - Egy szerver vagy hálózat megbénítása kérésekkel megjelölve válaszként.
+2024-04-16 19:17:49,461 - INFO - Egy szerver vagy hálózat megbénítása kérésekkel sikeresen leadva válaszként!
+2024-04-16 19:17:54,259 - INFO - Kilépés az alkalmazásból!
