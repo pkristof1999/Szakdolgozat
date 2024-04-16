@@ -274,7 +274,7 @@
        <string>Zsarolóvírusok</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="keyloggers">
+     <widget class="QPushButton" name="fileless">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -302,8 +302,7 @@
 }</string>
       </property>
       <property name="text">
-       <string>Billentyűnaplózó
-Programok</string>
+       <string>Fájlnélküli kártevők</string>
       </property>
      </widget>
      <widget class="QPushButton" name="rootkits">

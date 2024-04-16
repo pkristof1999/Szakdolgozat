@@ -195,7 +195,7 @@
             }
         }
     },
-    "Billentyűnaplózó Programok" : {
+    "Fájlnélküli kártevők" : {
         "dataPage1Path" : "src/main/resources/learningdata/keyloggers/page1.html",
         "dataPage2Path" : "src/main/resources/learningdata/keyloggers/page2.html",
         "dataPage3Path" : "src/main/resources/learningdata/keyloggers/page3.html",

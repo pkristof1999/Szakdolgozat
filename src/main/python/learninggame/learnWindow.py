@@ -33,7 +33,7 @@ class LearnWindowUI(QMainWindow):
                 "Reklámprogramok": "lesson5",
                 "Zsarolóvírusok": "lesson6",
                 "Rootkitek": "lesson7",
-                "Billentyűnaplózó Programok": "lesson8"
+                "Fájlnélküli kártevők": "lesson8"
             }
 
             self.currentLesson = lessonMapping.get(typeOfLesson, "")
@@ -57,7 +57,6 @@ class LearnWindowUI(QMainWindow):
             self.exitButton.setText("Bezárás")
 
             self.defaultBackButtonStyle = self.backButton.styleSheet()
-            print(self.defaultBackButtonStyle)
 
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
