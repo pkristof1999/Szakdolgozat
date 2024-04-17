@@ -25,11 +25,11 @@
     },
     "question4": {
         "question": "Mire lehet használni a Rootkiteket?",
-        "rightAnswer": "",
-        "answer1": "",
-        "answer2": "",
-        "answer3": "",
-        "answer4": ""
+        "rightAnswer": "Egyéb kártevők elrejtésére",
+        "answer1": "Egyéb kártevők elrejtésére",
+        "answer2": "Operációs rendszer frissítésére",
+        "answer3": "Hálózati kapcsolatok felügyeletére",
+        "answer4": "Adathordozók ellenőrzésére"
     },
     "question5": {
         "question": "Hogyan terjednek a leggyakrabban a számítógépes kártevők?",
@@ -65,11 +65,11 @@
     },
     "question9": {
         "question": "Mik a számítógépes férgek?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Kártékony szoftver, amely önállóan terjed hálózatokon",
+        "answer1": "Ha nem takarítjuk a számítógépet, féreg költözik bele",
+        "answer2": "Így hívják a zsarolóvírusokat másképp",
+        "answer3": "Kártékony szoftver, de nem terjed önállóan hálózatokon",
+        "answer4": "Kártékony szoftver, amely önállóan terjed hálózatokon"
     },
     "question10": {
         "question": "Hogyan terjedhetnek a számítógépes férgek?",
@@ -97,11 +97,11 @@
     },
     "question13": {
         "question": "Mik a kémprogramok?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Megfigyelés céljával írt kártékony szoftver",
+        "answer1": "Így hívják a fájlnélküli kártevőket",
+        "answer2": "Az operációs rendszer is ilyen",
+        "answer3": "Megfigyelés céljával írt kártékony szoftver",
+        "answer4": "Így hívják a rootkiteket másképp"
     },
     "question14": {
         "question": "Léteznek telefonokra is kártevők?",
@@ -130,34 +130,34 @@
     "question17": {
         "question": "Mit jelent a hátsóajtó (backdoor) sebezhetőség?",
         "rightAnswer": "Egy sebezhetőség, amin a támadó hozzáférést szerez",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
+        "answer1": "Nincs különösebb jelentése",
+        "answer2": "Kikapcsolt tűzfalat",
         "answer3": "Egy sebezhetőség, amin a támadó hozzáférést szerez",
         "answer4": "Ha nem zárjuk kulcsra a hátsó ajtónkat"
     },
     "question18": {
         "question": "Trójai vírus alkothat botnetet?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Igen, alkothat botnetet",
+        "answer1": "Nem alkothat botnetet",
+        "answer2": "Akkor alkothat botnetet, ha féreggel együtt fertőz",
+        "answer3": "Akkor alkothat botnetet, ha rootkittel együtt fertőz",
+        "answer4": "Igen, alkothat botnetet"
     },
     "question19": {
-        "question": "Zsarolóvírus alkothat botnetet?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "question": "Önmagukban a zsarolóvírusok alkothatnak botnetet?",
+        "rightAnswer": "Nem alkothat botnetet",
+        "answer1": "Nem alkothatnak botnetet",
+        "answer2": "Alkothatnak botnetet, ha ezernél több eszközt elérnek",
+        "answer3": "Alkothatnak botnetet, ha férgekkel együtt fertőznek",
+        "answer4": "Igen, alkothatnak botnetet"
     },
     "question20": {
-        "question": "Meg lehet fertőzni egy olyan számítógépet, mely nem kapcsolódik az internethez?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "question": "Meg lehet fertőzni egy olyan számítógépet, mely nem kapcsolódik semmilyen hálózathoz?",
+        "rightAnswer": "Igen, egy fertőzött adathordozóval",
+        "answer1": "Nem, mivel nem kapcsolódik a világhálóhoz",
+        "answer2": "Igen, egy fertőzött adathordozóval",
+        "answer3": "Igen, ha van a közelben Wi-Fi router",
+        "answer4": "Igen, ha korábban volt már hálózati kapcsolata"
     },
     "question21": {
         "question": "Fel lehet használni adathordózókat is kártevők terjesztésére?",
@@ -169,11 +169,11 @@
     },
     "question22": {
         "question": "Segíthet a rendszereink frissen tartása a kártevők elleni védelemben?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Igen, hiszen a biztonsági frissítések fontosak",
+        "answer1": "Nincs összefüggésben",
+        "answer2": "Igen, hiszen a biztonsági frissítések fontosak",
+        "answer3": "Igen, mert egy friss rendszer teljesen ellenálló",
+        "answer4": "Nem, a vírusírtók nem támogatják a friss rendszereket"
     },
     "question23": {
         "question": "Mi a különbség egy vírus és egy féreg között?",
