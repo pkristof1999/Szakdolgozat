@@ -4,7 +4,7 @@ import json
 from PyQt6 import QtCore
 from PyQt6.QtCore import QEventLoop
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication
+from PyQt6.QtWidgets import QFrame, QLabel, QPushButton, QMainWindow, QApplication, QWidget
 from PyQt6.uic import loadUi
 
 from src.main.python import resultsWindow
@@ -309,6 +309,8 @@ class MainWindowUI(QMainWindow):
                 terminateThread2.set()
                 thread2.join()
             logger.info("Kilépés az alkalmazásból!")
+            for window in QApplication.topLevelWidgets():
+                window.close()
             event.accept()
         else:
             event.ignore()
