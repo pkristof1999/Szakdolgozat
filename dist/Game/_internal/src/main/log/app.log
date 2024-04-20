@@ -29498,3 +29498,854 @@ FITOS@dbwbd.com kiválasztva.
 2024-04-16 19:17:48,459 - INFO - Egy szerver vagy hálózat megbénítása kérésekkel megjelölve válaszként.
 2024-04-16 19:17:49,461 - INFO - Egy szerver vagy hálózat megbénítása kérésekkel sikeresen leadva válaszként!
 2024-04-16 19:17:54,259 - INFO - Kilépés az alkalmazásból!
+2024-04-17 13:11:41,370 - INFO - Az alkalmazás elindult!
+2024-04-17 13:11:42,372 - INFO - Továbblépés a fő felületre.
+2024-04-17 13:11:43,290 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:11:45,696 - INFO - Megszerzi a postafiókunkat, majd nyilvánosságra hozza megjelölve válaszként.
+2024-04-17 13:11:46,044 - INFO - Megszerzi a postafiókunkat, majd nyilvánosságra hozza sikeresen leadva válaszként!
+2024-04-17 13:11:46,606 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:11:46,872 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:11:47,419 - INFO - Nincs különösebb jelentése a kártevőknél megjelölve válaszként.
+2024-04-17 13:11:47,712 - INFO - Nincs különösebb jelentése a kártevőknél sikeresen leadva válaszként!
+2024-04-17 13:11:48,187 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-17 13:11:48,494 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-17 13:11:48,875 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:11:49,150 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:11:49,524 - INFO - Nagy eséllyel visszakapjuk megjelölve válaszként.
+2024-04-17 13:11:49,988 - INFO - Nagy eséllyel visszakapjuk sikeresen leadva válaszként!
+2024-04-17 13:11:50,431 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:11:50,750 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:11:52,725 - INFO - Nem, a botnetek teljesen üzemképtelenek megjelölve válaszként.
+2024-04-17 13:11:53,087 - INFO - Nem, a botnetek teljesen üzemképtelenek sikeresen leadva válaszként!
+2024-04-17 13:11:53,936 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon megjelölve válaszként.
+2024-04-17 13:11:54,286 - INFO - Felugró ablakok gyűjtőfogalma egy weboldalon sikeresen leadva válaszként!
+2024-04-17 13:11:55,099 - INFO - A bankok általában SMS útján értesítenek megjelölve válaszként.
+2024-04-17 13:11:55,446 - INFO - A bankok általában SMS útján értesítenek sikeresen leadva válaszként!
+2024-04-17 13:11:57,421 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:11:58,002 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:11:58,629 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:01,293 - INFO - Nem, szoftverrel egyátalán nem oldható meg megjelölve válaszként.
+2024-04-17 13:12:02,307 - INFO - Nem, szoftverrel egyátalán nem oldható meg sikeresen leadva válaszként!
+2024-04-17 13:12:02,847 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:12:03,417 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:03,747 - INFO - Nem, a botnetek teljesen üzemképtelenek megjelölve válaszként.
+2024-04-17 13:12:04,239 - INFO - Nem, a botnetek teljesen üzemképtelenek sikeresen leadva válaszként!
+2024-04-17 13:12:04,676 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:12:04,966 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:05,372 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:12:05,620 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:05,976 - INFO - Zsaroló vírus megjelölve válaszként.
+2024-04-17 13:12:06,282 - INFO - Zsaroló vírus sikeresen leadva válaszként!
+2024-04-17 13:12:06,588 - INFO - Figyelemfelkeltés céljából, véletlenszerűen megjelölve válaszként.
+2024-04-17 13:12:06,967 - INFO - Figyelemfelkeltés céljából, véletlenszerűen sikeresen leadva válaszként!
+2024-04-17 13:12:07,287 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:12:07,545 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:07,942 - INFO -  megjelölve válaszként.
+2024-04-17 13:12:08,915 - INFO -  sikeresen leadva válaszként!
+2024-04-17 13:12:11,045 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:12:11,733 - INFO - A bankok általában SMS útján értesítenek megjelölve válaszként.
+2024-04-17 13:12:12,393 - INFO - A bankok általában SMS útján értesítenek sikeresen leadva válaszként!
+2024-04-17 13:12:12,773 - INFO -  megjelölve válaszként.
+2024-04-17 13:12:13,058 - INFO -  sikeresen leadva válaszként!
+2024-04-17 13:12:13,541 - INFO - Biztonsági mentések készítése megjelölve válaszként.
+2024-04-17 13:12:13,962 - INFO - Biztonsági mentések készítése sikeresen leadva válaszként!
+2024-04-17 13:12:14,445 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:12:14,738 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:12:15,060 - INFO - Nem, mert a vírusírtók nem támogatják a friss rendszereket megjelölve válaszként.
+2024-04-17 13:12:17,013 - INFO - Igen, hiszen a biztonsági frissítések fontosak megjelölve válaszként.
+2024-04-17 13:12:22,271 - INFO - Kilépés az alkalmazásból!
+2024-04-17 13:14:53,798 - INFO - Az alkalmazás elindult!
+2024-04-17 13:14:54,749 - INFO - Továbblépés a fő felületre.
+2024-04-17 13:14:55,790 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:14:56,621 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:14:57,259 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:14:57,642 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:14:57,977 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:14:58,334 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:14:58,929 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:14:59,204 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-17 13:14:59,742 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-17 13:15:00,106 - INFO - Email, adathordozók és hálózati sebezhetőségek megjelölve válaszként.
+2024-04-17 13:15:00,637 - INFO - Email, adathordozók és hálózati sebezhetőségek sikeresen leadva válaszként!
+2024-04-17 13:15:01,052 - INFO - Ha nem zárjuk kulcsra a hátsó ajtónkat megjelölve válaszként.
+2024-04-17 13:15:02,155 - INFO - Ha nem zárjuk kulcsra a hátsó ajtónkat sikeresen leadva válaszként!
+2024-04-17 13:15:02,631 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:15:02,965 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:15:03,547 - INFO - Biztonsági mentések készítése megjelölve válaszként.
+2024-04-17 13:15:03,960 - INFO - Biztonsági mentések készítése sikeresen leadva válaszként!
+2024-04-17 13:15:04,591 - INFO - Nagy eséllyel visszakapjuk megjelölve válaszként.
+2024-04-17 13:15:04,894 - INFO - Nagy eséllyel visszakapjuk sikeresen leadva válaszként!
+2024-04-17 13:15:05,458 - INFO - Rendszeres vírusellenőzés megjelölve válaszként.
+2024-04-17 13:15:05,872 - INFO - Rendszeres vírusellenőzés sikeresen leadva válaszként!
+2024-04-17 13:15:07,588 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:15:08,109 - INFO - Teszt2 megjelölve válaszként.
+2024-04-17 13:15:08,484 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-17 13:15:09,085 - INFO - Zsaroló vírus megjelölve válaszként.
+2024-04-17 13:15:09,398 - INFO - Zsaroló vírus sikeresen leadva válaszként!
+2024-04-17 13:15:09,866 - INFO -  megjelölve válaszként.
+2024-04-17 13:15:10,128 - INFO -  sikeresen leadva válaszként!
+2024-04-17 13:15:11,333 - INFO - Figyelemfelkeltés céljából, véletlenszerűen megjelölve válaszként.
+2024-04-17 13:15:12,058 - INFO - Figyelemfelkeltés céljából, véletlenszerűen sikeresen leadva válaszként!
+2024-04-17 13:15:12,592 - INFO - Nagy eséllyel visszakapjuk megjelölve válaszként.
+2024-04-17 13:15:12,987 - INFO - Nagy eséllyel visszakapjuk sikeresen leadva válaszként!
+2024-04-17 13:15:13,764 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye megjelölve válaszként.
+2024-04-17 13:15:14,198 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye sikeresen leadva válaszként!
+2024-04-17 13:15:14,825 - INFO - Microsoft Windows megjelölve válaszként.
+2024-04-17 13:15:15,121 - INFO - Microsoft Windows sikeresen leadva válaszként!
+2024-04-17 13:15:15,627 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:15:15,934 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:15:16,317 - INFO - Rendszeres vírusellenőzés megjelölve válaszként.
+2024-04-17 13:15:16,686 - INFO - Rendszeres vírusellenőzés sikeresen leadva válaszként!
+2024-04-17 13:15:18,371 - INFO - Nem, a tűzfal úgyis megállítaná megjelölve válaszként.
+2024-04-17 13:15:18,891 - INFO - Nem, a tűzfal úgyis megállítaná sikeresen leadva válaszként!
+2024-04-17 13:15:20,570 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:15:20,926 - INFO - Kikapcsolt tűzfalat megjelölve válaszként.
+2024-04-17 13:15:23,801 - INFO - Kikapcsolt tűzfalat sikeresen leadva válaszként!
+2024-04-17 13:15:25,002 - INFO - Nem, szoftverrel egyátalán nem oldható meg megjelölve válaszként.
+2024-04-17 13:15:25,561 - INFO - Nem, szoftverrel egyátalán nem oldható meg sikeresen leadva válaszként!
+2024-04-17 13:15:26,399 - INFO - Rendszeres vírusellenőzés megjelölve válaszként.
+2024-04-17 13:15:27,114 - INFO - Rendszeres vírusellenőzés sikeresen leadva válaszként!
+2024-04-17 13:15:27,934 - INFO - Nagy eséllyel visszakapjuk megjelölve válaszként.
+2024-04-17 13:15:28,195 - INFO - Nagy eséllyel visszakapjuk sikeresen leadva válaszként!
+2024-04-17 13:15:28,910 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:15:29,241 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:15:35,299 - INFO - Kilépés az alkalmazásból!
+2024-04-17 13:24:54,010 - INFO - Az alkalmazás elindult!
+2024-04-17 13:24:55,321 - INFO - Továbblépés a fő felületre.
+2024-04-17 13:24:56,122 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:24:57,191 - INFO - Nincs különösebb jelentése a kártevőknél megjelölve válaszként.
+2024-04-17 13:24:57,491 - INFO - Nincs különösebb jelentése a kártevőknél sikeresen leadva válaszként!
+2024-04-17 13:24:57,942 - INFO - Rendszeres vírusellenőzés megjelölve válaszként.
+2024-04-17 13:24:58,322 - INFO - Rendszeres vírusellenőzés sikeresen leadva válaszként!
+2024-04-17 13:24:58,917 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-17 13:24:59,243 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-17 13:24:59,694 - INFO - Nem, a botnetek teljesen üzemképtelenek megjelölve válaszként.
+2024-04-17 13:25:00,173 - INFO - Nem, a botnetek teljesen üzemképtelenek sikeresen leadva válaszként!
+2024-04-17 13:25:00,574 - INFO - Igen, ha korábban volt már hálózati kapcsolata megjelölve válaszként.
+2024-04-17 13:25:00,950 - INFO - Igen, ha korábban volt már hálózati kapcsolata sikeresen leadva válaszként!
+2024-04-17 13:25:01,361 - INFO - Email, adathordozók és hálózati sebezhetőségek megjelölve válaszként.
+2024-04-17 13:25:01,703 - INFO - Email, adathordozók és hálózati sebezhetőségek sikeresen leadva válaszként!
+2024-04-17 13:25:02,175 - INFO - Figyelemfelkeltés céljából, véletlenszerűen megjelölve válaszként.
+2024-04-17 13:25:02,636 - INFO - Figyelemfelkeltés céljából, véletlenszerűen sikeresen leadva válaszként!
+2024-04-17 13:25:03,209 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:25:03,504 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:25:04,044 - INFO - Ha nem zárjuk kulcsra a hátsó ajtónkat megjelölve válaszként.
+2024-04-17 13:25:04,783 - INFO - Ha nem zárjuk kulcsra a hátsó ajtónkat sikeresen leadva válaszként!
+2024-04-17 13:25:05,385 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye megjelölve válaszként.
+2024-04-17 13:25:05,772 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye sikeresen leadva válaszként!
+2024-04-17 13:25:07,297 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:25:09,318 - INFO - Nem, a tűzfal úgyis megállítaná megjelölve válaszként.
+2024-04-17 13:25:09,673 - INFO - Nem, a tűzfal úgyis megállítaná sikeresen leadva válaszként!
+2024-04-17 13:25:10,283 - INFO - Rendszeres vírusellenőzés megjelölve válaszként.
+2024-04-17 13:25:10,599 - INFO - Rendszeres vírusellenőzés sikeresen leadva válaszként!
+2024-04-17 13:25:11,147 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:25:11,435 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:25:12,148 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye megjelölve válaszként.
+2024-04-17 13:25:12,443 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye sikeresen leadva válaszként!
+2024-04-17 13:25:12,916 - INFO - Adathordozók ellenőrzésére megjelölve válaszként.
+2024-04-17 13:25:13,185 - INFO - Adathordozók ellenőrzésére sikeresen leadva válaszként!
+2024-04-17 13:25:14,267 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-17 13:25:15,290 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-17 13:25:16,253 - ERROR - Nem választott választ!
+2024-04-17 13:25:17,239 - INFO - Figyelemfelkeltés céljából, véletlenszerűen megjelölve válaszként.
+2024-04-17 13:25:17,559 - INFO - Figyelemfelkeltés céljából, véletlenszerűen sikeresen leadva válaszként!
+2024-04-17 13:25:18,085 - INFO - Nagy eséllyel visszakapjuk megjelölve válaszként.
+2024-04-17 13:25:18,399 - INFO - Nagy eséllyel visszakapjuk sikeresen leadva válaszként!
+2024-04-17 13:25:19,037 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:25:19,341 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:25:19,926 - INFO - Zsaroló vírus megjelölve válaszként.
+2024-04-17 13:25:20,237 - INFO - Zsaroló vírus sikeresen leadva válaszként!
+2024-04-17 13:25:22,055 - INFO - Kvíz játékmód megnyitása!
+2024-04-17 13:25:22,524 - INFO - Teszt2 megjelölve válaszként.
+2024-04-17 13:25:22,878 - INFO - Teszt2 sikeresen leadva válaszként!
+2024-04-17 13:25:24,134 - INFO - Igen, ha korábban volt már hálózati kapcsolata megjelölve válaszként.
+2024-04-17 13:25:25,083 - INFO - Igen, ha korábban volt már hálózati kapcsolata sikeresen leadva válaszként!
+2024-04-17 13:25:25,582 - INFO - Teszt4 megjelölve válaszként.
+2024-04-17 13:25:25,838 - INFO - Teszt4 sikeresen leadva válaszként!
+2024-04-17 13:25:36,078 - INFO - Kilépés az alkalmazásból!
+2024-04-17 13:29:49,836 - INFO - Az alkalmazás elindult!
+2024-04-17 13:29:51,102 - INFO - Továbblépés a fő felületre.
+2024-04-17 13:29:52,063 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-17 13:29:54,360 - INFO - Kilépés az alkalmazásból!
+2024-04-19 11:57:34,579 - INFO - Az alkalmazás elindult!
+2024-04-19 11:57:35,723 - INFO - Továbblépés a fő felületre.
+2024-04-19 11:57:37,202 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 11:57:38,194 - INFO - Vírusok lecke megnyitása!
+2024-04-19 11:57:39,396 - INFO - Tanulós játémód bezárása!
+2024-04-19 11:57:41,315 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 11:57:46,827 - INFO - Kvíz játékmód bezárása!
+2024-04-19 11:57:48,205 - INFO - Kilépés az alkalmazásból!
+2024-04-19 11:58:43,314 - INFO - Az alkalmazás elindult!
+2024-04-19 11:58:44,494 - INFO - Továbblépés a fő felületre.
+2024-04-19 11:58:45,694 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 11:58:47,063 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-19 11:58:48,450 - INFO - A hálózat felhasználásával áramkimaradások okozása megjelölve válaszként.
+2024-04-19 11:58:49,016 - INFO - A hálózat felhasználásával áramkimaradások okozása sikeresen leadva válaszként!
+2024-04-19 11:58:49,017 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-19 11:58:50,273 - INFO - Banki adatok eltulajdonítása megjelölve válaszként.
+2024-04-19 11:58:50,576 - INFO - Banki adatok eltulajdonítása sikeresen leadva válaszként!
+2024-04-19 11:58:50,576 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása', 'Banki adatok eltulajdonítása']
+2024-04-19 11:58:57,506 - INFO - Válaszok listája: ['A hálózat felhasználásával áramkimaradások okozása']
+2024-04-19 11:58:57,978 - INFO - Válaszok listája: []
+2024-04-19 11:58:59,004 - INFO - Tanulós játémód bezárása!
+2024-04-19 11:58:59,957 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 11:59:01,871 - INFO - Tanulós játémód bezárása!
+2024-04-19 12:18:14,967 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:27:37,116 - INFO - Az alkalmazás elindult!
+2024-04-19 12:27:38,965 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:27:41,123 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 12:27:42,726 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:27:53,114 - INFO - Vírusok lecke megnyitása!
+2024-04-19 12:27:54,231 - INFO - Tanulós játémód bezárása!
+2024-04-19 12:28:00,079 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 12:28:01,279 - INFO - Kvíz játékmód bezárása!
+2024-04-19 12:28:02,626 - INFO - Figyelem!
+A felhasznált emailek valós átveréseket tartalmazhatnak. A bennük látható linkeket, illetve címeket nem érdemes felkeresni!
+2024-04-19 12:28:05,436 - INFO - Email mód betöltve!
+2024-04-19 12:28:05,445 - INFO - Email játékmód megnyitása!
+2024-04-19 12:28:06,546 - INFO - Email játékmód bezárása!
+2024-04-19 12:28:08,951 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:31:22,865 - INFO - Az alkalmazás elindult!
+2024-04-19 12:31:24,389 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:31:26,635 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:31:28,238 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 12:32:32,093 - INFO - Az alkalmazás elindult!
+2024-04-19 12:32:34,420 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:32:36,657 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:32:46,318 - INFO - Az alkalmazás elindult!
+2024-04-19 12:32:47,374 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:32:49,527 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:34:34,335 - INFO - Az alkalmazás elindult!
+2024-04-19 12:34:35,440 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:34:38,150 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:34:39,358 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 12:34:40,362 - INFO - Kvíz játékmód bezárása!
+2024-04-19 12:34:41,640 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:34:42,678 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:34:43,282 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:35:53,069 - INFO - Az alkalmazás elindult!
+2024-04-19 12:35:54,081 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:35:56,392 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:36:37,096 - INFO - Az alkalmazás elindult!
+2024-04-19 12:36:38,129 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:36:40,394 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:37:18,680 - INFO - Az alkalmazás elindult!
+2024-04-19 12:37:19,825 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:37:22,021 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:41:19,981 - INFO - Az alkalmazás elindult!
+2024-04-19 12:41:21,113 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:41:23,963 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:41:27,845 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 12:41:29,051 - INFO - Kvíz játékmód bezárása!
+2024-04-19 12:41:30,422 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:41:30,889 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:41:46,917 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:42:25,014 - INFO - Az alkalmazás elindult!
+2024-04-19 12:42:26,072 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:42:27,574 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:42:29,802 - INFO - Az alkalmazás elindult!
+2024-04-19 12:42:30,772 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:42:32,489 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:42:53,908 - INFO - Az alkalmazás elindult!
+2024-04-19 12:42:55,045 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:42:57,827 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:43:06,873 - INFO - Az alkalmazás elindult!
+2024-04-19 12:43:07,836 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:43:09,991 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:43:17,734 - INFO - Az alkalmazás elindult!
+2024-04-19 12:43:18,585 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:43:19,859 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 12:43:21,360 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-19 12:43:23,058 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:44:38,798 - INFO - Az alkalmazás elindult!
+2024-04-19 12:44:39,730 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:44:43,461 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:44:44,775 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 12:44:58,617 - INFO - Az alkalmazás elindult!
+2024-04-19 12:44:59,576 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:45:01,561 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:45:02,986 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 12:45:03,891 - INFO - Kvíz játékmód bezárása!
+2024-04-19 12:45:07,257 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:46:08,395 - INFO - Az alkalmazás elindult!
+2024-04-19 12:46:09,538 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:46:11,645 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:46:20,716 - INFO - Az alkalmazás elindult!
+2024-04-19 12:46:21,666 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:46:24,375 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:46:25,242 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:46:35,228 - INFO - Az alkalmazás elindult!
+2024-04-19 12:46:36,605 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:46:38,369 - INFO - Kilépés az alkalmazásból!
+2024-04-19 12:56:27,137 - INFO - Az alkalmazás elindult!
+2024-04-19 12:56:28,345 - INFO - Továbblépés a fő felületre.
+2024-04-19 12:56:40,163 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 12:56:41,002 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 12:56:55,469 - INFO - Tanulós játémód bezárása!
+2024-04-19 12:56:57,762 - INFO - Kilépés az alkalmazásból!
+2024-04-19 13:26:25,446 - INFO - Az alkalmazás elindult!
+2024-04-19 13:26:26,435 - INFO - Továbblépés a fő felületre.
+2024-04-19 13:26:28,577 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 13:26:29,677 - INFO - Kvíz játékmód bezárása!
+2024-04-19 13:26:30,714 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 13:26:31,236 - INFO - Vírusok lecke megnyitása!
+2024-04-19 13:26:32,248 - INFO - Tanulós játémód bezárása!
+2024-04-19 13:26:33,921 - INFO - Kilépés az alkalmazásból!
+2024-04-19 13:26:34,905 - INFO - Kilépés az alkalmazásból!
+2024-04-19 13:26:35,519 - INFO - Kilépés az alkalmazásból!
+2024-04-19 13:26:41,176 - INFO - Az alkalmazás elindult!
+2024-04-19 13:26:42,220 - INFO - Továbblépés a fő felületre.
+2024-04-19 13:26:43,412 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 13:26:45,003 - INFO - Vírusok lecke megnyitása!
+2024-04-19 13:28:41,405 - INFO - Tanulós játémód bezárása!
+2024-04-19 13:28:44,166 - INFO - Férgek lecke megnyitása!
+2024-04-19 13:39:57,039 - INFO - Az alkalmazás elindult!
+2024-04-19 13:39:58,364 - INFO - Továbblépés a fő felületre.
+2024-04-19 13:39:59,375 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 13:40:00,198 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 13:40:05,523 - INFO - Tanulós játémód bezárása!
+2024-04-19 13:40:07,033 - INFO - Kilépés az alkalmazásból!
+2024-04-19 13:40:29,654 - INFO - Az alkalmazás elindult!
+2024-04-19 13:40:30,749 - INFO - Továbblépés a fő felületre.
+2024-04-19 13:40:31,814 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 13:40:32,913 - INFO - Kvíz játékmód bezárása!
+2024-04-19 13:40:33,856 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 13:40:34,709 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 13:40:39,132 - INFO - Tanulós játémód bezárása!
+2024-04-19 13:40:41,537 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:36:46,249 - INFO - Az alkalmazás elindult!
+2024-04-19 14:36:47,165 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:36:48,246 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:36:48,950 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 14:36:56,084 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:36:59,426 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:37:00,296 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 14:37:01,107 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:37:02,711 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:37:49,292 - INFO - Az alkalmazás elindult!
+2024-04-19 14:37:50,359 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:37:53,713 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:37:56,633 - INFO - Az alkalmazás elindult!
+2024-04-19 14:37:57,695 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:01,168 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:02,621 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:38:08,643 - INFO - Az alkalmazás elindult!
+2024-04-19 14:38:09,607 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:11,500 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:12,829 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:38:29,302 - INFO - Az alkalmazás elindult!
+2024-04-19 14:38:30,351 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:31,436 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:33,616 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:38:40,838 - INFO - Az alkalmazás elindult!
+2024-04-19 14:38:41,743 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:43,428 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:44,825 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:38:46,298 - INFO - Az alkalmazás elindult!
+2024-04-19 14:38:47,298 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:48,541 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:49,895 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:38:51,488 - INFO - Az alkalmazás elindult!
+2024-04-19 14:38:52,467 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:38:54,065 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:38:54,616 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:38:55,528 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:38:57,206 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:39:03,269 - INFO - Az alkalmazás elindult!
+2024-04-19 14:39:04,203 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:39:05,273 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:39:05,873 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:39:07,086 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:39:08,952 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:39:12,225 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:39:28,170 - INFO - Az alkalmazás elindult!
+2024-04-19 14:39:29,105 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:39:30,118 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:39:30,735 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:39:31,747 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:39:41,592 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:39:41,594 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:40:07,225 - INFO - Az alkalmazás elindult!
+2024-04-19 14:40:08,170 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:40:10,435 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:40:11,756 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:40:15,014 - INFO - Az alkalmazás elindult!
+2024-04-19 14:40:16,630 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:40:18,561 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:40:19,132 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:40:20,046 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:40:21,968 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:40:23,332 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:41:28,071 - INFO - Az alkalmazás elindult!
+2024-04-19 14:41:29,117 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:41:30,975 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:41:31,607 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 14:41:32,623 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:41:33,997 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:41:54,734 - INFO - Az alkalmazás elindult!
+2024-04-19 14:41:55,654 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:41:56,651 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:41:57,409 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:41:58,424 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:42:00,224 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:42:40,024 - INFO - Az alkalmazás elindult!
+2024-04-19 14:42:41,205 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:42:42,486 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:42:43,192 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:42:44,506 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:42:46,203 - INFO - Sikeres kijelentkezés!
+2024-04-19 14:42:46,203 - INFO - Bejelentkezési képernyő megnyitásra került!
+2024-04-19 14:42:53,231 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:42:55,817 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:44:41,360 - INFO - Az alkalmazás elindult!
+2024-04-19 14:44:42,921 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:44:43,949 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:44:45,485 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:44:46,299 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:44:47,950 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:44:56,909 - INFO - Az alkalmazás elindult!
+2024-04-19 14:44:57,848 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:44:59,738 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:45:00,741 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:45:02,054 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:45:03,354 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:45:04,570 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:45:41,327 - INFO - Az alkalmazás elindult!
+2024-04-19 14:45:42,283 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:45:43,221 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:45:43,818 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:45:45,232 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:45:46,507 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:46:12,299 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:46:47,672 - INFO - Az alkalmazás elindult!
+2024-04-19 14:46:51,238 - INFO - Az alkalmazás elindult!
+2024-04-19 14:46:53,995 - INFO - Az alkalmazás elindult!
+2024-04-19 14:46:55,081 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:46:56,118 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:46:57,123 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 14:46:58,136 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:46:59,637 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:47:05,784 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:47:19,328 - INFO - Az alkalmazás elindult!
+2024-04-19 14:47:20,461 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:47:22,054 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:47:22,598 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:47:23,614 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:47:24,944 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:47:27,040 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:47:36,699 - INFO - Az alkalmazás elindult!
+2024-04-19 14:47:42,671 - INFO - Az alkalmazás elindult!
+2024-04-19 14:47:46,198 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:47:47,200 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:47:47,576 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:47:49,193 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:47:51,046 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:47:53,292 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:48:10,201 - INFO - Az alkalmazás elindult!
+2024-04-19 14:48:11,855 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:48:14,439 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:48:14,954 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:48:15,967 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:48:17,214 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:48:20,009 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:48:34,595 - INFO - Az alkalmazás elindult!
+2024-04-19 14:48:35,628 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:48:36,519 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:48:37,153 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:48:38,066 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:48:40,129 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:48:41,627 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:49:44,628 - INFO - Az alkalmazás elindult!
+2024-04-19 14:49:45,679 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:49:46,831 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:49:47,327 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 14:49:48,540 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:49:49,754 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:50:20,854 - INFO - Az alkalmazás elindult!
+2024-04-19 14:50:21,834 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:50:22,791 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:50:23,365 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:50:24,280 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:50:26,053 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:50:36,522 - INFO - Az alkalmazás elindult!
+2024-04-19 14:50:53,250 - INFO - Az alkalmazás elindult!
+2024-04-19 14:50:54,279 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:50:55,293 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:50:55,730 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:50:57,145 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:51:00,078 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:51:04,347 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:51:05,193 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:51:06,207 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:51:10,003 - INFO - Az alkalmazás elindult!
+2024-04-19 14:51:11,065 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:51:12,043 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:51:12,555 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:51:14,872 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:51:15,507 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:51:16,522 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:51:18,254 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:51:20,031 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:51:39,639 - INFO - Az alkalmazás elindult!
+2024-04-19 14:51:40,767 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:51:41,714 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:51:42,308 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:51:43,622 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:51:45,392 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:51:56,267 - INFO - Az alkalmazás elindult!
+2024-04-19 14:51:57,318 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:51:58,250 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:51:58,849 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:51:59,963 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:52:02,254 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:52:30,443 - INFO - Az alkalmazás elindult!
+2024-04-19 14:52:31,463 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:52:32,364 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:52:33,280 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:52:34,495 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:52:36,732 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:52:38,306 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:52:58,038 - INFO - Az alkalmazás elindult!
+2024-04-19 14:52:59,333 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:53:00,225 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:53:00,700 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:53:01,614 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:53:03,120 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:53:14,839 - INFO - Az alkalmazás elindult!
+2024-04-19 14:53:15,896 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:53:17,873 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:53:20,718 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 14:53:21,531 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:53:23,825 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:53:34,069 - INFO - Az alkalmazás elindult!
+2024-04-19 14:53:35,144 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:53:37,345 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:53:37,865 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:53:38,678 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:53:40,935 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:54:41,106 - INFO - Az alkalmazás elindult!
+2024-04-19 14:54:42,520 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:54:43,462 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:54:44,566 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:54:45,379 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:54:46,948 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:55:09,283 - INFO - Az alkalmazás elindult!
+2024-04-19 14:55:10,228 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:55:11,714 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:55:12,422 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 14:55:13,332 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:55:14,564 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:55:27,979 - INFO - Az alkalmazás elindult!
+2024-04-19 14:55:28,915 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:55:29,946 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:55:30,525 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:55:31,438 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:55:33,477 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:55:34,429 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:55:39,552 - INFO - Az alkalmazás elindult!
+2024-04-19 14:55:40,566 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:55:41,680 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:55:42,490 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:55:43,602 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:55:45,989 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:55:49,814 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:56:24,788 - INFO - Az alkalmazás elindult!
+2024-04-19 14:56:25,805 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:56:26,996 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:56:27,568 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:56:28,581 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:56:32,434 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:57:11,185 - INFO - Az alkalmazás elindult!
+2024-04-19 14:57:16,184 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:57:17,157 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:57:17,878 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:57:19,092 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:57:20,628 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:57:21,197 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:57:44,205 - INFO - Az alkalmazás elindult!
+2024-04-19 14:57:45,427 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:57:46,535 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:57:46,992 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:57:48,306 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:57:49,949 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:57:51,452 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:58:19,994 - INFO - Az alkalmazás elindult!
+2024-04-19 14:58:21,015 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:58:22,065 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:58:22,807 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:58:24,221 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:58:25,399 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:58:26,630 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 14:58:27,448 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:58:28,512 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 14:58:29,425 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:59:34,386 - INFO - Az alkalmazás elindult!
+2024-04-19 14:59:35,285 - INFO - Továbblépés a fő felületre.
+2024-04-19 14:59:36,172 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 14:59:36,636 - INFO - Férgek lecke megnyitása!
+2024-04-19 14:59:37,550 - INFO - Tanulós játémód bezárása!
+2024-04-19 14:59:38,692 - INFO - Kilépés az alkalmazásból!
+2024-04-19 14:59:42,464 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 14:59:43,866 - INFO - Kvíz játékmód bezárása!
+2024-04-19 14:59:44,862 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:00:09,354 - INFO - Az alkalmazás elindult!
+2024-04-19 15:00:11,083 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:00:12,172 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:00:13,123 - INFO - Vírusok lecke megnyitása!
+2024-04-19 15:00:13,936 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:00:15,743 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:00:18,216 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:00:44,289 - INFO - Az alkalmazás elindult!
+2024-04-19 15:00:47,166 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:00:49,288 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:00:50,060 - INFO - Vírusok lecke megnyitása!
+2024-04-19 15:00:50,772 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:00:52,441 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:00:55,653 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:00:57,967 - INFO - Az alkalmazás elindult!
+2024-04-19 15:00:58,918 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:01:00,037 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:01:01,431 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:01:02,344 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:01:14,616 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:01:16,432 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:03:30,551 - INFO - Az alkalmazás elindult!
+2024-04-19 15:03:31,470 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:03:32,358 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:03:32,917 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:03:33,832 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:03:35,212 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:03:35,918 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:03:38,017 - INFO - Az alkalmazás elindult!
+2024-04-19 15:03:38,952 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:03:39,927 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:03:41,434 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:03:46,624 - INFO - Az alkalmazás elindult!
+2024-04-19 15:03:47,593 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:03:48,467 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:03:48,919 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:03:49,632 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:03:55,246 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:04:09,253 - INFO - Az alkalmazás elindult!
+2024-04-19 15:04:10,357 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:04:12,534 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:04:13,100 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:04:13,813 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:04:15,073 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:04:15,650 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:04:40,780 - INFO - Az alkalmazás elindult!
+2024-04-19 15:04:42,112 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:04:43,093 - INFO - Kvíz játékmód megnyitása!
+2024-04-19 15:04:43,791 - INFO - Kvíz játékmód bezárása!
+2024-04-19 15:04:44,830 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:04:45,228 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:04:46,442 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:04:47,926 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:04:48,680 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:04:49,469 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:01,639 - INFO - Az alkalmazás elindult!
+2024-04-19 15:05:02,604 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:05:04,043 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:05:04,910 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:05:05,822 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:05:07,260 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:07,260 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:09,458 - INFO - Az alkalmazás elindult!
+2024-04-19 15:05:10,310 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:05:11,364 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:05:14,468 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 15:05:15,381 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:05:16,994 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:17,006 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:28,196 - INFO - Az alkalmazás elindult!
+2024-04-19 15:05:29,362 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:05:31,611 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:33,332 - INFO - Az alkalmazás elindult!
+2024-04-19 15:05:34,188 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:05:35,197 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:05:35,737 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:05:36,650 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:05:37,914 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:38,724 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:05:59,604 - INFO - Az alkalmazás elindult!
+2024-04-19 15:06:01,288 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:06:02,642 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:06:03,432 - INFO - Férgek lecke megnyitása!
+2024-04-19 15:06:04,344 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:06:05,611 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:06:05,615 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:06:07,413 - INFO - Az alkalmazás elindult!
+2024-04-19 15:06:08,373 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:06:09,506 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:06:11,131 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:06:12,581 - INFO - Az alkalmazás elindult!
+2024-04-19 15:06:13,728 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:06:16,695 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:06:18,204 - INFO - Az alkalmazás elindult!
+2024-04-19 15:06:19,055 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:06:20,145 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:06:21,837 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:06:23,559 - INFO - Az alkalmazás elindult!
+2024-04-19 15:06:24,593 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:06:25,533 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:06:26,081 - INFO - Vírusok lecke megnyitása!
+2024-04-19 15:06:26,896 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:06:27,994 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:08:38,050 - INFO - Az alkalmazás elindult!
+2024-04-19 15:08:39,109 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:08:40,773 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:08:44,501 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 15:08:48,013 - INFO - testAnswer3 megjelölve válaszként.
+2024-04-19 15:08:48,379 - INFO - testAnswer3 sikeresen leadva válaszként!
+2024-04-19 15:08:48,379 - INFO - Válaszok listája: ['testAnswer3']
+2024-04-19 15:08:49,527 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:08:51,146 - INFO - Kilépés az alkalmazásból!
+2024-04-19 15:16:26,116 - INFO - Az alkalmazás elindult!
+2024-04-19 15:16:27,415 - INFO - Továbblépés a fő felületre.
+2024-04-19 15:16:28,490 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 15:16:29,435 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 15:16:34,662 - INFO - Tanulós játémód bezárása!
+2024-04-19 15:16:41,651 - INFO - Kilépés az alkalmazásból!
+2024-04-19 16:46:36,712 - INFO - Az alkalmazás elindult!
+2024-04-19 16:46:37,911 - INFO - Továbblépés a fő felületre.
+2024-04-19 16:46:39,145 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 16:46:39,715 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-19 16:46:40,931 - INFO - Tanulós játémód bezárása!
+2024-04-19 16:46:41,462 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 16:46:48,597 - INFO - Tanulós játémód bezárása!
+2024-04-19 16:46:50,856 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 16:46:52,573 - INFO - Tanulós játémód bezárása!
+2024-04-19 16:46:53,108 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 16:50:31,145 - INFO - Az alkalmazás elindult!
+2024-04-19 16:50:33,073 - INFO - Továbblépés a fő felületre.
+2024-04-19 16:50:34,222 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 16:50:35,942 - ERROR - [Errno 2] No such file or directory: 'D:\\Files\\Projects\\Szakdolgozat\\src/main/resources/learningdata/keyloggers/page1.html'
+2024-04-19 16:50:35,949 - ERROR - setText(self, a0: Optional[str]): argument 1 has unexpected type 'FileNotFoundError'
+2024-04-19 16:51:27,957 - INFO - Az alkalmazás elindult!
+2024-04-19 16:51:29,156 - INFO - Továbblépés a fő felületre.
+2024-04-19 16:51:30,097 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 16:51:30,518 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 16:51:32,135 - INFO - Tanulós játémód bezárása!
+2024-04-19 16:51:33,726 - INFO - Kilépés az alkalmazásból!
+2024-04-19 18:15:50,171 - INFO - Az alkalmazás elindult!
+2024-04-19 18:15:51,261 - INFO - Továbblépés a fő felületre.
+2024-04-19 18:15:52,209 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 18:15:53,141 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 18:15:54,352 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:15:54,866 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-19 18:15:56,576 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:15:57,200 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 18:15:58,515 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:15:59,097 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 18:16:07,236 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:16:08,847 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-19 18:16:10,355 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:16:18,994 - INFO - Kilépés az alkalmazásból!
+2024-04-19 18:20:50,841 - INFO - Az alkalmazás elindult!
+2024-04-19 18:20:51,990 - INFO - Továbblépés a fő felületre.
+2024-04-19 18:20:53,209 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 18:20:53,646 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 18:20:54,659 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:20:55,194 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 18:20:59,721 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:21:00,352 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-19 18:21:01,967 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:21:02,679 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-19 18:21:04,194 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:21:04,924 - INFO - Trójai Vírusok lecke megnyitása!
+2024-04-19 18:21:06,339 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:21:06,868 - INFO - Kémprogramok lecke megnyitása!
+2024-04-19 18:21:08,981 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:21:10,831 - INFO - Kilépés az alkalmazásból!
+2024-04-19 18:21:10,843 - INFO - Kilépés az alkalmazásból!
+2024-04-19 18:22:43,500 - INFO - Az alkalmazás elindult!
+2024-04-19 18:22:44,175 - INFO - Névjegy képernyő megnyitásra került!
+2024-04-19 18:22:46,466 - INFO - Visszalépés az üdvözlő képernyőre!
+2024-04-19 18:22:47,531 - INFO - Továbblépés a fő felületre.
+2024-04-19 18:22:48,755 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-19 18:22:49,209 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-19 18:22:50,324 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:22:51,207 - INFO - Rootkitek lecke megnyitása!
+2024-04-19 18:22:53,625 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:22:55,103 - INFO - Vírusok lecke megnyitása!
+2024-04-19 18:22:57,519 - INFO - Tanulós játémód bezárása!
+2024-04-19 18:23:00,054 - INFO - Kilépés az alkalmazásból!
+2024-04-20 15:13:44,027 - INFO - Az alkalmazás elindult!
+2024-04-20 15:13:45,012 - INFO - Továbblépés a fő felületre.
+2024-04-20 15:13:46,023 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-20 15:13:46,916 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-20 15:13:53,345 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:13:53,913 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-20 15:14:04,053 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:14:07,981 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-20 15:14:08,887 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-20 15:14:28,370 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:14:30,233 - INFO - Kilépés az alkalmazásból!
+2024-04-20 15:15:20,840 - INFO - Az alkalmazás elindult!
+2024-04-20 15:25:02,573 - INFO - Az alkalmazás elindult!
+2024-04-20 15:25:04,779 - INFO - Továbblépés a fő felületre.
+2024-04-20 15:25:05,777 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-20 15:25:06,888 - INFO - Rootkitek lecke megnyitása!
+2024-04-20 15:25:18,445 - INFO - testAnswer2 megjelölve válaszként.
+2024-04-20 15:25:19,086 - INFO - testAnswer2 sikeresen leadva válaszként!
+2024-04-20 15:25:19,086 - INFO - Válaszok listája: ['testAnswer2']
+2024-04-20 15:25:20,035 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:25:22,167 - INFO - Kilépés az alkalmazásból!
+2024-04-20 15:27:01,937 - INFO - Az alkalmazás elindult!
+2024-04-20 15:27:03,119 - INFO - Továbblépés a fő felületre.
+2024-04-20 15:27:04,039 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-20 15:27:05,120 - INFO - Vírusok lecke megnyitása!
+2024-04-20 15:27:06,126 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:27:08,957 - INFO - Kémprogramok lecke megnyitása!
+2024-04-20 15:27:10,308 - INFO - testAnswer2 megjelölve válaszként.
+2024-04-20 15:27:10,866 - INFO - testAnswer2 sikeresen leadva válaszként!
+2024-04-20 15:27:10,866 - INFO - Válaszok listája: ['testAnswer2']
+2024-04-20 15:27:11,970 - INFO - Tanulós játémód bezárása!
+2024-04-20 15:34:31,482 - INFO - Kilépés az alkalmazásból!
+2024-04-20 15:41:39,423 - INFO - Az alkalmazás elindult!
+2024-04-20 15:41:40,493 - INFO - Továbblépés a fő felületre.
+2024-04-20 15:41:41,661 - INFO - Kvíz játékmód megnyitása!
+2024-04-20 15:41:42,426 - INFO - Nincs összefüggésben megjelölve válaszként.
+2024-04-20 15:41:43,019 - INFO - Nincs összefüggésben sikeresen leadva válaszként!
+2024-04-20 15:41:43,401 - INFO - Nem, a botnetek teljesen üzemképtelenek megjelölve válaszként.
+2024-04-20 15:41:43,670 - INFO - Nem, a botnetek teljesen üzemképtelenek sikeresen leadva válaszként!
+2024-04-20 15:41:44,205 - INFO - Trójai vírus megjelölve válaszként.
+2024-04-20 15:41:44,541 - INFO - Trójai vírus sikeresen leadva válaszként!
+2024-04-20 15:41:44,940 - INFO - Így hívják a rootkiteket másképp megjelölve válaszként.
+2024-04-20 15:41:45,468 - INFO - Így hívják a rootkiteket másképp sikeresen leadva válaszként!
+2024-04-20 15:41:45,864 - INFO - Kikapcsolt tűzfalat megjelölve válaszként.
+2024-04-20 15:41:46,289 - INFO - Kikapcsolt tűzfalat sikeresen leadva válaszként!
+2024-04-20 15:41:46,772 - INFO - Android megjelölve válaszként.
+2024-04-20 15:41:47,128 - INFO - Android sikeresen leadva válaszként!
+2024-04-20 15:41:47,551 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye megjelölve válaszként.
+2024-04-20 15:41:47,827 - INFO - Van, a tűzfal hálózati szabályok gyűjteménye sikeresen leadva válaszként!
+2024-04-20 15:41:48,255 - INFO - Alkothatnak botnetet, ha ezernél több eszközt elérnek megjelölve válaszként.
+2024-04-20 15:41:49,572 - INFO - Alkothatnak botnetet, ha ezernél több eszközt elérnek sikeresen leadva válaszként!
+2024-04-20 15:41:49,891 - INFO - Tartalomblokkolók használata megjelölve válaszként.
+2024-04-20 15:41:50,264 - INFO - Tartalomblokkolók használata sikeresen leadva válaszként!
+2024-04-20 15:41:50,638 - INFO - Igen, a telefonokra is érdemes fejleszteni megjelölve válaszként.
+2024-04-20 15:41:50,910 - INFO - Igen, a telefonokra is érdemes fejleszteni sikeresen leadva válaszként!
+2024-04-20 15:41:58,637 - INFO - Jelvények sikeresen betöltve!
+2024-04-20 15:41:58,639 - INFO - Jelvények sikeresen betöltve!
+2024-04-20 15:42:08,192 - INFO - Kilépés az alkalmazásból!
+2024-04-20 18:01:03,574 - INFO - Az alkalmazás elindult!
+2024-04-20 18:01:04,799 - INFO - Továbblépés a fő felületre.
+2024-04-20 18:01:06,142 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-20 18:01:06,955 - INFO - Rootkitek lecke megnyitása!
+2024-04-20 18:01:09,140 - INFO - testAnswer3 megjelölve válaszként.
+2024-04-20 18:01:09,465 - INFO - testAnswer3 sikeresen leadva válaszként!
+2024-04-20 18:01:09,465 - INFO - Válaszok listája: ['testAnswer3']
+2024-04-20 18:01:10,276 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:11,116 - INFO - Vírusok lecke megnyitása!
+2024-04-20 18:01:39,622 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:40,687 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-20 18:01:48,523 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:49,151 - INFO - Rootkitek lecke megnyitása!
+2024-04-20 18:01:51,769 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:52,350 - INFO - Zsarolóvírusok lecke megnyitása!
+2024-04-20 18:01:53,765 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:54,381 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-20 18:01:57,796 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:01:58,402 - INFO - Kémprogramok lecke megnyitása!
+2024-04-20 18:02:02,426 - INFO - Tanulós játémód bezárása!
+2024-04-20 18:02:13,794 - INFO - Kilépés az alkalmazásból!

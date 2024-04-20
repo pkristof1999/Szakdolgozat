@@ -196,9 +196,9 @@
         }
     },
     "Fájlnélküli kártevők" : {
-        "dataPage1Path" : "src/main/resources/learningdata/keyloggers/page1.html",
-        "dataPage2Path" : "src/main/resources/learningdata/keyloggers/page2.html",
-        "dataPage3Path" : "src/main/resources/learningdata/keyloggers/page3.html",
+        "dataPage1Path" : "src/main/resources/learningdata/fileless/page1.html",
+        "dataPage2Path" : "src/main/resources/learningdata/fileless/page2.html",
+        "dataPage3Path" : "src/main/resources/learningdata/fileless/page3.html",
         "questions" : {
             "questions1": {
                 "question" : "testQuestion1",
