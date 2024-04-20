@@ -89,11 +89,11 @@
     },
     "question12": {
         "question": "Mik a fájlnélküli kártevők?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Olyan kártevők, amelyek nem hoznak létre fájlokat",
+        "answer1": "Nem létezhet kártevő fájlok nélkül",
+        "answer2": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "answer3": "A férgek más néven",
+        "answer4": "Olyan kártevők, amelyek nem hoznak létre fájlokat"
     },
     "question13": {
         "question": "Mik a kémprogramok?",
@@ -177,27 +177,27 @@
     },
     "question23": {
         "question": "Mi a különbség egy vírus és egy féreg között?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "A féreg a hálózatot fertőzi meg, a vírus nem",
+        "answer1": "Nincs különbség, a kettő ugyan az",
+        "answer2": "Mindkét kártevő a hálózatot fertőzi meg",
+        "answer3": "A féreg a hálózatot fertőzi meg, a vírus nem",
+        "answer4": "A vírus a hálózatot fertőzi meg, a féreg nem"
     },
     "question24": {
         "question": "Mi a különbség a trójai vírus és egy zsarolóvírus között?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Elsődleges cél az adatok lopása",
+        "answer1": "Mindkettő elsődleges célja az adatok lopása",
+        "answer2": "Egyik sem fedi fel magát a felhasználó számára",
+        "answer3": "Mindkettő a hálózatot fertőzi meg",
+        "answer4": "Egyik sem terjedhet emailek útján"
     },
     "question25": {
         "question": "Mi az a makro vírus?",
-        "rightAnswer": "Teszt1",
-        "answer1": "Teszt1",
-        "answer2": "Teszt2",
-        "answer3": "Teszt3",
-        "answer4": "Teszt4"
+        "rightAnswer": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "answer1": "Olyan féreg, amely csak belső hálózatokat támad",
+        "answer2": "Olyan vírus, amely titkosítja a fájlainkat",
+        "answer3": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "answer4": "Így hívják a rootkiteket másképp"
     },
     "question26": {
         "question": "Melyik vírus fajta álcázza magát legitim szoftverként?",
