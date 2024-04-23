@@ -89,25 +89,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/spywares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "A kémprogramok esetén mindig számít a megfertőzött felhasználók száma?",
+                "answer1" : "Nem, mivel bizonyos esetekben célzottan is alkalmazhatják",
+                "answer2" : "Nem, mivel kevesebb esetnél kisebb az esélye, hogy felfedezik",
+                "answer3" : "Igen, mivel így lehet biztosítani a támadó bevételeit",
+                "goodAnswer" : "Nem, mivel bizonyos esetekben célzottan is alkalmazhatják"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Eredetileg mi volt a célja a Pegasus kémprogram kifejlesztésének?",
+                "answer1" : "Felhasználó adatainak titkosítása, váltságdíj követelése",
+                "answer2" : "Felhasználók adatainak eltulajdonítása",
+                "answer3" : "Potenciális és valós terroristák és bűnözők megfigyelése",
+                "goodAnswer" : "Potenciális és valós terroristák és bűnözők megfigyelése"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Kik voltak a Cerberus kémszoftver fő célpontjai?",
+                "answer1" : "Bárki, akinek Android vagy iOS fut a telefonján.",
+                "answer2" : "Bárki, akinek csak Android fut a telefonján",
+                "answer3" : "Politikusok és újságírók",
+                "goodAnswer" : "Bárki, akinek csak Android fut a telefonján"
             }
         }
     },
