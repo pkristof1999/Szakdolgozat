@@ -75,11 +75,11 @@
                 "goodAnswer" : "Banki adatok eltulajdonítása"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért volt különösen veszélyes a PoisonIvy?",
+                "answer1" : "Azért, mert a növény is veszélyes, amiről a nevét kapta",
+                "answer2" : "Azért, mert váltságdíjért cserébe lehetett csak megszabadulni tőle",
+                "answer3" : "Azért, mert át lehetett vele venni teljesen az irányítást",
+                "goodAnswer" : "Azért, mert át lehetett vele venni teljesen az irányítást"
             }
         }
     },
@@ -117,25 +117,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/adwares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mi a legnagyobb probléma, amely felmerül egy reklámprogram esetén?",
+                "answer1" : "Zavaró a felhasználó számára a felugró ablak",
+                "answer2" : "Lassíthatja a számítógép működését",
+                "answer3" : "Veszélyezteti a felhasználó adatait",
+                "goodAnswer" : "Veszélyezteti a felhasználó adatait"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Milyen módon terjedt a VisualDiscovery a számítógépeken",
+                "answer1" : "Emailek és fertőzött weboldalak által",
+                "answer2" : "Előre telepítve számítógépeken",
+                "answer3" : "Belső hálózatokon keresztül, mint egy féreg",
+                "goodAnswer" : "Előre telepítve számítógépeken"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért probléma az, ha a Vontera átírányítja a böngészőt egy adott weboldalra?",
+                "answer1" : "Veszélyezteti a felhasználót egy potenciálisan káros oldal megnyitásával",
+                "answer2" : "A felhasználó idejét pazarolja vele",
+                "answer3" : "Mert a felhasználót ezzel feldühítheti",
+                "goodAnswer" : "Veszélyezteti a felhasználót egy potenciálisan káros oldal megnyitásával"
             }
         }
     },
