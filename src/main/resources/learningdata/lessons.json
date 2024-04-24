@@ -173,11 +173,11 @@
         "dataPage3Path" : "src/main/resources/learningdata/rootkits/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Az alábbiak közül mire nem lehet használni a rootkiteket?",
+                "answer1" : "Más kártevők elrejtésére",
+                "answer2" : "Számítógép feletti irányítás átvételére",
+                "answer3" : "Önsokszorosításra a hálózaton",
+                "goodAnswer" : "Önsokszorosításra a hálózaton"
             },
             "questions2": {
                 "question" : "testQuestion2",
@@ -201,11 +201,11 @@
         "dataPage3Path" : "src/main/resources/learningdata/fileless/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mit jelent az, hogy egy kártevő 'fájlnélküli'?",
+                "answer1" : "Azt, hogy működéséhez nem szükséges alkalmazást elindítani",
+                "answer2" : "Azt, hogy működéséhez nem szükséges a memóriába betöltődnie",
+                "answer3" : "Azt, hogy működéséhez nem hoz létre fájlokat",
+                "goodAnswer" : "Azt, hogy működéséhez nem hoz létre fájlokat"
             },
             "questions2": {
                 "question" : "testQuestion2",
