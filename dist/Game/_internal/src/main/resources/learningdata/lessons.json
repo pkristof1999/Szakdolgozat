@@ -75,11 +75,11 @@
                 "goodAnswer" : "Banki adatok eltulajdonítása"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért volt különösen veszélyes a PoisonIvy?",
+                "answer1" : "Azért, mert a növény is veszélyes, amiről a nevét kapta",
+                "answer2" : "Azért, mert váltságdíjért cserébe lehetett csak megszabadulni tőle",
+                "answer3" : "Azért, mert át lehetett vele venni teljesen az irányítást",
+                "goodAnswer" : "Azért, mert át lehetett vele venni teljesen az irányítást"
             }
         }
     },
@@ -89,25 +89,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/spywares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "A kémprogramok esetén mindig számít a megfertőzött felhasználók száma?",
+                "answer1" : "Nem, mivel bizonyos esetekben célzottan is alkalmazhatják",
+                "answer2" : "Nem, mivel kevesebb esetnél kisebb az esélye, hogy felfedezik",
+                "answer3" : "Igen, mivel így lehet biztosítani a támadó bevételeit",
+                "goodAnswer" : "Nem, mivel bizonyos esetekben célzottan is alkalmazhatják"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Eredetileg mi volt a célja a Pegasus kémprogram kifejlesztésének?",
+                "answer1" : "Felhasználó adatainak titkosítása, váltságdíj követelése",
+                "answer2" : "Felhasználók adatainak eltulajdonítása",
+                "answer3" : "Potenciális és valós terroristák és bűnözők megfigyelése",
+                "goodAnswer" : "Potenciális és valós terroristák és bűnözők megfigyelése"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Kik voltak a Cerberus kémszoftver fő célpontjai?",
+                "answer1" : "Bárki, akinek Android vagy iOS fut a telefonján.",
+                "answer2" : "Bárki, akinek csak Android fut a telefonján",
+                "answer3" : "Politikusok és újságírók",
+                "goodAnswer" : "Bárki, akinek csak Android fut a telefonján"
             }
         }
     },
@@ -117,25 +117,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/adwares/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mi a legnagyobb probléma, amely felmerül egy reklámprogram esetén?",
+                "answer1" : "Zavaró a felhasználó számára a felugró ablak",
+                "answer2" : "Lassíthatja a számítógép működését",
+                "answer3" : "Veszélyezteti a felhasználó adatait",
+                "goodAnswer" : "Veszélyezteti a felhasználó adatait"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Milyen módon terjedt a VisualDiscovery a számítógépeken",
+                "answer1" : "Emailek és fertőzött weboldalak által",
+                "answer2" : "Előre telepítve számítógépeken",
+                "answer3" : "Belső hálózatokon keresztül, mint egy féreg",
+                "goodAnswer" : "Előre telepítve számítógépeken"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Miért probléma az, ha a Vontera átírányítja a böngészőt egy adott weboldalra?",
+                "answer1" : "Veszélyezteti a felhasználót egy potenciálisan káros oldal megnyitásával",
+                "answer2" : "A felhasználó idejét pazarolja vele",
+                "answer3" : "Mert a felhasználót ezzel feldühítheti",
+                "goodAnswer" : "Veszélyezteti a felhasználót egy potenciálisan káros oldal megnyitásával"
             }
         }
     },
@@ -173,25 +173,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/rootkits/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Az alábbiak közül mire nem lehet használni a rootkiteket?",
+                "answer1" : "Más kártevők elrejtésére",
+                "answer2" : "Számítógép feletti irányítás átvételére",
+                "answer3" : "Önsokszorosításra a hálózaton",
+                "goodAnswer" : "Önsokszorosításra a hálózaton"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Hogyan települt az Alueron nevű rootkit?",
+                "answer1" : "Egy trójai vírus mellett",
+                "answer2" : "Önmagában egy fertőzött alkalmazás telepítésével",
+                "answer3" : "A hálózaton terjedt, mint egy féreg, és úgy fertőzött",
+                "goodAnswer" : "Egy trójai vírus mellett"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Milyen sebezhetőséget használt ki a Vanquish nevű rootkit?",
+                "answer1" : "A Windows operációs rendszer kerneljének egy sebezhetőségét",
+                "answer2" : "A Windows Tűzfal egy hálózati sebezhetőségét",
+                "answer3" : "Az Intel PID sebezhetőségét",
+                "goodAnswer" : "Az Intel PID sebezhetőségét"
             }
         }
     },
@@ -201,25 +201,25 @@
         "dataPage3Path" : "src/main/resources/learningdata/fileless/page3.html",
         "questions" : {
             "questions1": {
-                "question" : "testQuestion1",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mit jelent az, hogy egy kártevő 'fájlnélküli'?",
+                "answer1" : "Azt, hogy működéséhez nem szükséges alkalmazást elindítani",
+                "answer2" : "Azt, hogy működéséhez nem szükséges a memóriába betöltődnie",
+                "answer3" : "Azt, hogy működéséhez nem hoz létre fájlokat",
+                "goodAnswer" : "Azt, hogy működéséhez nem hoz létre fájlokat"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mi volt a fő célja a PowerGhost nevű kártevőnek?",
+                "answer1" : "Banki és egyéb személyes adatok ellopása",
+                "answer2" : "Nagyvállalatok erőforrásait felhasználva, kriptovaluta bányászat",
+                "answer3" : "Titkosítani a felhasználók adatait váltságdíjat követelve",
+                "goodAnswer" : "Nagyvállalatok erőforrásait felhasználva, kriptovaluta bányászat"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Melyik két kártevőfajtához hasonlít a legjobban a PowerWare?",
+                "answer1" : "Reklámprogramok és rootkitek",
+                "answer2" : "Férgek és kémprogramok",
+                "answer3" : "Zsarolóvírusok és dokumentumba ágyazott makró vírusok",
+                "goodAnswer" : "Zsarolóvírusok és dokumentumba ágyazott makró vírusok"
             }
         }
     }
