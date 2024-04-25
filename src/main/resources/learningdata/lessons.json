@@ -208,18 +208,18 @@
                 "goodAnswer" : "Azt, hogy működéséhez nem hoz létre fájlokat"
             },
             "questions2": {
-                "question" : "testQuestion2",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Mi volt a fő célja a PowerGhost nevű kártevőnek?",
+                "answer1" : "Banki és egyéb személyes adatok ellopása",
+                "answer2" : "Nagyvállalatok erőforrásait felhasználva, kriptovaluta bányászat",
+                "answer3" : "Titkosítani a felhasználók adatait váltságdíjat követelve",
+                "goodAnswer" : "Nagyvállalatok erőforrásait felhasználva, kriptovaluta bányászat"
             },
             "questions3": {
-                "question" : "testQuestion3",
-                "answer1" : "testAnswer1",
-                "answer2" : "testAnswer2",
-                "answer3" : "testAnswer3",
-                "goodAnswer" : "testAnswer1"
+                "question" : "Melyik két kártevőfajtához hasonlít a legjobban a PowerWare?",
+                "answer1" : "Reklámprogramok és rootkitek",
+                "answer2" : "Férgek és kémprogramok",
+                "answer3" : "Zsarolóvírusok és dokumentumba ágyazott makró vírusok",
+                "goodAnswer" : "Zsarolóvírusok és dokumentumba ágyazott makró vírusok"
             }
         }
     }
