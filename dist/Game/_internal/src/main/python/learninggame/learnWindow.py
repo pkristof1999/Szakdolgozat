@@ -4,7 +4,7 @@ import time
 
 from PyQt6.QtCore import QTimer
 from PyQt6.QtGui import QIcon
-from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QLabel, QPushButton, QMainWindow, QGraphicsBlurEffect
 from PyQt6.uic import loadUi
 
 from src.main.python.components.logger import *
@@ -60,6 +60,9 @@ class LearnWindowUI(QMainWindow):
 
             self.titleLabel.setText(typeOfLesson)
             self.learnContent = self.loadLearnContentIntoArray(typeOfLesson)
+
+            self.setBlurEffect = QGraphicsBlurEffect()
+            self.setBlurEffect.setBlurRadius(10)
 
             self.info = ""
             self.pointsEarned = 0
@@ -174,10 +177,13 @@ class LearnWindowUI(QMainWindow):
             )
 
         self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
-
+        self.setBlurEffect.setBlurRadius(10)
+        self.contentLabel.setGraphicsEffect(self.setBlurEffect)
         self.questionWindow.show()
 
     def handleNextPage(self, result):
+        self.setBlurEffect.setBlurRadius(0)
+        self.contentLabel.setGraphicsEffect(self.setBlurEffect)
         if result == "Next" and self.indexOfCurrentPage == self.numberOfDataPages:
             self.showResults()
         elif result == "Next":

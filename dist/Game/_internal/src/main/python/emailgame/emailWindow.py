@@ -223,7 +223,7 @@ class EmailWindowUI(QMainWindow):
             button = getattr(self, buttonName, None)
 
             self.senderAddress = self.emailBank[i]["sender"]
-            button.setText(f"{self.emailBank[i]["subject"]}\n{self.senderAddress}")
+            button.setText(f"{self.emailBank[i]['subject']}\n{self.senderAddress}")
             setattr(self, buttonID, self.emailBank[i]["ID"])
             setattr(self, emailPath, self.emailBank[i]["pathToEmail"])
             if self.emailBank[i]["isMalicious"]:
