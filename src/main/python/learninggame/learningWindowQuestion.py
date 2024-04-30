@@ -81,6 +81,7 @@ class LearningWindowQuestionUI(QMainWindow):
                                      """)
 
             self.showQuestionWithAnswers(parent)
+            self.closeEvent = self.declineWithClose
 
         except Exception as e:
             errorMessage(e)
@@ -118,6 +119,10 @@ class LearningWindowQuestionUI(QMainWindow):
         self.finished.emit("Back")
         self.parent.show()
         self.hide()
+
+    def declineWithClose(self, event):
+        self.declineAnswer()
+        event.accept()
 
     def acceptAnswer(self, parent):
         if self.answer1Button.isChecked() or \
