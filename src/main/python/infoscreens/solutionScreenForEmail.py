@@ -45,7 +45,9 @@ class SolutionScreenForEmailUI(QMainWindow):
                 self.sortedArrayOfReasons.append(i["reason"])
 
         self.emailFrame = self.findChild(QFrame, "emailFrame")
+        self.answerBox = self.findChild(QLabel, "answerBox")
         self.answerField = self.findChild(QLabel, "answerField")
+        self.userAnswerField = self.findChild(QLabel, "userAnswerField")
         self.backButton = self.findChild(QPushButton, "backButton")
         self.previousButton = self.findChild(QPushButton, "previousButton")
         self.nextButton = self.findChild(QPushButton, "nextButton")
@@ -61,18 +63,47 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
+        self.rightAnswerStyle = """
+                                    * {
+                                        background-color: rgb(100, 220, 95);
+                                        border: 2px solid rgb(20, 145, 15);
+                                        border-radius: 10px;
+                                        font-size: 12pt;
+                                    }
+                                    """
+
+        self.wrongAnswerStyle = """
+                                    * {
+                                        background-color: rgb(240, 95, 85);
+                                        border: 2px solid rgb(200, 45, 30);
+                                        border-radius: 10px;
+                                        font-size: 12pt;
+                                    }
+                                    """
+
         self.hideButton(self.previousButton)
         self.loadFirstQuestion()
 
         self.closeEvent = greatGrandParent.exitWindow
 
+    def checkAnswer(self):
+        tmpAnswerField = self.answerField.text().split("?")[1]
+        tmpUserAnswerField = self.userAnswerField.text().split(":")[1]
+        if "Hiteles" in tmpAnswerField and "Hiteles" in tmpUserAnswerField or \
+            "Káros" in tmpAnswerField and "Káros" in tmpUserAnswerField:
+            self.answerBox.setStyleSheet(self.rightAnswerStyle)
+        else:
+            self.answerBox.setStyleSheet(self.wrongAnswerStyle)
+
     def loadFirstQuestion(self):
         self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[0]))
-        self.answerField.setText(f"""
-        Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[0])}
-        A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[0])}
-        Az indoklás: {self.sortedArrayOfReasons[0]}
-                                    """)
+        self.answerField.setText("Milyen jellegű az e-mail? " +
+                                 self.translateRightAnswers(self.sortedArrayOfRightAnswers[0]) + "\n" +
+                                 "Az indoklás: " + self.sortedArrayOfReasons[0])
+        self.userAnswerField.setText("Megadott válasz: " +
+                                     self.translateSolutions(self.arrayOfSolutions[0]))
+
+        self.checkAnswer()
 
     def translateRightAnswers(self, answer):
         return "Hiteles" if not answer else "Káros"
@@ -85,11 +116,13 @@ class SolutionScreenForEmailUI(QMainWindow):
             self.questionIndex -= 1
 
         self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[self.questionIndex]))
-        self.answerField.setText(f"""
-        Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
-        A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
-        Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
-                                    """)
+        self.answerField.setText("Milyen jellegű az e-mail? " +
+                                 self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex]) + "\n" +
+                                 "Az indoklás: " + self.sortedArrayOfReasons[self.questionIndex])
+        self.userAnswerField.setText("Megadott válasz: " +
+                                     self.translateSolutions(self.arrayOfSolutions[self.questionIndex]))
+
+        self.checkAnswer()
 
         if self.questionIndex == 0:
             self.hideButton(self.previousButton)
@@ -100,11 +133,13 @@ class SolutionScreenForEmailUI(QMainWindow):
         self.questionIndex += 1
         if self.questionIndex < len(self.arrayOfSolutions):
             self.loadImage(os.path.join(self.basePath, self.sortedArrayOfEmails[self.questionIndex]))
-            self.answerField.setText(f"""
-            Milyen jellegű az e-mail?: {self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex])}
-            A megadott válasz a kérdésre: {self.translateSolutions(self.arrayOfSolutions[self.questionIndex])}
-            Az indoklás: {self.sortedArrayOfReasons[self.questionIndex]}
-                                        """)
+            self.answerField.setText("Milyen jellegű az e-mail? " +
+                                     self.translateRightAnswers(self.sortedArrayOfRightAnswers[self.questionIndex]) + "\n" +
+                                     "Az indoklás: " + self.sortedArrayOfReasons[self.questionIndex])
+            self.userAnswerField.setText("Megadott válasz: " +
+                                         self.translateSolutions(self.arrayOfSolutions[self.questionIndex]))
+
+            self.checkAnswer()
 
         self.showButton(self.previousButton)
 

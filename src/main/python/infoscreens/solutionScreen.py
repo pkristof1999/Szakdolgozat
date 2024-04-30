@@ -44,7 +44,9 @@ class SolutionScreenUI(QMainWindow):
                     self.sortedArrayOfRightAnswers.append(i["rightAnswer"])
 
         self.questionField = self.findChild(QLabel, "questionField")
+        self.answerBox = self.findChild(QLabel, "answerBox")
         self.answerField = self.findChild(QLabel, "answerField")
+        self.userAnswerField = self.findChild(QLabel, "userAnswerField")
         self.backButton = self.findChild(QPushButton, "backButton")
         self.previousButton = self.findChild(QPushButton, "previousButton")
         self.nextButton = self.findChild(QPushButton, "nextButton")
@@ -60,17 +62,42 @@ class SolutionScreenUI(QMainWindow):
         self.previousButton.clicked.connect(self.previousButtonClick)
         self.nextButton.clicked.connect(lambda: self.nextButtonClick(greatGrandParent))
 
+        self.rightAnswerStyle = """
+                                    * {
+                                        background-color: rgb(100, 220, 95);
+                                        border: 2px solid rgb(20, 145, 15);
+                                        border-radius: 10px;
+                                        font-size: 12pt;
+                                    }
+                                    """
+
+        self.wrongAnswerStyle = """
+                                    * {
+                                        background-color: rgb(240, 95, 85);
+                                        border: 2px solid rgb(200, 45, 30);
+                                        border-radius: 10px;
+                                        font-size: 12pt;
+                                    }
+                                    """
+
         self.hideButton(self.previousButton)
         self.loadFirstQuestion()
 
         self.closeEvent = greatGrandParent.exitWindow
 
+    def checkAnswer(self):
+        tmpAnswerField = self.answerField.text().split(":")[1]
+        tmpUserAnswerField = self.userAnswerField.text().split(":")[1]
+        if tmpAnswerField == tmpUserAnswerField:
+            self.answerBox.setStyleSheet(self.rightAnswerStyle)
+        else:
+            self.answerBox.setStyleSheet(self.wrongAnswerStyle)
+
     def loadFirstQuestion(self):
         self.questionField.setText(self.sortedArrayOfQuestions[0])
-        self.answerField.setText(f"""
-        Helyes válasz a kérdésre: {self.sortedArrayOfRightAnswers[0]}
-        A megadott válasz a kérdésre: {self.arrayOfSolutions[0]}
-                                    """)
+        self.answerField.setText("A helyes válasz: " + self.sortedArrayOfRightAnswers[0])
+        self.userAnswerField.setText("A megadott válasz: " + self.arrayOfSolutions[0])
+        self.checkAnswer()
 
     def previousButtonClick(self):
         if self.questionIndex > 0:
@@ -78,10 +105,9 @@ class SolutionScreenUI(QMainWindow):
 
         if self.questionIndex < len(self.arrayOfSolutions):
             self.questionField.setText(self.sortedArrayOfQuestions[self.questionIndex])
-            self.answerField.setText(f"""
-            Helyes válasz a kérdésre: {self.sortedArrayOfRightAnswers[self.questionIndex]}
-            A megadott válasz a kérdésre: {self.arrayOfSolutions[self.questionIndex]}
-                                        """)
+            self.answerField.setText("A helyes válasz: " + self.sortedArrayOfRightAnswers[self.questionIndex])
+            self.userAnswerField.setText("A megadott válasz: " + self.arrayOfSolutions[self.questionIndex])
+            self.checkAnswer()
 
         if self.questionIndex == 0:
             self.hideButton(self.previousButton)
@@ -92,10 +118,9 @@ class SolutionScreenUI(QMainWindow):
         self.questionIndex += 1
         if self.questionIndex < len(self.arrayOfSolutions):
             self.questionField.setText(self.sortedArrayOfQuestions[self.questionIndex])
-            self.answerField.setText(f"""
-            Helyes válasz a kérdésre: {self.sortedArrayOfRightAnswers[self.questionIndex]}
-            A megadott válasz a kérdésre: {self.arrayOfSolutions[self.questionIndex]}
-                                        """)
+            self.answerField.setText("A helyes válasz: " + self.sortedArrayOfRightAnswers[self.questionIndex])
+            self.userAnswerField.setText("A megadott válasz: " + self.arrayOfSolutions[self.questionIndex])
+            self.checkAnswer()
 
         self.showButton(self.previousButton)
 

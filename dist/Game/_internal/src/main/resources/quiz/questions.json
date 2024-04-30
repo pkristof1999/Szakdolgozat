@@ -91,7 +91,7 @@
         "question": "Mik a fájlnélküli kártevők?",
         "rightAnswer": "Olyan kártevők, amelyek nem hoznak létre fájlokat",
         "answer1": "Nem létezhet kártevő fájlok nélkül",
-        "answer2": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "answer2": "Olyan kártevő, ami egy dokumentum megnyitásával fut le",
         "answer3": "A férgek más néven",
         "answer4": "Olyan kártevők, amelyek nem hoznak létre fájlokat"
     },
@@ -193,10 +193,10 @@
     },
     "question25": {
         "question": "Mi az a makro vírus?",
-        "rightAnswer": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "rightAnswer": "Olyan kártevő, ami egy dokumentum megnyitásával fut le",
         "answer1": "Olyan féreg, amely csak belső hálózatokat támad",
         "answer2": "Olyan vírus, amely titkosítja a fájlainkat",
-        "answer3": "Olyan kártékony kód, ami egy dokumentum megnyitásával fut le",
+        "answer3": "Olyan kártevő, ami egy dokumentum megnyitásával fut le",
         "answer4": "Így hívják a rootkiteket másképp"
     },
     "question26": {
