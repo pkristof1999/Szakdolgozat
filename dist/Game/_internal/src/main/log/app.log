@@ -31933,3 +31933,72 @@ A felhasznált emailek valós átveréseket tartalmazhatnak. A bennük látható
 2024-04-30 14:35:34,213 - INFO - Rootkitek lecke megnyitása!
 2024-04-30 14:35:36,730 - INFO - Tanulós játémód bezárása!
 2024-04-30 14:35:38,878 - INFO - Kilépés az alkalmazásból!
+2024-04-30 14:39:40,474 - INFO - Az alkalmazás elindult!
+2024-04-30 14:39:41,422 - INFO - Továbblépés a fő felületre.
+2024-04-30 14:39:42,399 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-30 14:39:43,030 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-30 14:39:51,419 - INFO - Veszélyezteti a felhasználó adatait megjelölve válaszként.
+2024-04-30 14:39:55,442 - INFO - Lassíthatja a számítógép működését megjelölve válaszként.
+2024-04-30 14:39:55,841 - INFO - Zavaró a felhasználó számára a felugró ablak megjelölve válaszként.
+2024-04-30 14:39:57,697 - INFO - Zavaró a felhasználó számára a felugró ablak sikeresen leadva válaszként!
+2024-04-30 14:39:57,697 - INFO - Válaszok listája: ['Zavaró a felhasználó számára a felugró ablak']
+2024-04-30 14:39:58,909 - INFO - Válaszok listája: []
+2024-04-30 14:40:00,626 - INFO - Veszélyezteti a felhasználó adatait megjelölve válaszként.
+2024-04-30 14:40:01,075 - INFO - Veszélyezteti a felhasználó adatait sikeresen leadva válaszként!
+2024-04-30 14:40:01,075 - INFO - Válaszok listája: ['Veszélyezteti a felhasználó adatait']
+2024-04-30 14:40:14,065 - INFO - Válaszok listája: []
+2024-04-30 14:40:15,238 - INFO - Tanulós játémód bezárása!
+2024-04-30 14:40:16,274 - INFO - Fájlnélküli kártevők lecke megnyitása!
+2024-04-30 14:40:17,184 - INFO - Tanulós játémód bezárása!
+2024-04-30 14:40:19,755 - INFO - Kvíz játékmód megnyitása!
+2024-04-30 14:40:23,765 - INFO - Kvíz játékmód bezárása!
+2024-04-30 14:40:25,805 - INFO - Kilépés az alkalmazásból!
+2024-04-30 14:56:30,558 - INFO - Az alkalmazás elindult!
+2024-04-30 14:56:31,711 - INFO - Továbblépés a fő felületre.
+2024-04-30 14:56:32,892 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-30 14:56:33,585 - INFO - Vírusok lecke megnyitása!
+2024-04-30 14:56:42,209 - INFO - Kilépés az alkalmazásból!
+2024-04-30 14:56:42,210 - INFO - Kilépés az alkalmazásból!
+2024-04-30 14:56:44,435 - INFO - Az alkalmazás elindult!
+2024-04-30 14:56:45,324 - INFO - Továbblépés a fő felületre.
+2024-04-30 14:56:46,545 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-30 14:56:47,072 - INFO - Reklámprogramok lecke megnyitása!
+2024-04-30 14:56:48,329 - INFO - Veszélyezteti a felhasználó adatait megjelölve válaszként.
+2024-04-30 14:56:48,620 - INFO - Veszélyezteti a felhasználó adatait sikeresen leadva válaszként!
+2024-04-30 14:56:48,620 - INFO - Válaszok listája: ['Veszélyezteti a felhasználó adatait']
+2024-04-30 14:56:49,385 - INFO - Tanulós játémód bezárása!
+2024-04-30 14:56:50,040 - INFO - Vírusok lecke megnyitása!
+2024-04-30 14:56:51,844 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-30 14:56:52,230 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-30 14:56:52,230 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-30 14:56:54,810 - INFO - Fertőzött adathordozókon és emailek mellékletében megjelölve válaszként.
+2024-04-30 14:56:55,074 - INFO - Fertőzött adathordozókon és emailek mellékletében sikeresen leadva válaszként!
+2024-04-30 14:56:55,074 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'Fertőzött adathordozókon és emailek mellékletében']
+2024-04-30 14:56:59,581 - INFO - Tanulós játémód bezárása!
+2024-04-30 14:57:03,840 - INFO - Adatok mentve!
+2024-04-30 14:57:04,823 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-30 14:57:05,363 - INFO - Vírusok lecke megnyitása!
+2024-04-30 14:57:07,621 - INFO - Tűzfal használata megjelölve válaszként.
+2024-04-30 14:57:08,333 - INFO - Tűzfal használata sikeresen leadva válaszként!
+2024-04-30 14:57:08,333 - INFO - Válaszok listája: ['Tűzfal használata']
+2024-04-30 14:57:09,443 - INFO - Fertőzött adathordozókon és emailek mellékletében megjelölve válaszként.
+2024-04-30 14:57:09,727 - INFO - Fertőzött adathordozókon és emailek mellékletében sikeresen leadva válaszként!
+2024-04-30 14:57:09,728 - INFO - Válaszok listája: ['Tűzfal használata', 'Fertőzött adathordozókon és emailek mellékletében']
+2024-04-30 14:57:10,824 - INFO - Tapasztalatok híjján az emberek megnyitották a különös dokumentumot megjelölve válaszként.
+2024-04-30 14:57:15,973 - INFO - Tapasztalatok híjján az emberek megnyitották a különös dokumentumot sikeresen leadva válaszként!
+2024-04-30 14:57:15,973 - INFO - Válaszok listája: ['Tűzfal használata', 'Fertőzött adathordozókon és emailek mellékletében', 'Tapasztalatok híjján az emberek megnyitották a különös dokumentumot']
+2024-04-30 14:57:33,501 - INFO - Kilépés az alkalmazásból!
+2024-04-30 14:58:03,652 - INFO - Az alkalmazás elindult!
+2024-04-30 14:58:04,959 - INFO - Továbblépés a fő felületre.
+2024-04-30 14:58:06,279 - INFO - Tanulós játékmódhoz az anyagválasztó megnyitása!
+2024-04-30 14:58:06,736 - INFO - Vírusok lecke megnyitása!
+2024-04-30 14:58:07,833 - INFO - Óvatosság és odafigyelés megjelölve válaszként.
+2024-04-30 14:58:08,228 - INFO - Óvatosság és odafigyelés sikeresen leadva válaszként!
+2024-04-30 14:58:08,228 - INFO - Válaszok listája: ['Óvatosság és odafigyelés']
+2024-04-30 14:58:09,027 - INFO - Fertőzött adathordozókon és emailek mellékletében megjelölve válaszként.
+2024-04-30 14:58:09,304 - INFO - Fertőzött adathordozókon és emailek mellékletében sikeresen leadva válaszként!
+2024-04-30 14:58:09,304 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'Fertőzött adathordozókon és emailek mellékletében']
+2024-04-30 14:58:10,261 - INFO - Tapasztalatok híjján az emberek megnyitották a különös dokumentumot megjelölve válaszként.
+2024-04-30 14:58:10,799 - INFO - Tapasztalatok híjján az emberek megnyitották a különös dokumentumot sikeresen leadva válaszként!
+2024-04-30 14:58:10,799 - INFO - Válaszok listája: ['Óvatosság és odafigyelés', 'Fertőzött adathordozókon és emailek mellékletében', 'Tapasztalatok híjján az emberek megnyitották a különös dokumentumot']
+2024-04-30 14:58:29,590 - INFO - Kilépés az alkalmazásból!
