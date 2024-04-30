@@ -4,8 +4,10 @@
     <li>pyqt6; pyqt6-tools; bcrypt; pyinstaller (opcionális)</li>
     <h3>Alkalmazás (.exe) létrehozása Windowshoz:</h3>
     <li>pyinstaller --add-data ".\src;src" --add-data ".\userdata;userdata" --add-data ".\Game.py;." --icon "icon.ico" --noconsole Game.py</li>
+</div>
 <br>
 <hr>
+<br>
 <div>
     <h1><u>Munkaterv</u></h1>
 </div>
