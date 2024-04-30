@@ -165,7 +165,18 @@ class LearnWindowUI(QMainWindow):
         except Exception as e:
             errorMessage(e)
 
+    def enableButtons(self):
+        self.nextButton.setEnabled(True)
+        self.backButton.setEnabled(True)
+        self.exitButton.setEnabled(True)
+
+    def disableButtons(self):
+        self.nextButton.setEnabled(False)
+        self.backButton.setEnabled(False)
+        self.exitButton.setEnabled(False)
+
     def nextButtonClicked(self):
+        self.disableButtons()
         if not self.questionWindow:
             self.questionWindow = learningWindowQuestion.LearningWindowQuestionUI(
                 self.basePath, self.username, self, self.typeOfLesson, self.theme
@@ -177,6 +188,7 @@ class LearnWindowUI(QMainWindow):
             )
 
         self.questionWindow.finished.connect(lambda result: self.handleNextPage(result))
+        self.questionWindow.finished.connect(self.enableButtons)
         self.setBlurEffect.setBlurRadius(10)
         self.contentLabel.setGraphicsEffect(self.setBlurEffect)
         self.questionWindow.show()
@@ -184,6 +196,8 @@ class LearnWindowUI(QMainWindow):
     def handleNextPage(self, result):
         self.setBlurEffect.setBlurRadius(0)
         self.contentLabel.setGraphicsEffect(self.setBlurEffect)
+        self.nextButton.setEnabled(True)
+        self.backButton.setEnabled(True)
         if result == "Next" and self.indexOfCurrentPage == self.numberOfDataPages:
             self.showResults()
         elif result == "Next":

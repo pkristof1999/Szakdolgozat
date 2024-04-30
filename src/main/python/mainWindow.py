@@ -207,14 +207,17 @@ class MainWindowUI(QMainWindow):
 
     def handleLearningGameOpen(self, result, username):
         if result == "Yes":
+            self.closeOpenWindows()
             self.openLearningGame(username)
 
     def handleQuizGameOpen(self, result, username):
         if result == "Yes":
+            self.closeOpenWindows()
             self.openQuizGame(username)
 
     def handleEmailGameOpen(self, result, username):
         if result == "Yes":
+            self.closeOpenWindows()
             self.openEmailGame(username)
 
     def openLearningGame(self, username):

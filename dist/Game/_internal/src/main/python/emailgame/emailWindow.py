@@ -36,7 +36,6 @@ class EmailWindowUI(QMainWindow):
             self.setFixedSize(self.size())
 
             self.parent = parent
-            print(self.isHighContrast)
 
             alertMessage("Figyelem!\nA felhasznált emailek valós átveréseket tartalmazhatnak. "
                          "A bennük látható linkeket, illetve címeket nem érdemes felkeresni!",
@@ -205,7 +204,6 @@ class EmailWindowUI(QMainWindow):
 
             shuffledEmails = list(emailBank.values())
             random.shuffle(shuffledEmails)
-            print(shuffledEmails)
 
             return shuffledEmails
 
