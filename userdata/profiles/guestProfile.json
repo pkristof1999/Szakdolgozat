@@ -2,7 +2,7 @@
     "Vend\u00e9g": {
         "ProfilePicturePath": "src/main/resources/pictures/userDefault.png",
         "completedLessonInLearn": {
-            "lesson1": 1,
+            "lesson1": 0,
             "lesson2": 0,
             "lesson3": 0,
             "lesson4": 0,
@@ -12,7 +12,7 @@
             "lesson8": 0
         },
         "timeSpentInLearn": {
-            "lesson1": 1,
+            "lesson1": 0,
             "lesson2": 0,
             "lesson3": 0,
             "lesson4": 0,
@@ -22,7 +22,7 @@
             "lesson8": 0
         },
         "goodAnswersInLearn": {
-            "lesson1": 1,
+            "lesson1": 0,
             "lesson2": 0,
             "lesson3": 0,
             "lesson4": 0,
@@ -33,15 +33,15 @@
         },
         "LearnMessageShown": false,
         "LearnMedal": 0,
-        "QuizMedal": 0,
+        "QuizMedal": 1,
         "EmailMedal": 0,
         "badge01": 0,
         "badge02": 0,
-        "badge03": 0,
-        "badge04": 0,
+        "badge03": 1,
+        "badge04": 1,
         "badge05": 0,
         "badge06": 0,
-        "Score": 0,
+        "Score": 1350,
         "Theme": "default",
         "LearnMessageShow": false
     }

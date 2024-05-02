@@ -73,7 +73,7 @@
     },
     "question10": {
         "question": "Hogyan terjedhetnek a számítógépes férgek?",
-        "rightAnswer": "Adathordozók és mellékletek, hálózati sebezhetőségek",
+        "rightAnswer": "Email, adathordozók és hálózati sebezhetőségek",
         "answer1": "Csak hálózati sebezhetőségek útján",
         "answer2": "Csak emailes mellékletek útján",
         "answer3": "Emailes mellékletek, hálózati sebezhetőségek",
@@ -145,7 +145,7 @@
     },
     "question19": {
         "question": "Önmagukban a zsarolóvírusok alkothatnak botnetet?",
-        "rightAnswer": "Nem alkothat botnetet",
+        "rightAnswer": "Nem alkothatnak botnetet",
         "answer1": "Nem alkothatnak botnetet",
         "answer2": "Alkothatnak botnetet, ha ezernél több eszközt elérnek",
         "answer3": "Alkothatnak botnetet, ha férgekkel együtt fertőznek",
@@ -173,7 +173,7 @@
         "answer1": "Nincs összefüggésben",
         "answer2": "Igen, hiszen a biztonsági frissítések fontosak",
         "answer3": "Igen, mert egy friss rendszer teljesen ellenálló",
-        "answer4": "Nem, a vírusírtók nem támogatják a friss rendszereket"
+        "answer4": "Nem, a vírusírtók mindig támogatják a friss rendszereket"
     },
     "question23": {
         "question": "Mi a különbség egy vírus és egy féreg között?",
@@ -185,8 +185,8 @@
     },
     "question24": {
         "question": "Mi a különbség a trójai vírus és egy zsarolóvírus között?",
-        "rightAnswer": "Elsődleges cél az adatok lopása",
-        "answer1": "Mindkettő elsődleges célja az adatok lopása",
+        "rightAnswer": "Mindkettő váltságdíjat követel",
+        "answer1": "Mindkettő váltságdíjat követel",
         "answer2": "Egyik sem fedi fel magát a felhasználó számára",
         "answer3": "Mindkettő a hálózatot fertőzi meg",
         "answer4": "Egyik sem terjedhet emailek útján"
