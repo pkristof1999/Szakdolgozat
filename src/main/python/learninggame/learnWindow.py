@@ -74,7 +74,7 @@ class LearnWindowUI(QMainWindow):
             self.timerThread = None
             self.timeSpent = 0
 
-            self.startEmailTimer(self.timeSpent)
+            self.startLearningTimer(self.timeSpent)
 
             self.currentPage = ""
             self.indexOfCurrentPage = 1
@@ -108,7 +108,7 @@ class LearnWindowUI(QMainWindow):
             errorMessage(e)
             self.hide()
 
-    def startEmailTimer(self, seconds):
+    def startLearningTimer(self, seconds):
         self.terminateTimerThread.clear()
         self.timerThread = threading.Thread(target=self.timerThreadCounter, args=(seconds,))
         self.timerThread.start()
